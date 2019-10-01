@@ -15,7 +15,7 @@
 
 set -eo pipefail
 
-cd github//
+cd github/java-conformance-tests/
 
 # Print out Java
 java -version
