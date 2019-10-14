@@ -18,7 +18,7 @@
     <protobuf.version>3.9.1</protobuf.version>
     <junit.version>4.12</junit.version>
     <truth.version>1.0</truth.version>
-    <firestore.version>1.21.0</firestore.version>
+    <firestore.version>1.27.0</firestore.version>
     <bigtable.version>0.74.0</bigtable.version>
   </properties>
 
