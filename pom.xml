@@ -19,7 +19,7 @@
     <junit.version>4.12</junit.version>
     <truth.version>1.0</truth.version>
     <firestore.version>1.21.0</firestore.version>
-    <bigtable.version>0.74.0</bigtable.version>
+    <bigtable.version>0.80.0</bigtable.version>
   </properties>
 
   <dependencies>
