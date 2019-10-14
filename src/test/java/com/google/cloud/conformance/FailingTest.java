@@ -9,4 +9,9 @@ public final class FailingTest {
   public void shouldFail() {
     Assert.fail("verifying failure detection");
   }
+
+  @Test
+  public void shouldAlsoFail() {
+    Assert.fail("kaboom");
+  }
 }
