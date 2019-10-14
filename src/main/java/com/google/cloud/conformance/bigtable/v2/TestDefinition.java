@@ -909,9 +909,17 @@ public final class TestDefinition {
       // @@protoc_insertion_point(interface_extends:google.cloud.conformance.bigtable.v2.ReadRowsTest)
       com.google.protobuf.MessageOrBuilder {
 
-    /** <code>string description = 1;</code> */
+    /**
+     * <code>string description = 1;</code>
+     *
+     * @return The description.
+     */
     java.lang.String getDescription();
-    /** <code>string description = 1;</code> */
+    /**
+     * <code>string description = 1;</code>
+     *
+     * @return The bytes for description.
+     */
     com.google.protobuf.ByteString getDescriptionBytes();
 
     /** <code>repeated .google.bigtable.v2.ReadRowsResponse.CellChunk chunks = 2;</code> */
@@ -1082,35 +1090,83 @@ public final class TestDefinition {
         // @@protoc_insertion_point(interface_extends:google.cloud.conformance.bigtable.v2.ReadRowsTest.Result)
         com.google.protobuf.MessageOrBuilder {
 
-      /** <code>string row_key = 1;</code> */
+      /**
+       * <code>string row_key = 1;</code>
+       *
+       * @return The rowKey.
+       */
       java.lang.String getRowKey();
-      /** <code>string row_key = 1;</code> */
+      /**
+       * <code>string row_key = 1;</code>
+       *
+       * @return The bytes for rowKey.
+       */
       com.google.protobuf.ByteString getRowKeyBytes();
 
-      /** <code>string family_name = 2;</code> */
+      /**
+       * <code>string family_name = 2;</code>
+       *
+       * @return The familyName.
+       */
       java.lang.String getFamilyName();
-      /** <code>string family_name = 2;</code> */
+      /**
+       * <code>string family_name = 2;</code>
+       *
+       * @return The bytes for familyName.
+       */
       com.google.protobuf.ByteString getFamilyNameBytes();
 
-      /** <code>string qualifier = 3;</code> */
+      /**
+       * <code>string qualifier = 3;</code>
+       *
+       * @return The qualifier.
+       */
       java.lang.String getQualifier();
-      /** <code>string qualifier = 3;</code> */
+      /**
+       * <code>string qualifier = 3;</code>
+       *
+       * @return The bytes for qualifier.
+       */
       com.google.protobuf.ByteString getQualifierBytes();
 
-      /** <code>int64 timestamp_micros = 4;</code> */
+      /**
+       * <code>int64 timestamp_micros = 4;</code>
+       *
+       * @return The timestampMicros.
+       */
       long getTimestampMicros();
 
-      /** <code>string value = 5;</code> */
+      /**
+       * <code>string value = 5;</code>
+       *
+       * @return The value.
+       */
       java.lang.String getValue();
-      /** <code>string value = 5;</code> */
+      /**
+       * <code>string value = 5;</code>
+       *
+       * @return The bytes for value.
+       */
       com.google.protobuf.ByteString getValueBytes();
 
-      /** <code>string label = 6;</code> */
+      /**
+       * <code>string label = 6;</code>
+       *
+       * @return The label.
+       */
       java.lang.String getLabel();
-      /** <code>string label = 6;</code> */
+      /**
+       * <code>string label = 6;</code>
+       *
+       * @return The bytes for label.
+       */
       com.google.protobuf.ByteString getLabelBytes();
 
-      /** <code>bool error = 7;</code> */
+      /**
+       * <code>bool error = 7;</code>
+       *
+       * @return The error.
+       */
       boolean getError();
     }
     /**
@@ -1253,7 +1309,11 @@ public final class TestDefinition {
 
       public static final int ROW_KEY_FIELD_NUMBER = 1;
       private volatile java.lang.Object rowKey_;
-      /** <code>string row_key = 1;</code> */
+      /**
+       * <code>string row_key = 1;</code>
+       *
+       * @return The rowKey.
+       */
       public java.lang.String getRowKey() {
         java.lang.Object ref = rowKey_;
         if (ref instanceof java.lang.String) {
@@ -1265,7 +1325,11 @@ public final class TestDefinition {
           return s;
         }
       }
-      /** <code>string row_key = 1;</code> */
+      /**
+       * <code>string row_key = 1;</code>
+       *
+       * @return The bytes for rowKey.
+       */
       public com.google.protobuf.ByteString getRowKeyBytes() {
         java.lang.Object ref = rowKey_;
         if (ref instanceof java.lang.String) {
@@ -1280,7 +1344,11 @@ public final class TestDefinition {
 
       public static final int FAMILY_NAME_FIELD_NUMBER = 2;
       private volatile java.lang.Object familyName_;
-      /** <code>string family_name = 2;</code> */
+      /**
+       * <code>string family_name = 2;</code>
+       *
+       * @return The familyName.
+       */
       public java.lang.String getFamilyName() {
         java.lang.Object ref = familyName_;
         if (ref instanceof java.lang.String) {
@@ -1292,7 +1360,11 @@ public final class TestDefinition {
           return s;
         }
       }
-      /** <code>string family_name = 2;</code> */
+      /**
+       * <code>string family_name = 2;</code>
+       *
+       * @return The bytes for familyName.
+       */
       public com.google.protobuf.ByteString getFamilyNameBytes() {
         java.lang.Object ref = familyName_;
         if (ref instanceof java.lang.String) {
@@ -1307,7 +1379,11 @@ public final class TestDefinition {
 
       public static final int QUALIFIER_FIELD_NUMBER = 3;
       private volatile java.lang.Object qualifier_;
-      /** <code>string qualifier = 3;</code> */
+      /**
+       * <code>string qualifier = 3;</code>
+       *
+       * @return The qualifier.
+       */
       public java.lang.String getQualifier() {
         java.lang.Object ref = qualifier_;
         if (ref instanceof java.lang.String) {
@@ -1319,7 +1395,11 @@ public final class TestDefinition {
           return s;
         }
       }
-      /** <code>string qualifier = 3;</code> */
+      /**
+       * <code>string qualifier = 3;</code>
+       *
+       * @return The bytes for qualifier.
+       */
       public com.google.protobuf.ByteString getQualifierBytes() {
         java.lang.Object ref = qualifier_;
         if (ref instanceof java.lang.String) {
@@ -1334,14 +1414,22 @@ public final class TestDefinition {
 
       public static final int TIMESTAMP_MICROS_FIELD_NUMBER = 4;
       private long timestampMicros_;
-      /** <code>int64 timestamp_micros = 4;</code> */
+      /**
+       * <code>int64 timestamp_micros = 4;</code>
+       *
+       * @return The timestampMicros.
+       */
       public long getTimestampMicros() {
         return timestampMicros_;
       }
 
       public static final int VALUE_FIELD_NUMBER = 5;
       private volatile java.lang.Object value_;
-      /** <code>string value = 5;</code> */
+      /**
+       * <code>string value = 5;</code>
+       *
+       * @return The value.
+       */
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
         if (ref instanceof java.lang.String) {
@@ -1353,7 +1441,11 @@ public final class TestDefinition {
           return s;
         }
       }
-      /** <code>string value = 5;</code> */
+      /**
+       * <code>string value = 5;</code>
+       *
+       * @return The bytes for value.
+       */
       public com.google.protobuf.ByteString getValueBytes() {
         java.lang.Object ref = value_;
         if (ref instanceof java.lang.String) {
@@ -1368,7 +1460,11 @@ public final class TestDefinition {
 
       public static final int LABEL_FIELD_NUMBER = 6;
       private volatile java.lang.Object label_;
-      /** <code>string label = 6;</code> */
+      /**
+       * <code>string label = 6;</code>
+       *
+       * @return The label.
+       */
       public java.lang.String getLabel() {
         java.lang.Object ref = label_;
         if (ref instanceof java.lang.String) {
@@ -1380,7 +1476,11 @@ public final class TestDefinition {
           return s;
         }
       }
-      /** <code>string label = 6;</code> */
+      /**
+       * <code>string label = 6;</code>
+       *
+       * @return The bytes for label.
+       */
       public com.google.protobuf.ByteString getLabelBytes() {
         java.lang.Object ref = label_;
         if (ref instanceof java.lang.String) {
@@ -1395,7 +1495,11 @@ public final class TestDefinition {
 
       public static final int ERROR_FIELD_NUMBER = 7;
       private boolean error_;
-      /** <code>bool error = 7;</code> */
+      /**
+       * <code>bool error = 7;</code>
+       *
+       * @return The error.
+       */
       public boolean getError() {
         return error_;
       }
@@ -1843,7 +1947,11 @@ public final class TestDefinition {
         }
 
         private java.lang.Object rowKey_ = "";
-        /** <code>string row_key = 1;</code> */
+        /**
+         * <code>string row_key = 1;</code>
+         *
+         * @return The rowKey.
+         */
         public java.lang.String getRowKey() {
           java.lang.Object ref = rowKey_;
           if (!(ref instanceof java.lang.String)) {
@@ -1855,7 +1963,11 @@ public final class TestDefinition {
             return (java.lang.String) ref;
           }
         }
-        /** <code>string row_key = 1;</code> */
+        /**
+         * <code>string row_key = 1;</code>
+         *
+         * @return The bytes for rowKey.
+         */
         public com.google.protobuf.ByteString getRowKeyBytes() {
           java.lang.Object ref = rowKey_;
           if (ref instanceof String) {
@@ -1867,7 +1979,12 @@ public final class TestDefinition {
             return (com.google.protobuf.ByteString) ref;
           }
         }
-        /** <code>string row_key = 1;</code> */
+        /**
+         * <code>string row_key = 1;</code>
+         *
+         * @param value The rowKey to set.
+         * @return This builder for chaining.
+         */
         public Builder setRowKey(java.lang.String value) {
           if (value == null) {
             throw new NullPointerException();
@@ -1877,14 +1994,23 @@ public final class TestDefinition {
           onChanged();
           return this;
         }
-        /** <code>string row_key = 1;</code> */
+        /**
+         * <code>string row_key = 1;</code>
+         *
+         * @return This builder for chaining.
+         */
         public Builder clearRowKey() {
 
           rowKey_ = getDefaultInstance().getRowKey();
           onChanged();
           return this;
         }
-        /** <code>string row_key = 1;</code> */
+        /**
+         * <code>string row_key = 1;</code>
+         *
+         * @param value The bytes for rowKey to set.
+         * @return This builder for chaining.
+         */
         public Builder setRowKeyBytes(com.google.protobuf.ByteString value) {
           if (value == null) {
             throw new NullPointerException();
@@ -1897,7 +2023,11 @@ public final class TestDefinition {
         }
 
         private java.lang.Object familyName_ = "";
-        /** <code>string family_name = 2;</code> */
+        /**
+         * <code>string family_name = 2;</code>
+         *
+         * @return The familyName.
+         */
         public java.lang.String getFamilyName() {
           java.lang.Object ref = familyName_;
           if (!(ref instanceof java.lang.String)) {
@@ -1909,7 +2039,11 @@ public final class TestDefinition {
             return (java.lang.String) ref;
           }
         }
-        /** <code>string family_name = 2;</code> */
+        /**
+         * <code>string family_name = 2;</code>
+         *
+         * @return The bytes for familyName.
+         */
         public com.google.protobuf.ByteString getFamilyNameBytes() {
           java.lang.Object ref = familyName_;
           if (ref instanceof String) {
@@ -1921,7 +2055,12 @@ public final class TestDefinition {
             return (com.google.protobuf.ByteString) ref;
           }
         }
-        /** <code>string family_name = 2;</code> */
+        /**
+         * <code>string family_name = 2;</code>
+         *
+         * @param value The familyName to set.
+         * @return This builder for chaining.
+         */
         public Builder setFamilyName(java.lang.String value) {
           if (value == null) {
             throw new NullPointerException();
@@ -1931,14 +2070,23 @@ public final class TestDefinition {
           onChanged();
           return this;
         }
-        /** <code>string family_name = 2;</code> */
+        /**
+         * <code>string family_name = 2;</code>
+         *
+         * @return This builder for chaining.
+         */
         public Builder clearFamilyName() {
 
           familyName_ = getDefaultInstance().getFamilyName();
           onChanged();
           return this;
         }
-        /** <code>string family_name = 2;</code> */
+        /**
+         * <code>string family_name = 2;</code>
+         *
+         * @param value The bytes for familyName to set.
+         * @return This builder for chaining.
+         */
         public Builder setFamilyNameBytes(com.google.protobuf.ByteString value) {
           if (value == null) {
             throw new NullPointerException();
@@ -1951,7 +2099,11 @@ public final class TestDefinition {
         }
 
         private java.lang.Object qualifier_ = "";
-        /** <code>string qualifier = 3;</code> */
+        /**
+         * <code>string qualifier = 3;</code>
+         *
+         * @return The qualifier.
+         */
         public java.lang.String getQualifier() {
           java.lang.Object ref = qualifier_;
           if (!(ref instanceof java.lang.String)) {
@@ -1963,7 +2115,11 @@ public final class TestDefinition {
             return (java.lang.String) ref;
           }
         }
-        /** <code>string qualifier = 3;</code> */
+        /**
+         * <code>string qualifier = 3;</code>
+         *
+         * @return The bytes for qualifier.
+         */
         public com.google.protobuf.ByteString getQualifierBytes() {
           java.lang.Object ref = qualifier_;
           if (ref instanceof String) {
@@ -1975,7 +2131,12 @@ public final class TestDefinition {
             return (com.google.protobuf.ByteString) ref;
           }
         }
-        /** <code>string qualifier = 3;</code> */
+        /**
+         * <code>string qualifier = 3;</code>
+         *
+         * @param value The qualifier to set.
+         * @return This builder for chaining.
+         */
         public Builder setQualifier(java.lang.String value) {
           if (value == null) {
             throw new NullPointerException();
@@ -1985,14 +2146,23 @@ public final class TestDefinition {
           onChanged();
           return this;
         }
-        /** <code>string qualifier = 3;</code> */
+        /**
+         * <code>string qualifier = 3;</code>
+         *
+         * @return This builder for chaining.
+         */
         public Builder clearQualifier() {
 
           qualifier_ = getDefaultInstance().getQualifier();
           onChanged();
           return this;
         }
-        /** <code>string qualifier = 3;</code> */
+        /**
+         * <code>string qualifier = 3;</code>
+         *
+         * @param value The bytes for qualifier to set.
+         * @return This builder for chaining.
+         */
         public Builder setQualifierBytes(com.google.protobuf.ByteString value) {
           if (value == null) {
             throw new NullPointerException();
@@ -2005,18 +2175,31 @@ public final class TestDefinition {
         }
 
         private long timestampMicros_;
-        /** <code>int64 timestamp_micros = 4;</code> */
+        /**
+         * <code>int64 timestamp_micros = 4;</code>
+         *
+         * @return The timestampMicros.
+         */
         public long getTimestampMicros() {
           return timestampMicros_;
         }
-        /** <code>int64 timestamp_micros = 4;</code> */
+        /**
+         * <code>int64 timestamp_micros = 4;</code>
+         *
+         * @param value The timestampMicros to set.
+         * @return This builder for chaining.
+         */
         public Builder setTimestampMicros(long value) {
 
           timestampMicros_ = value;
           onChanged();
           return this;
         }
-        /** <code>int64 timestamp_micros = 4;</code> */
+        /**
+         * <code>int64 timestamp_micros = 4;</code>
+         *
+         * @return This builder for chaining.
+         */
         public Builder clearTimestampMicros() {
 
           timestampMicros_ = 0L;
@@ -2025,7 +2208,11 @@ public final class TestDefinition {
         }
 
         private java.lang.Object value_ = "";
-        /** <code>string value = 5;</code> */
+        /**
+         * <code>string value = 5;</code>
+         *
+         * @return The value.
+         */
         public java.lang.String getValue() {
           java.lang.Object ref = value_;
           if (!(ref instanceof java.lang.String)) {
@@ -2037,7 +2224,11 @@ public final class TestDefinition {
             return (java.lang.String) ref;
           }
         }
-        /** <code>string value = 5;</code> */
+        /**
+         * <code>string value = 5;</code>
+         *
+         * @return The bytes for value.
+         */
         public com.google.protobuf.ByteString getValueBytes() {
           java.lang.Object ref = value_;
           if (ref instanceof String) {
@@ -2049,7 +2240,12 @@ public final class TestDefinition {
             return (com.google.protobuf.ByteString) ref;
           }
         }
-        /** <code>string value = 5;</code> */
+        /**
+         * <code>string value = 5;</code>
+         *
+         * @param value The value to set.
+         * @return This builder for chaining.
+         */
         public Builder setValue(java.lang.String value) {
           if (value == null) {
             throw new NullPointerException();
@@ -2059,14 +2255,23 @@ public final class TestDefinition {
           onChanged();
           return this;
         }
-        /** <code>string value = 5;</code> */
+        /**
+         * <code>string value = 5;</code>
+         *
+         * @return This builder for chaining.
+         */
         public Builder clearValue() {
 
           value_ = getDefaultInstance().getValue();
           onChanged();
           return this;
         }
-        /** <code>string value = 5;</code> */
+        /**
+         * <code>string value = 5;</code>
+         *
+         * @param value The bytes for value to set.
+         * @return This builder for chaining.
+         */
         public Builder setValueBytes(com.google.protobuf.ByteString value) {
           if (value == null) {
             throw new NullPointerException();
@@ -2079,7 +2284,11 @@ public final class TestDefinition {
         }
 
         private java.lang.Object label_ = "";
-        /** <code>string label = 6;</code> */
+        /**
+         * <code>string label = 6;</code>
+         *
+         * @return The label.
+         */
         public java.lang.String getLabel() {
           java.lang.Object ref = label_;
           if (!(ref instanceof java.lang.String)) {
@@ -2091,7 +2300,11 @@ public final class TestDefinition {
             return (java.lang.String) ref;
           }
         }
-        /** <code>string label = 6;</code> */
+        /**
+         * <code>string label = 6;</code>
+         *
+         * @return The bytes for label.
+         */
         public com.google.protobuf.ByteString getLabelBytes() {
           java.lang.Object ref = label_;
           if (ref instanceof String) {
@@ -2103,7 +2316,12 @@ public final class TestDefinition {
             return (com.google.protobuf.ByteString) ref;
           }
         }
-        /** <code>string label = 6;</code> */
+        /**
+         * <code>string label = 6;</code>
+         *
+         * @param value The label to set.
+         * @return This builder for chaining.
+         */
         public Builder setLabel(java.lang.String value) {
           if (value == null) {
             throw new NullPointerException();
@@ -2113,14 +2331,23 @@ public final class TestDefinition {
           onChanged();
           return this;
         }
-        /** <code>string label = 6;</code> */
+        /**
+         * <code>string label = 6;</code>
+         *
+         * @return This builder for chaining.
+         */
         public Builder clearLabel() {
 
           label_ = getDefaultInstance().getLabel();
           onChanged();
           return this;
         }
-        /** <code>string label = 6;</code> */
+        /**
+         * <code>string label = 6;</code>
+         *
+         * @param value The bytes for label to set.
+         * @return This builder for chaining.
+         */
         public Builder setLabelBytes(com.google.protobuf.ByteString value) {
           if (value == null) {
             throw new NullPointerException();
@@ -2133,18 +2360,31 @@ public final class TestDefinition {
         }
 
         private boolean error_;
-        /** <code>bool error = 7;</code> */
+        /**
+         * <code>bool error = 7;</code>
+         *
+         * @return The error.
+         */
         public boolean getError() {
           return error_;
         }
-        /** <code>bool error = 7;</code> */
+        /**
+         * <code>bool error = 7;</code>
+         *
+         * @param value The error to set.
+         * @return This builder for chaining.
+         */
         public Builder setError(boolean value) {
 
           error_ = value;
           onChanged();
           return this;
         }
-        /** <code>bool error = 7;</code> */
+        /**
+         * <code>bool error = 7;</code>
+         *
+         * @return This builder for chaining.
+         */
         public Builder clearError() {
 
           error_ = false;
@@ -2211,7 +2451,11 @@ public final class TestDefinition {
 
     public static final int DESCRIPTION_FIELD_NUMBER = 1;
     private volatile java.lang.Object description_;
-    /** <code>string description = 1;</code> */
+    /**
+     * <code>string description = 1;</code>
+     *
+     * @return The description.
+     */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -2223,7 +2467,11 @@ public final class TestDefinition {
         return s;
       }
     }
-    /** <code>string description = 1;</code> */
+    /**
+     * <code>string description = 1;</code>
+     *
+     * @return The bytes for description.
+     */
     public com.google.protobuf.ByteString getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -2741,7 +2989,11 @@ public final class TestDefinition {
       private int bitField0_;
 
       private java.lang.Object description_ = "";
-      /** <code>string description = 1;</code> */
+      /**
+       * <code>string description = 1;</code>
+       *
+       * @return The description.
+       */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
         if (!(ref instanceof java.lang.String)) {
@@ -2753,7 +3005,11 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
-      /** <code>string description = 1;</code> */
+      /**
+       * <code>string description = 1;</code>
+       *
+       * @return The bytes for description.
+       */
       public com.google.protobuf.ByteString getDescriptionBytes() {
         java.lang.Object ref = description_;
         if (ref instanceof String) {
@@ -2765,7 +3021,12 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-      /** <code>string description = 1;</code> */
+      /**
+       * <code>string description = 1;</code>
+       *
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
       public Builder setDescription(java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
@@ -2775,14 +3036,23 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
-      /** <code>string description = 1;</code> */
+      /**
+       * <code>string description = 1;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearDescription() {
 
         description_ = getDefaultInstance().getDescription();
         onChanged();
         return this;
       }
-      /** <code>string description = 1;</code> */
+      /**
+       * <code>string description = 1;</code>
+       *
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
       public Builder setDescriptionBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
           throw new NullPointerException();

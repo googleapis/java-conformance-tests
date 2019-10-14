@@ -62,7 +62,15 @@ function main() {
   cpDir "src/main/resources/${bigtablePackage}/" conformance-tests/bigtable/v2/*.json
 
   msg "Generating protos"
-  mvn -Pgen-conformance-protos clean verify >> ${LOG_FILE} 2>&1
+  # Run maven to generate all the classes from the protos
+  ## here we disable the checkstyle-tests because the generated files do not
+  ## have copyright headers and will always fail. The copyright headers are
+  ## added after this command completes successfully, and is verified later
+  ## by running maven again with the profile not disabled.
+  mvn \
+    -Pgen-conformance-protos \
+    -P!checkstyle-tests \
+    clean verify >> ${LOG_FILE} 2>&1
 
   msg "Adding copyright header to generated sources"
   ## java classes generated from protoc do not include the copyright header

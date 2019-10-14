@@ -840,6 +840,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string description = 1;</code>
+     *
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -850,6 +852,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string description = 1;</code>
+     *
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString getDescriptionBytes();
 
@@ -861,6 +865,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string comment = 10;</code>
+     *
+     * @return The comment.
      */
     java.lang.String getComment();
     /**
@@ -871,65 +877,131 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string comment = 10;</code>
+     *
+     * @return The bytes for comment.
      */
     com.google.protobuf.ByteString getCommentBytes();
 
-    /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code>
+     *
+     * @return Whether the get field is set.
+     */
     boolean hasGet();
-    /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code>
+     *
+     * @return The get.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest getGet();
     /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.GetTestOrBuilder getGetOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code>
+     *
+     * @return Whether the create field is set.
+     */
     boolean hasCreate();
-    /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code>
+     *
+     * @return The create.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest getCreate();
     /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTestOrBuilder
         getCreateOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code>
+     *
+     * @return Whether the set field is set.
+     */
     boolean hasSet();
-    /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code>
+     *
+     * @return The set.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest getSet();
     /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.SetTestOrBuilder getSetOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code>
+     *
+     * @return Whether the update field is set.
+     */
     boolean hasUpdate();
-    /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code>
+     *
+     * @return The update.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest getUpdate();
     /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTestOrBuilder
         getUpdateOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code>
+     *
+     * @return Whether the updatePaths field is set.
+     */
     boolean hasUpdatePaths();
-    /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code>
+     *
+     * @return The updatePaths.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest getUpdatePaths();
     /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTestOrBuilder
         getUpdatePathsOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code>
+     *
+     * @return Whether the delete field is set.
+     */
     boolean hasDelete();
-    /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code>
+     *
+     * @return The delete.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest getDelete();
     /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTestOrBuilder
         getDeleteOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code>
+     *
+     * @return Whether the query field is set.
+     */
     boolean hasQuery();
-    /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code>
+     *
+     * @return The query.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest getQuery();
     /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTestOrBuilder getQueryOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code>
+     *
+     * @return Whether the listen field is set.
+     */
     boolean hasListen();
-    /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code>
+     *
+     * @return The listen.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest getListen();
     /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTestOrBuilder
@@ -1216,7 +1288,10 @@ public final class TestDefinition {
     private int testCase_ = 0;
     private java.lang.Object test_;
 
-    public enum TestCase implements com.google.protobuf.Internal.EnumLite {
+    public enum TestCase
+        implements
+            com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       GET(2),
       CREATE(3),
       SET(4),
@@ -1231,7 +1306,11 @@ public final class TestDefinition {
       private TestCase(int value) {
         this.value = value;
       }
-      /** @deprecated Use {@link #forNumber(int)} instead. */
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
       @java.lang.Deprecated
       public static TestCase valueOf(int value) {
         return forNumber(value);
@@ -1281,6 +1360,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string description = 1;</code>
+     *
+     * @return The description.
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
@@ -1301,6 +1382,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string description = 1;</code>
+     *
+     * @return The bytes for description.
      */
     public com.google.protobuf.ByteString getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -1324,6 +1407,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string comment = 10;</code>
+     *
+     * @return The comment.
      */
     public java.lang.String getComment() {
       java.lang.Object ref = comment_;
@@ -1344,6 +1429,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string comment = 10;</code>
+     *
+     * @return The bytes for comment.
      */
     public com.google.protobuf.ByteString getCommentBytes() {
       java.lang.Object ref = comment_;
@@ -1358,11 +1445,19 @@ public final class TestDefinition {
     }
 
     public static final int GET_FIELD_NUMBER = 2;
-    /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code>
+     *
+     * @return Whether the get field is set.
+     */
     public boolean hasGet() {
       return testCase_ == 2;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code>
+     *
+     * @return The get.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest getGet() {
       if (testCase_ == 2) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest) test_;
@@ -1379,11 +1474,19 @@ public final class TestDefinition {
     }
 
     public static final int CREATE_FIELD_NUMBER = 3;
-    /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code>
+     *
+     * @return Whether the create field is set.
+     */
     public boolean hasCreate() {
       return testCase_ == 3;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code>
+     *
+     * @return The create.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest getCreate() {
       if (testCase_ == 3) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest) test_;
@@ -1402,11 +1505,19 @@ public final class TestDefinition {
     }
 
     public static final int SET_FIELD_NUMBER = 4;
-    /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code>
+     *
+     * @return Whether the set field is set.
+     */
     public boolean hasSet() {
       return testCase_ == 4;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code>
+     *
+     * @return The set.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest getSet() {
       if (testCase_ == 4) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest) test_;
@@ -1423,11 +1534,19 @@ public final class TestDefinition {
     }
 
     public static final int UPDATE_FIELD_NUMBER = 5;
-    /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code>
+     *
+     * @return Whether the update field is set.
+     */
     public boolean hasUpdate() {
       return testCase_ == 5;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code>
+     *
+     * @return The update.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest getUpdate() {
       if (testCase_ == 5) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest) test_;
@@ -1446,11 +1565,19 @@ public final class TestDefinition {
     }
 
     public static final int UPDATE_PATHS_FIELD_NUMBER = 6;
-    /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code>
+     *
+     * @return Whether the updatePaths field is set.
+     */
     public boolean hasUpdatePaths() {
       return testCase_ == 6;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code>
+     *
+     * @return The updatePaths.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest
         getUpdatePaths() {
       if (testCase_ == 6) {
@@ -1470,11 +1597,19 @@ public final class TestDefinition {
     }
 
     public static final int DELETE_FIELD_NUMBER = 7;
-    /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code>
+     *
+     * @return Whether the delete field is set.
+     */
     public boolean hasDelete() {
       return testCase_ == 7;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code>
+     *
+     * @return The delete.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest getDelete() {
       if (testCase_ == 7) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest) test_;
@@ -1493,11 +1628,19 @@ public final class TestDefinition {
     }
 
     public static final int QUERY_FIELD_NUMBER = 8;
-    /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code>
+     *
+     * @return Whether the query field is set.
+     */
     public boolean hasQuery() {
       return testCase_ == 8;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code>
+     *
+     * @return The query.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest getQuery() {
       if (testCase_ == 8) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest) test_;
@@ -1516,11 +1659,19 @@ public final class TestDefinition {
     }
 
     public static final int LISTEN_FIELD_NUMBER = 9;
-    /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code>
+     *
+     * @return Whether the listen field is set.
+     */
     public boolean hasListen() {
       return testCase_ == 9;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code>
+     *
+     * @return The listen.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest getListen() {
       if (testCase_ == 9) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest) test_;
@@ -2147,6 +2298,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string description = 1;</code>
+       *
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2167,6 +2320,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string description = 1;</code>
+       *
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString getDescriptionBytes() {
         java.lang.Object ref = description_;
@@ -2187,6 +2342,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string description = 1;</code>
+       *
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(java.lang.String value) {
         if (value == null) {
@@ -2205,6 +2363,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string description = 1;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
 
@@ -2220,6 +2380,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string description = 1;</code>
+       *
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -2241,6 +2404,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string comment = 10;</code>
+       *
+       * @return The comment.
        */
       public java.lang.String getComment() {
         java.lang.Object ref = comment_;
@@ -2261,6 +2426,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string comment = 10;</code>
+       *
+       * @return The bytes for comment.
        */
       public com.google.protobuf.ByteString getCommentBytes() {
         java.lang.Object ref = comment_;
@@ -2281,6 +2448,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string comment = 10;</code>
+       *
+       * @param value The comment to set.
+       * @return This builder for chaining.
        */
       public Builder setComment(java.lang.String value) {
         if (value == null) {
@@ -2299,6 +2469,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string comment = 10;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearComment() {
 
@@ -2314,6 +2486,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string comment = 10;</code>
+       *
+       * @param value The bytes for comment to set.
+       * @return This builder for chaining.
        */
       public Builder setCommentBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -2331,11 +2506,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.GetTestOrBuilder>
           getBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code>
+       *
+       * @return Whether the get field is set.
+       */
       public boolean hasGet() {
         return testCase_ == 2;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code>
+       *
+       * @return The get.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest getGet() {
         if (getBuilder_ == null) {
           if (testCase_ == 2) {
@@ -2473,11 +2656,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTestOrBuilder>
           createBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code>
+       *
+       * @return Whether the create field is set.
+       */
       public boolean hasCreate() {
         return testCase_ == 3;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code>
+       *
+       * @return The create.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest getCreate() {
         if (createBuilder_ == null) {
           if (testCase_ == 3) {
@@ -2615,11 +2806,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.SetTestOrBuilder>
           setBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code>
+       *
+       * @return Whether the set field is set.
+       */
       public boolean hasSet() {
         return testCase_ == 4;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code>
+       *
+       * @return The set.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest getSet() {
         if (setBuilder_ == null) {
           if (testCase_ == 4) {
@@ -2757,11 +2956,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTestOrBuilder>
           updateBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code>
+       *
+       * @return Whether the update field is set.
+       */
       public boolean hasUpdate() {
         return testCase_ == 5;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code>
+       *
+       * @return The update.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest getUpdate() {
         if (updateBuilder_ == null) {
           if (testCase_ == 5) {
@@ -2899,11 +3106,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTestOrBuilder>
           updatePathsBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code>
+       *
+       * @return Whether the updatePaths field is set.
+       */
       public boolean hasUpdatePaths() {
         return testCase_ == 6;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code>
+       *
+       * @return The updatePaths.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest
           getUpdatePaths() {
         if (updatePathsBuilder_ == null) {
@@ -3044,11 +3259,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTestOrBuilder>
           deleteBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code>
+       *
+       * @return Whether the delete field is set.
+       */
       public boolean hasDelete() {
         return testCase_ == 7;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code>
+       *
+       * @return The delete.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest getDelete() {
         if (deleteBuilder_ == null) {
           if (testCase_ == 7) {
@@ -3186,11 +3409,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTestOrBuilder>
           queryBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code>
+       *
+       * @return Whether the query field is set.
+       */
       public boolean hasQuery() {
         return testCase_ == 8;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code>
+       *
+       * @return The query.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest getQuery() {
         if (queryBuilder_ == null) {
           if (testCase_ == 8) {
@@ -3328,11 +3559,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTestOrBuilder>
           listenBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code>
+       *
+       * @return Whether the listen field is set.
+       */
       public boolean hasListen() {
         return testCase_ == 9;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code>
+       *
+       * @return The listen.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest getListen() {
         if (listenBuilder_ == null) {
           if (testCase_ == 9) {
@@ -3533,6 +3772,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
     /**
@@ -3543,6 +3784,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     com.google.protobuf.ByteString getDocRefPathBytes();
 
@@ -3554,6 +3797,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.GetDocumentRequest request = 2;</code>
+     *
+     * @return Whether the request field is set.
      */
     boolean hasRequest();
     /**
@@ -3564,6 +3809,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.GetDocumentRequest request = 2;</code>
+     *
+     * @return The request.
      */
     com.google.firestore.v1.GetDocumentRequest getRequest();
     /**
@@ -3696,6 +3943,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
@@ -3716,6 +3965,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
@@ -3739,6 +3990,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.GetDocumentRequest request = 2;</code>
+     *
+     * @return Whether the request field is set.
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -3751,6 +4004,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.GetDocumentRequest request = 2;</code>
+     *
+     * @return The request.
      */
     public com.google.firestore.v1.GetDocumentRequest getRequest() {
       return request_ == null
@@ -4138,6 +4393,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The docRefPath.
        */
       public java.lang.String getDocRefPath() {
         java.lang.Object ref = docRefPath_;
@@ -4158,6 +4415,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The bytes for docRefPath.
        */
       public com.google.protobuf.ByteString getDocRefPathBytes() {
         java.lang.Object ref = docRefPath_;
@@ -4178,6 +4437,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPath(java.lang.String value) {
         if (value == null) {
@@ -4196,6 +4458,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
 
@@ -4211,6 +4475,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The bytes for docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPathBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -4237,6 +4504,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.GetDocumentRequest request = 2;</code>
+       *
+       * @return Whether the request field is set.
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -4249,6 +4518,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.GetDocumentRequest request = 2;</code>
+       *
+       * @return The request.
        */
       public com.google.firestore.v1.GetDocumentRequest getRequest() {
         if (requestBuilder_ == null) {
@@ -4473,6 +4744,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
     /**
@@ -4483,6 +4756,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     com.google.protobuf.ByteString getDocRefPathBytes();
 
@@ -4496,6 +4771,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 2;</code>
+     *
+     * @return The jsonData.
      */
     java.lang.String getJsonData();
     /**
@@ -4508,6 +4785,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 2;</code>
+     *
+     * @return The bytes for jsonData.
      */
     com.google.protobuf.ByteString getJsonDataBytes();
 
@@ -4519,6 +4798,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+     *
+     * @return Whether the request field is set.
      */
     boolean hasRequest();
     /**
@@ -4529,6 +4810,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+     *
+     * @return The request.
      */
     com.google.firestore.v1.CommitRequest getRequest();
     /**
@@ -4551,6 +4834,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool is_error = 4;</code>
+     *
+     * @return The isError.
      */
     boolean getIsError();
   }
@@ -4686,6 +4971,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
@@ -4706,6 +4993,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
@@ -4731,6 +5020,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 2;</code>
+     *
+     * @return The jsonData.
      */
     public java.lang.String getJsonData() {
       java.lang.Object ref = jsonData_;
@@ -4753,6 +5044,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 2;</code>
+     *
+     * @return The bytes for jsonData.
      */
     public com.google.protobuf.ByteString getJsonDataBytes() {
       java.lang.Object ref = jsonData_;
@@ -4776,6 +5069,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+     *
+     * @return Whether the request field is set.
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -4788,6 +5083,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+     *
+     * @return The request.
      */
     public com.google.firestore.v1.CommitRequest getRequest() {
       return request_ == null
@@ -4818,6 +5115,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool is_error = 4;</code>
+     *
+     * @return The isError.
      */
     public boolean getIsError() {
       return isError_;
@@ -5222,6 +5521,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The docRefPath.
        */
       public java.lang.String getDocRefPath() {
         java.lang.Object ref = docRefPath_;
@@ -5242,6 +5543,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The bytes for docRefPath.
        */
       public com.google.protobuf.ByteString getDocRefPathBytes() {
         java.lang.Object ref = docRefPath_;
@@ -5262,6 +5565,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPath(java.lang.String value) {
         if (value == null) {
@@ -5280,6 +5586,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
 
@@ -5295,6 +5603,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The bytes for docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPathBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -5318,6 +5629,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 2;</code>
+       *
+       * @return The jsonData.
        */
       public java.lang.String getJsonData() {
         java.lang.Object ref = jsonData_;
@@ -5340,6 +5653,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 2;</code>
+       *
+       * @return The bytes for jsonData.
        */
       public com.google.protobuf.ByteString getJsonDataBytes() {
         java.lang.Object ref = jsonData_;
@@ -5362,6 +5677,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 2;</code>
+       *
+       * @param value The jsonData to set.
+       * @return This builder for chaining.
        */
       public Builder setJsonData(java.lang.String value) {
         if (value == null) {
@@ -5382,6 +5700,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 2;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearJsonData() {
 
@@ -5399,6 +5719,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 2;</code>
+       *
+       * @param value The bytes for jsonData to set.
+       * @return This builder for chaining.
        */
       public Builder setJsonDataBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -5425,6 +5748,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+       *
+       * @return Whether the request field is set.
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -5437,6 +5762,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+       *
+       * @return The request.
        */
       public com.google.firestore.v1.CommitRequest getRequest() {
         if (requestBuilder_ == null) {
@@ -5602,6 +5929,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 4;</code>
+       *
+       * @return The isError.
        */
       public boolean getIsError() {
         return isError_;
@@ -5615,6 +5944,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 4;</code>
+       *
+       * @param value The isError to set.
+       * @return This builder for chaining.
        */
       public Builder setIsError(boolean value) {
 
@@ -5631,6 +5963,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 4;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearIsError() {
 
@@ -5707,6 +6041,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
     /**
@@ -5717,6 +6053,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     com.google.protobuf.ByteString getDocRefPathBytes();
 
@@ -5728,6 +6066,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.cloud.conformance.firestore.v1.SetOption option = 2;</code>
+     *
+     * @return Whether the option field is set.
      */
     boolean hasOption();
     /**
@@ -5738,6 +6078,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.cloud.conformance.firestore.v1.SetOption option = 2;</code>
+     *
+     * @return The option.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption getOption();
     /**
@@ -5760,6 +6102,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 3;</code>
+     *
+     * @return The jsonData.
      */
     java.lang.String getJsonData();
     /**
@@ -5770,6 +6114,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 3;</code>
+     *
+     * @return The bytes for jsonData.
      */
     com.google.protobuf.ByteString getJsonDataBytes();
 
@@ -5781,6 +6127,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+     *
+     * @return Whether the request field is set.
      */
     boolean hasRequest();
     /**
@@ -5791,6 +6139,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+     *
+     * @return The request.
      */
     com.google.firestore.v1.CommitRequest getRequest();
     /**
@@ -5812,6 +6162,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool is_error = 5;</code>
+     *
+     * @return The isError.
      */
     boolean getIsError();
   }
@@ -5965,6 +6317,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
@@ -5985,6 +6339,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
@@ -6008,6 +6364,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.cloud.conformance.firestore.v1.SetOption option = 2;</code>
+     *
+     * @return Whether the option field is set.
      */
     public boolean hasOption() {
       return option_ != null;
@@ -6020,6 +6378,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.cloud.conformance.firestore.v1.SetOption option = 2;</code>
+     *
+     * @return The option.
      */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption getOption() {
       return option_ == null
@@ -6050,6 +6410,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 3;</code>
+     *
+     * @return The jsonData.
      */
     public java.lang.String getJsonData() {
       java.lang.Object ref = jsonData_;
@@ -6070,6 +6432,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 3;</code>
+     *
+     * @return The bytes for jsonData.
      */
     public com.google.protobuf.ByteString getJsonDataBytes() {
       java.lang.Object ref = jsonData_;
@@ -6093,6 +6457,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+     *
+     * @return Whether the request field is set.
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -6105,6 +6471,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+     *
+     * @return The request.
      */
     public com.google.firestore.v1.CommitRequest getRequest() {
       return request_ == null
@@ -6134,6 +6502,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool is_error = 5;</code>
+     *
+     * @return The isError.
      */
     public boolean getIsError() {
       return isError_;
@@ -6566,6 +6936,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The docRefPath.
        */
       public java.lang.String getDocRefPath() {
         java.lang.Object ref = docRefPath_;
@@ -6586,6 +6958,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The bytes for docRefPath.
        */
       public com.google.protobuf.ByteString getDocRefPathBytes() {
         java.lang.Object ref = docRefPath_;
@@ -6606,6 +6980,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPath(java.lang.String value) {
         if (value == null) {
@@ -6624,6 +7001,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
 
@@ -6639,6 +7018,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The bytes for docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPathBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -6665,6 +7047,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.cloud.conformance.firestore.v1.SetOption option = 2;</code>
+       *
+       * @return Whether the option field is set.
        */
       public boolean hasOption() {
         return optionBuilder_ != null || option_ != null;
@@ -6677,6 +7061,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.cloud.conformance.firestore.v1.SetOption option = 2;</code>
+       *
+       * @return The option.
        */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption getOption() {
         if (optionBuilder_ == null) {
@@ -6850,6 +7236,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 3;</code>
+       *
+       * @return The jsonData.
        */
       public java.lang.String getJsonData() {
         java.lang.Object ref = jsonData_;
@@ -6870,6 +7258,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 3;</code>
+       *
+       * @return The bytes for jsonData.
        */
       public com.google.protobuf.ByteString getJsonDataBytes() {
         java.lang.Object ref = jsonData_;
@@ -6890,6 +7280,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 3;</code>
+       *
+       * @param value The jsonData to set.
+       * @return This builder for chaining.
        */
       public Builder setJsonData(java.lang.String value) {
         if (value == null) {
@@ -6908,6 +7301,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 3;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearJsonData() {
 
@@ -6923,6 +7318,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 3;</code>
+       *
+       * @param value The bytes for jsonData to set.
+       * @return This builder for chaining.
        */
       public Builder setJsonDataBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -6949,6 +7347,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+       *
+       * @return Whether the request field is set.
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -6961,6 +7361,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+       *
+       * @return The request.
        */
       public com.google.firestore.v1.CommitRequest getRequest() {
         if (requestBuilder_ == null) {
@@ -7125,6 +7527,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 5;</code>
+       *
+       * @return The isError.
        */
       public boolean getIsError() {
         return isError_;
@@ -7137,6 +7541,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 5;</code>
+       *
+       * @param value The isError to set.
+       * @return This builder for chaining.
        */
       public Builder setIsError(boolean value) {
 
@@ -7152,6 +7559,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 5;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearIsError() {
 
@@ -7228,6 +7637,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
     /**
@@ -7238,6 +7649,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     com.google.protobuf.ByteString getDocRefPathBytes();
 
@@ -7249,6 +7662,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return Whether the precondition field is set.
      */
     boolean hasPrecondition();
     /**
@@ -7259,6 +7674,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return The precondition.
      */
     com.google.firestore.v1.Precondition getPrecondition();
     /**
@@ -7280,6 +7697,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 3;</code>
+     *
+     * @return The jsonData.
      */
     java.lang.String getJsonData();
     /**
@@ -7290,6 +7709,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 3;</code>
+     *
+     * @return The bytes for jsonData.
      */
     com.google.protobuf.ByteString getJsonDataBytes();
 
@@ -7301,6 +7722,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+     *
+     * @return Whether the request field is set.
      */
     boolean hasRequest();
     /**
@@ -7311,6 +7734,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+     *
+     * @return The request.
      */
     com.google.firestore.v1.CommitRequest getRequest();
     /**
@@ -7332,6 +7757,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool is_error = 5;</code>
+     *
+     * @return The isError.
      */
     boolean getIsError();
   }
@@ -7484,6 +7911,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
@@ -7504,6 +7933,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
@@ -7527,6 +7958,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return Whether the precondition field is set.
      */
     public boolean hasPrecondition() {
       return precondition_ != null;
@@ -7539,6 +7972,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return The precondition.
      */
     public com.google.firestore.v1.Precondition getPrecondition() {
       return precondition_ == null
@@ -7568,6 +8003,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 3;</code>
+     *
+     * @return The jsonData.
      */
     public java.lang.String getJsonData() {
       java.lang.Object ref = jsonData_;
@@ -7588,6 +8025,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string json_data = 3;</code>
+     *
+     * @return The bytes for jsonData.
      */
     public com.google.protobuf.ByteString getJsonDataBytes() {
       java.lang.Object ref = jsonData_;
@@ -7611,6 +8050,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+     *
+     * @return Whether the request field is set.
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -7623,6 +8064,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+     *
+     * @return The request.
      */
     public com.google.firestore.v1.CommitRequest getRequest() {
       return request_ == null
@@ -7652,6 +8095,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool is_error = 5;</code>
+     *
+     * @return The isError.
      */
     public boolean getIsError() {
       return isError_;
@@ -8085,6 +8530,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The docRefPath.
        */
       public java.lang.String getDocRefPath() {
         java.lang.Object ref = docRefPath_;
@@ -8105,6 +8552,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The bytes for docRefPath.
        */
       public com.google.protobuf.ByteString getDocRefPathBytes() {
         java.lang.Object ref = docRefPath_;
@@ -8125,6 +8574,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPath(java.lang.String value) {
         if (value == null) {
@@ -8143,6 +8595,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
 
@@ -8158,6 +8612,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The bytes for docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPathBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -8184,6 +8641,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+       *
+       * @return Whether the precondition field is set.
        */
       public boolean hasPrecondition() {
         return preconditionBuilder_ != null || precondition_ != null;
@@ -8196,6 +8655,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+       *
+       * @return The precondition.
        */
       public com.google.firestore.v1.Precondition getPrecondition() {
         if (preconditionBuilder_ == null) {
@@ -8360,6 +8821,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 3;</code>
+       *
+       * @return The jsonData.
        */
       public java.lang.String getJsonData() {
         java.lang.Object ref = jsonData_;
@@ -8380,6 +8843,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 3;</code>
+       *
+       * @return The bytes for jsonData.
        */
       public com.google.protobuf.ByteString getJsonDataBytes() {
         java.lang.Object ref = jsonData_;
@@ -8400,6 +8865,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 3;</code>
+       *
+       * @param value The jsonData to set.
+       * @return This builder for chaining.
        */
       public Builder setJsonData(java.lang.String value) {
         if (value == null) {
@@ -8418,6 +8886,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 3;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearJsonData() {
 
@@ -8433,6 +8903,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string json_data = 3;</code>
+       *
+       * @param value The bytes for jsonData to set.
+       * @return This builder for chaining.
        */
       public Builder setJsonDataBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -8459,6 +8932,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+       *
+       * @return Whether the request field is set.
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -8471,6 +8946,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.CommitRequest request = 4;</code>
+       *
+       * @return The request.
        */
       public com.google.firestore.v1.CommitRequest getRequest() {
         if (requestBuilder_ == null) {
@@ -8635,6 +9112,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 5;</code>
+       *
+       * @return The isError.
        */
       public boolean getIsError() {
         return isError_;
@@ -8647,6 +9126,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 5;</code>
+       *
+       * @param value The isError to set.
+       * @return This builder for chaining.
        */
       public Builder setIsError(boolean value) {
 
@@ -8662,6 +9144,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 5;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearIsError() {
 
@@ -8738,6 +9222,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
     /**
@@ -8748,6 +9234,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     com.google.protobuf.ByteString getDocRefPathBytes();
 
@@ -8759,6 +9247,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return Whether the precondition field is set.
      */
     boolean hasPrecondition();
     /**
@@ -8769,6 +9259,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return The precondition.
      */
     com.google.firestore.v1.Precondition getPrecondition();
     /**
@@ -8845,6 +9337,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>repeated string json_values = 4;</code>
+     *
+     * @return A list containing the jsonValues.
      */
     java.util.List<java.lang.String> getJsonValuesList();
     /**
@@ -8855,6 +9349,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>repeated string json_values = 4;</code>
+     *
+     * @return The count of jsonValues.
      */
     int getJsonValuesCount();
     /**
@@ -8865,6 +9361,9 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>repeated string json_values = 4;</code>
+     *
+     * @param index The index of the element to return.
+     * @return The jsonValues at the given index.
      */
     java.lang.String getJsonValues(int index);
     /**
@@ -8875,6 +9374,9 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>repeated string json_values = 4;</code>
+     *
+     * @param index The index of the value to return.
+     * @return The bytes of the jsonValues at the given index.
      */
     com.google.protobuf.ByteString getJsonValuesBytes(int index);
 
@@ -8886,6 +9388,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 5;</code>
+     *
+     * @return Whether the request field is set.
      */
     boolean hasRequest();
     /**
@@ -8896,6 +9400,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 5;</code>
+     *
+     * @return The request.
      */
     com.google.firestore.v1.CommitRequest getRequest();
     /**
@@ -8917,6 +9423,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool is_error = 6;</code>
+     *
+     * @return The isError.
      */
     boolean getIsError();
   }
@@ -9095,6 +9603,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
@@ -9115,6 +9625,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
@@ -9138,6 +9650,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return Whether the precondition field is set.
      */
     public boolean hasPrecondition() {
       return precondition_ != null;
@@ -9150,6 +9664,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return The precondition.
      */
     public com.google.firestore.v1.Precondition getPrecondition() {
       return precondition_ == null
@@ -9248,6 +9764,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>repeated string json_values = 4;</code>
+     *
+     * @return A list containing the jsonValues.
      */
     public com.google.protobuf.ProtocolStringList getJsonValuesList() {
       return jsonValues_;
@@ -9260,6 +9778,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>repeated string json_values = 4;</code>
+     *
+     * @return The count of jsonValues.
      */
     public int getJsonValuesCount() {
       return jsonValues_.size();
@@ -9272,6 +9792,9 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>repeated string json_values = 4;</code>
+     *
+     * @param index The index of the element to return.
+     * @return The jsonValues at the given index.
      */
     public java.lang.String getJsonValues(int index) {
       return jsonValues_.get(index);
@@ -9284,6 +9807,9 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>repeated string json_values = 4;</code>
+     *
+     * @param index The index of the value to return.
+     * @return The bytes of the jsonValues at the given index.
      */
     public com.google.protobuf.ByteString getJsonValuesBytes(int index) {
       return jsonValues_.getByteString(index);
@@ -9299,6 +9825,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 5;</code>
+     *
+     * @return Whether the request field is set.
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -9311,6 +9839,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 5;</code>
+     *
+     * @return The request.
      */
     public com.google.firestore.v1.CommitRequest getRequest() {
       return request_ == null
@@ -9340,6 +9870,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool is_error = 6;</code>
+     *
+     * @return The isError.
      */
     public boolean getIsError() {
       return isError_;
@@ -9859,6 +10391,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The docRefPath.
        */
       public java.lang.String getDocRefPath() {
         java.lang.Object ref = docRefPath_;
@@ -9879,6 +10413,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The bytes for docRefPath.
        */
       public com.google.protobuf.ByteString getDocRefPathBytes() {
         java.lang.Object ref = docRefPath_;
@@ -9899,6 +10435,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPath(java.lang.String value) {
         if (value == null) {
@@ -9917,6 +10456,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
 
@@ -9932,6 +10473,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The bytes for docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPathBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -9958,6 +10502,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+       *
+       * @return Whether the precondition field is set.
        */
       public boolean hasPrecondition() {
         return preconditionBuilder_ != null || precondition_ != null;
@@ -9970,6 +10516,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+       *
+       * @return The precondition.
        */
       public com.google.firestore.v1.Precondition getPrecondition() {
         if (preconditionBuilder_ == null) {
@@ -10517,6 +11065,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>repeated string json_values = 4;</code>
+       *
+       * @return A list containing the jsonValues.
        */
       public com.google.protobuf.ProtocolStringList getJsonValuesList() {
         return jsonValues_.getUnmodifiableView();
@@ -10529,6 +11079,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>repeated string json_values = 4;</code>
+       *
+       * @return The count of jsonValues.
        */
       public int getJsonValuesCount() {
         return jsonValues_.size();
@@ -10541,6 +11093,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>repeated string json_values = 4;</code>
+       *
+       * @param index The index of the element to return.
+       * @return The jsonValues at the given index.
        */
       public java.lang.String getJsonValues(int index) {
         return jsonValues_.get(index);
@@ -10553,6 +11108,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>repeated string json_values = 4;</code>
+       *
+       * @param index The index of the value to return.
+       * @return The bytes of the jsonValues at the given index.
        */
       public com.google.protobuf.ByteString getJsonValuesBytes(int index) {
         return jsonValues_.getByteString(index);
@@ -10565,6 +11123,10 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>repeated string json_values = 4;</code>
+       *
+       * @param index The index to set the value at.
+       * @param value The jsonValues to set.
+       * @return This builder for chaining.
        */
       public Builder setJsonValues(int index, java.lang.String value) {
         if (value == null) {
@@ -10583,6 +11145,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>repeated string json_values = 4;</code>
+       *
+       * @param value The jsonValues to add.
+       * @return This builder for chaining.
        */
       public Builder addJsonValues(java.lang.String value) {
         if (value == null) {
@@ -10601,6 +11166,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>repeated string json_values = 4;</code>
+       *
+       * @param values The jsonValues to add.
+       * @return This builder for chaining.
        */
       public Builder addAllJsonValues(java.lang.Iterable<java.lang.String> values) {
         ensureJsonValuesIsMutable();
@@ -10616,6 +11184,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>repeated string json_values = 4;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearJsonValues() {
         jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -10631,6 +11201,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>repeated string json_values = 4;</code>
+       *
+       * @param value The bytes of the jsonValues to add.
+       * @return This builder for chaining.
        */
       public Builder addJsonValuesBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -10657,6 +11230,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.CommitRequest request = 5;</code>
+       *
+       * @return Whether the request field is set.
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -10669,6 +11244,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.CommitRequest request = 5;</code>
+       *
+       * @return The request.
        */
       public com.google.firestore.v1.CommitRequest getRequest() {
         if (requestBuilder_ == null) {
@@ -10833,6 +11410,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 6;</code>
+       *
+       * @return The isError.
        */
       public boolean getIsError() {
         return isError_;
@@ -10845,6 +11424,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 6;</code>
+       *
+       * @param value The isError to set.
+       * @return This builder for chaining.
        */
       public Builder setIsError(boolean value) {
 
@@ -10860,6 +11442,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 6;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearIsError() {
 
@@ -10937,6 +11521,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
     /**
@@ -10947,12 +11533,22 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     com.google.protobuf.ByteString getDocRefPathBytes();
 
-    /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
+    /**
+     * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return Whether the precondition field is set.
+     */
     boolean hasPrecondition();
-    /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
+    /**
+     * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return The precondition.
+     */
     com.google.firestore.v1.Precondition getPrecondition();
     /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
     com.google.firestore.v1.PreconditionOrBuilder getPreconditionOrBuilder();
@@ -10965,6 +11561,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+     *
+     * @return Whether the request field is set.
      */
     boolean hasRequest();
     /**
@@ -10975,6 +11573,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+     *
+     * @return The request.
      */
     com.google.firestore.v1.CommitRequest getRequest();
     /**
@@ -10996,6 +11596,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool is_error = 4;</code>
+     *
+     * @return The isError.
      */
     boolean getIsError();
   }
@@ -11139,6 +11741,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The docRefPath.
      */
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
@@ -11159,6 +11763,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string doc_ref_path = 1;</code>
+     *
+     * @return The bytes for docRefPath.
      */
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
@@ -11174,11 +11780,19 @@ public final class TestDefinition {
 
     public static final int PRECONDITION_FIELD_NUMBER = 2;
     private com.google.firestore.v1.Precondition precondition_;
-    /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
+    /**
+     * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return Whether the precondition field is set.
+     */
     public boolean hasPrecondition() {
       return precondition_ != null;
     }
-    /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
+    /**
+     * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+     *
+     * @return The precondition.
+     */
     public com.google.firestore.v1.Precondition getPrecondition() {
       return precondition_ == null
           ? com.google.firestore.v1.Precondition.getDefaultInstance()
@@ -11199,6 +11813,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+     *
+     * @return Whether the request field is set.
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -11211,6 +11827,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+     *
+     * @return The request.
      */
     public com.google.firestore.v1.CommitRequest getRequest() {
       return request_ == null
@@ -11240,6 +11858,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool is_error = 4;</code>
+     *
+     * @return The isError.
      */
     public boolean getIsError() {
       return isError_;
@@ -11656,6 +12276,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The docRefPath.
        */
       public java.lang.String getDocRefPath() {
         java.lang.Object ref = docRefPath_;
@@ -11676,6 +12298,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return The bytes for docRefPath.
        */
       public com.google.protobuf.ByteString getDocRefPathBytes() {
         java.lang.Object ref = docRefPath_;
@@ -11696,6 +12320,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPath(java.lang.String value) {
         if (value == null) {
@@ -11714,6 +12341,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
 
@@ -11729,6 +12358,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string doc_ref_path = 1;</code>
+       *
+       * @param value The bytes for docRefPath to set.
+       * @return This builder for chaining.
        */
       public Builder setDocRefPathBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -11747,11 +12379,19 @@ public final class TestDefinition {
               com.google.firestore.v1.Precondition.Builder,
               com.google.firestore.v1.PreconditionOrBuilder>
           preconditionBuilder_;
-      /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
+      /**
+       * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+       *
+       * @return Whether the precondition field is set.
+       */
       public boolean hasPrecondition() {
         return preconditionBuilder_ != null || precondition_ != null;
       }
-      /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
+      /**
+       * <code>.google.firestore.v1.Precondition precondition = 2;</code>
+       *
+       * @return The precondition.
+       */
       public com.google.firestore.v1.Precondition getPrecondition() {
         if (preconditionBuilder_ == null) {
           return precondition_ == null
@@ -11864,6 +12504,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+       *
+       * @return Whether the request field is set.
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -11876,6 +12518,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.firestore.v1.CommitRequest request = 3;</code>
+       *
+       * @return The request.
        */
       public com.google.firestore.v1.CommitRequest getRequest() {
         if (requestBuilder_ == null) {
@@ -12040,6 +12684,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 4;</code>
+       *
+       * @return The isError.
        */
       public boolean getIsError() {
         return isError_;
@@ -12052,6 +12698,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 4;</code>
+       *
+       * @param value The isError to set.
+       * @return This builder for chaining.
        */
       public Builder setIsError(boolean value) {
 
@@ -12067,6 +12716,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool is_error = 4;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearIsError() {
 
@@ -12143,6 +12794,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool all = 1;</code>
+     *
+     * @return The all.
      */
     boolean getAll();
 
@@ -12320,6 +12973,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>bool all = 1;</code>
+     *
+     * @return The all.
      */
     public boolean getAll() {
       return all_;
@@ -12790,6 +13445,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool all = 1;</code>
+       *
+       * @return The all.
        */
       public boolean getAll() {
         return all_;
@@ -12802,6 +13459,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool all = 1;</code>
+       *
+       * @param value The all to set.
+       * @return This builder for chaining.
        */
       public Builder setAll(boolean value) {
 
@@ -12817,6 +13477,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>bool all = 1;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearAll() {
 
@@ -13268,6 +13930,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string coll_path = 1;</code>
+     *
+     * @return The collPath.
      */
     java.lang.String getCollPath();
     /**
@@ -13278,6 +13942,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string coll_path = 1;</code>
+     *
+     * @return The bytes for collPath.
      */
     com.google.protobuf.ByteString getCollPathBytes();
 
@@ -13296,14 +13962,26 @@ public final class TestDefinition {
     com.google.cloud.conformance.firestore.v1.TestDefinition.ClauseOrBuilder getClausesOrBuilder(
         int index);
 
-    /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
+    /**
+     * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
+     *
+     * @return Whether the query field is set.
+     */
     boolean hasQuery();
-    /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
+    /**
+     * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
+     *
+     * @return The query.
+     */
     com.google.firestore.v1.StructuredQuery getQuery();
     /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
     com.google.firestore.v1.StructuredQueryOrBuilder getQueryOrBuilder();
 
-    /** <code>bool is_error = 4;</code> */
+    /**
+     * <code>bool is_error = 4;</code>
+     *
+     * @return The isError.
+     */
     boolean getIsError();
   }
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.QueryTest} */
@@ -13441,6 +14119,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string coll_path = 1;</code>
+     *
+     * @return The collPath.
      */
     public java.lang.String getCollPath() {
       java.lang.Object ref = collPath_;
@@ -13461,6 +14141,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string coll_path = 1;</code>
+     *
+     * @return The bytes for collPath.
      */
     public com.google.protobuf.ByteString getCollPathBytes() {
       java.lang.Object ref = collPath_;
@@ -13504,11 +14186,19 @@ public final class TestDefinition {
 
     public static final int QUERY_FIELD_NUMBER = 3;
     private com.google.firestore.v1.StructuredQuery query_;
-    /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
+    /**
+     * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
+     *
+     * @return Whether the query field is set.
+     */
     public boolean hasQuery() {
       return query_ != null;
     }
-    /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
+    /**
+     * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
+     *
+     * @return The query.
+     */
     public com.google.firestore.v1.StructuredQuery getQuery() {
       return query_ == null ? com.google.firestore.v1.StructuredQuery.getDefaultInstance() : query_;
     }
@@ -13519,7 +14209,11 @@ public final class TestDefinition {
 
     public static final int IS_ERROR_FIELD_NUMBER = 4;
     private boolean isError_;
-    /** <code>bool is_error = 4;</code> */
+    /**
+     * <code>bool is_error = 4;</code>
+     *
+     * @return The isError.
+     */
     public boolean getIsError() {
       return isError_;
     }
@@ -13957,6 +14651,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string coll_path = 1;</code>
+       *
+       * @return The collPath.
        */
       public java.lang.String getCollPath() {
         java.lang.Object ref = collPath_;
@@ -13977,6 +14673,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string coll_path = 1;</code>
+       *
+       * @return The bytes for collPath.
        */
       public com.google.protobuf.ByteString getCollPathBytes() {
         java.lang.Object ref = collPath_;
@@ -13997,6 +14695,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string coll_path = 1;</code>
+       *
+       * @param value The collPath to set.
+       * @return This builder for chaining.
        */
       public Builder setCollPath(java.lang.String value) {
         if (value == null) {
@@ -14015,6 +14716,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string coll_path = 1;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearCollPath() {
 
@@ -14030,6 +14733,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string coll_path = 1;</code>
+       *
+       * @param value The bytes for collPath to set.
+       * @return This builder for chaining.
        */
       public Builder setCollPathBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -14274,11 +14980,19 @@ public final class TestDefinition {
               com.google.firestore.v1.StructuredQuery.Builder,
               com.google.firestore.v1.StructuredQueryOrBuilder>
           queryBuilder_;
-      /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
+      /**
+       * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
+       *
+       * @return Whether the query field is set.
+       */
       public boolean hasQuery() {
         return queryBuilder_ != null || query_ != null;
       }
-      /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
+      /**
+       * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
+       *
+       * @return The query.
+       */
       public com.google.firestore.v1.StructuredQuery getQuery() {
         if (queryBuilder_ == null) {
           return query_ == null
@@ -14378,18 +15092,31 @@ public final class TestDefinition {
       }
 
       private boolean isError_;
-      /** <code>bool is_error = 4;</code> */
+      /**
+       * <code>bool is_error = 4;</code>
+       *
+       * @return The isError.
+       */
       public boolean getIsError() {
         return isError_;
       }
-      /** <code>bool is_error = 4;</code> */
+      /**
+       * <code>bool is_error = 4;</code>
+       *
+       * @param value The isError to set.
+       * @return This builder for chaining.
+       */
       public Builder setIsError(boolean value) {
 
         isError_ = value;
         onChanged();
         return this;
       }
-      /** <code>bool is_error = 4;</code> */
+      /**
+       * <code>bool is_error = 4;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearIsError() {
 
         isError_ = false;
@@ -14457,58 +15184,122 @@ public final class TestDefinition {
       // @@protoc_insertion_point(interface_extends:google.cloud.conformance.firestore.v1.Clause)
       com.google.protobuf.MessageOrBuilder {
 
-    /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code>
+     *
+     * @return Whether the select field is set.
+     */
     boolean hasSelect();
-    /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code>
+     *
+     * @return The select.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Select getSelect();
     /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.SelectOrBuilder getSelectOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code>
+     *
+     * @return Whether the where field is set.
+     */
     boolean hasWhere();
-    /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code>
+     *
+     * @return The where.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Where getWhere();
     /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.WhereOrBuilder getWhereOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code>
+     *
+     * @return Whether the orderBy field is set.
+     */
     boolean hasOrderBy();
-    /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code>
+     *
+     * @return The orderBy.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy getOrderBy();
     /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.OrderByOrBuilder getOrderByOrBuilder();
 
-    /** <code>int32 offset = 4;</code> */
+    /**
+     * <code>int32 offset = 4;</code>
+     *
+     * @return The offset.
+     */
     int getOffset();
 
-    /** <code>int32 limit = 5;</code> */
+    /**
+     * <code>int32 limit = 5;</code>
+     *
+     * @return The limit.
+     */
     int getLimit();
 
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code>
+     *
+     * @return Whether the startAt field is set.
+     */
     boolean hasStartAt();
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code>
+     *
+     * @return The startAt.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAt();
     /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder getStartAtOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code>
+     *
+     * @return Whether the startAfter field is set.
+     */
     boolean hasStartAfter();
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code>
+     *
+     * @return The startAfter.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAfter();
     /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
         getStartAfterOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code>
+     *
+     * @return Whether the endAt field is set.
+     */
     boolean hasEndAt();
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code>
+     *
+     * @return The endAt.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndAt();
     /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder getEndAtOrBuilder();
 
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code>
+     *
+     * @return Whether the endBefore field is set.
+     */
     boolean hasEndBefore();
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code>
+     *
+     * @return The endBefore.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndBefore();
     /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
@@ -14755,7 +15546,10 @@ public final class TestDefinition {
     private int clauseCase_ = 0;
     private java.lang.Object clause_;
 
-    public enum ClauseCase implements com.google.protobuf.Internal.EnumLite {
+    public enum ClauseCase
+        implements
+            com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SELECT(1),
       WHERE(2),
       ORDER_BY(3),
@@ -14771,7 +15565,11 @@ public final class TestDefinition {
       private ClauseCase(int value) {
         this.value = value;
       }
-      /** @deprecated Use {@link #forNumber(int)} instead. */
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
       @java.lang.Deprecated
       public static ClauseCase valueOf(int value) {
         return forNumber(value);
@@ -14814,11 +15612,19 @@ public final class TestDefinition {
     }
 
     public static final int SELECT_FIELD_NUMBER = 1;
-    /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code>
+     *
+     * @return Whether the select field is set.
+     */
     public boolean hasSelect() {
       return clauseCase_ == 1;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code>
+     *
+     * @return The select.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Select getSelect() {
       if (clauseCase_ == 1) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Select) clause_;
@@ -14835,11 +15641,19 @@ public final class TestDefinition {
     }
 
     public static final int WHERE_FIELD_NUMBER = 2;
-    /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code>
+     *
+     * @return Whether the where field is set.
+     */
     public boolean hasWhere() {
       return clauseCase_ == 2;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code>
+     *
+     * @return The where.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Where getWhere() {
       if (clauseCase_ == 2) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Where) clause_;
@@ -14856,11 +15670,19 @@ public final class TestDefinition {
     }
 
     public static final int ORDER_BY_FIELD_NUMBER = 3;
-    /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code>
+     *
+     * @return Whether the orderBy field is set.
+     */
     public boolean hasOrderBy() {
       return clauseCase_ == 3;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code>
+     *
+     * @return The orderBy.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy getOrderBy() {
       if (clauseCase_ == 3) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy) clause_;
@@ -14877,7 +15699,11 @@ public final class TestDefinition {
     }
 
     public static final int OFFSET_FIELD_NUMBER = 4;
-    /** <code>int32 offset = 4;</code> */
+    /**
+     * <code>int32 offset = 4;</code>
+     *
+     * @return The offset.
+     */
     public int getOffset() {
       if (clauseCase_ == 4) {
         return (java.lang.Integer) clause_;
@@ -14886,7 +15712,11 @@ public final class TestDefinition {
     }
 
     public static final int LIMIT_FIELD_NUMBER = 5;
-    /** <code>int32 limit = 5;</code> */
+    /**
+     * <code>int32 limit = 5;</code>
+     *
+     * @return The limit.
+     */
     public int getLimit() {
       if (clauseCase_ == 5) {
         return (java.lang.Integer) clause_;
@@ -14895,11 +15725,19 @@ public final class TestDefinition {
     }
 
     public static final int START_AT_FIELD_NUMBER = 6;
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code>
+     *
+     * @return Whether the startAt field is set.
+     */
     public boolean hasStartAt() {
       return clauseCase_ == 6;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code>
+     *
+     * @return The startAt.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAt() {
       if (clauseCase_ == 6) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_;
@@ -14916,11 +15754,19 @@ public final class TestDefinition {
     }
 
     public static final int START_AFTER_FIELD_NUMBER = 7;
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code>
+     *
+     * @return Whether the startAfter field is set.
+     */
     public boolean hasStartAfter() {
       return clauseCase_ == 7;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code>
+     *
+     * @return The startAfter.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAfter() {
       if (clauseCase_ == 7) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_;
@@ -14937,11 +15783,19 @@ public final class TestDefinition {
     }
 
     public static final int END_AT_FIELD_NUMBER = 8;
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code>
+     *
+     * @return Whether the endAt field is set.
+     */
     public boolean hasEndAt() {
       return clauseCase_ == 8;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code>
+     *
+     * @return The endAt.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndAt() {
       if (clauseCase_ == 8) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_;
@@ -14958,11 +15812,19 @@ public final class TestDefinition {
     }
 
     public static final int END_BEFORE_FIELD_NUMBER = 9;
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code>
+     *
+     * @return Whether the endBefore field is set.
+     */
     public boolean hasEndBefore() {
       return clauseCase_ == 9;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code>
+     *
+     * @return The endBefore.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndBefore() {
       if (clauseCase_ == 9) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_;
@@ -15562,11 +16424,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Select.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.SelectOrBuilder>
           selectBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code>
+       *
+       * @return Whether the select field is set.
+       */
       public boolean hasSelect() {
         return clauseCase_ == 1;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code>
+       *
+       * @return The select.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Select getSelect() {
         if (selectBuilder_ == null) {
           if (clauseCase_ == 1) {
@@ -15703,11 +16573,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Where.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.WhereOrBuilder>
           whereBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code>
+       *
+       * @return Whether the where field is set.
+       */
       public boolean hasWhere() {
         return clauseCase_ == 2;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code>
+       *
+       * @return The where.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Where getWhere() {
         if (whereBuilder_ == null) {
           if (clauseCase_ == 2) {
@@ -15843,11 +16721,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.OrderByOrBuilder>
           orderByBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code>
+       *
+       * @return Whether the orderBy field is set.
+       */
       public boolean hasOrderBy() {
         return clauseCase_ == 3;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code>
+       *
+       * @return The orderBy.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy getOrderBy() {
         if (orderByBuilder_ == null) {
           if (clauseCase_ == 3) {
@@ -15980,21 +16866,34 @@ public final class TestDefinition {
         return orderByBuilder_;
       }
 
-      /** <code>int32 offset = 4;</code> */
+      /**
+       * <code>int32 offset = 4;</code>
+       *
+       * @return The offset.
+       */
       public int getOffset() {
         if (clauseCase_ == 4) {
           return (java.lang.Integer) clause_;
         }
         return 0;
       }
-      /** <code>int32 offset = 4;</code> */
+      /**
+       * <code>int32 offset = 4;</code>
+       *
+       * @param value The offset to set.
+       * @return This builder for chaining.
+       */
       public Builder setOffset(int value) {
         clauseCase_ = 4;
         clause_ = value;
         onChanged();
         return this;
       }
-      /** <code>int32 offset = 4;</code> */
+      /**
+       * <code>int32 offset = 4;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearOffset() {
         if (clauseCase_ == 4) {
           clauseCase_ = 0;
@@ -16004,21 +16903,34 @@ public final class TestDefinition {
         return this;
       }
 
-      /** <code>int32 limit = 5;</code> */
+      /**
+       * <code>int32 limit = 5;</code>
+       *
+       * @return The limit.
+       */
       public int getLimit() {
         if (clauseCase_ == 5) {
           return (java.lang.Integer) clause_;
         }
         return 0;
       }
-      /** <code>int32 limit = 5;</code> */
+      /**
+       * <code>int32 limit = 5;</code>
+       *
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
       public Builder setLimit(int value) {
         clauseCase_ = 5;
         clause_ = value;
         onChanged();
         return this;
       }
-      /** <code>int32 limit = 5;</code> */
+      /**
+       * <code>int32 limit = 5;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearLimit() {
         if (clauseCase_ == 5) {
           clauseCase_ = 0;
@@ -16033,11 +16945,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder>
           startAtBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code>
+       *
+       * @return Whether the startAt field is set.
+       */
       public boolean hasStartAt() {
         return clauseCase_ == 6;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code>
+       *
+       * @return The startAt.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAt() {
         if (startAtBuilder_ == null) {
           if (clauseCase_ == 6) {
@@ -16174,11 +17094,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder>
           startAfterBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code>
+       *
+       * @return Whether the startAfter field is set.
+       */
       public boolean hasStartAfter() {
         return clauseCase_ == 7;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code>
+       *
+       * @return The startAfter.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAfter() {
         if (startAfterBuilder_ == null) {
           if (clauseCase_ == 7) {
@@ -16315,11 +17243,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder>
           endAtBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code>
+       *
+       * @return Whether the endAt field is set.
+       */
       public boolean hasEndAt() {
         return clauseCase_ == 8;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code>
+       *
+       * @return The endAt.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndAt() {
         if (endAtBuilder_ == null) {
           if (clauseCase_ == 8) {
@@ -16456,11 +17392,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder>
           endBeforeBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code>
+       *
+       * @return Whether the endBefore field is set.
+       */
       public boolean hasEndBefore() {
         return clauseCase_ == 9;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code>
+       *
+       * @return The endBefore.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndBefore() {
         if (endBeforeBuilder_ == null) {
           if (clauseCase_ == 9) {
@@ -17445,21 +18389,45 @@ public final class TestDefinition {
       // @@protoc_insertion_point(interface_extends:google.cloud.conformance.firestore.v1.Where)
       com.google.protobuf.MessageOrBuilder {
 
-    /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+     *
+     * @return Whether the path field is set.
+     */
     boolean hasPath();
-    /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+     *
+     * @return The path.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getPath();
     /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder getPathOrBuilder();
 
-    /** <code>string op = 2;</code> */
+    /**
+     * <code>string op = 2;</code>
+     *
+     * @return The op.
+     */
     java.lang.String getOp();
-    /** <code>string op = 2;</code> */
+    /**
+     * <code>string op = 2;</code>
+     *
+     * @return The bytes for op.
+     */
     com.google.protobuf.ByteString getOpBytes();
 
-    /** <code>string json_value = 3;</code> */
+    /**
+     * <code>string json_value = 3;</code>
+     *
+     * @return The jsonValue.
+     */
     java.lang.String getJsonValue();
-    /** <code>string json_value = 3;</code> */
+    /**
+     * <code>string json_value = 3;</code>
+     *
+     * @return The bytes for jsonValue.
+     */
     com.google.protobuf.ByteString getJsonValueBytes();
   }
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.Where} */
@@ -17575,11 +18543,19 @@ public final class TestDefinition {
 
     public static final int PATH_FIELD_NUMBER = 1;
     private com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath path_;
-    /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+     *
+     * @return Whether the path field is set.
+     */
     public boolean hasPath() {
       return path_ != null;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+     *
+     * @return The path.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getPath() {
       return path_ == null
           ? com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.getDefaultInstance()
@@ -17593,7 +18569,11 @@ public final class TestDefinition {
 
     public static final int OP_FIELD_NUMBER = 2;
     private volatile java.lang.Object op_;
-    /** <code>string op = 2;</code> */
+    /**
+     * <code>string op = 2;</code>
+     *
+     * @return The op.
+     */
     public java.lang.String getOp() {
       java.lang.Object ref = op_;
       if (ref instanceof java.lang.String) {
@@ -17605,7 +18585,11 @@ public final class TestDefinition {
         return s;
       }
     }
-    /** <code>string op = 2;</code> */
+    /**
+     * <code>string op = 2;</code>
+     *
+     * @return The bytes for op.
+     */
     public com.google.protobuf.ByteString getOpBytes() {
       java.lang.Object ref = op_;
       if (ref instanceof java.lang.String) {
@@ -17620,7 +18604,11 @@ public final class TestDefinition {
 
     public static final int JSON_VALUE_FIELD_NUMBER = 3;
     private volatile java.lang.Object jsonValue_;
-    /** <code>string json_value = 3;</code> */
+    /**
+     * <code>string json_value = 3;</code>
+     *
+     * @return The jsonValue.
+     */
     public java.lang.String getJsonValue() {
       java.lang.Object ref = jsonValue_;
       if (ref instanceof java.lang.String) {
@@ -17632,7 +18620,11 @@ public final class TestDefinition {
         return s;
       }
     }
-    /** <code>string json_value = 3;</code> */
+    /**
+     * <code>string json_value = 3;</code>
+     *
+     * @return The bytes for jsonValue.
+     */
     public com.google.protobuf.ByteString getJsonValueBytes() {
       java.lang.Object ref = jsonValue_;
       if (ref instanceof java.lang.String) {
@@ -18014,11 +19006,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>
           pathBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+       *
+       * @return Whether the path field is set.
+       */
       public boolean hasPath() {
         return pathBuilder_ != null || path_ != null;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+       *
+       * @return The path.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getPath() {
         if (pathBuilder_ == null) {
           return path_ == null
@@ -18126,7 +19126,11 @@ public final class TestDefinition {
       }
 
       private java.lang.Object op_ = "";
-      /** <code>string op = 2;</code> */
+      /**
+       * <code>string op = 2;</code>
+       *
+       * @return The op.
+       */
       public java.lang.String getOp() {
         java.lang.Object ref = op_;
         if (!(ref instanceof java.lang.String)) {
@@ -18138,7 +19142,11 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
-      /** <code>string op = 2;</code> */
+      /**
+       * <code>string op = 2;</code>
+       *
+       * @return The bytes for op.
+       */
       public com.google.protobuf.ByteString getOpBytes() {
         java.lang.Object ref = op_;
         if (ref instanceof String) {
@@ -18150,7 +19158,12 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-      /** <code>string op = 2;</code> */
+      /**
+       * <code>string op = 2;</code>
+       *
+       * @param value The op to set.
+       * @return This builder for chaining.
+       */
       public Builder setOp(java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
@@ -18160,14 +19173,23 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
-      /** <code>string op = 2;</code> */
+      /**
+       * <code>string op = 2;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearOp() {
 
         op_ = getDefaultInstance().getOp();
         onChanged();
         return this;
       }
-      /** <code>string op = 2;</code> */
+      /**
+       * <code>string op = 2;</code>
+       *
+       * @param value The bytes for op to set.
+       * @return This builder for chaining.
+       */
       public Builder setOpBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
           throw new NullPointerException();
@@ -18180,7 +19202,11 @@ public final class TestDefinition {
       }
 
       private java.lang.Object jsonValue_ = "";
-      /** <code>string json_value = 3;</code> */
+      /**
+       * <code>string json_value = 3;</code>
+       *
+       * @return The jsonValue.
+       */
       public java.lang.String getJsonValue() {
         java.lang.Object ref = jsonValue_;
         if (!(ref instanceof java.lang.String)) {
@@ -18192,7 +19218,11 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
-      /** <code>string json_value = 3;</code> */
+      /**
+       * <code>string json_value = 3;</code>
+       *
+       * @return The bytes for jsonValue.
+       */
       public com.google.protobuf.ByteString getJsonValueBytes() {
         java.lang.Object ref = jsonValue_;
         if (ref instanceof String) {
@@ -18204,7 +19234,12 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-      /** <code>string json_value = 3;</code> */
+      /**
+       * <code>string json_value = 3;</code>
+       *
+       * @param value The jsonValue to set.
+       * @return This builder for chaining.
+       */
       public Builder setJsonValue(java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
@@ -18214,14 +19249,23 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
-      /** <code>string json_value = 3;</code> */
+      /**
+       * <code>string json_value = 3;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearJsonValue() {
 
         jsonValue_ = getDefaultInstance().getJsonValue();
         onChanged();
         return this;
       }
-      /** <code>string json_value = 3;</code> */
+      /**
+       * <code>string json_value = 3;</code>
+       *
+       * @param value The bytes for jsonValue to set.
+       * @return This builder for chaining.
+       */
       public Builder setJsonValueBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
           throw new NullPointerException();
@@ -18293,9 +19337,17 @@ public final class TestDefinition {
       // @@protoc_insertion_point(interface_extends:google.cloud.conformance.firestore.v1.OrderBy)
       com.google.protobuf.MessageOrBuilder {
 
-    /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+     *
+     * @return Whether the path field is set.
+     */
     boolean hasPath();
-    /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+     *
+     * @return The path.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getPath();
     /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder getPathOrBuilder();
@@ -18308,6 +19360,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string direction = 2;</code>
+     *
+     * @return The direction.
      */
     java.lang.String getDirection();
     /**
@@ -18318,6 +19372,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string direction = 2;</code>
+     *
+     * @return The bytes for direction.
      */
     com.google.protobuf.ByteString getDirectionBytes();
   }
@@ -18426,11 +19482,19 @@ public final class TestDefinition {
 
     public static final int PATH_FIELD_NUMBER = 1;
     private com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath path_;
-    /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+     *
+     * @return Whether the path field is set.
+     */
     public boolean hasPath() {
       return path_ != null;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+     *
+     * @return The path.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getPath() {
       return path_ == null
           ? com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.getDefaultInstance()
@@ -18452,6 +19516,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string direction = 2;</code>
+     *
+     * @return The direction.
      */
     public java.lang.String getDirection() {
       java.lang.Object ref = direction_;
@@ -18472,6 +19538,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>string direction = 2;</code>
+     *
+     * @return The bytes for direction.
      */
     public com.google.protobuf.ByteString getDirectionBytes() {
       java.lang.Object ref = direction_;
@@ -18842,11 +19910,19 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>
           pathBuilder_;
-      /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+       *
+       * @return Whether the path field is set.
+       */
       public boolean hasPath() {
         return pathBuilder_ != null || path_ != null;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
+       *
+       * @return The path.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getPath() {
         if (pathBuilder_ == null) {
           return path_ == null
@@ -18962,6 +20038,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string direction = 2;</code>
+       *
+       * @return The direction.
        */
       public java.lang.String getDirection() {
         java.lang.Object ref = direction_;
@@ -18982,6 +20060,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string direction = 2;</code>
+       *
+       * @return The bytes for direction.
        */
       public com.google.protobuf.ByteString getDirectionBytes() {
         java.lang.Object ref = direction_;
@@ -19002,6 +20082,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string direction = 2;</code>
+       *
+       * @param value The direction to set.
+       * @return This builder for chaining.
        */
       public Builder setDirection(java.lang.String value) {
         if (value == null) {
@@ -19020,6 +20103,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string direction = 2;</code>
+       *
+       * @return This builder for chaining.
        */
       public Builder clearDirection() {
 
@@ -19035,6 +20120,9 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>string direction = 2;</code>
+       *
+       * @param value The bytes for direction to set.
+       * @return This builder for chaining.
        */
       public Builder setDirectionBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -19115,6 +20203,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.cloud.conformance.firestore.v1.DocSnapshot doc_snapshot = 1;</code>
+     *
+     * @return Whether the docSnapshot field is set.
      */
     boolean hasDocSnapshot();
     /**
@@ -19125,6 +20215,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.cloud.conformance.firestore.v1.DocSnapshot doc_snapshot = 1;</code>
+     *
+     * @return The docSnapshot.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot getDocSnapshot();
     /**
@@ -19139,13 +20231,31 @@ public final class TestDefinition {
     com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshotOrBuilder
         getDocSnapshotOrBuilder();
 
-    /** <code>repeated string json_values = 2;</code> */
+    /**
+     * <code>repeated string json_values = 2;</code>
+     *
+     * @return A list containing the jsonValues.
+     */
     java.util.List<java.lang.String> getJsonValuesList();
-    /** <code>repeated string json_values = 2;</code> */
+    /**
+     * <code>repeated string json_values = 2;</code>
+     *
+     * @return The count of jsonValues.
+     */
     int getJsonValuesCount();
-    /** <code>repeated string json_values = 2;</code> */
+    /**
+     * <code>repeated string json_values = 2;</code>
+     *
+     * @param index The index of the element to return.
+     * @return The jsonValues at the given index.
+     */
     java.lang.String getJsonValues(int index);
-    /** <code>repeated string json_values = 2;</code> */
+    /**
+     * <code>repeated string json_values = 2;</code>
+     *
+     * @param index The index of the value to return.
+     * @return The bytes of the jsonValues at the given index.
+     */
     com.google.protobuf.ByteString getJsonValuesBytes(int index);
   }
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.Cursor} */
@@ -19269,6 +20379,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.cloud.conformance.firestore.v1.DocSnapshot doc_snapshot = 1;</code>
+     *
+     * @return Whether the docSnapshot field is set.
      */
     public boolean hasDocSnapshot() {
       return docSnapshot_ != null;
@@ -19281,6 +20393,8 @@ public final class TestDefinition {
      * </pre>
      *
      * <code>.google.cloud.conformance.firestore.v1.DocSnapshot doc_snapshot = 1;</code>
+     *
+     * @return The docSnapshot.
      */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot getDocSnapshot() {
       return docSnapshot_ == null
@@ -19304,19 +20418,37 @@ public final class TestDefinition {
 
     public static final int JSON_VALUES_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList jsonValues_;
-    /** <code>repeated string json_values = 2;</code> */
+    /**
+     * <code>repeated string json_values = 2;</code>
+     *
+     * @return A list containing the jsonValues.
+     */
     public com.google.protobuf.ProtocolStringList getJsonValuesList() {
       return jsonValues_;
     }
-    /** <code>repeated string json_values = 2;</code> */
+    /**
+     * <code>repeated string json_values = 2;</code>
+     *
+     * @return The count of jsonValues.
+     */
     public int getJsonValuesCount() {
       return jsonValues_.size();
     }
-    /** <code>repeated string json_values = 2;</code> */
+    /**
+     * <code>repeated string json_values = 2;</code>
+     *
+     * @param index The index of the element to return.
+     * @return The jsonValues at the given index.
+     */
     public java.lang.String getJsonValues(int index) {
       return jsonValues_.get(index);
     }
-    /** <code>repeated string json_values = 2;</code> */
+    /**
+     * <code>repeated string json_values = 2;</code>
+     *
+     * @param index The index of the value to return.
+     * @return The bytes of the jsonValues at the given index.
+     */
     public com.google.protobuf.ByteString getJsonValuesBytes(int index) {
       return jsonValues_.getByteString(index);
     }
@@ -19704,6 +20836,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.cloud.conformance.firestore.v1.DocSnapshot doc_snapshot = 1;</code>
+       *
+       * @return Whether the docSnapshot field is set.
        */
       public boolean hasDocSnapshot() {
         return docSnapshotBuilder_ != null || docSnapshot_ != null;
@@ -19716,6 +20850,8 @@ public final class TestDefinition {
        * </pre>
        *
        * <code>.google.cloud.conformance.firestore.v1.DocSnapshot doc_snapshot = 1;</code>
+       *
+       * @return The docSnapshot.
        */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot getDocSnapshot() {
         if (docSnapshotBuilder_ == null) {
@@ -19889,23 +21025,47 @@ public final class TestDefinition {
           bitField0_ |= 0x00000001;
         }
       }
-      /** <code>repeated string json_values = 2;</code> */
+      /**
+       * <code>repeated string json_values = 2;</code>
+       *
+       * @return A list containing the jsonValues.
+       */
       public com.google.protobuf.ProtocolStringList getJsonValuesList() {
         return jsonValues_.getUnmodifiableView();
       }
-      /** <code>repeated string json_values = 2;</code> */
+      /**
+       * <code>repeated string json_values = 2;</code>
+       *
+       * @return The count of jsonValues.
+       */
       public int getJsonValuesCount() {
         return jsonValues_.size();
       }
-      /** <code>repeated string json_values = 2;</code> */
+      /**
+       * <code>repeated string json_values = 2;</code>
+       *
+       * @param index The index of the element to return.
+       * @return The jsonValues at the given index.
+       */
       public java.lang.String getJsonValues(int index) {
         return jsonValues_.get(index);
       }
-      /** <code>repeated string json_values = 2;</code> */
+      /**
+       * <code>repeated string json_values = 2;</code>
+       *
+       * @param index The index of the value to return.
+       * @return The bytes of the jsonValues at the given index.
+       */
       public com.google.protobuf.ByteString getJsonValuesBytes(int index) {
         return jsonValues_.getByteString(index);
       }
-      /** <code>repeated string json_values = 2;</code> */
+      /**
+       * <code>repeated string json_values = 2;</code>
+       *
+       * @param index The index to set the value at.
+       * @param value The jsonValues to set.
+       * @return This builder for chaining.
+       */
       public Builder setJsonValues(int index, java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
@@ -19915,7 +21075,12 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
-      /** <code>repeated string json_values = 2;</code> */
+      /**
+       * <code>repeated string json_values = 2;</code>
+       *
+       * @param value The jsonValues to add.
+       * @return This builder for chaining.
+       */
       public Builder addJsonValues(java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
@@ -19925,21 +21090,35 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
-      /** <code>repeated string json_values = 2;</code> */
+      /**
+       * <code>repeated string json_values = 2;</code>
+       *
+       * @param values The jsonValues to add.
+       * @return This builder for chaining.
+       */
       public Builder addAllJsonValues(java.lang.Iterable<java.lang.String> values) {
         ensureJsonValuesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, jsonValues_);
         onChanged();
         return this;
       }
-      /** <code>repeated string json_values = 2;</code> */
+      /**
+       * <code>repeated string json_values = 2;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearJsonValues() {
         jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
-      /** <code>repeated string json_values = 2;</code> */
+      /**
+       * <code>repeated string json_values = 2;</code>
+       *
+       * @param value The bytes of the jsonValues to add.
+       * @return This builder for chaining.
+       */
       public Builder addJsonValuesBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
           throw new NullPointerException();
@@ -20011,14 +21190,30 @@ public final class TestDefinition {
       // @@protoc_insertion_point(interface_extends:google.cloud.conformance.firestore.v1.DocSnapshot)
       com.google.protobuf.MessageOrBuilder {
 
-    /** <code>string path = 1;</code> */
+    /**
+     * <code>string path = 1;</code>
+     *
+     * @return The path.
+     */
     java.lang.String getPath();
-    /** <code>string path = 1;</code> */
+    /**
+     * <code>string path = 1;</code>
+     *
+     * @return The bytes for path.
+     */
     com.google.protobuf.ByteString getPathBytes();
 
-    /** <code>string json_data = 2;</code> */
+    /**
+     * <code>string json_data = 2;</code>
+     *
+     * @return The jsonData.
+     */
     java.lang.String getJsonData();
-    /** <code>string json_data = 2;</code> */
+    /**
+     * <code>string json_data = 2;</code>
+     *
+     * @return The bytes for jsonData.
+     */
     com.google.protobuf.ByteString getJsonDataBytes();
   }
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.DocSnapshot} */
@@ -20116,7 +21311,11 @@ public final class TestDefinition {
 
     public static final int PATH_FIELD_NUMBER = 1;
     private volatile java.lang.Object path_;
-    /** <code>string path = 1;</code> */
+    /**
+     * <code>string path = 1;</code>
+     *
+     * @return The path.
+     */
     public java.lang.String getPath() {
       java.lang.Object ref = path_;
       if (ref instanceof java.lang.String) {
@@ -20128,7 +21327,11 @@ public final class TestDefinition {
         return s;
       }
     }
-    /** <code>string path = 1;</code> */
+    /**
+     * <code>string path = 1;</code>
+     *
+     * @return The bytes for path.
+     */
     public com.google.protobuf.ByteString getPathBytes() {
       java.lang.Object ref = path_;
       if (ref instanceof java.lang.String) {
@@ -20143,7 +21346,11 @@ public final class TestDefinition {
 
     public static final int JSON_DATA_FIELD_NUMBER = 2;
     private volatile java.lang.Object jsonData_;
-    /** <code>string json_data = 2;</code> */
+    /**
+     * <code>string json_data = 2;</code>
+     *
+     * @return The jsonData.
+     */
     public java.lang.String getJsonData() {
       java.lang.Object ref = jsonData_;
       if (ref instanceof java.lang.String) {
@@ -20155,7 +21362,11 @@ public final class TestDefinition {
         return s;
       }
     }
-    /** <code>string json_data = 2;</code> */
+    /**
+     * <code>string json_data = 2;</code>
+     *
+     * @return The bytes for jsonData.
+     */
     public com.google.protobuf.ByteString getJsonDataBytes() {
       java.lang.Object ref = jsonData_;
       if (ref instanceof java.lang.String) {
@@ -20509,7 +21720,11 @@ public final class TestDefinition {
       }
 
       private java.lang.Object path_ = "";
-      /** <code>string path = 1;</code> */
+      /**
+       * <code>string path = 1;</code>
+       *
+       * @return The path.
+       */
       public java.lang.String getPath() {
         java.lang.Object ref = path_;
         if (!(ref instanceof java.lang.String)) {
@@ -20521,7 +21736,11 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
-      /** <code>string path = 1;</code> */
+      /**
+       * <code>string path = 1;</code>
+       *
+       * @return The bytes for path.
+       */
       public com.google.protobuf.ByteString getPathBytes() {
         java.lang.Object ref = path_;
         if (ref instanceof String) {
@@ -20533,7 +21752,12 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-      /** <code>string path = 1;</code> */
+      /**
+       * <code>string path = 1;</code>
+       *
+       * @param value The path to set.
+       * @return This builder for chaining.
+       */
       public Builder setPath(java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
@@ -20543,14 +21767,23 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
-      /** <code>string path = 1;</code> */
+      /**
+       * <code>string path = 1;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearPath() {
 
         path_ = getDefaultInstance().getPath();
         onChanged();
         return this;
       }
-      /** <code>string path = 1;</code> */
+      /**
+       * <code>string path = 1;</code>
+       *
+       * @param value The bytes for path to set.
+       * @return This builder for chaining.
+       */
       public Builder setPathBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
           throw new NullPointerException();
@@ -20563,7 +21796,11 @@ public final class TestDefinition {
       }
 
       private java.lang.Object jsonData_ = "";
-      /** <code>string json_data = 2;</code> */
+      /**
+       * <code>string json_data = 2;</code>
+       *
+       * @return The jsonData.
+       */
       public java.lang.String getJsonData() {
         java.lang.Object ref = jsonData_;
         if (!(ref instanceof java.lang.String)) {
@@ -20575,7 +21812,11 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
-      /** <code>string json_data = 2;</code> */
+      /**
+       * <code>string json_data = 2;</code>
+       *
+       * @return The bytes for jsonData.
+       */
       public com.google.protobuf.ByteString getJsonDataBytes() {
         java.lang.Object ref = jsonData_;
         if (ref instanceof String) {
@@ -20587,7 +21828,12 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-      /** <code>string json_data = 2;</code> */
+      /**
+       * <code>string json_data = 2;</code>
+       *
+       * @param value The jsonData to set.
+       * @return This builder for chaining.
+       */
       public Builder setJsonData(java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
@@ -20597,14 +21843,23 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
-      /** <code>string json_data = 2;</code> */
+      /**
+       * <code>string json_data = 2;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearJsonData() {
 
         jsonData_ = getDefaultInstance().getJsonData();
         onChanged();
         return this;
       }
-      /** <code>string json_data = 2;</code> */
+      /**
+       * <code>string json_data = 2;</code>
+       *
+       * @param value The bytes for jsonData to set.
+       * @return This builder for chaining.
+       */
       public Builder setJsonDataBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
           throw new NullPointerException();
@@ -20676,13 +21931,31 @@ public final class TestDefinition {
       // @@protoc_insertion_point(interface_extends:google.cloud.conformance.firestore.v1.FieldPath)
       com.google.protobuf.MessageOrBuilder {
 
-    /** <code>repeated string field = 1;</code> */
+    /**
+     * <code>repeated string field = 1;</code>
+     *
+     * @return A list containing the field.
+     */
     java.util.List<java.lang.String> getFieldList();
-    /** <code>repeated string field = 1;</code> */
+    /**
+     * <code>repeated string field = 1;</code>
+     *
+     * @return The count of field.
+     */
     int getFieldCount();
-    /** <code>repeated string field = 1;</code> */
+    /**
+     * <code>repeated string field = 1;</code>
+     *
+     * @param index The index of the element to return.
+     * @return The field at the given index.
+     */
     java.lang.String getField(int index);
-    /** <code>repeated string field = 1;</code> */
+    /**
+     * <code>repeated string field = 1;</code>
+     *
+     * @param index The index of the value to return.
+     * @return The bytes of the field at the given index.
+     */
     com.google.protobuf.ByteString getFieldBytes(int index);
   }
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.FieldPath} */
@@ -20779,19 +22052,37 @@ public final class TestDefinition {
 
     public static final int FIELD_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList field_;
-    /** <code>repeated string field = 1;</code> */
+    /**
+     * <code>repeated string field = 1;</code>
+     *
+     * @return A list containing the field.
+     */
     public com.google.protobuf.ProtocolStringList getFieldList() {
       return field_;
     }
-    /** <code>repeated string field = 1;</code> */
+    /**
+     * <code>repeated string field = 1;</code>
+     *
+     * @return The count of field.
+     */
     public int getFieldCount() {
       return field_.size();
     }
-    /** <code>repeated string field = 1;</code> */
+    /**
+     * <code>repeated string field = 1;</code>
+     *
+     * @param index The index of the element to return.
+     * @return The field at the given index.
+     */
     public java.lang.String getField(int index) {
       return field_.get(index);
     }
-    /** <code>repeated string field = 1;</code> */
+    /**
+     * <code>repeated string field = 1;</code>
+     *
+     * @param index The index of the value to return.
+     * @return The bytes of the field at the given index.
+     */
     public com.google.protobuf.ByteString getFieldBytes(int index) {
       return field_.getByteString(index);
     }
@@ -21148,23 +22439,47 @@ public final class TestDefinition {
           bitField0_ |= 0x00000001;
         }
       }
-      /** <code>repeated string field = 1;</code> */
+      /**
+       * <code>repeated string field = 1;</code>
+       *
+       * @return A list containing the field.
+       */
       public com.google.protobuf.ProtocolStringList getFieldList() {
         return field_.getUnmodifiableView();
       }
-      /** <code>repeated string field = 1;</code> */
+      /**
+       * <code>repeated string field = 1;</code>
+       *
+       * @return The count of field.
+       */
       public int getFieldCount() {
         return field_.size();
       }
-      /** <code>repeated string field = 1;</code> */
+      /**
+       * <code>repeated string field = 1;</code>
+       *
+       * @param index The index of the element to return.
+       * @return The field at the given index.
+       */
       public java.lang.String getField(int index) {
         return field_.get(index);
       }
-      /** <code>repeated string field = 1;</code> */
+      /**
+       * <code>repeated string field = 1;</code>
+       *
+       * @param index The index of the value to return.
+       * @return The bytes of the field at the given index.
+       */
       public com.google.protobuf.ByteString getFieldBytes(int index) {
         return field_.getByteString(index);
       }
-      /** <code>repeated string field = 1;</code> */
+      /**
+       * <code>repeated string field = 1;</code>
+       *
+       * @param index The index to set the value at.
+       * @param value The field to set.
+       * @return This builder for chaining.
+       */
       public Builder setField(int index, java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
@@ -21174,7 +22489,12 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
-      /** <code>repeated string field = 1;</code> */
+      /**
+       * <code>repeated string field = 1;</code>
+       *
+       * @param value The field to add.
+       * @return This builder for chaining.
+       */
       public Builder addField(java.lang.String value) {
         if (value == null) {
           throw new NullPointerException();
@@ -21184,21 +22504,35 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
-      /** <code>repeated string field = 1;</code> */
+      /**
+       * <code>repeated string field = 1;</code>
+       *
+       * @param values The field to add.
+       * @return This builder for chaining.
+       */
       public Builder addAllField(java.lang.Iterable<java.lang.String> values) {
         ensureFieldIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, field_);
         onChanged();
         return this;
       }
-      /** <code>repeated string field = 1;</code> */
+      /**
+       * <code>repeated string field = 1;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearField() {
         field_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
-      /** <code>repeated string field = 1;</code> */
+      /**
+       * <code>repeated string field = 1;</code>
+       *
+       * @param value The bytes of the field to add.
+       * @return This builder for chaining.
+       */
       public Builder addFieldBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
           throw new NullPointerException();
@@ -21297,7 +22631,11 @@ public final class TestDefinition {
     com.google.cloud.conformance.firestore.v1.TestDefinition.SnapshotOrBuilder
         getSnapshotsOrBuilder(int index);
 
-    /** <code>bool is_error = 3;</code> */
+    /**
+     * <code>bool is_error = 3;</code>
+     *
+     * @return The isError.
+     */
     boolean getIsError();
   }
   /**
@@ -21487,7 +22825,11 @@ public final class TestDefinition {
 
     public static final int IS_ERROR_FIELD_NUMBER = 3;
     private boolean isError_;
-    /** <code>bool is_error = 3;</code> */
+    /**
+     * <code>bool is_error = 3;</code>
+     *
+     * @return The isError.
+     */
     public boolean getIsError() {
       return isError_;
     }
@@ -22379,18 +23721,31 @@ public final class TestDefinition {
       }
 
       private boolean isError_;
-      /** <code>bool is_error = 3;</code> */
+      /**
+       * <code>bool is_error = 3;</code>
+       *
+       * @return The isError.
+       */
       public boolean getIsError() {
         return isError_;
       }
-      /** <code>bool is_error = 3;</code> */
+      /**
+       * <code>bool is_error = 3;</code>
+       *
+       * @param value The isError to set.
+       * @return This builder for chaining.
+       */
       public Builder setIsError(boolean value) {
 
         isError_ = value;
         onChanged();
         return this;
       }
-      /** <code>bool is_error = 3;</code> */
+      /**
+       * <code>bool is_error = 3;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearIsError() {
 
         isError_ = false;
@@ -22484,9 +23839,17 @@ public final class TestDefinition {
     com.google.cloud.conformance.firestore.v1.TestDefinition.DocChangeOrBuilder getChangesOrBuilder(
         int index);
 
-    /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
+    /**
+     * <code>.google.protobuf.Timestamp read_time = 3;</code>
+     *
+     * @return Whether the readTime field is set.
+     */
     boolean hasReadTime();
-    /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
+    /**
+     * <code>.google.protobuf.Timestamp read_time = 3;</code>
+     *
+     * @return The readTime.
+     */
     com.google.protobuf.Timestamp getReadTime();
     /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
     com.google.protobuf.TimestampOrBuilder getReadTimeOrBuilder();
@@ -22672,11 +24035,19 @@ public final class TestDefinition {
 
     public static final int READ_TIME_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp readTime_;
-    /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
+    /**
+     * <code>.google.protobuf.Timestamp read_time = 3;</code>
+     *
+     * @return Whether the readTime field is set.
+     */
     public boolean hasReadTime() {
       return readTime_ != null;
     }
-    /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
+    /**
+     * <code>.google.protobuf.Timestamp read_time = 3;</code>
+     *
+     * @return The readTime.
+     */
     public com.google.protobuf.Timestamp getReadTime() {
       return readTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : readTime_;
     }
@@ -23571,11 +24942,19 @@ public final class TestDefinition {
               com.google.protobuf.Timestamp.Builder,
               com.google.protobuf.TimestampOrBuilder>
           readTimeBuilder_;
-      /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
+      /**
+       * <code>.google.protobuf.Timestamp read_time = 3;</code>
+       *
+       * @return Whether the readTime field is set.
+       */
       public boolean hasReadTime() {
         return readTimeBuilder_ != null || readTime_ != null;
       }
-      /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
+      /**
+       * <code>.google.protobuf.Timestamp read_time = 3;</code>
+       *
+       * @return The readTime.
+       */
       public com.google.protobuf.Timestamp getReadTime() {
         if (readTimeBuilder_ == null) {
           return readTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : readTime_;
@@ -23728,22 +25107,46 @@ public final class TestDefinition {
       // @@protoc_insertion_point(interface_extends:google.cloud.conformance.firestore.v1.DocChange)
       com.google.protobuf.MessageOrBuilder {
 
-    /** <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
+     *
+     * @return The enum numeric value on the wire for kind.
+     */
     int getKindValue();
-    /** <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
+     *
+     * @return The kind.
+     */
     com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind getKind();
 
-    /** <code>.google.firestore.v1.Document doc = 2;</code> */
+    /**
+     * <code>.google.firestore.v1.Document doc = 2;</code>
+     *
+     * @return Whether the doc field is set.
+     */
     boolean hasDoc();
-    /** <code>.google.firestore.v1.Document doc = 2;</code> */
+    /**
+     * <code>.google.firestore.v1.Document doc = 2;</code>
+     *
+     * @return The doc.
+     */
     com.google.firestore.v1.Document getDoc();
     /** <code>.google.firestore.v1.Document doc = 2;</code> */
     com.google.firestore.v1.DocumentOrBuilder getDocOrBuilder();
 
-    /** <code>int32 old_index = 3;</code> */
+    /**
+     * <code>int32 old_index = 3;</code>
+     *
+     * @return The oldIndex.
+     */
     int getOldIndex();
 
-    /** <code>int32 new_index = 4;</code> */
+    /**
+     * <code>int32 new_index = 4;</code>
+     *
+     * @return The newIndex.
+     */
     int getNewIndex();
   }
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.DocChange} */
@@ -23886,12 +25289,20 @@ public final class TestDefinition {
         return value;
       }
 
-      /** @deprecated Use {@link #forNumber(int)} instead. */
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
       @java.lang.Deprecated
       public static Kind valueOf(int value) {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Kind forNumber(int value) {
         switch (value) {
           case 0:
@@ -23955,11 +25366,19 @@ public final class TestDefinition {
 
     public static final int KIND_FIELD_NUMBER = 1;
     private int kind_;
-    /** <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
+     *
+     * @return The enum numeric value on the wire for kind.
+     */
     public int getKindValue() {
       return kind_;
     }
-    /** <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code> */
+    /**
+     * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
+     *
+     * @return The kind.
+     */
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind getKind() {
       @SuppressWarnings("deprecation")
       com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind result =
@@ -23971,11 +25390,19 @@ public final class TestDefinition {
 
     public static final int DOC_FIELD_NUMBER = 2;
     private com.google.firestore.v1.Document doc_;
-    /** <code>.google.firestore.v1.Document doc = 2;</code> */
+    /**
+     * <code>.google.firestore.v1.Document doc = 2;</code>
+     *
+     * @return Whether the doc field is set.
+     */
     public boolean hasDoc() {
       return doc_ != null;
     }
-    /** <code>.google.firestore.v1.Document doc = 2;</code> */
+    /**
+     * <code>.google.firestore.v1.Document doc = 2;</code>
+     *
+     * @return The doc.
+     */
     public com.google.firestore.v1.Document getDoc() {
       return doc_ == null ? com.google.firestore.v1.Document.getDefaultInstance() : doc_;
     }
@@ -23986,14 +25413,22 @@ public final class TestDefinition {
 
     public static final int OLD_INDEX_FIELD_NUMBER = 3;
     private int oldIndex_;
-    /** <code>int32 old_index = 3;</code> */
+    /**
+     * <code>int32 old_index = 3;</code>
+     *
+     * @return The oldIndex.
+     */
     public int getOldIndex() {
       return oldIndex_;
     }
 
     public static final int NEW_INDEX_FIELD_NUMBER = 4;
     private int newIndex_;
-    /** <code>int32 new_index = 4;</code> */
+    /**
+     * <code>int32 new_index = 4;</code>
+     *
+     * @return The newIndex.
+     */
     public int getNewIndex() {
       return newIndex_;
     }
@@ -24385,17 +25820,30 @@ public final class TestDefinition {
       }
 
       private int kind_ = 0;
-      /** <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
+       *
+       * @return The enum numeric value on the wire for kind.
+       */
       public int getKindValue() {
         return kind_;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
+       *
+       * @param value The enum numeric value on the wire for kind to set.
+       * @return This builder for chaining.
+       */
       public Builder setKindValue(int value) {
         kind_ = value;
         onChanged();
         return this;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
+       *
+       * @return The kind.
+       */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind getKind() {
         @SuppressWarnings("deprecation")
         com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind result =
@@ -24404,7 +25852,12 @@ public final class TestDefinition {
             ? com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind.UNRECOGNIZED
             : result;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
+       *
+       * @param value The kind to set.
+       * @return This builder for chaining.
+       */
       public Builder setKind(
           com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind value) {
         if (value == null) {
@@ -24415,7 +25868,11 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
-      /** <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code> */
+      /**
+       * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearKind() {
 
         kind_ = 0;
@@ -24429,11 +25886,19 @@ public final class TestDefinition {
               com.google.firestore.v1.Document.Builder,
               com.google.firestore.v1.DocumentOrBuilder>
           docBuilder_;
-      /** <code>.google.firestore.v1.Document doc = 2;</code> */
+      /**
+       * <code>.google.firestore.v1.Document doc = 2;</code>
+       *
+       * @return Whether the doc field is set.
+       */
       public boolean hasDoc() {
         return docBuilder_ != null || doc_ != null;
       }
-      /** <code>.google.firestore.v1.Document doc = 2;</code> */
+      /**
+       * <code>.google.firestore.v1.Document doc = 2;</code>
+       *
+       * @return The doc.
+       */
       public com.google.firestore.v1.Document getDoc() {
         if (docBuilder_ == null) {
           return doc_ == null ? com.google.firestore.v1.Document.getDefaultInstance() : doc_;
@@ -24527,18 +25992,31 @@ public final class TestDefinition {
       }
 
       private int oldIndex_;
-      /** <code>int32 old_index = 3;</code> */
+      /**
+       * <code>int32 old_index = 3;</code>
+       *
+       * @return The oldIndex.
+       */
       public int getOldIndex() {
         return oldIndex_;
       }
-      /** <code>int32 old_index = 3;</code> */
+      /**
+       * <code>int32 old_index = 3;</code>
+       *
+       * @param value The oldIndex to set.
+       * @return This builder for chaining.
+       */
       public Builder setOldIndex(int value) {
 
         oldIndex_ = value;
         onChanged();
         return this;
       }
-      /** <code>int32 old_index = 3;</code> */
+      /**
+       * <code>int32 old_index = 3;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearOldIndex() {
 
         oldIndex_ = 0;
@@ -24547,18 +26025,31 @@ public final class TestDefinition {
       }
 
       private int newIndex_;
-      /** <code>int32 new_index = 4;</code> */
+      /**
+       * <code>int32 new_index = 4;</code>
+       *
+       * @return The newIndex.
+       */
       public int getNewIndex() {
         return newIndex_;
       }
-      /** <code>int32 new_index = 4;</code> */
+      /**
+       * <code>int32 new_index = 4;</code>
+       *
+       * @param value The newIndex to set.
+       * @return This builder for chaining.
+       */
       public Builder setNewIndex(int value) {
 
         newIndex_ = value;
         onChanged();
         return this;
       }
-      /** <code>int32 new_index = 4;</code> */
+      /**
+       * <code>int32 new_index = 4;</code>
+       *
+       * @return This builder for chaining.
+       */
       public Builder clearNewIndex() {
 
         newIndex_ = 0;

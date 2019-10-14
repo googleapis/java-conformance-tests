@@ -191,7 +191,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   public static final int FILENAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object fileName_;
-  /** <code>string fileName = 1;</code> */
+  /**
+   * <code>string fileName = 1;</code>
+   *
+   * @return The fileName.
+   */
   public java.lang.String getFileName() {
     java.lang.Object ref = fileName_;
     if (ref instanceof java.lang.String) {
@@ -203,7 +207,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
-  /** <code>string fileName = 1;</code> */
+  /**
+   * <code>string fileName = 1;</code>
+   *
+   * @return The bytes for fileName.
+   */
   public com.google.protobuf.ByteString getFileNameBytes() {
     java.lang.Object ref = fileName_;
     if (ref instanceof java.lang.String) {
@@ -218,7 +226,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
   private volatile java.lang.Object description_;
-  /** <code>string description = 2;</code> */
+  /**
+   * <code>string description = 2;</code>
+   *
+   * @return The description.
+   */
   public java.lang.String getDescription() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
@@ -230,7 +242,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
-  /** <code>string description = 2;</code> */
+  /**
+   * <code>string description = 2;</code>
+   *
+   * @return The bytes for description.
+   */
   public com.google.protobuf.ByteString getDescriptionBytes() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
@@ -245,7 +261,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   public static final int BUCKET_FIELD_NUMBER = 3;
   private volatile java.lang.Object bucket_;
-  /** <code>string bucket = 3;</code> */
+  /**
+   * <code>string bucket = 3;</code>
+   *
+   * @return The bucket.
+   */
   public java.lang.String getBucket() {
     java.lang.Object ref = bucket_;
     if (ref instanceof java.lang.String) {
@@ -257,7 +277,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
-  /** <code>string bucket = 3;</code> */
+  /**
+   * <code>string bucket = 3;</code>
+   *
+   * @return The bytes for bucket.
+   */
   public com.google.protobuf.ByteString getBucketBytes() {
     java.lang.Object ref = bucket_;
     if (ref instanceof java.lang.String) {
@@ -272,7 +296,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   public static final int OBJECT_FIELD_NUMBER = 4;
   private volatile java.lang.Object object_;
-  /** <code>string object = 4;</code> */
+  /**
+   * <code>string object = 4;</code>
+   *
+   * @return The object.
+   */
   public java.lang.String getObject() {
     java.lang.Object ref = object_;
     if (ref instanceof java.lang.String) {
@@ -284,7 +312,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
-  /** <code>string object = 4;</code> */
+  /**
+   * <code>string object = 4;</code>
+   *
+   * @return The bytes for object.
+   */
   public com.google.protobuf.ByteString getObjectBytes() {
     java.lang.Object ref = object_;
     if (ref instanceof java.lang.String) {
@@ -299,7 +331,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   public static final int METHOD_FIELD_NUMBER = 5;
   private volatile java.lang.Object method_;
-  /** <code>string method = 5;</code> */
+  /**
+   * <code>string method = 5;</code>
+   *
+   * @return The method.
+   */
   public java.lang.String getMethod() {
     java.lang.Object ref = method_;
     if (ref instanceof java.lang.String) {
@@ -311,7 +347,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
-  /** <code>string method = 5;</code> */
+  /**
+   * <code>string method = 5;</code>
+   *
+   * @return The bytes for method.
+   */
   public com.google.protobuf.ByteString getMethodBytes() {
     java.lang.Object ref = method_;
     if (ref instanceof java.lang.String) {
@@ -326,18 +366,30 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   public static final int EXPIRATION_FIELD_NUMBER = 6;
   private long expiration_;
-  /** <code>int64 expiration = 6;</code> */
+  /**
+   * <code>int64 expiration = 6;</code>
+   *
+   * @return The expiration.
+   */
   public long getExpiration() {
     return expiration_;
   }
 
   public static final int TIMESTAMP_FIELD_NUMBER = 7;
   private com.google.protobuf.Timestamp timestamp_;
-  /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
+  /**
+   * <code>.google.protobuf.Timestamp timestamp = 7;</code>
+   *
+   * @return Whether the timestamp field is set.
+   */
   public boolean hasTimestamp() {
     return timestamp_ != null;
   }
-  /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
+  /**
+   * <code>.google.protobuf.Timestamp timestamp = 7;</code>
+   *
+   * @return The timestamp.
+   */
   public com.google.protobuf.Timestamp getTimestamp() {
     return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
   }
@@ -348,7 +400,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   public static final int EXPECTEDURL_FIELD_NUMBER = 8;
   private volatile java.lang.Object expectedUrl_;
-  /** <code>string expectedUrl = 8;</code> */
+  /**
+   * <code>string expectedUrl = 8;</code>
+   *
+   * @return The expectedUrl.
+   */
   public java.lang.String getExpectedUrl() {
     java.lang.Object ref = expectedUrl_;
     if (ref instanceof java.lang.String) {
@@ -360,7 +416,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
-  /** <code>string expectedUrl = 8;</code> */
+  /**
+   * <code>string expectedUrl = 8;</code>
+   *
+   * @return The bytes for expectedUrl.
+   */
   public com.google.protobuf.ByteString getExpectedUrlBytes() {
     java.lang.Object ref = expectedUrl_;
     if (ref instanceof java.lang.String) {
@@ -913,7 +973,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     private int bitField0_;
 
     private java.lang.Object fileName_ = "";
-    /** <code>string fileName = 1;</code> */
+    /**
+     * <code>string fileName = 1;</code>
+     *
+     * @return The fileName.
+     */
     public java.lang.String getFileName() {
       java.lang.Object ref = fileName_;
       if (!(ref instanceof java.lang.String)) {
@@ -925,7 +989,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
-    /** <code>string fileName = 1;</code> */
+    /**
+     * <code>string fileName = 1;</code>
+     *
+     * @return The bytes for fileName.
+     */
     public com.google.protobuf.ByteString getFileNameBytes() {
       java.lang.Object ref = fileName_;
       if (ref instanceof String) {
@@ -937,7 +1005,12 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    /** <code>string fileName = 1;</code> */
+    /**
+     * <code>string fileName = 1;</code>
+     *
+     * @param value The fileName to set.
+     * @return This builder for chaining.
+     */
     public Builder setFileName(java.lang.String value) {
       if (value == null) {
         throw new NullPointerException();
@@ -947,14 +1020,23 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
-    /** <code>string fileName = 1;</code> */
+    /**
+     * <code>string fileName = 1;</code>
+     *
+     * @return This builder for chaining.
+     */
     public Builder clearFileName() {
 
       fileName_ = getDefaultInstance().getFileName();
       onChanged();
       return this;
     }
-    /** <code>string fileName = 1;</code> */
+    /**
+     * <code>string fileName = 1;</code>
+     *
+     * @param value The bytes for fileName to set.
+     * @return This builder for chaining.
+     */
     public Builder setFileNameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
         throw new NullPointerException();
@@ -967,7 +1049,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object description_ = "";
-    /** <code>string description = 2;</code> */
+    /**
+     * <code>string description = 2;</code>
+     *
+     * @return The description.
+     */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (!(ref instanceof java.lang.String)) {
@@ -979,7 +1065,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
-    /** <code>string description = 2;</code> */
+    /**
+     * <code>string description = 2;</code>
+     *
+     * @return The bytes for description.
+     */
     public com.google.protobuf.ByteString getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof String) {
@@ -991,7 +1081,12 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    /** <code>string description = 2;</code> */
+    /**
+     * <code>string description = 2;</code>
+     *
+     * @param value The description to set.
+     * @return This builder for chaining.
+     */
     public Builder setDescription(java.lang.String value) {
       if (value == null) {
         throw new NullPointerException();
@@ -1001,14 +1096,23 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
-    /** <code>string description = 2;</code> */
+    /**
+     * <code>string description = 2;</code>
+     *
+     * @return This builder for chaining.
+     */
     public Builder clearDescription() {
 
       description_ = getDefaultInstance().getDescription();
       onChanged();
       return this;
     }
-    /** <code>string description = 2;</code> */
+    /**
+     * <code>string description = 2;</code>
+     *
+     * @param value The bytes for description to set.
+     * @return This builder for chaining.
+     */
     public Builder setDescriptionBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
         throw new NullPointerException();
@@ -1021,7 +1125,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object bucket_ = "";
-    /** <code>string bucket = 3;</code> */
+    /**
+     * <code>string bucket = 3;</code>
+     *
+     * @return The bucket.
+     */
     public java.lang.String getBucket() {
       java.lang.Object ref = bucket_;
       if (!(ref instanceof java.lang.String)) {
@@ -1033,7 +1141,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
-    /** <code>string bucket = 3;</code> */
+    /**
+     * <code>string bucket = 3;</code>
+     *
+     * @return The bytes for bucket.
+     */
     public com.google.protobuf.ByteString getBucketBytes() {
       java.lang.Object ref = bucket_;
       if (ref instanceof String) {
@@ -1045,7 +1157,12 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    /** <code>string bucket = 3;</code> */
+    /**
+     * <code>string bucket = 3;</code>
+     *
+     * @param value The bucket to set.
+     * @return This builder for chaining.
+     */
     public Builder setBucket(java.lang.String value) {
       if (value == null) {
         throw new NullPointerException();
@@ -1055,14 +1172,23 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
-    /** <code>string bucket = 3;</code> */
+    /**
+     * <code>string bucket = 3;</code>
+     *
+     * @return This builder for chaining.
+     */
     public Builder clearBucket() {
 
       bucket_ = getDefaultInstance().getBucket();
       onChanged();
       return this;
     }
-    /** <code>string bucket = 3;</code> */
+    /**
+     * <code>string bucket = 3;</code>
+     *
+     * @param value The bytes for bucket to set.
+     * @return This builder for chaining.
+     */
     public Builder setBucketBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
         throw new NullPointerException();
@@ -1075,7 +1201,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object object_ = "";
-    /** <code>string object = 4;</code> */
+    /**
+     * <code>string object = 4;</code>
+     *
+     * @return The object.
+     */
     public java.lang.String getObject() {
       java.lang.Object ref = object_;
       if (!(ref instanceof java.lang.String)) {
@@ -1087,7 +1217,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
-    /** <code>string object = 4;</code> */
+    /**
+     * <code>string object = 4;</code>
+     *
+     * @return The bytes for object.
+     */
     public com.google.protobuf.ByteString getObjectBytes() {
       java.lang.Object ref = object_;
       if (ref instanceof String) {
@@ -1099,7 +1233,12 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    /** <code>string object = 4;</code> */
+    /**
+     * <code>string object = 4;</code>
+     *
+     * @param value The object to set.
+     * @return This builder for chaining.
+     */
     public Builder setObject(java.lang.String value) {
       if (value == null) {
         throw new NullPointerException();
@@ -1109,14 +1248,23 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
-    /** <code>string object = 4;</code> */
+    /**
+     * <code>string object = 4;</code>
+     *
+     * @return This builder for chaining.
+     */
     public Builder clearObject() {
 
       object_ = getDefaultInstance().getObject();
       onChanged();
       return this;
     }
-    /** <code>string object = 4;</code> */
+    /**
+     * <code>string object = 4;</code>
+     *
+     * @param value The bytes for object to set.
+     * @return This builder for chaining.
+     */
     public Builder setObjectBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
         throw new NullPointerException();
@@ -1129,7 +1277,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object method_ = "";
-    /** <code>string method = 5;</code> */
+    /**
+     * <code>string method = 5;</code>
+     *
+     * @return The method.
+     */
     public java.lang.String getMethod() {
       java.lang.Object ref = method_;
       if (!(ref instanceof java.lang.String)) {
@@ -1141,7 +1293,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
-    /** <code>string method = 5;</code> */
+    /**
+     * <code>string method = 5;</code>
+     *
+     * @return The bytes for method.
+     */
     public com.google.protobuf.ByteString getMethodBytes() {
       java.lang.Object ref = method_;
       if (ref instanceof String) {
@@ -1153,7 +1309,12 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    /** <code>string method = 5;</code> */
+    /**
+     * <code>string method = 5;</code>
+     *
+     * @param value The method to set.
+     * @return This builder for chaining.
+     */
     public Builder setMethod(java.lang.String value) {
       if (value == null) {
         throw new NullPointerException();
@@ -1163,14 +1324,23 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
-    /** <code>string method = 5;</code> */
+    /**
+     * <code>string method = 5;</code>
+     *
+     * @return This builder for chaining.
+     */
     public Builder clearMethod() {
 
       method_ = getDefaultInstance().getMethod();
       onChanged();
       return this;
     }
-    /** <code>string method = 5;</code> */
+    /**
+     * <code>string method = 5;</code>
+     *
+     * @param value The bytes for method to set.
+     * @return This builder for chaining.
+     */
     public Builder setMethodBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
         throw new NullPointerException();
@@ -1183,18 +1353,31 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private long expiration_;
-    /** <code>int64 expiration = 6;</code> */
+    /**
+     * <code>int64 expiration = 6;</code>
+     *
+     * @return The expiration.
+     */
     public long getExpiration() {
       return expiration_;
     }
-    /** <code>int64 expiration = 6;</code> */
+    /**
+     * <code>int64 expiration = 6;</code>
+     *
+     * @param value The expiration to set.
+     * @return This builder for chaining.
+     */
     public Builder setExpiration(long value) {
 
       expiration_ = value;
       onChanged();
       return this;
     }
-    /** <code>int64 expiration = 6;</code> */
+    /**
+     * <code>int64 expiration = 6;</code>
+     *
+     * @return This builder for chaining.
+     */
     public Builder clearExpiration() {
 
       expiration_ = 0L;
@@ -1208,11 +1391,19 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.Timestamp.Builder,
             com.google.protobuf.TimestampOrBuilder>
         timestampBuilder_;
-    /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 7;</code>
+     *
+     * @return Whether the timestamp field is set.
+     */
     public boolean hasTimestamp() {
       return timestampBuilder_ != null || timestamp_ != null;
     }
-    /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 7;</code>
+     *
+     * @return The timestamp.
+     */
     public com.google.protobuf.Timestamp getTimestamp() {
       if (timestampBuilder_ == null) {
         return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
@@ -1306,7 +1497,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object expectedUrl_ = "";
-    /** <code>string expectedUrl = 8;</code> */
+    /**
+     * <code>string expectedUrl = 8;</code>
+     *
+     * @return The expectedUrl.
+     */
     public java.lang.String getExpectedUrl() {
       java.lang.Object ref = expectedUrl_;
       if (!(ref instanceof java.lang.String)) {
@@ -1318,7 +1513,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
-    /** <code>string expectedUrl = 8;</code> */
+    /**
+     * <code>string expectedUrl = 8;</code>
+     *
+     * @return The bytes for expectedUrl.
+     */
     public com.google.protobuf.ByteString getExpectedUrlBytes() {
       java.lang.Object ref = expectedUrl_;
       if (ref instanceof String) {
@@ -1330,7 +1529,12 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    /** <code>string expectedUrl = 8;</code> */
+    /**
+     * <code>string expectedUrl = 8;</code>
+     *
+     * @param value The expectedUrl to set.
+     * @return This builder for chaining.
+     */
     public Builder setExpectedUrl(java.lang.String value) {
       if (value == null) {
         throw new NullPointerException();
@@ -1340,14 +1544,23 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
-    /** <code>string expectedUrl = 8;</code> */
+    /**
+     * <code>string expectedUrl = 8;</code>
+     *
+     * @return This builder for chaining.
+     */
     public Builder clearExpectedUrl() {
 
       expectedUrl_ = getDefaultInstance().getExpectedUrl();
       onChanged();
       return this;
     }
-    /** <code>string expectedUrl = 8;</code> */
+    /**
+     * <code>string expectedUrl = 8;</code>
+     *
+     * @param value The bytes for expectedUrl to set.
+     * @return This builder for chaining.
+     */
     public Builder setExpectedUrlBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
         throw new NullPointerException();
