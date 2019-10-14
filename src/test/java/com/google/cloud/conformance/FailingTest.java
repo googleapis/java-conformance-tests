@@ -16,18 +16,28 @@
 
 package com.google.cloud.conformance;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public final class FailingTest {
 
   @Test
+  @Ignore
   public void shouldFail() {
     Assert.fail("verifying failure detection");
   }
 
   @Test
+  @Ignore
   public void shouldAlsoFail() {
     Assert.fail("kaboom");
+  }
+
+  @Test
+  public void passingTest() {
+    assertTrue(true);
   }
 }
