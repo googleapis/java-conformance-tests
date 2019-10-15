@@ -16,12 +16,9 @@
 set -o errexit -o errtrace -o nounset -o pipefail
 
 MODULE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-LOG_FILE_NAME="generate.log"
-LOG_FILE=${MODULE_DIR}/${LOG_FILE_NAME}
 
 function errNotify() {
     echo "Error while generating conformance tests" >&2;
-    echo "See ${LOG_FILE_NAME} for details" >&2;
     return 1
 }
 trap errNotify ERR
@@ -32,17 +29,11 @@ function cpDir() {
 }
 
 function main() {
-  rm ${LOG_FILE} 2> /dev/null || true
-
   local javaBasePackage="com/google/cloud/conformance"
   local firestorePackage="${javaBasePackage}/firestore/v1"
   local storagePackage="${javaBasePackage}/storage/v1"
   local bigtablePackage="${javaBasePackage}/bigtable/v2"
 
-  msg "Cleaning existing generated protos"
-  rm -rf src/main/java/${firestorePackage}/*
-  rm -rf src/main/java/${storagePackage}/*
-  rm -rf src/main/java/${bigtablePackage}/*
   msg "Cleaning existing test definitions"
   rm -rf src/main/resources/${firestorePackage}/*
   rm -rf src/main/resources/${storagePackage}/*
@@ -61,23 +52,14 @@ function main() {
   cpDir "src/main/resources/${storagePackage}/" conformance-tests/storage/v1/*.json
   cpDir "src/main/resources/${bigtablePackage}/" conformance-tests/bigtable/v2/*.json
 
-  msg "Generating protos"
-  mvn -Pgen-conformance-protos clean verify >> ${LOG_FILE} 2>&1
-
-  ## move generated proto class(es) into the main src root
-  cpDir src/main/java/ target/generated-sources/protobuf/java/*
-
-  ## cleanup any generated files that may have not been moved over
-  mvn clean >> ${LOG_FILE} 2>&1
-
-  msg "Building module..."
+  msg "Verifying module builds..."
   ## ensure building of the module still works
-  mvn clean package | tee -a ${LOG_FILE}
+  mvn clean package
   msg "Complete"
 }
 
 function now { date +"%Y-%m-%d %H:%M:%S" | tr -d '\n' ;}
-function msg { println "$*" | tee -a ${LOG_FILE} >&2 ;}
+function msg { println "$*" >&2 ;}
 function println { printf '%s\n' "$(now) $*" ;}
 
 main
