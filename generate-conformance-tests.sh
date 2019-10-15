@@ -64,19 +64,6 @@ function main() {
   msg "Generating protos"
   mvn -Pgen-conformance-protos clean verify >> ${LOG_FILE} 2>&1
 
-  msg "Adding copyright header to generated sources"
-  ## java classes generated from protoc do not include the copyright header
-  ## prepend it to the generated files
-  pushd target/generated-sources/protobuf/java/ > /dev/null 2>&1
-  for f in $(find ./ -type f -name '*.java' | sort); do
-    msg "Processing $f"
-    mv ${f} ${f}.tmp
-    cat ${MODULE_DIR}/copyright-header.txt > ${f}
-    cat ${f}.tmp >> ${f}
-    rm ${f}.tmp
-  done
-  popd > /dev/null 2>&1
-
   ## move generated proto class(es) into the main src root
   cpDir src/main/java/ target/generated-sources/protobuf/java/*
 
