@@ -23,44 +23,104 @@ public interface SigningV4TestOrBuilder
     // @@protoc_insertion_point(interface_extends:google.cloud.conformance.storage.v1.SigningV4Test)
     com.google.protobuf.MessageOrBuilder {
 
-  /** <code>string fileName = 1;</code> */
+  /**
+   * <code>string fileName = 1;</code>
+   *
+   * @return The fileName.
+   */
   java.lang.String getFileName();
-  /** <code>string fileName = 1;</code> */
+  /**
+   * <code>string fileName = 1;</code>
+   *
+   * @return The bytes for fileName.
+   */
   com.google.protobuf.ByteString getFileNameBytes();
 
-  /** <code>string description = 2;</code> */
+  /**
+   * <code>string description = 2;</code>
+   *
+   * @return The description.
+   */
   java.lang.String getDescription();
-  /** <code>string description = 2;</code> */
+  /**
+   * <code>string description = 2;</code>
+   *
+   * @return The bytes for description.
+   */
   com.google.protobuf.ByteString getDescriptionBytes();
 
-  /** <code>string bucket = 3;</code> */
+  /**
+   * <code>string bucket = 3;</code>
+   *
+   * @return The bucket.
+   */
   java.lang.String getBucket();
-  /** <code>string bucket = 3;</code> */
+  /**
+   * <code>string bucket = 3;</code>
+   *
+   * @return The bytes for bucket.
+   */
   com.google.protobuf.ByteString getBucketBytes();
 
-  /** <code>string object = 4;</code> */
+  /**
+   * <code>string object = 4;</code>
+   *
+   * @return The object.
+   */
   java.lang.String getObject();
-  /** <code>string object = 4;</code> */
+  /**
+   * <code>string object = 4;</code>
+   *
+   * @return The bytes for object.
+   */
   com.google.protobuf.ByteString getObjectBytes();
 
-  /** <code>string method = 5;</code> */
+  /**
+   * <code>string method = 5;</code>
+   *
+   * @return The method.
+   */
   java.lang.String getMethod();
-  /** <code>string method = 5;</code> */
+  /**
+   * <code>string method = 5;</code>
+   *
+   * @return The bytes for method.
+   */
   com.google.protobuf.ByteString getMethodBytes();
 
-  /** <code>int64 expiration = 6;</code> */
+  /**
+   * <code>int64 expiration = 6;</code>
+   *
+   * @return The expiration.
+   */
   long getExpiration();
 
-  /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
+  /**
+   * <code>.google.protobuf.Timestamp timestamp = 7;</code>
+   *
+   * @return Whether the timestamp field is set.
+   */
   boolean hasTimestamp();
-  /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
+  /**
+   * <code>.google.protobuf.Timestamp timestamp = 7;</code>
+   *
+   * @return The timestamp.
+   */
   com.google.protobuf.Timestamp getTimestamp();
   /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
   com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
-  /** <code>string expectedUrl = 8;</code> */
+  /**
+   * <code>string expectedUrl = 8;</code>
+   *
+   * @return The expectedUrl.
+   */
   java.lang.String getExpectedUrl();
-  /** <code>string expectedUrl = 8;</code> */
+  /**
+   * <code>string expectedUrl = 8;</code>
+   *
+   * @return The bytes for expectedUrl.
+   */
   com.google.protobuf.ByteString getExpectedUrlBytes();
 
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
