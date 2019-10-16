@@ -1,4 +1,15 @@
+# Maven
 target/
-.idea/
+
+# Eclipse
+.classpath
+.project
+.settings
+
+# Intellij
 *.iml
-__pycache__/
+.idea/
+
+# python utilities
+*.pyc
+__pycache__
