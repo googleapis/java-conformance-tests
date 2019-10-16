@@ -18,9 +18,19 @@
     <protobuf.version>3.10.0</protobuf.version>
     <junit.version>4.12</junit.version>
     <truth.version>1.0</truth.version>
-    <firestore.version>1.27.0</firestore.version>
-    <bigtable.version>0.80.0</bigtable.version>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-bom</artifactId>
+        <version>0.115.0-alpha</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
@@ -49,14 +59,10 @@
     <dependency>
       <groupId>com.google.api.grpc</groupId>
       <artifactId>proto-google-cloud-firestore-v1</artifactId>
-      <version>${firestore.version}</version>
-      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.google.api.grpc</groupId>
       <artifactId>proto-google-cloud-bigtable-v2</artifactId>
-      <version>${bigtable.version}</version>
-      <scope>compile</scope>
     </dependency>
   </dependencies>
 
