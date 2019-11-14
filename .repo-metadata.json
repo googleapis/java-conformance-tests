@@ -4,5 +4,6 @@
   "release_level": "beta",
   "repo": "googleapis/java-conformance-tests",
   "repo_short": "java-conformance-tests",
-  "language": "java"
+  "language": "java",
+  "distribution_name": "com.google.cloud:google-cloud-conformance-tests"
 }
