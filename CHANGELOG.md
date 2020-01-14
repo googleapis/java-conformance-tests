@@ -1,5 +1,16 @@
 # Changelog
 
+### [0.0.4](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.3...v0.0.4) (2020-01-14)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-bom to v0.121.0-alpha ([#53](https://www.github.com/googleapis/java-conformance-tests/issues/53)) ([9aafef4](https://www.github.com/googleapis/java-conformance-tests/commit/9aafef40f215df42d529ca7a2f7cb22c49ed13df))
+* update dependency com.google.cloud:google-cloud-shared-config to v0.4.0 ([#55](https://www.github.com/googleapis/java-conformance-tests/issues/55)) ([e33dc1d](https://www.github.com/googleapis/java-conformance-tests/commit/e33dc1d18909be783a8a0d605c34d45fc4a4e6fb))
+* update dependency com.google.guava:guava to v28.2-android ([#47](https://www.github.com/googleapis/java-conformance-tests/issues/47)) ([a2be86b](https://www.github.com/googleapis/java-conformance-tests/commit/a2be86b0b1c723e5c36dd13d782f4edde684fea1))
+* update dependency com.google.truth:truth to v1.0.1 ([#57](https://www.github.com/googleapis/java-conformance-tests/issues/57)) ([08f65c5](https://www.github.com/googleapis/java-conformance-tests/commit/08f65c52d0e9e77e81587326e9194d4d1fe11173))
+* update dependency junit:junit to v4.13 ([#49](https://www.github.com/googleapis/java-conformance-tests/issues/49)) ([50b2680](https://www.github.com/googleapis/java-conformance-tests/commit/50b26808d97e64c98fdb8c6a630592d71bbcc82c))
+
 ### [0.0.3](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.2...v0.0.3) (2019-12-18)
 
 
