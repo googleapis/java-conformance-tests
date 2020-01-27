@@ -36,6 +36,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     object_ = "";
     method_ = "";
     expectedUrl_ = "";
+    scheme_ = "";
+    urlStyle_ = 0;
+    bucketBoundDomain_ = "";
+    expectedCanonicalRequest_ = "";
+    expectedStringToSign_ = "";
   }
 
   @java.lang.Override
@@ -144,6 +149,58 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
               headers_.getMutableMap().put(headers__.getKey(), headers__.getValue());
               break;
             }
+          case 82:
+            {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                queryParameters_ =
+                    com.google.protobuf.MapField.newMapField(
+                        QueryParametersDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String> queryParameters__ =
+                  input.readMessage(
+                      QueryParametersDefaultEntryHolder.defaultEntry.getParserForType(),
+                      extensionRegistry);
+              queryParameters_
+                  .getMutableMap()
+                  .put(queryParameters__.getKey(), queryParameters__.getValue());
+              break;
+            }
+          case 90:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              scheme_ = s;
+              break;
+            }
+          case 96:
+            {
+              int rawValue = input.readEnum();
+
+              urlStyle_ = rawValue;
+              break;
+            }
+          case 106:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bucketBoundDomain_ = s;
+              break;
+            }
+          case 114:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              expectedCanonicalRequest_ = s;
+              break;
+            }
+          case 122:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              expectedStringToSign_ = s;
+              break;
+            }
           default:
             {
               if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -174,6 +231,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     switch (number) {
       case 9:
         return internalGetHeaders();
+      case 10:
+        return internalGetQueryParameters();
       default:
         throw new RuntimeException("Invalid map field number: " + number);
     }
@@ -187,6 +246,105 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         .ensureFieldAccessorsInitialized(
             com.google.cloud.conformance.storage.v1.SigningV4Test.class,
             com.google.cloud.conformance.storage.v1.SigningV4Test.Builder.class);
+  }
+
+  /** Protobuf enum {@code google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle} */
+  public enum UrlStyle implements com.google.protobuf.ProtocolMessageEnum {
+    /** <code>PATH_STYLE = 0;</code> */
+    PATH_STYLE(0),
+    /** <code>VIRTUAL_HOSTED_STYLE = 1;</code> */
+    VIRTUAL_HOSTED_STYLE(1),
+    /** <code>BUCKET_BOUND_DOMAIN = 2;</code> */
+    BUCKET_BOUND_DOMAIN(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /** <code>PATH_STYLE = 0;</code> */
+    public static final int PATH_STYLE_VALUE = 0;
+    /** <code>VIRTUAL_HOSTED_STYLE = 1;</code> */
+    public static final int VIRTUAL_HOSTED_STYLE_VALUE = 1;
+    /** <code>BUCKET_BOUND_DOMAIN = 2;</code> */
+    public static final int BUCKET_BOUND_DOMAIN_VALUE = 2;
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static UrlStyle valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static UrlStyle forNumber(int value) {
+      switch (value) {
+        case 0:
+          return PATH_STYLE;
+        case 1:
+          return VIRTUAL_HOSTED_STYLE;
+        case 2:
+          return BUCKET_BOUND_DOMAIN;
+        default:
+          return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<UrlStyle> internalGetValueMap() {
+      return internalValueMap;
+    }
+
+    private static final com.google.protobuf.Internal.EnumLiteMap<UrlStyle> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<UrlStyle>() {
+          public UrlStyle findValueByNumber(int number) {
+            return UrlStyle.forNumber(number);
+          }
+        };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+
+    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+      return getDescriptor();
+    }
+
+    public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+      return com.google.cloud.conformance.storage.v1.SigningV4Test.getDescriptor()
+          .getEnumTypes()
+          .get(0);
+    }
+
+    private static final UrlStyle[] VALUES = values();
+
+    public static UrlStyle valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private UrlStyle(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle)
   }
 
   public static final int FILENAME_FIELD_NUMBER = 1;
@@ -494,6 +652,234 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     return map.get(key);
   }
 
+  public static final int QUERY_PARAMETERS_FIELD_NUMBER = 10;
+
+  private static final class QueryParametersDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<java.lang.String, java.lang.String> defaultEntry =
+        com.google.protobuf.MapEntry.<java.lang.String, java.lang.String>newDefaultInstance(
+            com.google.cloud.conformance.storage.v1.Tests
+                .internal_static_google_cloud_conformance_storage_v1_SigningV4Test_QueryParametersEntry_descriptor,
+            com.google.protobuf.WireFormat.FieldType.STRING,
+            "",
+            com.google.protobuf.WireFormat.FieldType.STRING,
+            "");
+  }
+
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String> queryParameters_;
+
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetQueryParameters() {
+    if (queryParameters_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          QueryParametersDefaultEntryHolder.defaultEntry);
+    }
+    return queryParameters_;
+  }
+
+  public int getQueryParametersCount() {
+    return internalGetQueryParameters().getMap().size();
+  }
+  /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  public boolean containsQueryParameters(java.lang.String key) {
+    if (key == null) {
+      throw new java.lang.NullPointerException();
+    }
+    return internalGetQueryParameters().getMap().containsKey(key);
+  }
+  /** Use {@link #getQueryParametersMap()} instead. */
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.String> getQueryParameters() {
+    return getQueryParametersMap();
+  }
+  /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  public java.util.Map<java.lang.String, java.lang.String> getQueryParametersMap() {
+    return internalGetQueryParameters().getMap();
+  }
+  /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  public java.lang.String getQueryParametersOrDefault(
+      java.lang.String key, java.lang.String defaultValue) {
+    if (key == null) {
+      throw new java.lang.NullPointerException();
+    }
+    java.util.Map<java.lang.String, java.lang.String> map = internalGetQueryParameters().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  public java.lang.String getQueryParametersOrThrow(java.lang.String key) {
+    if (key == null) {
+      throw new java.lang.NullPointerException();
+    }
+    java.util.Map<java.lang.String, java.lang.String> map = internalGetQueryParameters().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
+  public static final int SCHEME_FIELD_NUMBER = 11;
+  private volatile java.lang.Object scheme_;
+  /**
+   * <code>string scheme = 11;</code>
+   *
+   * @return The scheme.
+   */
+  public java.lang.String getScheme() {
+    java.lang.Object ref = scheme_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      scheme_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string scheme = 11;</code>
+   *
+   * @return The bytes for scheme.
+   */
+  public com.google.protobuf.ByteString getSchemeBytes() {
+    java.lang.Object ref = scheme_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      scheme_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int URLSTYLE_FIELD_NUMBER = 12;
+  private int urlStyle_;
+  /**
+   * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+   *
+   * @return The enum numeric value on the wire for urlStyle.
+   */
+  public int getUrlStyleValue() {
+    return urlStyle_;
+  }
+  /**
+   * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+   *
+   * @return The urlStyle.
+   */
+  public com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle getUrlStyle() {
+    @SuppressWarnings("deprecation")
+    com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle result =
+        com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.valueOf(urlStyle_);
+    return result == null
+        ? com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.UNRECOGNIZED
+        : result;
+  }
+
+  public static final int BUCKETBOUNDDOMAIN_FIELD_NUMBER = 13;
+  private volatile java.lang.Object bucketBoundDomain_;
+  /**
+   * <code>string bucketBoundDomain = 13;</code>
+   *
+   * @return The bucketBoundDomain.
+   */
+  public java.lang.String getBucketBoundDomain() {
+    java.lang.Object ref = bucketBoundDomain_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      bucketBoundDomain_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string bucketBoundDomain = 13;</code>
+   *
+   * @return The bytes for bucketBoundDomain.
+   */
+  public com.google.protobuf.ByteString getBucketBoundDomainBytes() {
+    java.lang.Object ref = bucketBoundDomain_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      bucketBoundDomain_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int EXPECTEDCANONICALREQUEST_FIELD_NUMBER = 14;
+  private volatile java.lang.Object expectedCanonicalRequest_;
+  /**
+   * <code>string expectedCanonicalRequest = 14;</code>
+   *
+   * @return The expectedCanonicalRequest.
+   */
+  public java.lang.String getExpectedCanonicalRequest() {
+    java.lang.Object ref = expectedCanonicalRequest_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      expectedCanonicalRequest_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string expectedCanonicalRequest = 14;</code>
+   *
+   * @return The bytes for expectedCanonicalRequest.
+   */
+  public com.google.protobuf.ByteString getExpectedCanonicalRequestBytes() {
+    java.lang.Object ref = expectedCanonicalRequest_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      expectedCanonicalRequest_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int EXPECTEDSTRINGTOSIGN_FIELD_NUMBER = 15;
+  private volatile java.lang.Object expectedStringToSign_;
+  /**
+   * <code>string expectedStringToSign = 15;</code>
+   *
+   * @return The expectedStringToSign.
+   */
+  public java.lang.String getExpectedStringToSign() {
+    java.lang.Object ref = expectedStringToSign_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      expectedStringToSign_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string expectedStringToSign = 15;</code>
+   *
+   * @return The bytes for expectedStringToSign.
+   */
+  public com.google.protobuf.ByteString getExpectedStringToSignBytes() {
+    java.lang.Object ref = expectedStringToSign_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      expectedStringToSign_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -534,6 +920,24 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
     com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
         output, internalGetHeaders(), HeadersDefaultEntryHolder.defaultEntry, 9);
+    com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
+        output, internalGetQueryParameters(), QueryParametersDefaultEntryHolder.defaultEntry, 10);
+    if (!getSchemeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, scheme_);
+    }
+    if (urlStyle_
+        != com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.PATH_STYLE.getNumber()) {
+      output.writeEnum(12, urlStyle_);
+    }
+    if (!getBucketBoundDomainBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, bucketBoundDomain_);
+    }
+    if (!getExpectedCanonicalRequestBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, expectedCanonicalRequest_);
+    }
+    if (!getExpectedStringToSignBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, expectedStringToSign_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -577,6 +981,33 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
               .build();
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(9, headers__);
     }
+    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :
+        internalGetQueryParameters().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.String> queryParameters__ =
+          QueryParametersDefaultEntryHolder.defaultEntry
+              .newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(10, queryParameters__);
+    }
+    if (!getSchemeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, scheme_);
+    }
+    if (urlStyle_
+        != com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.PATH_STYLE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream.computeEnumSize(12, urlStyle_);
+    }
+    if (!getBucketBoundDomainBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, bucketBoundDomain_);
+    }
+    if (!getExpectedCanonicalRequestBytes().isEmpty()) {
+      size +=
+          com.google.protobuf.GeneratedMessageV3.computeStringSize(14, expectedCanonicalRequest_);
+    }
+    if (!getExpectedStringToSignBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, expectedStringToSign_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -605,6 +1036,12 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
     if (!getExpectedUrl().equals(other.getExpectedUrl())) return false;
     if (!internalGetHeaders().equals(other.internalGetHeaders())) return false;
+    if (!internalGetQueryParameters().equals(other.internalGetQueryParameters())) return false;
+    if (!getScheme().equals(other.getScheme())) return false;
+    if (urlStyle_ != other.urlStyle_) return false;
+    if (!getBucketBoundDomain().equals(other.getBucketBoundDomain())) return false;
+    if (!getExpectedCanonicalRequest().equals(other.getExpectedCanonicalRequest())) return false;
+    if (!getExpectedStringToSign().equals(other.getExpectedStringToSign())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -638,6 +1075,20 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + HEADERS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetHeaders().hashCode();
     }
+    if (!internalGetQueryParameters().getMap().isEmpty()) {
+      hash = (37 * hash) + QUERY_PARAMETERS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetQueryParameters().hashCode();
+    }
+    hash = (37 * hash) + SCHEME_FIELD_NUMBER;
+    hash = (53 * hash) + getScheme().hashCode();
+    hash = (37 * hash) + URLSTYLE_FIELD_NUMBER;
+    hash = (53 * hash) + urlStyle_;
+    hash = (37 * hash) + BUCKETBOUNDDOMAIN_FIELD_NUMBER;
+    hash = (53 * hash) + getBucketBoundDomain().hashCode();
+    hash = (37 * hash) + EXPECTEDCANONICALREQUEST_FIELD_NUMBER;
+    hash = (53 * hash) + getExpectedCanonicalRequest().hashCode();
+    hash = (37 * hash) + EXPECTEDSTRINGTOSIGN_FIELD_NUMBER;
+    hash = (53 * hash) + getExpectedStringToSign().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -754,6 +1205,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       switch (number) {
         case 9:
           return internalGetHeaders();
+        case 10:
+          return internalGetQueryParameters();
         default:
           throw new RuntimeException("Invalid map field number: " + number);
       }
@@ -764,6 +1217,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       switch (number) {
         case 9:
           return internalGetMutableHeaders();
+        case 10:
+          return internalGetMutableQueryParameters();
         default:
           throw new RuntimeException("Invalid map field number: " + number);
       }
@@ -817,6 +1272,17 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       expectedUrl_ = "";
 
       internalGetMutableHeaders().clear();
+      internalGetMutableQueryParameters().clear();
+      scheme_ = "";
+
+      urlStyle_ = 0;
+
+      bucketBoundDomain_ = "";
+
+      expectedCanonicalRequest_ = "";
+
+      expectedStringToSign_ = "";
+
       return this;
     }
 
@@ -859,6 +1325,13 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       result.expectedUrl_ = expectedUrl_;
       result.headers_ = internalGetHeaders();
       result.headers_.makeImmutable();
+      result.queryParameters_ = internalGetQueryParameters();
+      result.queryParameters_.makeImmutable();
+      result.scheme_ = scheme_;
+      result.urlStyle_ = urlStyle_;
+      result.bucketBoundDomain_ = bucketBoundDomain_;
+      result.expectedCanonicalRequest_ = expectedCanonicalRequest_;
+      result.expectedStringToSign_ = expectedStringToSign_;
       onBuilt();
       return result;
     }
@@ -940,6 +1413,26 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         onChanged();
       }
       internalGetMutableHeaders().mergeFrom(other.internalGetHeaders());
+      internalGetMutableQueryParameters().mergeFrom(other.internalGetQueryParameters());
+      if (!other.getScheme().isEmpty()) {
+        scheme_ = other.scheme_;
+        onChanged();
+      }
+      if (other.urlStyle_ != 0) {
+        setUrlStyleValue(other.getUrlStyleValue());
+      }
+      if (!other.getBucketBoundDomain().isEmpty()) {
+        bucketBoundDomain_ = other.bucketBoundDomain_;
+        onChanged();
+      }
+      if (!other.getExpectedCanonicalRequest().isEmpty()) {
+        expectedCanonicalRequest_ = other.expectedCanonicalRequest_;
+        onChanged();
+      }
+      if (!other.getExpectedStringToSign().isEmpty()) {
+        expectedStringToSign_ = other.expectedStringToSign_;
+        onChanged();
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -1665,6 +2158,471 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
     public Builder putAllHeaders(java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableHeaders().getMutableMap().putAll(values);
+      return this;
+    }
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> queryParameters_;
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetQueryParameters() {
+      if (queryParameters_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            QueryParametersDefaultEntryHolder.defaultEntry);
+      }
+      return queryParameters_;
+    }
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableQueryParameters() {
+      onChanged();
+      ;
+      if (queryParameters_ == null) {
+        queryParameters_ =
+            com.google.protobuf.MapField.newMapField(
+                QueryParametersDefaultEntryHolder.defaultEntry);
+      }
+      if (!queryParameters_.isMutable()) {
+        queryParameters_ = queryParameters_.copy();
+      }
+      return queryParameters_;
+    }
+
+    public int getQueryParametersCount() {
+      return internalGetQueryParameters().getMap().size();
+    }
+    /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+    public boolean containsQueryParameters(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      return internalGetQueryParameters().getMap().containsKey(key);
+    }
+    /** Use {@link #getQueryParametersMap()} instead. */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getQueryParameters() {
+      return getQueryParametersMap();
+    }
+    /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+    public java.util.Map<java.lang.String, java.lang.String> getQueryParametersMap() {
+      return internalGetQueryParameters().getMap();
+    }
+    /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+    public java.lang.String getQueryParametersOrDefault(
+        java.lang.String key, java.lang.String defaultValue) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetQueryParameters().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+    public java.lang.String getQueryParametersOrThrow(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetQueryParameters().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public Builder clearQueryParameters() {
+      internalGetMutableQueryParameters().getMutableMap().clear();
+      return this;
+    }
+    /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+    public Builder removeQueryParameters(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      internalGetMutableQueryParameters().getMutableMap().remove(key);
+      return this;
+    }
+    /** Use alternate mutation accessors instead. */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getMutableQueryParameters() {
+      return internalGetMutableQueryParameters().getMutableMap();
+    }
+    /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+    public Builder putQueryParameters(java.lang.String key, java.lang.String value) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      if (value == null) {
+        throw new java.lang.NullPointerException();
+      }
+      internalGetMutableQueryParameters().getMutableMap().put(key, value);
+      return this;
+    }
+    /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+    public Builder putAllQueryParameters(java.util.Map<java.lang.String, java.lang.String> values) {
+      internalGetMutableQueryParameters().getMutableMap().putAll(values);
+      return this;
+    }
+
+    private java.lang.Object scheme_ = "";
+    /**
+     * <code>string scheme = 11;</code>
+     *
+     * @return The scheme.
+     */
+    public java.lang.String getScheme() {
+      java.lang.Object ref = scheme_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scheme_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string scheme = 11;</code>
+     *
+     * @return The bytes for scheme.
+     */
+    public com.google.protobuf.ByteString getSchemeBytes() {
+      java.lang.Object ref = scheme_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        scheme_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string scheme = 11;</code>
+     *
+     * @param value The scheme to set.
+     * @return This builder for chaining.
+     */
+    public Builder setScheme(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+
+      scheme_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string scheme = 11;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearScheme() {
+
+      scheme_ = getDefaultInstance().getScheme();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string scheme = 11;</code>
+     *
+     * @param value The bytes for scheme to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSchemeBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
+      scheme_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int urlStyle_ = 0;
+    /**
+     * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+     *
+     * @return The enum numeric value on the wire for urlStyle.
+     */
+    public int getUrlStyleValue() {
+      return urlStyle_;
+    }
+    /**
+     * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+     *
+     * @param value The enum numeric value on the wire for urlStyle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUrlStyleValue(int value) {
+      urlStyle_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+     *
+     * @return The urlStyle.
+     */
+    public com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle getUrlStyle() {
+      @SuppressWarnings("deprecation")
+      com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle result =
+          com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.valueOf(urlStyle_);
+      return result == null
+          ? com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.UNRECOGNIZED
+          : result;
+    }
+    /**
+     * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+     *
+     * @param value The urlStyle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUrlStyle(
+        com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+
+      urlStyle_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearUrlStyle() {
+
+      urlStyle_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object bucketBoundDomain_ = "";
+    /**
+     * <code>string bucketBoundDomain = 13;</code>
+     *
+     * @return The bucketBoundDomain.
+     */
+    public java.lang.String getBucketBoundDomain() {
+      java.lang.Object ref = bucketBoundDomain_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bucketBoundDomain_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string bucketBoundDomain = 13;</code>
+     *
+     * @return The bytes for bucketBoundDomain.
+     */
+    public com.google.protobuf.ByteString getBucketBoundDomainBytes() {
+      java.lang.Object ref = bucketBoundDomain_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        bucketBoundDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string bucketBoundDomain = 13;</code>
+     *
+     * @param value The bucketBoundDomain to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBucketBoundDomain(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+
+      bucketBoundDomain_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string bucketBoundDomain = 13;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearBucketBoundDomain() {
+
+      bucketBoundDomain_ = getDefaultInstance().getBucketBoundDomain();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string bucketBoundDomain = 13;</code>
+     *
+     * @param value The bytes for bucketBoundDomain to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBucketBoundDomainBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
+      bucketBoundDomain_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object expectedCanonicalRequest_ = "";
+    /**
+     * <code>string expectedCanonicalRequest = 14;</code>
+     *
+     * @return The expectedCanonicalRequest.
+     */
+    public java.lang.String getExpectedCanonicalRequest() {
+      java.lang.Object ref = expectedCanonicalRequest_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        expectedCanonicalRequest_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string expectedCanonicalRequest = 14;</code>
+     *
+     * @return The bytes for expectedCanonicalRequest.
+     */
+    public com.google.protobuf.ByteString getExpectedCanonicalRequestBytes() {
+      java.lang.Object ref = expectedCanonicalRequest_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        expectedCanonicalRequest_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string expectedCanonicalRequest = 14;</code>
+     *
+     * @param value The expectedCanonicalRequest to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExpectedCanonicalRequest(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+
+      expectedCanonicalRequest_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string expectedCanonicalRequest = 14;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearExpectedCanonicalRequest() {
+
+      expectedCanonicalRequest_ = getDefaultInstance().getExpectedCanonicalRequest();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string expectedCanonicalRequest = 14;</code>
+     *
+     * @param value The bytes for expectedCanonicalRequest to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExpectedCanonicalRequestBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
+      expectedCanonicalRequest_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object expectedStringToSign_ = "";
+    /**
+     * <code>string expectedStringToSign = 15;</code>
+     *
+     * @return The expectedStringToSign.
+     */
+    public java.lang.String getExpectedStringToSign() {
+      java.lang.Object ref = expectedStringToSign_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        expectedStringToSign_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string expectedStringToSign = 15;</code>
+     *
+     * @return The bytes for expectedStringToSign.
+     */
+    public com.google.protobuf.ByteString getExpectedStringToSignBytes() {
+      java.lang.Object ref = expectedStringToSign_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        expectedStringToSign_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string expectedStringToSign = 15;</code>
+     *
+     * @param value The expectedStringToSign to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExpectedStringToSign(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+
+      expectedStringToSign_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string expectedStringToSign = 15;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearExpectedStringToSign() {
+
+      expectedStringToSign_ = getDefaultInstance().getExpectedStringToSign();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string expectedStringToSign = 15;</code>
+     *
+     * @param value The bytes for expectedStringToSign to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExpectedStringToSignBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
+      expectedStringToSign_ = value;
+      onChanged();
       return this;
     }
 

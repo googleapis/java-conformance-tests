@@ -136,4 +136,83 @@ public interface SigningV4TestOrBuilder
   java.lang.String getHeadersOrDefault(java.lang.String key, java.lang.String defaultValue);
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   java.lang.String getHeadersOrThrow(java.lang.String key);
+
+  /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  int getQueryParametersCount();
+  /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  boolean containsQueryParameters(java.lang.String key);
+  /** Use {@link #getQueryParametersMap()} instead. */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.String> getQueryParameters();
+  /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  java.util.Map<java.lang.String, java.lang.String> getQueryParametersMap();
+  /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  java.lang.String getQueryParametersOrDefault(java.lang.String key, java.lang.String defaultValue);
+  /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  java.lang.String getQueryParametersOrThrow(java.lang.String key);
+
+  /**
+   * <code>string scheme = 11;</code>
+   *
+   * @return The scheme.
+   */
+  java.lang.String getScheme();
+  /**
+   * <code>string scheme = 11;</code>
+   *
+   * @return The bytes for scheme.
+   */
+  com.google.protobuf.ByteString getSchemeBytes();
+
+  /**
+   * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+   *
+   * @return The enum numeric value on the wire for urlStyle.
+   */
+  int getUrlStyleValue();
+  /**
+   * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+   *
+   * @return The urlStyle.
+   */
+  com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle getUrlStyle();
+
+  /**
+   * <code>string bucketBoundDomain = 13;</code>
+   *
+   * @return The bucketBoundDomain.
+   */
+  java.lang.String getBucketBoundDomain();
+  /**
+   * <code>string bucketBoundDomain = 13;</code>
+   *
+   * @return The bytes for bucketBoundDomain.
+   */
+  com.google.protobuf.ByteString getBucketBoundDomainBytes();
+
+  /**
+   * <code>string expectedCanonicalRequest = 14;</code>
+   *
+   * @return The expectedCanonicalRequest.
+   */
+  java.lang.String getExpectedCanonicalRequest();
+  /**
+   * <code>string expectedCanonicalRequest = 14;</code>
+   *
+   * @return The bytes for expectedCanonicalRequest.
+   */
+  com.google.protobuf.ByteString getExpectedCanonicalRequestBytes();
+
+  /**
+   * <code>string expectedStringToSign = 15;</code>
+   *
+   * @return The expectedStringToSign.
+   */
+  java.lang.String getExpectedStringToSign();
+  /**
+   * <code>string expectedStringToSign = 15;</code>
+   *
+   * @return The bytes for expectedStringToSign.
+   */
+  com.google.protobuf.ByteString getExpectedStringToSignBytes();
 }
