@@ -1,0 +1,332 @@
+2020-01-30 15:10:24 Cleaning existing generated protos
+2020-01-30 15:10:24 Cleaning existing test definitions
+2020-01-30 15:10:24 Cleaning existing proto files
+2020-01-30 15:10:24 Copying new proto files
+2020-01-30 15:10:24 Copying new test definitions
+2020-01-30 15:10:24 Generating protos
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.cloud:google-cloud-conformance-tests:jar:0.0.5-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM com.google.cloud:google-cloud-conformance-tests:0.0.5-SNAPSHOT (/usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/pom.xml) points at com.google.cloud:google-cloud-java-all instead of com.google.cloud:google-cloud-shared-config, please verify your project structure @ line 10, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.2
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 2
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: rodete
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] 
+[INFO] ----------< com.google.cloud:google-cloud-conformance-tests >-----------
+[INFO] Building google-cloud-conformance-tests 0.0.5-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ google-cloud-conformance-tests ---
+[INFO] Deleting /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce) @ google-cloud-conformance-tests ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (checkstyle) @ google-cloud-conformance-tests ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ google-cloud-conformance-tests ---
+[INFO] argLine set to -javaagent:/usr/local/google/home/benwhitehead/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/jacoco.exec
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.6.1:compile (generate-main) @ google-cloud-conformance-tests ---
+[INFO] Compiling 3 proto file(s) to /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java
+[INFO] 
+[INFO] --- license-maven-plugin:3.0:format (license-main) @ google-cloud-conformance-tests ---
+[INFO] Updating license headers...
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/SigningV4TestOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PostPolicyV4TestOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyConditions.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyInput.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/bigtable/v2/TestDefinition.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyOutputOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyInputOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PostPolicyV4Test.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/ConditionalMatches.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/TestFileOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/SigningV4Test.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/Tests.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/ConditionalMatchesOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/TestFile.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyOutput.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyConditionsOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/firestore/v1/TestDefinition.java
+[INFO] 
+[INFO] --- fmt-maven-plugin:2.9:format (format-main) @ google-cloud-conformance-tests ---
+[INFO] Processed 19 files (17 reformatted).
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-resource (add-main-proto-resources) @ google-cloud-conformance-tests ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ google-cloud-conformance-tests ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 227 resources
+[INFO] Copying 3 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ google-cloud-conformance-tests ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 18 source files to /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.7
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.6.1:test-compile (generate-test) @ google-cloud-conformance-tests ---
+[INFO] /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/src/test/proto does not exist. Review the configuration or consider disabling the plugin.
+[INFO] 
+[INFO] --- license-maven-plugin:3.0:format (license-test) @ google-cloud-conformance-tests ---
+[INFO] Updating license headers...
+[INFO] 
+[INFO] --- fmt-maven-plugin:2.9:format (format-test) @ google-cloud-conformance-tests ---
+[INFO] Processed 19 files (0 reformatted).
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-test-resource (add-test-proto-resources) @ google-cloud-conformance-tests ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ google-cloud-conformance-tests ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] skip non existing resourceDirectory /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/src/test/proto
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ google-cloud-conformance-tests ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/test-classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.7
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M4:test (default-test) @ google-cloud-conformance-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.google.cloud.conformance.ConformanceTestLocatorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s - in com.google.cloud.conformance.ConformanceTestLocatorTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:report (report) @ google-cloud-conformance-tests ---
+[INFO] Loading execution data file /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/jacoco.exec
+[INFO] Analyzed bundle 'google-cloud-conformance-tests' with 105 classes
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ google-cloud-conformance-tests ---
+[INFO] Building jar: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/google-cloud-conformance-tests-0.0.5-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:test-jar (default) @ google-cloud-conformance-tests ---
+[INFO] Building jar: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/google-cloud-conformance-tests-0.0.5-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:3.0.0-M4:integration-test (default) @ google-cloud-conformance-tests ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:3.0.0-M4:verify (default) @ google-cloud-conformance-tests ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] >>> clirr-maven-plugin:2.8:check (default) > compile @ google-cloud-conformance-tests >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce) @ google-cloud-conformance-tests ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (checkstyle) @ google-cloud-conformance-tests ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ google-cloud-conformance-tests ---
+[INFO] argLine set to -javaagent:/usr/local/google/home/benwhitehead/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/jacoco.exec
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.6.1:compile (generate-main) @ google-cloud-conformance-tests ---
+[INFO] Compiling 3 proto file(s) to /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java
+[INFO] 
+[INFO] --- license-maven-plugin:3.0:format (license-main) @ google-cloud-conformance-tests ---
+[INFO] Updating license headers...
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PostPolicyV4TestOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/ConditionalMatches.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PostPolicyV4Test.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/ConditionalMatchesOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/TestFile.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/bigtable/v2/TestDefinition.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyConditionsOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyInputOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyOutputOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/firestore/v1/TestDefinition.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyOutput.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyConditions.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/PolicyInput.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/TestFileOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/SigningV4TestOrBuilder.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/Tests.java
+[INFO] Updating license header in: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/generated-sources/protobuf/java/com/google/cloud/conformance/storage/v1/SigningV4Test.java
+[INFO] 
+[INFO] --- fmt-maven-plugin:2.9:format (format-main) @ google-cloud-conformance-tests ---
+[INFO] Processed 19 files (17 reformatted).
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-resource (add-main-proto-resources) @ google-cloud-conformance-tests ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ google-cloud-conformance-tests ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 227 resources
+[INFO] Copying 3 resources
+[INFO] Copying 3 resources
+[INFO] Copying 3 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ google-cloud-conformance-tests ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 18 source files to /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.7
+[INFO] 
+[INFO] <<< clirr-maven-plugin:2.8:check (default) < compile @ google-cloud-conformance-tests <<<
+[INFO] 
+[INFO] 
+[INFO] --- clirr-maven-plugin:2.8:check (default) @ google-cloud-conformance-tests ---
+[INFO] artifact com.google.cloud:google-cloud-conformance-tests: checking for updates from central
+[INFO] Comparing to version: 0.0.4
+[INFO] Succeeded with 0 errors; 0 warnings; and 0 other changes.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.847 s
+[INFO] Finished at: 2020-01-30T15:10:34-05:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.cloud:google-cloud-conformance-tests:jar:0.0.5-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM com.google.cloud:google-cloud-conformance-tests:0.0.5-SNAPSHOT (/usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/pom.xml) points at com.google.cloud:google-cloud-java-all instead of com.google.cloud:google-cloud-shared-config, please verify your project structure @ line 10, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.2
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 2
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: rodete
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] 
+[INFO] ----------< com.google.cloud:google-cloud-conformance-tests >-----------
+[INFO] Building google-cloud-conformance-tests 0.0.5-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ google-cloud-conformance-tests ---
+[INFO] Deleting /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.525 s
+[INFO] Finished at: 2020-01-30T15:10:35-05:00
+[INFO] ------------------------------------------------------------------------
+2020-01-30 15:10:35 Building module...
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.cloud:google-cloud-conformance-tests:jar:0.0.5-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM com.google.cloud:google-cloud-conformance-tests:0.0.5-SNAPSHOT (/usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/pom.xml) points at com.google.cloud:google-cloud-java-all instead of com.google.cloud:google-cloud-shared-config, please verify your project structure @ line 10, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.2
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 2
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: rodete
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] 
+[INFO] ----------< com.google.cloud:google-cloud-conformance-tests >-----------
+[INFO] Building google-cloud-conformance-tests 0.0.5-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ google-cloud-conformance-tests ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce) @ google-cloud-conformance-tests ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (checkstyle) @ google-cloud-conformance-tests ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ google-cloud-conformance-tests ---
+[INFO] argLine set to -javaagent:/usr/local/google/home/benwhitehead/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/jacoco.exec
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-resource (add-main-proto-resources) @ google-cloud-conformance-tests ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ google-cloud-conformance-tests ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 227 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ google-cloud-conformance-tests ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 18 source files to /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.7
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-test-resource (add-test-proto-resources) @ google-cloud-conformance-tests ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ google-cloud-conformance-tests ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] skip non existing resourceDirectory /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/src/test/proto
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ google-cloud-conformance-tests ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/test-classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.7
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M4:test (default-test) @ google-cloud-conformance-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.google.cloud.conformance.ConformanceTestLocatorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s - in com.google.cloud.conformance.ConformanceTestLocatorTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:report (report) @ google-cloud-conformance-tests ---
+[INFO] Loading execution data file /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/jacoco.exec
+[INFO] Analyzed bundle 'google-cloud-conformance-tests' with 105 classes
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ google-cloud-conformance-tests ---
+[INFO] Building jar: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/google-cloud-conformance-tests-0.0.5-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:test-jar (default) @ google-cloud-conformance-tests ---
+[INFO] Building jar: /usr/local/google/home/benwhitehead/src/github.com/googleapis/java/conformance-tests/target/google-cloud-conformance-tests-0.0.5-SNAPSHOT-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.493 s
+[INFO] Finished at: 2020-01-30T15:10:40-05:00
+[INFO] ------------------------------------------------------------------------
+2020-01-30 15:10:40 Complete

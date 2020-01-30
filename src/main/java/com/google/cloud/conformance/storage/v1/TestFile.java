@@ -31,6 +31,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
 
   private TestFile() {
     signingV4Tests_ = java.util.Collections.emptyList();
+    postPolicyV4Tests_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -77,6 +78,20 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
                       extensionRegistry));
               break;
             }
+          case 18:
+            {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                postPolicyV4Tests_ =
+                    new java.util.ArrayList<
+                        com.google.cloud.conformance.storage.v1.PostPolicyV4Test>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              postPolicyV4Tests_.add(
+                  input.readMessage(
+                      com.google.cloud.conformance.storage.v1.PostPolicyV4Test.parser(),
+                      extensionRegistry));
+              break;
+            }
           default:
             {
               if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -93,6 +108,9 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         signingV4Tests_ = java.util.Collections.unmodifiableList(signingV4Tests_);
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        postPolicyV4Tests_ = java.util.Collections.unmodifiableList(postPolicyV4Tests_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -150,6 +168,48 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
     return signingV4Tests_.get(index);
   }
 
+  public static final int POST_POLICY_V4_TESTS_FIELD_NUMBER = 2;
+  private java.util.List<com.google.cloud.conformance.storage.v1.PostPolicyV4Test>
+      postPolicyV4Tests_;
+  /**
+   * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+   * </code>
+   */
+  public java.util.List<com.google.cloud.conformance.storage.v1.PostPolicyV4Test>
+      getPostPolicyV4TestsList() {
+    return postPolicyV4Tests_;
+  }
+  /**
+   * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+   * </code>
+   */
+  public java.util.List<? extends com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder>
+      getPostPolicyV4TestsOrBuilderList() {
+    return postPolicyV4Tests_;
+  }
+  /**
+   * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+   * </code>
+   */
+  public int getPostPolicyV4TestsCount() {
+    return postPolicyV4Tests_.size();
+  }
+  /**
+   * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+   * </code>
+   */
+  public com.google.cloud.conformance.storage.v1.PostPolicyV4Test getPostPolicyV4Tests(int index) {
+    return postPolicyV4Tests_.get(index);
+  }
+  /**
+   * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+   * </code>
+   */
+  public com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder
+      getPostPolicyV4TestsOrBuilder(int index) {
+    return postPolicyV4Tests_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -167,6 +227,9 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
     for (int i = 0; i < signingV4Tests_.size(); i++) {
       output.writeMessage(1, signingV4Tests_.get(i));
     }
+    for (int i = 0; i < postPolicyV4Tests_.size(); i++) {
+      output.writeMessage(2, postPolicyV4Tests_.get(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -178,6 +241,10 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
     size = 0;
     for (int i = 0; i < signingV4Tests_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, signingV4Tests_.get(i));
+    }
+    for (int i = 0; i < postPolicyV4Tests_.size(); i++) {
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(2, postPolicyV4Tests_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -196,6 +263,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
         (com.google.cloud.conformance.storage.v1.TestFile) obj;
 
     if (!getSigningV4TestsList().equals(other.getSigningV4TestsList())) return false;
+    if (!getPostPolicyV4TestsList().equals(other.getPostPolicyV4TestsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -210,6 +278,10 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
     if (getSigningV4TestsCount() > 0) {
       hash = (37 * hash) + SIGNING_V4_TESTS_FIELD_NUMBER;
       hash = (53 * hash) + getSigningV4TestsList().hashCode();
+    }
+    if (getPostPolicyV4TestsCount() > 0) {
+      hash = (37 * hash) + POST_POLICY_V4_TESTS_FIELD_NUMBER;
+      hash = (53 * hash) + getPostPolicyV4TestsList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -344,6 +416,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getSigningV4TestsFieldBuilder();
+        getPostPolicyV4TestsFieldBuilder();
       }
     }
 
@@ -355,6 +428,12 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
         bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         signingV4TestsBuilder_.clear();
+      }
+      if (postPolicyV4TestsBuilder_ == null) {
+        postPolicyV4Tests_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      } else {
+        postPolicyV4TestsBuilder_.clear();
       }
       return this;
     }
@@ -392,6 +471,15 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
         result.signingV4Tests_ = signingV4Tests_;
       } else {
         result.signingV4Tests_ = signingV4TestsBuilder_.build();
+      }
+      if (postPolicyV4TestsBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          postPolicyV4Tests_ = java.util.Collections.unmodifiableList(postPolicyV4Tests_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.postPolicyV4Tests_ = postPolicyV4Tests_;
+      } else {
+        result.postPolicyV4Tests_ = postPolicyV4TestsBuilder_.build();
       }
       onBuilt();
       return result;
@@ -467,6 +555,33 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
                     : null;
           } else {
             signingV4TestsBuilder_.addAllMessages(other.signingV4Tests_);
+          }
+        }
+      }
+      if (postPolicyV4TestsBuilder_ == null) {
+        if (!other.postPolicyV4Tests_.isEmpty()) {
+          if (postPolicyV4Tests_.isEmpty()) {
+            postPolicyV4Tests_ = other.postPolicyV4Tests_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensurePostPolicyV4TestsIsMutable();
+            postPolicyV4Tests_.addAll(other.postPolicyV4Tests_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.postPolicyV4Tests_.isEmpty()) {
+          if (postPolicyV4TestsBuilder_.isEmpty()) {
+            postPolicyV4TestsBuilder_.dispose();
+            postPolicyV4TestsBuilder_ = null;
+            postPolicyV4Tests_ = other.postPolicyV4Tests_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            postPolicyV4TestsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getPostPolicyV4TestsFieldBuilder()
+                    : null;
+          } else {
+            postPolicyV4TestsBuilder_.addAllMessages(other.postPolicyV4Tests_);
           }
         }
       }
@@ -773,6 +888,304 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
         signingV4Tests_ = null;
       }
       return signingV4TestsBuilder_;
+    }
+
+    private java.util.List<com.google.cloud.conformance.storage.v1.PostPolicyV4Test>
+        postPolicyV4Tests_ = java.util.Collections.emptyList();
+
+    private void ensurePostPolicyV4TestsIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        postPolicyV4Tests_ =
+            new java.util.ArrayList<com.google.cloud.conformance.storage.v1.PostPolicyV4Test>(
+                postPolicyV4Tests_);
+        bitField0_ |= 0x00000002;
+      }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.cloud.conformance.storage.v1.PostPolicyV4Test,
+            com.google.cloud.conformance.storage.v1.PostPolicyV4Test.Builder,
+            com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder>
+        postPolicyV4TestsBuilder_;
+
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public java.util.List<com.google.cloud.conformance.storage.v1.PostPolicyV4Test>
+        getPostPolicyV4TestsList() {
+      if (postPolicyV4TestsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(postPolicyV4Tests_);
+      } else {
+        return postPolicyV4TestsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public int getPostPolicyV4TestsCount() {
+      if (postPolicyV4TestsBuilder_ == null) {
+        return postPolicyV4Tests_.size();
+      } else {
+        return postPolicyV4TestsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public com.google.cloud.conformance.storage.v1.PostPolicyV4Test getPostPolicyV4Tests(
+        int index) {
+      if (postPolicyV4TestsBuilder_ == null) {
+        return postPolicyV4Tests_.get(index);
+      } else {
+        return postPolicyV4TestsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public Builder setPostPolicyV4Tests(
+        int index, com.google.cloud.conformance.storage.v1.PostPolicyV4Test value) {
+      if (postPolicyV4TestsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePostPolicyV4TestsIsMutable();
+        postPolicyV4Tests_.set(index, value);
+        onChanged();
+      } else {
+        postPolicyV4TestsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public Builder setPostPolicyV4Tests(
+        int index,
+        com.google.cloud.conformance.storage.v1.PostPolicyV4Test.Builder builderForValue) {
+      if (postPolicyV4TestsBuilder_ == null) {
+        ensurePostPolicyV4TestsIsMutable();
+        postPolicyV4Tests_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        postPolicyV4TestsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public Builder addPostPolicyV4Tests(
+        com.google.cloud.conformance.storage.v1.PostPolicyV4Test value) {
+      if (postPolicyV4TestsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePostPolicyV4TestsIsMutable();
+        postPolicyV4Tests_.add(value);
+        onChanged();
+      } else {
+        postPolicyV4TestsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public Builder addPostPolicyV4Tests(
+        int index, com.google.cloud.conformance.storage.v1.PostPolicyV4Test value) {
+      if (postPolicyV4TestsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePostPolicyV4TestsIsMutable();
+        postPolicyV4Tests_.add(index, value);
+        onChanged();
+      } else {
+        postPolicyV4TestsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public Builder addPostPolicyV4Tests(
+        com.google.cloud.conformance.storage.v1.PostPolicyV4Test.Builder builderForValue) {
+      if (postPolicyV4TestsBuilder_ == null) {
+        ensurePostPolicyV4TestsIsMutable();
+        postPolicyV4Tests_.add(builderForValue.build());
+        onChanged();
+      } else {
+        postPolicyV4TestsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public Builder addPostPolicyV4Tests(
+        int index,
+        com.google.cloud.conformance.storage.v1.PostPolicyV4Test.Builder builderForValue) {
+      if (postPolicyV4TestsBuilder_ == null) {
+        ensurePostPolicyV4TestsIsMutable();
+        postPolicyV4Tests_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        postPolicyV4TestsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public Builder addAllPostPolicyV4Tests(
+        java.lang.Iterable<? extends com.google.cloud.conformance.storage.v1.PostPolicyV4Test>
+            values) {
+      if (postPolicyV4TestsBuilder_ == null) {
+        ensurePostPolicyV4TestsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, postPolicyV4Tests_);
+        onChanged();
+      } else {
+        postPolicyV4TestsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public Builder clearPostPolicyV4Tests() {
+      if (postPolicyV4TestsBuilder_ == null) {
+        postPolicyV4Tests_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        postPolicyV4TestsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public Builder removePostPolicyV4Tests(int index) {
+      if (postPolicyV4TestsBuilder_ == null) {
+        ensurePostPolicyV4TestsIsMutable();
+        postPolicyV4Tests_.remove(index);
+        onChanged();
+      } else {
+        postPolicyV4TestsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public com.google.cloud.conformance.storage.v1.PostPolicyV4Test.Builder
+        getPostPolicyV4TestsBuilder(int index) {
+      return getPostPolicyV4TestsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder
+        getPostPolicyV4TestsOrBuilder(int index) {
+      if (postPolicyV4TestsBuilder_ == null) {
+        return postPolicyV4Tests_.get(index);
+      } else {
+        return postPolicyV4TestsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public java.util.List<
+            ? extends com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder>
+        getPostPolicyV4TestsOrBuilderList() {
+      if (postPolicyV4TestsBuilder_ != null) {
+        return postPolicyV4TestsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(postPolicyV4Tests_);
+      }
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public com.google.cloud.conformance.storage.v1.PostPolicyV4Test.Builder
+        addPostPolicyV4TestsBuilder() {
+      return getPostPolicyV4TestsFieldBuilder()
+          .addBuilder(
+              com.google.cloud.conformance.storage.v1.PostPolicyV4Test.getDefaultInstance());
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public com.google.cloud.conformance.storage.v1.PostPolicyV4Test.Builder
+        addPostPolicyV4TestsBuilder(int index) {
+      return getPostPolicyV4TestsFieldBuilder()
+          .addBuilder(
+              index, com.google.cloud.conformance.storage.v1.PostPolicyV4Test.getDefaultInstance());
+    }
+    /**
+     * <code>
+     * repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+     * </code>
+     */
+    public java.util.List<com.google.cloud.conformance.storage.v1.PostPolicyV4Test.Builder>
+        getPostPolicyV4TestsBuilderList() {
+      return getPostPolicyV4TestsFieldBuilder().getBuilderList();
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.cloud.conformance.storage.v1.PostPolicyV4Test,
+            com.google.cloud.conformance.storage.v1.PostPolicyV4Test.Builder,
+            com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder>
+        getPostPolicyV4TestsFieldBuilder() {
+      if (postPolicyV4TestsBuilder_ == null) {
+        postPolicyV4TestsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.cloud.conformance.storage.v1.PostPolicyV4Test,
+                com.google.cloud.conformance.storage.v1.PostPolicyV4Test.Builder,
+                com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder>(
+                postPolicyV4Tests_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        postPolicyV4Tests_ = null;
+      }
+      return postPolicyV4TestsBuilder_;
     }
 
     @java.lang.Override

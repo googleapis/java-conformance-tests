@@ -45,4 +45,33 @@ public interface TestFileOrBuilder
    */
   com.google.cloud.conformance.storage.v1.SigningV4TestOrBuilder getSigningV4TestsOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+   * </code>
+   */
+  java.util.List<com.google.cloud.conformance.storage.v1.PostPolicyV4Test>
+      getPostPolicyV4TestsList();
+  /**
+   * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+   * </code>
+   */
+  com.google.cloud.conformance.storage.v1.PostPolicyV4Test getPostPolicyV4Tests(int index);
+  /**
+   * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+   * </code>
+   */
+  int getPostPolicyV4TestsCount();
+  /**
+   * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+   * </code>
+   */
+  java.util.List<? extends com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder>
+      getPostPolicyV4TestsOrBuilderList();
+  /**
+   * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
+   * </code>
+   */
+  com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder getPostPolicyV4TestsOrBuilder(
+      int index);
 }
