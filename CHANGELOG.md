@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.0.5](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.4...v0.0.5) (2020-01-30)
+
+
+### Dependencies
+
+* bump conformance-tests to 06fa568823de852fedc36a8be5da3caa5b3ea051 ([#60](https://www.github.com/googleapis/java-conformance-tests/issues/60)) ([f9c72c6](https://www.github.com/googleapis/java-conformance-tests/commit/f9c72c6ea057c0768d287b4bd44269b9dcede43c))
+
 ### [0.0.4](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.3...v0.0.4) (2020-01-14)
 
 
