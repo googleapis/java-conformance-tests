@@ -1,18 +1,18 @@
 {
-  "updateTime": "2020-02-21T23:10:17.442956Z",
+  "updateTime": "2020-02-22T10:15:39.436834Z",
   "sources": [
     {
       "generator": {
         "name": "artman",
-        "version": "0.45.0",
-        "dockerImage": "googleapis/artman@sha256:6aec9c34db0e4be221cdaf6faba27bdc07cfea846808b3d3b964dfce3a9a0f9b"
+        "version": "0.45.1",
+        "dockerImage": "googleapis/artman@sha256:36956ca6a4dc70a59de5d5d0fd35061b050bb56884516f0898f46d8220f25738"
       }
     },
     {
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-conformance-tests.git",
-        "sha": "76675e0fd4f7bd5a7666516340b7c54599e9a590"
+        "sha": "37f369d4408f078a525deebce148dc4e1672b30b"
       }
     },
     {
