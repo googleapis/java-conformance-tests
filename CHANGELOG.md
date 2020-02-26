@@ -1,5 +1,16 @@
 # Changelog
 
+### [0.0.6](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.5...v0.0.6) (2020-02-26)
+
+
+### Dependencies
+
+* bump conformance-tests to 4475caa202b22f296010d74beeddfcfcec465ea6 ([#76](https://www.github.com/googleapis/java-conformance-tests/issues/76)) ([f0229f3](https://www.github.com/googleapis/java-conformance-tests/commit/f0229f33f8e9039f71c6258602f87af2a62e48ad))
+* update dependency com.google.cloud:google-cloud-bom to v0.122.0-alpha ([#66](https://www.github.com/googleapis/java-conformance-tests/issues/66)) ([f9b2330](https://www.github.com/googleapis/java-conformance-tests/commit/f9b2330709286f6be621bf0305a4ca5c30b01819))
+* update dependency com.google.cloud:google-cloud-bom to v0.122.1-alpha ([#68](https://www.github.com/googleapis/java-conformance-tests/issues/68)) ([27e21cc](https://www.github.com/googleapis/java-conformance-tests/commit/27e21cc2c92208822a6bcfb6476fed0f0fe877e6))
+* update dependency com.google.protobuf:protobuf-java to v3.11.3 ([#64](https://www.github.com/googleapis/java-conformance-tests/issues/64)) ([a566a78](https://www.github.com/googleapis/java-conformance-tests/commit/a566a7881b02a24b19dc7dc8f6032532188ebbd6))
+* update dependency com.google.protobuf:protobuf-java to v3.11.4 ([#71](https://www.github.com/googleapis/java-conformance-tests/issues/71)) ([76675e0](https://www.github.com/googleapis/java-conformance-tests/commit/76675e0fd4f7bd5a7666516340b7c54599e9a590))
+
 ### [0.0.5](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.4...v0.0.5) (2020-01-30)
 
 
