@@ -20,7 +20,7 @@ function gitLog() {
     formattedLog="$formattedLog\n$formattedLine"
   done
 
-  echo "$formattedLog"
+  echo -e "$formattedLog"
 }
 
 function main() { (
