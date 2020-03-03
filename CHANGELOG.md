@@ -1,5 +1,19 @@
 # Changelog
 
+### [0.0.7](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.6...v0.0.7) (2020-03-03)
+
+
+### Bug Fixes
+
+* update echo statement to evaluate new-line characters ([#82](https://www.github.com/googleapis/java-conformance-tests/issues/82)) ([8965302](https://www.github.com/googleapis/java-conformance-tests/commit/89653025021ae3de2c01a47e50fa96a16ccf83a9))
+
+
+### Dependencies
+
+* bump conformance-tests to 4fa0699d03a23ae42036ea9da56e5ca7b9485f4d ([#81](https://www.github.com/googleapis/java-conformance-tests/issues/81)) ([2495895](https://www.github.com/googleapis/java-conformance-tests/commit/249589558a589a474ca2ab867f4824cb16cca4a1)), closes [#24](https://www.github.com/googleapis/java-conformance-tests/issues/24)
+* update dependency com.google.cloud:google-cloud-bom to v0.122.2-alpha ([#70](https://www.github.com/googleapis/java-conformance-tests/issues/70)) ([aba3ad1](https://www.github.com/googleapis/java-conformance-tests/commit/aba3ad110988b19bd6b7d6512f828f33b0fd4222))
+* update dependency com.google.cloud:google-cloud-bom to v0.122.3-alpha ([#84](https://www.github.com/googleapis/java-conformance-tests/issues/84)) ([54547cc](https://www.github.com/googleapis/java-conformance-tests/commit/54547cc64715cc73fad0c651ab5be778df41e16a))
+
 ### [0.0.6](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.5...v0.0.6) (2020-02-26)
 
 
