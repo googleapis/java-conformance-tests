@@ -9,6 +9,12 @@ function gitSha() {
   git rev-parse --verify HEAD
 }
 
+function cleanLogLine() {
+  echo ${1} \
+    | sed -E 's@^@https://github.com/googleapis/conformance-tests/commit/@g' \
+    | sed -E 's@#([1-9][0-9]+)@[#\1](https://github.com/googleapis/conformance-tests/pull/\1)@g'
+}
+
 function gitLog() {
 
   local rawLog=$(git log --decorate=no --oneline $1..$2)
@@ -16,7 +22,7 @@ function gitLog() {
   IFS=$'\n'
   for line in ${rawLog}; do
     msg "Including revision: $line"
-    formattedLine=$(echo ${line} | sed 's#^#https://github.com/googleapis/conformance-tests/commit/#g')
+    formattedLine=$(cleanLogLine "${line}")
     formattedLog="$formattedLog\n$formattedLine"
   done
 
