@@ -37,6 +37,10 @@ function main() { (
   git pull >> ${LOG_FILE} 2>&1
   updatedSha=$(gitSha)
   msg "Updated revision: conformance-tests@$updatedSha"
+  if [[ "$currentSha" == "$updatedSha" ]]; then
+    msg "Current and updated revision are the same, nothing to do."
+    return 0
+  fi
 
   changes=$(gitLog ${currentSha} ${updatedSha})
   popd > /dev/null
