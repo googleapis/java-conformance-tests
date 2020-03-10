@@ -165,30 +165,30 @@ public interface SigningV4TestOrBuilder
   com.google.protobuf.ByteString getSchemeBytes();
 
   /**
-   * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+   * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
    *
    * @return The enum numeric value on the wire for urlStyle.
    */
   int getUrlStyleValue();
   /**
-   * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+   * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
    *
    * @return The urlStyle.
    */
-  com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle getUrlStyle();
+  com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle();
 
   /**
-   * <code>string bucketBoundDomain = 13;</code>
+   * <code>string bucketBoundHostname = 13;</code>
    *
-   * @return The bucketBoundDomain.
+   * @return The bucketBoundHostname.
    */
-  java.lang.String getBucketBoundDomain();
+  java.lang.String getBucketBoundHostname();
   /**
-   * <code>string bucketBoundDomain = 13;</code>
+   * <code>string bucketBoundHostname = 13;</code>
    *
-   * @return The bytes for bucketBoundDomain.
+   * @return The bytes for bucketBoundHostname.
    */
-  com.google.protobuf.ByteString getBucketBoundDomainBytes();
+  com.google.protobuf.ByteString getBucketBoundHostnameBytes();
 
   /**
    * <code>string expectedCanonicalRequest = 14;</code>

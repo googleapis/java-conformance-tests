@@ -31,6 +31,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
   private PolicyInput() {
     scheme_ = "";
+    urlStyle_ = 0;
+    bucketBoundHostname_ = "";
     bucket_ = "";
     object_ = "";
   }
@@ -72,26 +74,40 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
               scheme_ = s;
               break;
             }
-          case 18:
+          case 16:
             {
-              java.lang.String s = input.readStringRequireUtf8();
+              int rawValue = input.readEnum();
 
-              bucket_ = s;
+              urlStyle_ = rawValue;
               break;
             }
           case 26:
             {
               java.lang.String s = input.readStringRequireUtf8();
 
-              object_ = s;
+              bucketBoundHostname_ = s;
               break;
             }
-          case 32:
+          case 34:
             {
-              expiration_ = input.readInt64();
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bucket_ = s;
               break;
             }
           case 42:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              object_ = s;
+              break;
+            }
+          case 48:
+            {
+              expiration_ = input.readInt32();
+              break;
+            }
+          case 58:
             {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (timestamp_ != null) {
@@ -106,21 +122,20 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
               break;
             }
-          case 50:
+          case 66:
             {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                headers_ =
-                    com.google.protobuf.MapField.newMapField(
-                        HeadersDefaultEntryHolder.defaultEntry);
+                fields_ =
+                    com.google.protobuf.MapField.newMapField(FieldsDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000001;
               }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String> fields__ =
                   input.readMessage(
-                      HeadersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              headers_.getMutableMap().put(headers__.getKey(), headers__.getValue());
+                      FieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              fields_.getMutableMap().put(fields__.getKey(), fields__.getValue());
               break;
             }
-          case 58:
+          case 74:
             {
               com.google.cloud.conformance.storage.v1.PolicyConditions.Builder subBuilder = null;
               if (conditions_ != null) {
@@ -165,8 +180,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   protected com.google.protobuf.MapField internalGetMapField(int number) {
     switch (number) {
-      case 6:
-        return internalGetHeaders();
+      case 8:
+        return internalGetFields();
       default:
         throw new RuntimeException("Invalid map field number: " + number);
     }
@@ -217,10 +232,67 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
   }
 
-  public static final int BUCKET_FIELD_NUMBER = 2;
+  public static final int URLSTYLE_FIELD_NUMBER = 2;
+  private int urlStyle_;
+  /**
+   * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
+   *
+   * @return The enum numeric value on the wire for urlStyle.
+   */
+  public int getUrlStyleValue() {
+    return urlStyle_;
+  }
+  /**
+   * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
+   *
+   * @return The urlStyle.
+   */
+  public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
+    @SuppressWarnings("deprecation")
+    com.google.cloud.conformance.storage.v1.UrlStyle result =
+        com.google.cloud.conformance.storage.v1.UrlStyle.valueOf(urlStyle_);
+    return result == null ? com.google.cloud.conformance.storage.v1.UrlStyle.UNRECOGNIZED : result;
+  }
+
+  public static final int BUCKETBOUNDHOSTNAME_FIELD_NUMBER = 3;
+  private volatile java.lang.Object bucketBoundHostname_;
+  /**
+   * <code>string bucketBoundHostname = 3;</code>
+   *
+   * @return The bucketBoundHostname.
+   */
+  public java.lang.String getBucketBoundHostname() {
+    java.lang.Object ref = bucketBoundHostname_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      bucketBoundHostname_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string bucketBoundHostname = 3;</code>
+   *
+   * @return The bytes for bucketBoundHostname.
+   */
+  public com.google.protobuf.ByteString getBucketBoundHostnameBytes() {
+    java.lang.Object ref = bucketBoundHostname_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      bucketBoundHostname_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int BUCKET_FIELD_NUMBER = 4;
   private volatile java.lang.Object bucket_;
   /**
-   * <code>string bucket = 2;</code>
+   * <code>string bucket = 4;</code>
    *
    * @return The bucket.
    */
@@ -236,7 +308,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
   }
   /**
-   * <code>string bucket = 2;</code>
+   * <code>string bucket = 4;</code>
    *
    * @return The bytes for bucket.
    */
@@ -252,10 +324,10 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
   }
 
-  public static final int OBJECT_FIELD_NUMBER = 3;
+  public static final int OBJECT_FIELD_NUMBER = 5;
   private volatile java.lang.Object object_;
   /**
-   * <code>string object = 3;</code>
+   * <code>string object = 5;</code>
    *
    * @return The object.
    */
@@ -271,7 +343,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
   }
   /**
-   * <code>string object = 3;</code>
+   * <code>string object = 5;</code>
    *
    * @return The bytes for object.
    */
@@ -287,21 +359,21 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
   }
 
-  public static final int EXPIRATION_FIELD_NUMBER = 4;
-  private long expiration_;
+  public static final int EXPIRATION_FIELD_NUMBER = 6;
+  private int expiration_;
   /**
-   * <code>int64 expiration = 4;</code>
+   * <code>int32 expiration = 6;</code>
    *
    * @return The expiration.
    */
-  public long getExpiration() {
+  public int getExpiration() {
     return expiration_;
   }
 
-  public static final int TIMESTAMP_FIELD_NUMBER = 5;
+  public static final int TIMESTAMP_FIELD_NUMBER = 7;
   private com.google.protobuf.Timestamp timestamp_;
   /**
-   * <code>.google.protobuf.Timestamp timestamp = 5;</code>
+   * <code>.google.protobuf.Timestamp timestamp = 7;</code>
    *
    * @return Whether the timestamp field is set.
    */
@@ -309,83 +381,83 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     return timestamp_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp timestamp = 5;</code>
+   * <code>.google.protobuf.Timestamp timestamp = 7;</code>
    *
    * @return The timestamp.
    */
   public com.google.protobuf.Timestamp getTimestamp() {
     return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
   }
-  /** <code>.google.protobuf.Timestamp timestamp = 5;</code> */
+  /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
   public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
     return getTimestamp();
   }
 
-  public static final int HEADERS_FIELD_NUMBER = 6;
+  public static final int FIELDS_FIELD_NUMBER = 8;
 
-  private static final class HeadersDefaultEntryHolder {
+  private static final class FieldsDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<java.lang.String, java.lang.String> defaultEntry =
         com.google.protobuf.MapEntry.<java.lang.String, java.lang.String>newDefaultInstance(
             com.google.cloud.conformance.storage.v1.Tests
-                .internal_static_google_cloud_conformance_storage_v1_PolicyInput_HeadersEntry_descriptor,
+                .internal_static_google_cloud_conformance_storage_v1_PolicyInput_FieldsEntry_descriptor,
             com.google.protobuf.WireFormat.FieldType.STRING,
             "",
             com.google.protobuf.WireFormat.FieldType.STRING,
             "");
   }
 
-  private com.google.protobuf.MapField<java.lang.String, java.lang.String> headers_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String> fields_;
 
-  private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetHeaders() {
-    if (headers_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(HeadersDefaultEntryHolder.defaultEntry);
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetFields() {
+    if (fields_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(FieldsDefaultEntryHolder.defaultEntry);
     }
-    return headers_;
+    return fields_;
   }
 
-  public int getHeadersCount() {
-    return internalGetHeaders().getMap().size();
+  public int getFieldsCount() {
+    return internalGetFields().getMap().size();
   }
-  /** <code>map&lt;string, string&gt; headers = 6;</code> */
-  public boolean containsHeaders(java.lang.String key) {
+  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  public boolean containsFields(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
     }
-    return internalGetHeaders().getMap().containsKey(key);
+    return internalGetFields().getMap().containsKey(key);
   }
-  /** Use {@link #getHeadersMap()} instead. */
+  /** Use {@link #getFieldsMap()} instead. */
   @java.lang.Deprecated
-  public java.util.Map<java.lang.String, java.lang.String> getHeaders() {
-    return getHeadersMap();
+  public java.util.Map<java.lang.String, java.lang.String> getFields() {
+    return getFieldsMap();
   }
-  /** <code>map&lt;string, string&gt; headers = 6;</code> */
-  public java.util.Map<java.lang.String, java.lang.String> getHeadersMap() {
-    return internalGetHeaders().getMap();
+  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
+    return internalGetFields().getMap();
   }
-  /** <code>map&lt;string, string&gt; headers = 6;</code> */
-  public java.lang.String getHeadersOrDefault(java.lang.String key, java.lang.String defaultValue) {
+  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  public java.lang.String getFieldsOrDefault(java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
       throw new java.lang.NullPointerException();
     }
-    java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
+    java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
-  /** <code>map&lt;string, string&gt; headers = 6;</code> */
-  public java.lang.String getHeadersOrThrow(java.lang.String key) {
+  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  public java.lang.String getFieldsOrThrow(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
     }
-    java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
+    java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
     if (!map.containsKey(key)) {
       throw new java.lang.IllegalArgumentException();
     }
     return map.get(key);
   }
 
-  public static final int CONDITIONS_FIELD_NUMBER = 7;
+  public static final int CONDITIONS_FIELD_NUMBER = 9;
   private com.google.cloud.conformance.storage.v1.PolicyConditions conditions_;
   /**
-   * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code>
+   * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
    *
    * @return Whether the conditions field is set.
    */
@@ -393,7 +465,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     return conditions_ != null;
   }
   /**
-   * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code>
+   * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
    *
    * @return The conditions.
    */
@@ -402,7 +474,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         ? com.google.cloud.conformance.storage.v1.PolicyConditions.getDefaultInstance()
         : conditions_;
   }
-  /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code> */
+  /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
   public com.google.cloud.conformance.storage.v1.PolicyConditionsOrBuilder
       getConditionsOrBuilder() {
     return getConditions();
@@ -425,22 +497,28 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     if (!getSchemeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scheme_);
     }
+    if (urlStyle_ != com.google.cloud.conformance.storage.v1.UrlStyle.PATH_STYLE.getNumber()) {
+      output.writeEnum(2, urlStyle_);
+    }
+    if (!getBucketBoundHostnameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bucketBoundHostname_);
+    }
     if (!getBucketBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bucket_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bucket_);
     }
     if (!getObjectBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, object_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, object_);
     }
-    if (expiration_ != 0L) {
-      output.writeInt64(4, expiration_);
+    if (expiration_ != 0) {
+      output.writeInt32(6, expiration_);
     }
     if (timestamp_ != null) {
-      output.writeMessage(5, getTimestamp());
+      output.writeMessage(7, getTimestamp());
     }
     com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
-        output, internalGetHeaders(), HeadersDefaultEntryHolder.defaultEntry, 6);
+        output, internalGetFields(), FieldsDefaultEntryHolder.defaultEntry, 8);
     if (conditions_ != null) {
-      output.writeMessage(7, getConditions());
+      output.writeMessage(9, getConditions());
     }
     unknownFields.writeTo(output);
   }
@@ -454,30 +532,36 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     if (!getSchemeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scheme_);
     }
+    if (urlStyle_ != com.google.cloud.conformance.storage.v1.UrlStyle.PATH_STYLE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream.computeEnumSize(2, urlStyle_);
+    }
+    if (!getBucketBoundHostnameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bucketBoundHostname_);
+    }
     if (!getBucketBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bucket_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bucket_);
     }
     if (!getObjectBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, object_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, object_);
     }
-    if (expiration_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(4, expiration_);
+    if (expiration_ != 0) {
+      size += com.google.protobuf.CodedOutputStream.computeInt32Size(6, expiration_);
     }
     if (timestamp_ != null) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, getTimestamp());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(7, getTimestamp());
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :
-        internalGetHeaders().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
-          HeadersDefaultEntryHolder.defaultEntry
+        internalGetFields().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.String> fields__ =
+          FieldsDefaultEntryHolder.defaultEntry
               .newBuilderForType()
               .setKey(entry.getKey())
               .setValue(entry.getValue())
               .build();
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(6, headers__);
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(8, fields__);
     }
     if (conditions_ != null) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(7, getConditions());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(9, getConditions());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -496,6 +580,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         (com.google.cloud.conformance.storage.v1.PolicyInput) obj;
 
     if (!getScheme().equals(other.getScheme())) return false;
+    if (urlStyle_ != other.urlStyle_) return false;
+    if (!getBucketBoundHostname().equals(other.getBucketBoundHostname())) return false;
     if (!getBucket().equals(other.getBucket())) return false;
     if (!getObject().equals(other.getObject())) return false;
     if (getExpiration() != other.getExpiration()) return false;
@@ -503,7 +589,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     if (hasTimestamp()) {
       if (!getTimestamp().equals(other.getTimestamp())) return false;
     }
-    if (!internalGetHeaders().equals(other.internalGetHeaders())) return false;
+    if (!internalGetFields().equals(other.internalGetFields())) return false;
     if (hasConditions() != other.hasConditions()) return false;
     if (hasConditions()) {
       if (!getConditions().equals(other.getConditions())) return false;
@@ -521,19 +607,23 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + SCHEME_FIELD_NUMBER;
     hash = (53 * hash) + getScheme().hashCode();
+    hash = (37 * hash) + URLSTYLE_FIELD_NUMBER;
+    hash = (53 * hash) + urlStyle_;
+    hash = (37 * hash) + BUCKETBOUNDHOSTNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getBucketBoundHostname().hashCode();
     hash = (37 * hash) + BUCKET_FIELD_NUMBER;
     hash = (53 * hash) + getBucket().hashCode();
     hash = (37 * hash) + OBJECT_FIELD_NUMBER;
     hash = (53 * hash) + getObject().hashCode();
     hash = (37 * hash) + EXPIRATION_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getExpiration());
+    hash = (53 * hash) + getExpiration();
     if (hasTimestamp()) {
       hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
       hash = (53 * hash) + getTimestamp().hashCode();
     }
-    if (!internalGetHeaders().getMap().isEmpty()) {
-      hash = (37 * hash) + HEADERS_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetHeaders().hashCode();
+    if (!internalGetFields().getMap().isEmpty()) {
+      hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetFields().hashCode();
     }
     if (hasConditions()) {
       hash = (37 * hash) + CONDITIONS_FIELD_NUMBER;
@@ -652,8 +742,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     @SuppressWarnings({"rawtypes"})
     protected com.google.protobuf.MapField internalGetMapField(int number) {
       switch (number) {
-        case 6:
-          return internalGetHeaders();
+        case 8:
+          return internalGetFields();
         default:
           throw new RuntimeException("Invalid map field number: " + number);
       }
@@ -662,8 +752,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     @SuppressWarnings({"rawtypes"})
     protected com.google.protobuf.MapField internalGetMutableMapField(int number) {
       switch (number) {
-        case 6:
-          return internalGetMutableHeaders();
+        case 8:
+          return internalGetMutableFields();
         default:
           throw new RuntimeException("Invalid map field number: " + number);
       }
@@ -698,11 +788,15 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       super.clear();
       scheme_ = "";
 
+      urlStyle_ = 0;
+
+      bucketBoundHostname_ = "";
+
       bucket_ = "";
 
       object_ = "";
 
-      expiration_ = 0L;
+      expiration_ = 0;
 
       if (timestampBuilder_ == null) {
         timestamp_ = null;
@@ -710,7 +804,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         timestamp_ = null;
         timestampBuilder_ = null;
       }
-      internalGetMutableHeaders().clear();
+      internalGetMutableFields().clear();
       if (conditionsBuilder_ == null) {
         conditions_ = null;
       } else {
@@ -746,6 +840,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
           new com.google.cloud.conformance.storage.v1.PolicyInput(this);
       int from_bitField0_ = bitField0_;
       result.scheme_ = scheme_;
+      result.urlStyle_ = urlStyle_;
+      result.bucketBoundHostname_ = bucketBoundHostname_;
       result.bucket_ = bucket_;
       result.object_ = object_;
       result.expiration_ = expiration_;
@@ -754,8 +850,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       } else {
         result.timestamp_ = timestampBuilder_.build();
       }
-      result.headers_ = internalGetHeaders();
-      result.headers_.makeImmutable();
+      result.fields_ = internalGetFields();
+      result.fields_.makeImmutable();
       if (conditionsBuilder_ == null) {
         result.conditions_ = conditions_;
       } else {
@@ -815,6 +911,13 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         scheme_ = other.scheme_;
         onChanged();
       }
+      if (other.urlStyle_ != 0) {
+        setUrlStyleValue(other.getUrlStyleValue());
+      }
+      if (!other.getBucketBoundHostname().isEmpty()) {
+        bucketBoundHostname_ = other.bucketBoundHostname_;
+        onChanged();
+      }
       if (!other.getBucket().isEmpty()) {
         bucket_ = other.bucket_;
         onChanged();
@@ -823,13 +926,13 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         object_ = other.object_;
         onChanged();
       }
-      if (other.getExpiration() != 0L) {
+      if (other.getExpiration() != 0) {
         setExpiration(other.getExpiration());
       }
       if (other.hasTimestamp()) {
         mergeTimestamp(other.getTimestamp());
       }
-      internalGetMutableHeaders().mergeFrom(other.internalGetHeaders());
+      internalGetMutableFields().mergeFrom(other.internalGetFields());
       if (other.hasConditions()) {
         mergeConditions(other.getConditions());
       }
@@ -941,9 +1044,145 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
+    private int urlStyle_ = 0;
+    /**
+     * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
+     *
+     * @return The enum numeric value on the wire for urlStyle.
+     */
+    public int getUrlStyleValue() {
+      return urlStyle_;
+    }
+    /**
+     * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
+     *
+     * @param value The enum numeric value on the wire for urlStyle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUrlStyleValue(int value) {
+      urlStyle_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
+     *
+     * @return The urlStyle.
+     */
+    public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
+      @SuppressWarnings("deprecation")
+      com.google.cloud.conformance.storage.v1.UrlStyle result =
+          com.google.cloud.conformance.storage.v1.UrlStyle.valueOf(urlStyle_);
+      return result == null
+          ? com.google.cloud.conformance.storage.v1.UrlStyle.UNRECOGNIZED
+          : result;
+    }
+    /**
+     * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
+     *
+     * @param value The urlStyle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUrlStyle(com.google.cloud.conformance.storage.v1.UrlStyle value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+
+      urlStyle_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearUrlStyle() {
+
+      urlStyle_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object bucketBoundHostname_ = "";
+    /**
+     * <code>string bucketBoundHostname = 3;</code>
+     *
+     * @return The bucketBoundHostname.
+     */
+    public java.lang.String getBucketBoundHostname() {
+      java.lang.Object ref = bucketBoundHostname_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bucketBoundHostname_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string bucketBoundHostname = 3;</code>
+     *
+     * @return The bytes for bucketBoundHostname.
+     */
+    public com.google.protobuf.ByteString getBucketBoundHostnameBytes() {
+      java.lang.Object ref = bucketBoundHostname_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        bucketBoundHostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string bucketBoundHostname = 3;</code>
+     *
+     * @param value The bucketBoundHostname to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBucketBoundHostname(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+
+      bucketBoundHostname_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string bucketBoundHostname = 3;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearBucketBoundHostname() {
+
+      bucketBoundHostname_ = getDefaultInstance().getBucketBoundHostname();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string bucketBoundHostname = 3;</code>
+     *
+     * @param value The bytes for bucketBoundHostname to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBucketBoundHostnameBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
+      bucketBoundHostname_ = value;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object bucket_ = "";
     /**
-     * <code>string bucket = 2;</code>
+     * <code>string bucket = 4;</code>
      *
      * @return The bucket.
      */
@@ -959,7 +1198,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     * <code>string bucket = 2;</code>
+     * <code>string bucket = 4;</code>
      *
      * @return The bytes for bucket.
      */
@@ -975,7 +1214,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     * <code>string bucket = 2;</code>
+     * <code>string bucket = 4;</code>
      *
      * @param value The bucket to set.
      * @return This builder for chaining.
@@ -990,7 +1229,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     * <code>string bucket = 2;</code>
+     * <code>string bucket = 4;</code>
      *
      * @return This builder for chaining.
      */
@@ -1001,7 +1240,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     * <code>string bucket = 2;</code>
+     * <code>string bucket = 4;</code>
      *
      * @param value The bytes for bucket to set.
      * @return This builder for chaining.
@@ -1019,7 +1258,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object object_ = "";
     /**
-     * <code>string object = 3;</code>
+     * <code>string object = 5;</code>
      *
      * @return The object.
      */
@@ -1035,7 +1274,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     * <code>string object = 3;</code>
+     * <code>string object = 5;</code>
      *
      * @return The bytes for object.
      */
@@ -1051,7 +1290,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     * <code>string object = 3;</code>
+     * <code>string object = 5;</code>
      *
      * @param value The object to set.
      * @return This builder for chaining.
@@ -1066,7 +1305,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     * <code>string object = 3;</code>
+     * <code>string object = 5;</code>
      *
      * @return This builder for chaining.
      */
@@ -1077,7 +1316,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     * <code>string object = 3;</code>
+     * <code>string object = 5;</code>
      *
      * @param value The bytes for object to set.
      * @return This builder for chaining.
@@ -1093,35 +1332,35 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private long expiration_;
+    private int expiration_;
     /**
-     * <code>int64 expiration = 4;</code>
+     * <code>int32 expiration = 6;</code>
      *
      * @return The expiration.
      */
-    public long getExpiration() {
+    public int getExpiration() {
       return expiration_;
     }
     /**
-     * <code>int64 expiration = 4;</code>
+     * <code>int32 expiration = 6;</code>
      *
      * @param value The expiration to set.
      * @return This builder for chaining.
      */
-    public Builder setExpiration(long value) {
+    public Builder setExpiration(int value) {
 
       expiration_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 expiration = 4;</code>
+     * <code>int32 expiration = 6;</code>
      *
      * @return This builder for chaining.
      */
     public Builder clearExpiration() {
 
-      expiration_ = 0L;
+      expiration_ = 0;
       onChanged();
       return this;
     }
@@ -1133,7 +1372,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.TimestampOrBuilder>
         timestampBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 5;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 7;</code>
      *
      * @return Whether the timestamp field is set.
      */
@@ -1141,7 +1380,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return timestampBuilder_ != null || timestamp_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 5;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 7;</code>
      *
      * @return The timestamp.
      */
@@ -1152,7 +1391,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return timestampBuilder_.getMessage();
       }
     }
-    /** <code>.google.protobuf.Timestamp timestamp = 5;</code> */
+    /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder setTimestamp(com.google.protobuf.Timestamp value) {
       if (timestampBuilder_ == null) {
         if (value == null) {
@@ -1166,7 +1405,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
       return this;
     }
-    /** <code>.google.protobuf.Timestamp timestamp = 5;</code> */
+    /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder setTimestamp(com.google.protobuf.Timestamp.Builder builderForValue) {
       if (timestampBuilder_ == null) {
         timestamp_ = builderForValue.build();
@@ -1177,7 +1416,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
       return this;
     }
-    /** <code>.google.protobuf.Timestamp timestamp = 5;</code> */
+    /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
       if (timestampBuilder_ == null) {
         if (timestamp_ != null) {
@@ -1193,7 +1432,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
       return this;
     }
-    /** <code>.google.protobuf.Timestamp timestamp = 5;</code> */
+    /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder clearTimestamp() {
       if (timestampBuilder_ == null) {
         timestamp_ = null;
@@ -1205,13 +1444,13 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
       return this;
     }
-    /** <code>.google.protobuf.Timestamp timestamp = 5;</code> */
+    /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
 
       onChanged();
       return getTimestampFieldBuilder().getBuilder();
     }
-    /** <code>.google.protobuf.Timestamp timestamp = 5;</code> */
+    /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
       if (timestampBuilder_ != null) {
         return timestampBuilder_.getMessageOrBuilder();
@@ -1219,7 +1458,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
       }
     }
-    /** <code>.google.protobuf.Timestamp timestamp = 5;</code> */
+    /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp,
             com.google.protobuf.Timestamp.Builder,
@@ -1237,99 +1476,99 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return timestampBuilder_;
     }
 
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String> headers_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> fields_;
 
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetHeaders() {
-      if (headers_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(HeadersDefaultEntryHolder.defaultEntry);
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetFields() {
+      if (fields_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(FieldsDefaultEntryHolder.defaultEntry);
       }
-      return headers_;
+      return fields_;
     }
 
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableHeaders() {
+        internalGetMutableFields() {
       onChanged();
       ;
-      if (headers_ == null) {
-        headers_ = com.google.protobuf.MapField.newMapField(HeadersDefaultEntryHolder.defaultEntry);
+      if (fields_ == null) {
+        fields_ = com.google.protobuf.MapField.newMapField(FieldsDefaultEntryHolder.defaultEntry);
       }
-      if (!headers_.isMutable()) {
-        headers_ = headers_.copy();
+      if (!fields_.isMutable()) {
+        fields_ = fields_.copy();
       }
-      return headers_;
+      return fields_;
     }
 
-    public int getHeadersCount() {
-      return internalGetHeaders().getMap().size();
+    public int getFieldsCount() {
+      return internalGetFields().getMap().size();
     }
-    /** <code>map&lt;string, string&gt; headers = 6;</code> */
-    public boolean containsHeaders(java.lang.String key) {
+    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    public boolean containsFields(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
       }
-      return internalGetHeaders().getMap().containsKey(key);
+      return internalGetFields().getMap().containsKey(key);
     }
-    /** Use {@link #getHeadersMap()} instead. */
+    /** Use {@link #getFieldsMap()} instead. */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getHeaders() {
-      return getHeadersMap();
+    public java.util.Map<java.lang.String, java.lang.String> getFields() {
+      return getFieldsMap();
     }
-    /** <code>map&lt;string, string&gt; headers = 6;</code> */
-    public java.util.Map<java.lang.String, java.lang.String> getHeadersMap() {
-      return internalGetHeaders().getMap();
+    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
+      return internalGetFields().getMap();
     }
-    /** <code>map&lt;string, string&gt; headers = 6;</code> */
-    public java.lang.String getHeadersOrDefault(
+    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    public java.lang.String getFieldsOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
         throw new java.lang.NullPointerException();
       }
-      java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
-    /** <code>map&lt;string, string&gt; headers = 6;</code> */
-    public java.lang.String getHeadersOrThrow(java.lang.String key) {
+    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    public java.lang.String getFieldsOrThrow(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
       }
-      java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
     }
 
-    public Builder clearHeaders() {
-      internalGetMutableHeaders().getMutableMap().clear();
+    public Builder clearFields() {
+      internalGetMutableFields().getMutableMap().clear();
       return this;
     }
-    /** <code>map&lt;string, string&gt; headers = 6;</code> */
-    public Builder removeHeaders(java.lang.String key) {
+    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    public Builder removeFields(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
       }
-      internalGetMutableHeaders().getMutableMap().remove(key);
+      internalGetMutableFields().getMutableMap().remove(key);
       return this;
     }
     /** Use alternate mutation accessors instead. */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getMutableHeaders() {
-      return internalGetMutableHeaders().getMutableMap();
+    public java.util.Map<java.lang.String, java.lang.String> getMutableFields() {
+      return internalGetMutableFields().getMutableMap();
     }
-    /** <code>map&lt;string, string&gt; headers = 6;</code> */
-    public Builder putHeaders(java.lang.String key, java.lang.String value) {
+    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    public Builder putFields(java.lang.String key, java.lang.String value) {
       if (key == null) {
         throw new java.lang.NullPointerException();
       }
       if (value == null) {
         throw new java.lang.NullPointerException();
       }
-      internalGetMutableHeaders().getMutableMap().put(key, value);
+      internalGetMutableFields().getMutableMap().put(key, value);
       return this;
     }
-    /** <code>map&lt;string, string&gt; headers = 6;</code> */
-    public Builder putAllHeaders(java.util.Map<java.lang.String, java.lang.String> values) {
-      internalGetMutableHeaders().getMutableMap().putAll(values);
+    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    public Builder putAllFields(java.util.Map<java.lang.String, java.lang.String> values) {
+      internalGetMutableFields().getMutableMap().putAll(values);
       return this;
     }
 
@@ -1340,7 +1579,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
             com.google.cloud.conformance.storage.v1.PolicyConditionsOrBuilder>
         conditionsBuilder_;
     /**
-     * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code>
+     * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
      *
      * @return Whether the conditions field is set.
      */
@@ -1348,7 +1587,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return conditionsBuilder_ != null || conditions_ != null;
     }
     /**
-     * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code>
+     * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
      *
      * @return The conditions.
      */
@@ -1361,7 +1600,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return conditionsBuilder_.getMessage();
       }
     }
-    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code> */
+    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public Builder setConditions(com.google.cloud.conformance.storage.v1.PolicyConditions value) {
       if (conditionsBuilder_ == null) {
         if (value == null) {
@@ -1375,7 +1614,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
       return this;
     }
-    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code> */
+    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public Builder setConditions(
         com.google.cloud.conformance.storage.v1.PolicyConditions.Builder builderForValue) {
       if (conditionsBuilder_ == null) {
@@ -1387,7 +1626,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
       return this;
     }
-    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code> */
+    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public Builder mergeConditions(com.google.cloud.conformance.storage.v1.PolicyConditions value) {
       if (conditionsBuilder_ == null) {
         if (conditions_ != null) {
@@ -1405,7 +1644,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
       return this;
     }
-    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code> */
+    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public Builder clearConditions() {
       if (conditionsBuilder_ == null) {
         conditions_ = null;
@@ -1417,13 +1656,13 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
       return this;
     }
-    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code> */
+    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public com.google.cloud.conformance.storage.v1.PolicyConditions.Builder getConditionsBuilder() {
 
       onChanged();
       return getConditionsFieldBuilder().getBuilder();
     }
-    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code> */
+    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public com.google.cloud.conformance.storage.v1.PolicyConditionsOrBuilder
         getConditionsOrBuilder() {
       if (conditionsBuilder_ != null) {
@@ -1434,7 +1673,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
             : conditions_;
       }
     }
-    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code> */
+    /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.cloud.conformance.storage.v1.PolicyConditions,
             com.google.cloud.conformance.storage.v1.PolicyConditions.Builder,

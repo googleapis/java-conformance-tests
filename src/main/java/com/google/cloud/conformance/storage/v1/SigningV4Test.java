@@ -38,7 +38,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     expectedUrl_ = "";
     scheme_ = "";
     urlStyle_ = 0;
-    bucketBoundDomain_ = "";
+    bucketBoundHostname_ = "";
     expectedCanonicalRequest_ = "";
     expectedStringToSign_ = "";
   }
@@ -184,7 +184,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
             {
               java.lang.String s = input.readStringRequireUtf8();
 
-              bucketBoundDomain_ = s;
+              bucketBoundHostname_ = s;
               break;
             }
           case 114:
@@ -246,105 +246,6 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         .ensureFieldAccessorsInitialized(
             com.google.cloud.conformance.storage.v1.SigningV4Test.class,
             com.google.cloud.conformance.storage.v1.SigningV4Test.Builder.class);
-  }
-
-  /** Protobuf enum {@code google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle} */
-  public enum UrlStyle implements com.google.protobuf.ProtocolMessageEnum {
-    /** <code>PATH_STYLE = 0;</code> */
-    PATH_STYLE(0),
-    /** <code>VIRTUAL_HOSTED_STYLE = 1;</code> */
-    VIRTUAL_HOSTED_STYLE(1),
-    /** <code>BUCKET_BOUND_DOMAIN = 2;</code> */
-    BUCKET_BOUND_DOMAIN(2),
-    UNRECOGNIZED(-1),
-    ;
-
-    /** <code>PATH_STYLE = 0;</code> */
-    public static final int PATH_STYLE_VALUE = 0;
-    /** <code>VIRTUAL_HOSTED_STYLE = 1;</code> */
-    public static final int VIRTUAL_HOSTED_STYLE_VALUE = 1;
-    /** <code>BUCKET_BOUND_DOMAIN = 2;</code> */
-    public static final int BUCKET_BOUND_DOMAIN_VALUE = 2;
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static UrlStyle valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static UrlStyle forNumber(int value) {
-      switch (value) {
-        case 0:
-          return PATH_STYLE;
-        case 1:
-          return VIRTUAL_HOSTED_STYLE;
-        case 2:
-          return BUCKET_BOUND_DOMAIN;
-        default:
-          return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<UrlStyle> internalGetValueMap() {
-      return internalValueMap;
-    }
-
-    private static final com.google.protobuf.Internal.EnumLiteMap<UrlStyle> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<UrlStyle>() {
-          public UrlStyle findValueByNumber(int number) {
-            return UrlStyle.forNumber(number);
-          }
-        };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-
-    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
-      return getDescriptor();
-    }
-
-    public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
-      return com.google.cloud.conformance.storage.v1.SigningV4Test.getDescriptor()
-          .getEnumTypes()
-          .get(0);
-    }
-
-    private static final UrlStyle[] VALUES = values();
-
-    public static UrlStyle valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private UrlStyle(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle)
   }
 
   public static final int FILENAME_FIELD_NUMBER = 1;
@@ -754,7 +655,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   public static final int URLSTYLE_FIELD_NUMBER = 12;
   private int urlStyle_;
   /**
-   * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+   * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
    *
    * @return The enum numeric value on the wire for urlStyle.
    */
@@ -762,48 +663,46 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     return urlStyle_;
   }
   /**
-   * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+   * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
    *
    * @return The urlStyle.
    */
-  public com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle getUrlStyle() {
+  public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
     @SuppressWarnings("deprecation")
-    com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle result =
-        com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.valueOf(urlStyle_);
-    return result == null
-        ? com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.UNRECOGNIZED
-        : result;
+    com.google.cloud.conformance.storage.v1.UrlStyle result =
+        com.google.cloud.conformance.storage.v1.UrlStyle.valueOf(urlStyle_);
+    return result == null ? com.google.cloud.conformance.storage.v1.UrlStyle.UNRECOGNIZED : result;
   }
 
-  public static final int BUCKETBOUNDDOMAIN_FIELD_NUMBER = 13;
-  private volatile java.lang.Object bucketBoundDomain_;
+  public static final int BUCKETBOUNDHOSTNAME_FIELD_NUMBER = 13;
+  private volatile java.lang.Object bucketBoundHostname_;
   /**
-   * <code>string bucketBoundDomain = 13;</code>
+   * <code>string bucketBoundHostname = 13;</code>
    *
-   * @return The bucketBoundDomain.
+   * @return The bucketBoundHostname.
    */
-  public java.lang.String getBucketBoundDomain() {
-    java.lang.Object ref = bucketBoundDomain_;
+  public java.lang.String getBucketBoundHostname() {
+    java.lang.Object ref = bucketBoundHostname_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      bucketBoundDomain_ = s;
+      bucketBoundHostname_ = s;
       return s;
     }
   }
   /**
-   * <code>string bucketBoundDomain = 13;</code>
+   * <code>string bucketBoundHostname = 13;</code>
    *
-   * @return The bytes for bucketBoundDomain.
+   * @return The bytes for bucketBoundHostname.
    */
-  public com.google.protobuf.ByteString getBucketBoundDomainBytes() {
-    java.lang.Object ref = bucketBoundDomain_;
+  public com.google.protobuf.ByteString getBucketBoundHostnameBytes() {
+    java.lang.Object ref = bucketBoundHostname_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b =
           com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-      bucketBoundDomain_ = b;
+      bucketBoundHostname_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -925,12 +824,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (!getSchemeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, scheme_);
     }
-    if (urlStyle_
-        != com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.PATH_STYLE.getNumber()) {
+    if (urlStyle_ != com.google.cloud.conformance.storage.v1.UrlStyle.PATH_STYLE.getNumber()) {
       output.writeEnum(12, urlStyle_);
     }
-    if (!getBucketBoundDomainBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, bucketBoundDomain_);
+    if (!getBucketBoundHostnameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, bucketBoundHostname_);
     }
     if (!getExpectedCanonicalRequestBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, expectedCanonicalRequest_);
@@ -994,12 +892,11 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (!getSchemeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, scheme_);
     }
-    if (urlStyle_
-        != com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.PATH_STYLE.getNumber()) {
+    if (urlStyle_ != com.google.cloud.conformance.storage.v1.UrlStyle.PATH_STYLE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream.computeEnumSize(12, urlStyle_);
     }
-    if (!getBucketBoundDomainBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, bucketBoundDomain_);
+    if (!getBucketBoundHostnameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, bucketBoundHostname_);
     }
     if (!getExpectedCanonicalRequestBytes().isEmpty()) {
       size +=
@@ -1039,7 +936,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (!internalGetQueryParameters().equals(other.internalGetQueryParameters())) return false;
     if (!getScheme().equals(other.getScheme())) return false;
     if (urlStyle_ != other.urlStyle_) return false;
-    if (!getBucketBoundDomain().equals(other.getBucketBoundDomain())) return false;
+    if (!getBucketBoundHostname().equals(other.getBucketBoundHostname())) return false;
     if (!getExpectedCanonicalRequest().equals(other.getExpectedCanonicalRequest())) return false;
     if (!getExpectedStringToSign().equals(other.getExpectedStringToSign())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -1083,8 +980,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     hash = (53 * hash) + getScheme().hashCode();
     hash = (37 * hash) + URLSTYLE_FIELD_NUMBER;
     hash = (53 * hash) + urlStyle_;
-    hash = (37 * hash) + BUCKETBOUNDDOMAIN_FIELD_NUMBER;
-    hash = (53 * hash) + getBucketBoundDomain().hashCode();
+    hash = (37 * hash) + BUCKETBOUNDHOSTNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getBucketBoundHostname().hashCode();
     hash = (37 * hash) + EXPECTEDCANONICALREQUEST_FIELD_NUMBER;
     hash = (53 * hash) + getExpectedCanonicalRequest().hashCode();
     hash = (37 * hash) + EXPECTEDSTRINGTOSIGN_FIELD_NUMBER;
@@ -1277,7 +1174,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
       urlStyle_ = 0;
 
-      bucketBoundDomain_ = "";
+      bucketBoundHostname_ = "";
 
       expectedCanonicalRequest_ = "";
 
@@ -1329,7 +1226,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       result.queryParameters_.makeImmutable();
       result.scheme_ = scheme_;
       result.urlStyle_ = urlStyle_;
-      result.bucketBoundDomain_ = bucketBoundDomain_;
+      result.bucketBoundHostname_ = bucketBoundHostname_;
       result.expectedCanonicalRequest_ = expectedCanonicalRequest_;
       result.expectedStringToSign_ = expectedStringToSign_;
       onBuilt();
@@ -1421,8 +1318,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (other.urlStyle_ != 0) {
         setUrlStyleValue(other.getUrlStyleValue());
       }
-      if (!other.getBucketBoundDomain().isEmpty()) {
-        bucketBoundDomain_ = other.bucketBoundDomain_;
+      if (!other.getBucketBoundHostname().isEmpty()) {
+        bucketBoundHostname_ = other.bucketBoundHostname_;
         onChanged();
       }
       if (!other.getExpectedCanonicalRequest().isEmpty()) {
@@ -2339,7 +2236,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
     private int urlStyle_ = 0;
     /**
-     * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+     * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
      *
      * @return The enum numeric value on the wire for urlStyle.
      */
@@ -2347,7 +2244,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return urlStyle_;
     }
     /**
-     * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+     * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
      *
      * @param value The enum numeric value on the wire for urlStyle to set.
      * @return This builder for chaining.
@@ -2358,26 +2255,25 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+     * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
      *
      * @return The urlStyle.
      */
-    public com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle getUrlStyle() {
+    public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
       @SuppressWarnings("deprecation")
-      com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle result =
-          com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.valueOf(urlStyle_);
+      com.google.cloud.conformance.storage.v1.UrlStyle result =
+          com.google.cloud.conformance.storage.v1.UrlStyle.valueOf(urlStyle_);
       return result == null
-          ? com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle.UNRECOGNIZED
+          ? com.google.cloud.conformance.storage.v1.UrlStyle.UNRECOGNIZED
           : result;
     }
     /**
-     * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+     * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
      *
      * @param value The urlStyle to set.
      * @return This builder for chaining.
      */
-    public Builder setUrlStyle(
-        com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle value) {
+    public Builder setUrlStyle(com.google.cloud.conformance.storage.v1.UrlStyle value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -2387,7 +2283,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     * <code>.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle urlStyle = 12;</code>
+     * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
      *
      * @return This builder for chaining.
      */
@@ -2398,78 +2294,78 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private java.lang.Object bucketBoundDomain_ = "";
+    private java.lang.Object bucketBoundHostname_ = "";
     /**
-     * <code>string bucketBoundDomain = 13;</code>
+     * <code>string bucketBoundHostname = 13;</code>
      *
-     * @return The bucketBoundDomain.
+     * @return The bucketBoundHostname.
      */
-    public java.lang.String getBucketBoundDomain() {
-      java.lang.Object ref = bucketBoundDomain_;
+    public java.lang.String getBucketBoundHostname() {
+      java.lang.Object ref = bucketBoundHostname_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        bucketBoundDomain_ = s;
+        bucketBoundHostname_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string bucketBoundDomain = 13;</code>
+     * <code>string bucketBoundHostname = 13;</code>
      *
-     * @return The bytes for bucketBoundDomain.
+     * @return The bytes for bucketBoundHostname.
      */
-    public com.google.protobuf.ByteString getBucketBoundDomainBytes() {
-      java.lang.Object ref = bucketBoundDomain_;
+    public com.google.protobuf.ByteString getBucketBoundHostnameBytes() {
+      java.lang.Object ref = bucketBoundHostname_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-        bucketBoundDomain_ = b;
+        bucketBoundHostname_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string bucketBoundDomain = 13;</code>
+     * <code>string bucketBoundHostname = 13;</code>
      *
-     * @param value The bucketBoundDomain to set.
+     * @param value The bucketBoundHostname to set.
      * @return This builder for chaining.
      */
-    public Builder setBucketBoundDomain(java.lang.String value) {
+    public Builder setBucketBoundHostname(java.lang.String value) {
       if (value == null) {
         throw new NullPointerException();
       }
 
-      bucketBoundDomain_ = value;
+      bucketBoundHostname_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string bucketBoundDomain = 13;</code>
+     * <code>string bucketBoundHostname = 13;</code>
      *
      * @return This builder for chaining.
      */
-    public Builder clearBucketBoundDomain() {
+    public Builder clearBucketBoundHostname() {
 
-      bucketBoundDomain_ = getDefaultInstance().getBucketBoundDomain();
+      bucketBoundHostname_ = getDefaultInstance().getBucketBoundHostname();
       onChanged();
       return this;
     }
     /**
-     * <code>string bucketBoundDomain = 13;</code>
+     * <code>string bucketBoundHostname = 13;</code>
      *
-     * @param value The bytes for bucketBoundDomain to set.
+     * @param value The bytes for bucketBoundHostname to set.
      * @return This builder for chaining.
      */
-    public Builder setBucketBoundDomainBytes(com.google.protobuf.ByteString value) {
+    public Builder setBucketBoundHostnameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
 
-      bucketBoundDomain_ = value;
+      bucketBoundHostname_ = value;
       onChanged();
       return this;
     }

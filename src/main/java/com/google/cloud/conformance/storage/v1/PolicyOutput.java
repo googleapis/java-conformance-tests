@@ -31,7 +31,6 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
 
   private PolicyOutput() {
     url_ = "";
-    key_ = "";
     expectedDecodedPolicy_ = "";
   }
 
@@ -74,13 +73,6 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
             }
           case 18:
             {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              key_ = s;
-              break;
-            }
-          case 26:
-            {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 fields_ =
                     com.google.protobuf.MapField.newMapField(FieldsDefaultEntryHolder.defaultEntry);
@@ -92,7 +84,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
               fields_.getMutableMap().put(fields__.getKey(), fields__.getValue());
               break;
             }
-          case 34:
+          case 26:
             {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -127,7 +119,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   protected com.google.protobuf.MapField internalGetMapField(int number) {
     switch (number) {
-      case 3:
+      case 2:
         return internalGetFields();
       default:
         throw new RuntimeException("Invalid map field number: " + number);
@@ -179,42 +171,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     }
   }
 
-  public static final int KEY_FIELD_NUMBER = 2;
-  private volatile java.lang.Object key_;
-  /**
-   * <code>string key = 2;</code>
-   *
-   * @return The key.
-   */
-  public java.lang.String getKey() {
-    java.lang.Object ref = key_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      key_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string key = 2;</code>
-   *
-   * @return The bytes for key.
-   */
-  public com.google.protobuf.ByteString getKeyBytes() {
-    java.lang.Object ref = key_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-      key_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int FIELDS_FIELD_NUMBER = 3;
+  public static final int FIELDS_FIELD_NUMBER = 2;
 
   private static final class FieldsDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<java.lang.String, java.lang.String> defaultEntry =
@@ -239,7 +196,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
   public int getFieldsCount() {
     return internalGetFields().getMap().size();
   }
-  /** <code>map&lt;string, string&gt; fields = 3;</code> */
+  /** <code>map&lt;string, string&gt; fields = 2;</code> */
   public boolean containsFields(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -251,11 +208,11 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
   public java.util.Map<java.lang.String, java.lang.String> getFields() {
     return getFieldsMap();
   }
-  /** <code>map&lt;string, string&gt; fields = 3;</code> */
+  /** <code>map&lt;string, string&gt; fields = 2;</code> */
   public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
     return internalGetFields().getMap();
   }
-  /** <code>map&lt;string, string&gt; fields = 3;</code> */
+  /** <code>map&lt;string, string&gt; fields = 2;</code> */
   public java.lang.String getFieldsOrDefault(java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -263,7 +220,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
-  /** <code>map&lt;string, string&gt; fields = 3;</code> */
+  /** <code>map&lt;string, string&gt; fields = 2;</code> */
   public java.lang.String getFieldsOrThrow(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -275,10 +232,10 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     return map.get(key);
   }
 
-  public static final int EXPECTEDDECODEDPOLICY_FIELD_NUMBER = 4;
+  public static final int EXPECTEDDECODEDPOLICY_FIELD_NUMBER = 3;
   private volatile java.lang.Object expectedDecodedPolicy_;
   /**
-   * <code>string expectedDecodedPolicy = 4;</code>
+   * <code>string expectedDecodedPolicy = 3;</code>
    *
    * @return The expectedDecodedPolicy.
    */
@@ -294,7 +251,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     }
   }
   /**
-   * <code>string expectedDecodedPolicy = 4;</code>
+   * <code>string expectedDecodedPolicy = 3;</code>
    *
    * @return The bytes for expectedDecodedPolicy.
    */
@@ -327,13 +284,10 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     if (!getUrlBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
     }
-    if (!getKeyBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
-    }
     com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
-        output, internalGetFields(), FieldsDefaultEntryHolder.defaultEntry, 3);
+        output, internalGetFields(), FieldsDefaultEntryHolder.defaultEntry, 2);
     if (!getExpectedDecodedPolicyBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, expectedDecodedPolicy_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, expectedDecodedPolicy_);
     }
     unknownFields.writeTo(output);
   }
@@ -347,9 +301,6 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     if (!getUrlBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
     }
-    if (!getKeyBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
-    }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :
         internalGetFields().getMap().entrySet()) {
       com.google.protobuf.MapEntry<java.lang.String, java.lang.String> fields__ =
@@ -358,10 +309,10 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
               .setKey(entry.getKey())
               .setValue(entry.getValue())
               .build();
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, fields__);
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, fields__);
     }
     if (!getExpectedDecodedPolicyBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, expectedDecodedPolicy_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, expectedDecodedPolicy_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -380,7 +331,6 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
         (com.google.cloud.conformance.storage.v1.PolicyOutput) obj;
 
     if (!getUrl().equals(other.getUrl())) return false;
-    if (!getKey().equals(other.getKey())) return false;
     if (!internalGetFields().equals(other.internalGetFields())) return false;
     if (!getExpectedDecodedPolicy().equals(other.getExpectedDecodedPolicy())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -396,8 +346,6 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + URL_FIELD_NUMBER;
     hash = (53 * hash) + getUrl().hashCode();
-    hash = (37 * hash) + KEY_FIELD_NUMBER;
-    hash = (53 * hash) + getKey().hashCode();
     if (!internalGetFields().getMap().isEmpty()) {
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetFields().hashCode();
@@ -517,7 +465,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     @SuppressWarnings({"rawtypes"})
     protected com.google.protobuf.MapField internalGetMapField(int number) {
       switch (number) {
-        case 3:
+        case 2:
           return internalGetFields();
         default:
           throw new RuntimeException("Invalid map field number: " + number);
@@ -527,7 +475,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     @SuppressWarnings({"rawtypes"})
     protected com.google.protobuf.MapField internalGetMutableMapField(int number) {
       switch (number) {
-        case 3:
+        case 2:
           return internalGetMutableFields();
         default:
           throw new RuntimeException("Invalid map field number: " + number);
@@ -563,8 +511,6 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       super.clear();
       url_ = "";
 
-      key_ = "";
-
       internalGetMutableFields().clear();
       expectedDecodedPolicy_ = "";
 
@@ -597,7 +543,6 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
           new com.google.cloud.conformance.storage.v1.PolicyOutput(this);
       int from_bitField0_ = bitField0_;
       result.url_ = url_;
-      result.key_ = key_;
       result.fields_ = internalGetFields();
       result.fields_.makeImmutable();
       result.expectedDecodedPolicy_ = expectedDecodedPolicy_;
@@ -653,10 +598,6 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
         return this;
       if (!other.getUrl().isEmpty()) {
         url_ = other.url_;
-        onChanged();
-      }
-      if (!other.getKey().isEmpty()) {
-        key_ = other.key_;
         onChanged();
       }
       internalGetMutableFields().mergeFrom(other.internalGetFields());
@@ -772,82 +713,6 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private java.lang.Object key_ = "";
-    /**
-     * <code>string key = 2;</code>
-     *
-     * @return The key.
-     */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string key = 2;</code>
-     *
-     * @return The bytes for key.
-     */
-    public com.google.protobuf.ByteString getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string key = 2;</code>
-     *
-     * @param value The key to set.
-     * @return This builder for chaining.
-     */
-    public Builder setKey(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-
-      key_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string key = 2;</code>
-     *
-     * @return This builder for chaining.
-     */
-    public Builder clearKey() {
-
-      key_ = getDefaultInstance().getKey();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string key = 2;</code>
-     *
-     * @param value The bytes for key to set.
-     * @return This builder for chaining.
-     */
-    public Builder setKeyBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
-      key_ = value;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.MapField<java.lang.String, java.lang.String> fields_;
 
     private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetFields() {
@@ -873,7 +738,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     public int getFieldsCount() {
       return internalGetFields().getMap().size();
     }
-    /** <code>map&lt;string, string&gt; fields = 3;</code> */
+    /** <code>map&lt;string, string&gt; fields = 2;</code> */
     public boolean containsFields(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -885,11 +750,11 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     public java.util.Map<java.lang.String, java.lang.String> getFields() {
       return getFieldsMap();
     }
-    /** <code>map&lt;string, string&gt; fields = 3;</code> */
+    /** <code>map&lt;string, string&gt; fields = 2;</code> */
     public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
       return internalGetFields().getMap();
     }
-    /** <code>map&lt;string, string&gt; fields = 3;</code> */
+    /** <code>map&lt;string, string&gt; fields = 2;</code> */
     public java.lang.String getFieldsOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
@@ -898,7 +763,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
-    /** <code>map&lt;string, string&gt; fields = 3;</code> */
+    /** <code>map&lt;string, string&gt; fields = 2;</code> */
     public java.lang.String getFieldsOrThrow(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -914,7 +779,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableFields().getMutableMap().clear();
       return this;
     }
-    /** <code>map&lt;string, string&gt; fields = 3;</code> */
+    /** <code>map&lt;string, string&gt; fields = 2;</code> */
     public Builder removeFields(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -927,7 +792,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     public java.util.Map<java.lang.String, java.lang.String> getMutableFields() {
       return internalGetMutableFields().getMutableMap();
     }
-    /** <code>map&lt;string, string&gt; fields = 3;</code> */
+    /** <code>map&lt;string, string&gt; fields = 2;</code> */
     public Builder putFields(java.lang.String key, java.lang.String value) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -938,7 +803,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableFields().getMutableMap().put(key, value);
       return this;
     }
-    /** <code>map&lt;string, string&gt; fields = 3;</code> */
+    /** <code>map&lt;string, string&gt; fields = 2;</code> */
     public Builder putAllFields(java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableFields().getMutableMap().putAll(values);
       return this;
@@ -946,7 +811,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object expectedDecodedPolicy_ = "";
     /**
-     * <code>string expectedDecodedPolicy = 4;</code>
+     * <code>string expectedDecodedPolicy = 3;</code>
      *
      * @return The expectedDecodedPolicy.
      */
@@ -962,7 +827,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     * <code>string expectedDecodedPolicy = 4;</code>
+     * <code>string expectedDecodedPolicy = 3;</code>
      *
      * @return The bytes for expectedDecodedPolicy.
      */
@@ -978,7 +843,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     * <code>string expectedDecodedPolicy = 4;</code>
+     * <code>string expectedDecodedPolicy = 3;</code>
      *
      * @param value The expectedDecodedPolicy to set.
      * @return This builder for chaining.
@@ -993,7 +858,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     * <code>string expectedDecodedPolicy = 4;</code>
+     * <code>string expectedDecodedPolicy = 3;</code>
      *
      * @return This builder for chaining.
      */
@@ -1004,7 +869,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     * <code>string expectedDecodedPolicy = 4;</code>
+     * <code>string expectedDecodedPolicy = 3;</code>
      *
      * @param value The bytes for expectedDecodedPolicy to set.
      * @return This builder for chaining.

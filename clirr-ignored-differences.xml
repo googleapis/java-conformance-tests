@@ -16,4 +16,64 @@
     <className>com/google/cloud/conformance/storage/v1/*OrBuilder</className>
     <method>boolean has*(*)</method>
   </difference>
+  <difference>
+    <differenceType>6003</differenceType> <!-- value changed -->
+    <className>com/google/cloud/conformance/storage/v1/Policy*</className>
+    <field>*_FIELD_NUMBER</field>
+  </difference>
+  <difference>
+    <differenceType>6011</differenceType> <!-- removed -->
+    <className>com/google/cloud/conformance/storage/v1/Policy*</className>
+    <field>*_FIELD_NUMBER</field>
+  </difference>
+  <difference>
+    <differenceType>6011</differenceType> <!-- removed -->
+    <className>com/google/cloud/conformance/storage/v1/SigningV4Test</className>
+    <field>BUCKETBOUNDDOMAIN_FIELD_NUMBER</field>
+  </difference>
+  <difference>
+    <differenceType>7002</differenceType>
+    <className>com/google/cloud/conformance/storage/v1/*</className>
+    <method>* *(*)</method>
+  </difference>
+  <difference>
+    <differenceType>7006</differenceType>
+    <className>com/google/cloud/conformance/storage/v1/*</className>
+    <method>* *UrlStyle(*)</method>
+    <from>com.google.cloud.conformance.storage.v1.SigningV4Test.UrlStyle</from>
+    <to>com.google.cloud.conformance.storage.v1.UrlStyle</to>
+  </difference>
+  <difference>
+    <differenceType>7006</differenceType>
+    <className>com/google/cloud/conformance/storage/v1/PolicyInput</className>
+    <method>* getExpiration()</method>
+    <from>long</from>
+    <to>int</to>
+  </difference>
+  <difference>
+    <differenceType>7006</differenceType>
+    <className>com/google/cloud/conformance/storage/v1/*Builder</className>
+    <method>* getExpiration()</method>
+    <from>long</from>
+    <to>int</to>
+  </difference>
+
+  <difference>
+    <differenceType>7005</differenceType>
+    <className>com/google/cloud/conformance/storage/v1/PolicyInput$Builder</className>
+    <method>com.google.cloud.conformance.storage.v1.PolicyInput$Builder setExpiration(long)</method>
+    <to>com.google.cloud.conformance.storage.v1.PolicyInput$Builder setExpiration(int)</to>
+  </difference>
+  <difference>
+    <differenceType>7005</differenceType>
+    <className>com/google/cloud/conformance/storage/v1/SigningV4Test$Builder</className>
+    <method>com.google.cloud.conformance.storage.v1.SigningV4Test$Builder setUrlStyle(com.google.cloud.conformance.storage.v1.SigningV4Test$UrlStyle)</method>
+    <to>com.google.cloud.conformance.storage.v1.SigningV4Test$Builder setUrlStyle(com.google.cloud.conformance.storage.v1.UrlStyle)</to>
+  </difference>
+
+  <difference>
+    <differenceType>8001</differenceType>
+    <className>com/google/cloud/conformance/storage/v1/SigningV4Test$UrlStyle
+    </className>
+  </difference>
 </differences>
