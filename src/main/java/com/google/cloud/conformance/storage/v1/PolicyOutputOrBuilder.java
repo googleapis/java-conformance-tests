@@ -36,41 +36,28 @@ public interface PolicyOutputOrBuilder
    */
   com.google.protobuf.ByteString getUrlBytes();
 
-  /**
-   * <code>string key = 2;</code>
-   *
-   * @return The key.
-   */
-  java.lang.String getKey();
-  /**
-   * <code>string key = 2;</code>
-   *
-   * @return The bytes for key.
-   */
-  com.google.protobuf.ByteString getKeyBytes();
-
-  /** <code>map&lt;string, string&gt; fields = 3;</code> */
+  /** <code>map&lt;string, string&gt; fields = 2;</code> */
   int getFieldsCount();
-  /** <code>map&lt;string, string&gt; fields = 3;</code> */
+  /** <code>map&lt;string, string&gt; fields = 2;</code> */
   boolean containsFields(java.lang.String key);
   /** Use {@link #getFieldsMap()} instead. */
   @java.lang.Deprecated
   java.util.Map<java.lang.String, java.lang.String> getFields();
-  /** <code>map&lt;string, string&gt; fields = 3;</code> */
+  /** <code>map&lt;string, string&gt; fields = 2;</code> */
   java.util.Map<java.lang.String, java.lang.String> getFieldsMap();
-  /** <code>map&lt;string, string&gt; fields = 3;</code> */
+  /** <code>map&lt;string, string&gt; fields = 2;</code> */
   java.lang.String getFieldsOrDefault(java.lang.String key, java.lang.String defaultValue);
-  /** <code>map&lt;string, string&gt; fields = 3;</code> */
+  /** <code>map&lt;string, string&gt; fields = 2;</code> */
   java.lang.String getFieldsOrThrow(java.lang.String key);
 
   /**
-   * <code>string expectedDecodedPolicy = 4;</code>
+   * <code>string expectedDecodedPolicy = 3;</code>
    *
    * @return The expectedDecodedPolicy.
    */
   java.lang.String getExpectedDecodedPolicy();
   /**
-   * <code>string expectedDecodedPolicy = 4;</code>
+   * <code>string expectedDecodedPolicy = 3;</code>
    *
    * @return The bytes for expectedDecodedPolicy.
    */

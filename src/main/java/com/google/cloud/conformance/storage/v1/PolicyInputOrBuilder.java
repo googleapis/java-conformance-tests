@@ -37,79 +37,105 @@ public interface PolicyInputOrBuilder
   com.google.protobuf.ByteString getSchemeBytes();
 
   /**
-   * <code>string bucket = 2;</code>
+   * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
+   *
+   * @return The enum numeric value on the wire for urlStyle.
+   */
+  int getUrlStyleValue();
+  /**
+   * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
+   *
+   * @return The urlStyle.
+   */
+  com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle();
+
+  /**
+   * <code>string bucketBoundHostname = 3;</code>
+   *
+   * @return The bucketBoundHostname.
+   */
+  java.lang.String getBucketBoundHostname();
+  /**
+   * <code>string bucketBoundHostname = 3;</code>
+   *
+   * @return The bytes for bucketBoundHostname.
+   */
+  com.google.protobuf.ByteString getBucketBoundHostnameBytes();
+
+  /**
+   * <code>string bucket = 4;</code>
    *
    * @return The bucket.
    */
   java.lang.String getBucket();
   /**
-   * <code>string bucket = 2;</code>
+   * <code>string bucket = 4;</code>
    *
    * @return The bytes for bucket.
    */
   com.google.protobuf.ByteString getBucketBytes();
 
   /**
-   * <code>string object = 3;</code>
+   * <code>string object = 5;</code>
    *
    * @return The object.
    */
   java.lang.String getObject();
   /**
-   * <code>string object = 3;</code>
+   * <code>string object = 5;</code>
    *
    * @return The bytes for object.
    */
   com.google.protobuf.ByteString getObjectBytes();
 
   /**
-   * <code>int64 expiration = 4;</code>
+   * <code>int32 expiration = 6;</code>
    *
    * @return The expiration.
    */
-  long getExpiration();
+  int getExpiration();
 
   /**
-   * <code>.google.protobuf.Timestamp timestamp = 5;</code>
+   * <code>.google.protobuf.Timestamp timestamp = 7;</code>
    *
    * @return Whether the timestamp field is set.
    */
   boolean hasTimestamp();
   /**
-   * <code>.google.protobuf.Timestamp timestamp = 5;</code>
+   * <code>.google.protobuf.Timestamp timestamp = 7;</code>
    *
    * @return The timestamp.
    */
   com.google.protobuf.Timestamp getTimestamp();
-  /** <code>.google.protobuf.Timestamp timestamp = 5;</code> */
+  /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
   com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
-  /** <code>map&lt;string, string&gt; headers = 6;</code> */
-  int getHeadersCount();
-  /** <code>map&lt;string, string&gt; headers = 6;</code> */
-  boolean containsHeaders(java.lang.String key);
-  /** Use {@link #getHeadersMap()} instead. */
+  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  int getFieldsCount();
+  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  boolean containsFields(java.lang.String key);
+  /** Use {@link #getFieldsMap()} instead. */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, java.lang.String> getHeaders();
-  /** <code>map&lt;string, string&gt; headers = 6;</code> */
-  java.util.Map<java.lang.String, java.lang.String> getHeadersMap();
-  /** <code>map&lt;string, string&gt; headers = 6;</code> */
-  java.lang.String getHeadersOrDefault(java.lang.String key, java.lang.String defaultValue);
-  /** <code>map&lt;string, string&gt; headers = 6;</code> */
-  java.lang.String getHeadersOrThrow(java.lang.String key);
+  java.util.Map<java.lang.String, java.lang.String> getFields();
+  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  java.util.Map<java.lang.String, java.lang.String> getFieldsMap();
+  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  java.lang.String getFieldsOrDefault(java.lang.String key, java.lang.String defaultValue);
+  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  java.lang.String getFieldsOrThrow(java.lang.String key);
 
   /**
-   * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code>
+   * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
    *
    * @return Whether the conditions field is set.
    */
   boolean hasConditions();
   /**
-   * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code>
+   * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
    *
    * @return The conditions.
    */
   com.google.cloud.conformance.storage.v1.PolicyConditions getConditions();
-  /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 7;</code> */
+  /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
   com.google.cloud.conformance.storage.v1.PolicyConditionsOrBuilder getConditionsOrBuilder();
 }

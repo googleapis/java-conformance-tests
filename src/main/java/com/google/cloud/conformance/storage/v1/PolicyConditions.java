@@ -30,9 +30,8 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
   }
 
   private PolicyConditions() {
-    successActionStatus_ = "";
-    successActionRedirect_ = "";
-    matches_ = java.util.Collections.emptyList();
+    contentLengthRange_ = emptyIntList();
+    startsWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -65,32 +64,37 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
           case 0:
             done = true;
             break;
+          case 8:
+            {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                contentLengthRange_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              contentLengthRange_.addInt(input.readInt32());
+              break;
+            }
           case 10:
             {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              successActionStatus_ = s;
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                contentLengthRange_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                contentLengthRange_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
               break;
             }
           case 18:
             {
               java.lang.String s = input.readStringRequireUtf8();
-
-              successActionRedirect_ = s;
-              break;
-            }
-          case 26:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                matches_ =
-                    new java.util.ArrayList<
-                        com.google.cloud.conformance.storage.v1.ConditionalMatches>();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                startsWith_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
               }
-              matches_.add(
-                  input.readMessage(
-                      com.google.cloud.conformance.storage.v1.ConditionalMatches.parser(),
-                      extensionRegistry));
+              startsWith_.add(s);
               break;
             }
           default:
@@ -108,7 +112,10 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        matches_ = java.util.Collections.unmodifiableList(matches_);
+        contentLengthRange_.makeImmutable(); // C
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        startsWith_ = startsWith_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -130,101 +137,71 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
             com.google.cloud.conformance.storage.v1.PolicyConditions.Builder.class);
   }
 
-  public static final int SUCCESSACTIONSTATUS_FIELD_NUMBER = 1;
-  private volatile java.lang.Object successActionStatus_;
+  public static final int CONTENTLENGTHRANGE_FIELD_NUMBER = 1;
+  private com.google.protobuf.Internal.IntList contentLengthRange_;
   /**
-   * <code>string successActionStatus = 1;</code>
+   * <code>repeated int32 contentLengthRange = 1;</code>
    *
-   * @return The successActionStatus.
+   * @return A list containing the contentLengthRange.
    */
-  public java.lang.String getSuccessActionStatus() {
-    java.lang.Object ref = successActionStatus_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      successActionStatus_ = s;
-      return s;
-    }
+  public java.util.List<java.lang.Integer> getContentLengthRangeList() {
+    return contentLengthRange_;
   }
   /**
-   * <code>string successActionStatus = 1;</code>
+   * <code>repeated int32 contentLengthRange = 1;</code>
    *
-   * @return The bytes for successActionStatus.
+   * @return The count of contentLengthRange.
    */
-  public com.google.protobuf.ByteString getSuccessActionStatusBytes() {
-    java.lang.Object ref = successActionStatus_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-      successActionStatus_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public int getContentLengthRangeCount() {
+    return contentLengthRange_.size();
+  }
+  /**
+   * <code>repeated int32 contentLengthRange = 1;</code>
+   *
+   * @param index The index of the element to return.
+   * @return The contentLengthRange at the given index.
+   */
+  public int getContentLengthRange(int index) {
+    return contentLengthRange_.getInt(index);
   }
 
-  public static final int SUCCESSACTIONREDIRECT_FIELD_NUMBER = 2;
-  private volatile java.lang.Object successActionRedirect_;
-  /**
-   * <code>string successActionRedirect = 2;</code>
-   *
-   * @return The successActionRedirect.
-   */
-  public java.lang.String getSuccessActionRedirect() {
-    java.lang.Object ref = successActionRedirect_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      successActionRedirect_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string successActionRedirect = 2;</code>
-   *
-   * @return The bytes for successActionRedirect.
-   */
-  public com.google.protobuf.ByteString getSuccessActionRedirectBytes() {
-    java.lang.Object ref = successActionRedirect_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-      successActionRedirect_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
+  private int contentLengthRangeMemoizedSerializedSize = -1;
 
-  public static final int MATCHES_FIELD_NUMBER = 3;
-  private java.util.List<com.google.cloud.conformance.storage.v1.ConditionalMatches> matches_;
-  /** <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code> */
-  public java.util.List<com.google.cloud.conformance.storage.v1.ConditionalMatches>
-      getMatchesList() {
-    return matches_;
+  public static final int STARTSWITH_FIELD_NUMBER = 2;
+  private com.google.protobuf.LazyStringList startsWith_;
+  /**
+   * <code>repeated string startsWith = 2;</code>
+   *
+   * @return A list containing the startsWith.
+   */
+  public com.google.protobuf.ProtocolStringList getStartsWithList() {
+    return startsWith_;
   }
-  /** <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code> */
-  public java.util.List<
-          ? extends com.google.cloud.conformance.storage.v1.ConditionalMatchesOrBuilder>
-      getMatchesOrBuilderList() {
-    return matches_;
+  /**
+   * <code>repeated string startsWith = 2;</code>
+   *
+   * @return The count of startsWith.
+   */
+  public int getStartsWithCount() {
+    return startsWith_.size();
   }
-  /** <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code> */
-  public int getMatchesCount() {
-    return matches_.size();
+  /**
+   * <code>repeated string startsWith = 2;</code>
+   *
+   * @param index The index of the element to return.
+   * @return The startsWith at the given index.
+   */
+  public java.lang.String getStartsWith(int index) {
+    return startsWith_.get(index);
   }
-  /** <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code> */
-  public com.google.cloud.conformance.storage.v1.ConditionalMatches getMatches(int index) {
-    return matches_.get(index);
-  }
-  /** <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code> */
-  public com.google.cloud.conformance.storage.v1.ConditionalMatchesOrBuilder getMatchesOrBuilder(
-      int index) {
-    return matches_.get(index);
+  /**
+   * <code>repeated string startsWith = 2;</code>
+   *
+   * @param index The index of the value to return.
+   * @return The bytes of the startsWith at the given index.
+   */
+  public com.google.protobuf.ByteString getStartsWithBytes(int index) {
+    return startsWith_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -241,14 +218,16 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!getSuccessActionStatusBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, successActionStatus_);
+    getSerializedSize();
+    if (getContentLengthRangeList().size() > 0) {
+      output.writeUInt32NoTag(10);
+      output.writeUInt32NoTag(contentLengthRangeMemoizedSerializedSize);
     }
-    if (!getSuccessActionRedirectBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, successActionRedirect_);
+    for (int i = 0; i < contentLengthRange_.size(); i++) {
+      output.writeInt32NoTag(contentLengthRange_.getInt(i));
     }
-    for (int i = 0; i < matches_.size(); i++) {
-      output.writeMessage(3, matches_.get(i));
+    for (int i = 0; i < startsWith_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, startsWith_.getRaw(i));
     }
     unknownFields.writeTo(output);
   }
@@ -259,14 +238,27 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     if (size != -1) return size;
 
     size = 0;
-    if (!getSuccessActionStatusBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, successActionStatus_);
+    {
+      int dataSize = 0;
+      for (int i = 0; i < contentLengthRange_.size(); i++) {
+        dataSize +=
+            com.google.protobuf.CodedOutputStream.computeInt32SizeNoTag(
+                contentLengthRange_.getInt(i));
+      }
+      size += dataSize;
+      if (!getContentLengthRangeList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream.computeInt32SizeNoTag(dataSize);
+      }
+      contentLengthRangeMemoizedSerializedSize = dataSize;
     }
-    if (!getSuccessActionRedirectBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, successActionRedirect_);
-    }
-    for (int i = 0; i < matches_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, matches_.get(i));
+    {
+      int dataSize = 0;
+      for (int i = 0; i < startsWith_.size(); i++) {
+        dataSize += computeStringSizeNoTag(startsWith_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getStartsWithList().size();
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -284,9 +276,8 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     com.google.cloud.conformance.storage.v1.PolicyConditions other =
         (com.google.cloud.conformance.storage.v1.PolicyConditions) obj;
 
-    if (!getSuccessActionStatus().equals(other.getSuccessActionStatus())) return false;
-    if (!getSuccessActionRedirect().equals(other.getSuccessActionRedirect())) return false;
-    if (!getMatchesList().equals(other.getMatchesList())) return false;
+    if (!getContentLengthRangeList().equals(other.getContentLengthRangeList())) return false;
+    if (!getStartsWithList().equals(other.getStartsWithList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -298,13 +289,13 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + SUCCESSACTIONSTATUS_FIELD_NUMBER;
-    hash = (53 * hash) + getSuccessActionStatus().hashCode();
-    hash = (37 * hash) + SUCCESSACTIONREDIRECT_FIELD_NUMBER;
-    hash = (53 * hash) + getSuccessActionRedirect().hashCode();
-    if (getMatchesCount() > 0) {
-      hash = (37 * hash) + MATCHES_FIELD_NUMBER;
-      hash = (53 * hash) + getMatchesList().hashCode();
+    if (getContentLengthRangeCount() > 0) {
+      hash = (37 * hash) + CONTENTLENGTHRANGE_FIELD_NUMBER;
+      hash = (53 * hash) + getContentLengthRangeList().hashCode();
+    }
+    if (getStartsWithCount() > 0) {
+      hash = (37 * hash) + STARTSWITH_FIELD_NUMBER;
+      hash = (53 * hash) + getStartsWithList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -438,24 +429,16 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     }
 
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-        getMatchesFieldBuilder();
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      successActionStatus_ = "";
-
-      successActionRedirect_ = "";
-
-      if (matchesBuilder_ == null) {
-        matches_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      } else {
-        matchesBuilder_.clear();
-      }
+      contentLengthRange_ = emptyIntList();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      startsWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -484,17 +467,16 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       com.google.cloud.conformance.storage.v1.PolicyConditions result =
           new com.google.cloud.conformance.storage.v1.PolicyConditions(this);
       int from_bitField0_ = bitField0_;
-      result.successActionStatus_ = successActionStatus_;
-      result.successActionRedirect_ = successActionRedirect_;
-      if (matchesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          matches_ = java.util.Collections.unmodifiableList(matches_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.matches_ = matches_;
-      } else {
-        result.matches_ = matchesBuilder_.build();
+      if (((bitField0_ & 0x00000001) != 0)) {
+        contentLengthRange_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
+      result.contentLengthRange_ = contentLengthRange_;
+      if (((bitField0_ & 0x00000002) != 0)) {
+        startsWith_ = startsWith_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.startsWith_ = startsWith_;
       onBuilt();
       return result;
     }
@@ -545,40 +527,25 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     public Builder mergeFrom(com.google.cloud.conformance.storage.v1.PolicyConditions other) {
       if (other == com.google.cloud.conformance.storage.v1.PolicyConditions.getDefaultInstance())
         return this;
-      if (!other.getSuccessActionStatus().isEmpty()) {
-        successActionStatus_ = other.successActionStatus_;
+      if (!other.contentLengthRange_.isEmpty()) {
+        if (contentLengthRange_.isEmpty()) {
+          contentLengthRange_ = other.contentLengthRange_;
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ensureContentLengthRangeIsMutable();
+          contentLengthRange_.addAll(other.contentLengthRange_);
+        }
         onChanged();
       }
-      if (!other.getSuccessActionRedirect().isEmpty()) {
-        successActionRedirect_ = other.successActionRedirect_;
+      if (!other.startsWith_.isEmpty()) {
+        if (startsWith_.isEmpty()) {
+          startsWith_ = other.startsWith_;
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ensureStartsWithIsMutable();
+          startsWith_.addAll(other.startsWith_);
+        }
         onChanged();
-      }
-      if (matchesBuilder_ == null) {
-        if (!other.matches_.isEmpty()) {
-          if (matches_.isEmpty()) {
-            matches_ = other.matches_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureMatchesIsMutable();
-            matches_.addAll(other.matches_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.matches_.isEmpty()) {
-          if (matchesBuilder_.isEmpty()) {
-            matchesBuilder_.dispose();
-            matchesBuilder_ = null;
-            matches_ = other.matches_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-            matchesBuilder_ =
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
-                    ? getMatchesFieldBuilder()
-                    : null;
-          } else {
-            matchesBuilder_.addAllMessages(other.matches_);
-          }
-        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -612,413 +579,203 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
 
     private int bitField0_;
 
-    private java.lang.Object successActionStatus_ = "";
-    /**
-     * <code>string successActionStatus = 1;</code>
-     *
-     * @return The successActionStatus.
-     */
-    public java.lang.String getSuccessActionStatus() {
-      java.lang.Object ref = successActionStatus_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        successActionStatus_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string successActionStatus = 1;</code>
-     *
-     * @return The bytes for successActionStatus.
-     */
-    public com.google.protobuf.ByteString getSuccessActionStatusBytes() {
-      java.lang.Object ref = successActionStatus_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-        successActionStatus_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string successActionStatus = 1;</code>
-     *
-     * @param value The successActionStatus to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSuccessActionStatus(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    private com.google.protobuf.Internal.IntList contentLengthRange_ = emptyIntList();
 
-      successActionStatus_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string successActionStatus = 1;</code>
-     *
-     * @return This builder for chaining.
-     */
-    public Builder clearSuccessActionStatus() {
-
-      successActionStatus_ = getDefaultInstance().getSuccessActionStatus();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string successActionStatus = 1;</code>
-     *
-     * @param value The bytes for successActionStatus to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSuccessActionStatusBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
-      successActionStatus_ = value;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object successActionRedirect_ = "";
-    /**
-     * <code>string successActionRedirect = 2;</code>
-     *
-     * @return The successActionRedirect.
-     */
-    public java.lang.String getSuccessActionRedirect() {
-      java.lang.Object ref = successActionRedirect_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        successActionRedirect_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string successActionRedirect = 2;</code>
-     *
-     * @return The bytes for successActionRedirect.
-     */
-    public com.google.protobuf.ByteString getSuccessActionRedirectBytes() {
-      java.lang.Object ref = successActionRedirect_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-        successActionRedirect_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string successActionRedirect = 2;</code>
-     *
-     * @param value The successActionRedirect to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSuccessActionRedirect(java.lang.String value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-
-      successActionRedirect_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string successActionRedirect = 2;</code>
-     *
-     * @return This builder for chaining.
-     */
-    public Builder clearSuccessActionRedirect() {
-
-      successActionRedirect_ = getDefaultInstance().getSuccessActionRedirect();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string successActionRedirect = 2;</code>
-     *
-     * @param value The bytes for successActionRedirect to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSuccessActionRedirectBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
-      successActionRedirect_ = value;
-      onChanged();
-      return this;
-    }
-
-    private java.util.List<com.google.cloud.conformance.storage.v1.ConditionalMatches> matches_ =
-        java.util.Collections.emptyList();
-
-    private void ensureMatchesIsMutable() {
+    private void ensureContentLengthRangeIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        matches_ =
-            new java.util.ArrayList<com.google.cloud.conformance.storage.v1.ConditionalMatches>(
-                matches_);
+        contentLengthRange_ = mutableCopy(contentLengthRange_);
         bitField0_ |= 0x00000001;
       }
     }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.cloud.conformance.storage.v1.ConditionalMatches,
-            com.google.cloud.conformance.storage.v1.ConditionalMatches.Builder,
-            com.google.cloud.conformance.storage.v1.ConditionalMatchesOrBuilder>
-        matchesBuilder_;
-
     /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
+     * <code>repeated int32 contentLengthRange = 1;</code>
+     *
+     * @return A list containing the contentLengthRange.
      */
-    public java.util.List<com.google.cloud.conformance.storage.v1.ConditionalMatches>
-        getMatchesList() {
-      if (matchesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(matches_);
-      } else {
-        return matchesBuilder_.getMessageList();
-      }
+    public java.util.List<java.lang.Integer> getContentLengthRangeList() {
+      return ((bitField0_ & 0x00000001) != 0)
+          ? java.util.Collections.unmodifiableList(contentLengthRange_)
+          : contentLengthRange_;
     }
     /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
+     * <code>repeated int32 contentLengthRange = 1;</code>
+     *
+     * @return The count of contentLengthRange.
      */
-    public int getMatchesCount() {
-      if (matchesBuilder_ == null) {
-        return matches_.size();
-      } else {
-        return matchesBuilder_.getCount();
-      }
+    public int getContentLengthRangeCount() {
+      return contentLengthRange_.size();
     }
     /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
+     * <code>repeated int32 contentLengthRange = 1;</code>
+     *
+     * @param index The index of the element to return.
+     * @return The contentLengthRange at the given index.
      */
-    public com.google.cloud.conformance.storage.v1.ConditionalMatches getMatches(int index) {
-      if (matchesBuilder_ == null) {
-        return matches_.get(index);
-      } else {
-        return matchesBuilder_.getMessage(index);
-      }
+    public int getContentLengthRange(int index) {
+      return contentLengthRange_.getInt(index);
     }
     /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
+     * <code>repeated int32 contentLengthRange = 1;</code>
+     *
+     * @param index The index to set the value at.
+     * @param value The contentLengthRange to set.
+     * @return This builder for chaining.
      */
-    public Builder setMatches(
-        int index, com.google.cloud.conformance.storage.v1.ConditionalMatches value) {
-      if (matchesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMatchesIsMutable();
-        matches_.set(index, value);
-        onChanged();
-      } else {
-        matchesBuilder_.setMessage(index, value);
-      }
+    public Builder setContentLengthRange(int index, int value) {
+      ensureContentLengthRangeIsMutable();
+      contentLengthRange_.setInt(index, value);
+      onChanged();
       return this;
     }
     /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
+     * <code>repeated int32 contentLengthRange = 1;</code>
+     *
+     * @param value The contentLengthRange to add.
+     * @return This builder for chaining.
      */
-    public Builder setMatches(
-        int index,
-        com.google.cloud.conformance.storage.v1.ConditionalMatches.Builder builderForValue) {
-      if (matchesBuilder_ == null) {
-        ensureMatchesIsMutable();
-        matches_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        matchesBuilder_.setMessage(index, builderForValue.build());
-      }
+    public Builder addContentLengthRange(int value) {
+      ensureContentLengthRangeIsMutable();
+      contentLengthRange_.addInt(value);
+      onChanged();
       return this;
     }
     /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
+     * <code>repeated int32 contentLengthRange = 1;</code>
+     *
+     * @param values The contentLengthRange to add.
+     * @return This builder for chaining.
      */
-    public Builder addMatches(com.google.cloud.conformance.storage.v1.ConditionalMatches value) {
-      if (matchesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMatchesIsMutable();
-        matches_.add(value);
-        onChanged();
-      } else {
-        matchesBuilder_.addMessage(value);
-      }
+    public Builder addAllContentLengthRange(
+        java.lang.Iterable<? extends java.lang.Integer> values) {
+      ensureContentLengthRangeIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(values, contentLengthRange_);
+      onChanged();
       return this;
     }
     /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
+     * <code>repeated int32 contentLengthRange = 1;</code>
+     *
+     * @return This builder for chaining.
      */
-    public Builder addMatches(
-        int index, com.google.cloud.conformance.storage.v1.ConditionalMatches value) {
-      if (matchesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMatchesIsMutable();
-        matches_.add(index, value);
-        onChanged();
-      } else {
-        matchesBuilder_.addMessage(index, value);
-      }
+    public Builder clearContentLengthRange() {
+      contentLengthRange_ = emptyIntList();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
       return this;
-    }
-    /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
-     */
-    public Builder addMatches(
-        com.google.cloud.conformance.storage.v1.ConditionalMatches.Builder builderForValue) {
-      if (matchesBuilder_ == null) {
-        ensureMatchesIsMutable();
-        matches_.add(builderForValue.build());
-        onChanged();
-      } else {
-        matchesBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
-     */
-    public Builder addMatches(
-        int index,
-        com.google.cloud.conformance.storage.v1.ConditionalMatches.Builder builderForValue) {
-      if (matchesBuilder_ == null) {
-        ensureMatchesIsMutable();
-        matches_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        matchesBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
-     */
-    public Builder addAllMatches(
-        java.lang.Iterable<? extends com.google.cloud.conformance.storage.v1.ConditionalMatches>
-            values) {
-      if (matchesBuilder_ == null) {
-        ensureMatchesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, matches_);
-        onChanged();
-      } else {
-        matchesBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
-     */
-    public Builder clearMatches() {
-      if (matchesBuilder_ == null) {
-        matches_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-      } else {
-        matchesBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
-     */
-    public Builder removeMatches(int index) {
-      if (matchesBuilder_ == null) {
-        ensureMatchesIsMutable();
-        matches_.remove(index);
-        onChanged();
-      } else {
-        matchesBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
-     */
-    public com.google.cloud.conformance.storage.v1.ConditionalMatches.Builder getMatchesBuilder(
-        int index) {
-      return getMatchesFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
-     */
-    public com.google.cloud.conformance.storage.v1.ConditionalMatchesOrBuilder getMatchesOrBuilder(
-        int index) {
-      if (matchesBuilder_ == null) {
-        return matches_.get(index);
-      } else {
-        return matchesBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
-     */
-    public java.util.List<
-            ? extends com.google.cloud.conformance.storage.v1.ConditionalMatchesOrBuilder>
-        getMatchesOrBuilderList() {
-      if (matchesBuilder_ != null) {
-        return matchesBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(matches_);
-      }
-    }
-    /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
-     */
-    public com.google.cloud.conformance.storage.v1.ConditionalMatches.Builder addMatchesBuilder() {
-      return getMatchesFieldBuilder()
-          .addBuilder(
-              com.google.cloud.conformance.storage.v1.ConditionalMatches.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
-     */
-    public com.google.cloud.conformance.storage.v1.ConditionalMatches.Builder addMatchesBuilder(
-        int index) {
-      return getMatchesFieldBuilder()
-          .addBuilder(
-              index,
-              com.google.cloud.conformance.storage.v1.ConditionalMatches.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code>
-     */
-    public java.util.List<com.google.cloud.conformance.storage.v1.ConditionalMatches.Builder>
-        getMatchesBuilderList() {
-      return getMatchesFieldBuilder().getBuilderList();
     }
 
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.cloud.conformance.storage.v1.ConditionalMatches,
-            com.google.cloud.conformance.storage.v1.ConditionalMatches.Builder,
-            com.google.cloud.conformance.storage.v1.ConditionalMatchesOrBuilder>
-        getMatchesFieldBuilder() {
-      if (matchesBuilder_ == null) {
-        matchesBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.google.cloud.conformance.storage.v1.ConditionalMatches,
-                com.google.cloud.conformance.storage.v1.ConditionalMatches.Builder,
-                com.google.cloud.conformance.storage.v1.ConditionalMatchesOrBuilder>(
-                matches_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
-        matches_ = null;
+    private com.google.protobuf.LazyStringList startsWith_ =
+        com.google.protobuf.LazyStringArrayList.EMPTY;
+
+    private void ensureStartsWithIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        startsWith_ = new com.google.protobuf.LazyStringArrayList(startsWith_);
+        bitField0_ |= 0x00000002;
       }
-      return matchesBuilder_;
+    }
+    /**
+     * <code>repeated string startsWith = 2;</code>
+     *
+     * @return A list containing the startsWith.
+     */
+    public com.google.protobuf.ProtocolStringList getStartsWithList() {
+      return startsWith_.getUnmodifiableView();
+    }
+    /**
+     * <code>repeated string startsWith = 2;</code>
+     *
+     * @return The count of startsWith.
+     */
+    public int getStartsWithCount() {
+      return startsWith_.size();
+    }
+    /**
+     * <code>repeated string startsWith = 2;</code>
+     *
+     * @param index The index of the element to return.
+     * @return The startsWith at the given index.
+     */
+    public java.lang.String getStartsWith(int index) {
+      return startsWith_.get(index);
+    }
+    /**
+     * <code>repeated string startsWith = 2;</code>
+     *
+     * @param index The index of the value to return.
+     * @return The bytes of the startsWith at the given index.
+     */
+    public com.google.protobuf.ByteString getStartsWithBytes(int index) {
+      return startsWith_.getByteString(index);
+    }
+    /**
+     * <code>repeated string startsWith = 2;</code>
+     *
+     * @param index The index to set the value at.
+     * @param value The startsWith to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStartsWith(int index, java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureStartsWithIsMutable();
+      startsWith_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string startsWith = 2;</code>
+     *
+     * @param value The startsWith to add.
+     * @return This builder for chaining.
+     */
+    public Builder addStartsWith(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureStartsWithIsMutable();
+      startsWith_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string startsWith = 2;</code>
+     *
+     * @param values The startsWith to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllStartsWith(java.lang.Iterable<java.lang.String> values) {
+      ensureStartsWithIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(values, startsWith_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string startsWith = 2;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearStartsWith() {
+      startsWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string startsWith = 2;</code>
+     *
+     * @param value The bytes of the startsWith to add.
+     * @return This builder for chaining.
+     */
+    public Builder addStartsWithBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+      ensureStartsWithIsMutable();
+      startsWith_.add(value);
+      onChanged();
+      return this;
     }
 
     @java.lang.Override

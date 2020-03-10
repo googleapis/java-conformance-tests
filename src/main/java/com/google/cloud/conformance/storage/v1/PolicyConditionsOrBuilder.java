@@ -24,41 +24,49 @@ public interface PolicyConditionsOrBuilder
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string successActionStatus = 1;</code>
+   * <code>repeated int32 contentLengthRange = 1;</code>
    *
-   * @return The successActionStatus.
+   * @return A list containing the contentLengthRange.
    */
-  java.lang.String getSuccessActionStatus();
+  java.util.List<java.lang.Integer> getContentLengthRangeList();
   /**
-   * <code>string successActionStatus = 1;</code>
+   * <code>repeated int32 contentLengthRange = 1;</code>
    *
-   * @return The bytes for successActionStatus.
+   * @return The count of contentLengthRange.
    */
-  com.google.protobuf.ByteString getSuccessActionStatusBytes();
+  int getContentLengthRangeCount();
+  /**
+   * <code>repeated int32 contentLengthRange = 1;</code>
+   *
+   * @param index The index of the element to return.
+   * @return The contentLengthRange at the given index.
+   */
+  int getContentLengthRange(int index);
 
   /**
-   * <code>string successActionRedirect = 2;</code>
+   * <code>repeated string startsWith = 2;</code>
    *
-   * @return The successActionRedirect.
+   * @return A list containing the startsWith.
    */
-  java.lang.String getSuccessActionRedirect();
+  java.util.List<java.lang.String> getStartsWithList();
   /**
-   * <code>string successActionRedirect = 2;</code>
+   * <code>repeated string startsWith = 2;</code>
    *
-   * @return The bytes for successActionRedirect.
+   * @return The count of startsWith.
    */
-  com.google.protobuf.ByteString getSuccessActionRedirectBytes();
-
-  /** <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code> */
-  java.util.List<com.google.cloud.conformance.storage.v1.ConditionalMatches> getMatchesList();
-  /** <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code> */
-  com.google.cloud.conformance.storage.v1.ConditionalMatches getMatches(int index);
-  /** <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code> */
-  int getMatchesCount();
-  /** <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code> */
-  java.util.List<? extends com.google.cloud.conformance.storage.v1.ConditionalMatchesOrBuilder>
-      getMatchesOrBuilderList();
-  /** <code>repeated .google.cloud.conformance.storage.v1.ConditionalMatches matches = 3;</code> */
-  com.google.cloud.conformance.storage.v1.ConditionalMatchesOrBuilder getMatchesOrBuilder(
-      int index);
+  int getStartsWithCount();
+  /**
+   * <code>repeated string startsWith = 2;</code>
+   *
+   * @param index The index of the element to return.
+   * @return The startsWith at the given index.
+   */
+  java.lang.String getStartsWith(int index);
+  /**
+   * <code>repeated string startsWith = 2;</code>
+   *
+   * @param index The index of the value to return.
+   * @return The bytes of the startsWith at the given index.
+   */
+  com.google.protobuf.ByteString getStartsWithBytes(int index);
 }
