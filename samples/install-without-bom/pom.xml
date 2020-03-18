@@ -31,7 +31,7 @@
       <artifactId>google-cloud-conformance-tests</artifactId>
       <version></version>
     </dependency>
-    <!-- [END conformance-tests_install_with_bom] -->
+    <!-- [END conformance-tests_install_without_bom] -->
 
     <dependency>
       <groupId>junit</groupId>
