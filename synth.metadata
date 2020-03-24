@@ -1,18 +1,11 @@
 {
-  "updateTime": "2020-03-14T09:16:24.125076Z",
+  "updateTime": "2020-03-24T18:32:39.735569Z",
   "sources": [
     {
-      "generator": {
-        "name": "artman",
-        "version": "1.1.0",
-        "dockerImage": "googleapis/artman@sha256:f54b7644a1d2e7a37b23f5c0dfe9bba473e41c675002a507a244389e27487ca9"
-      }
-    },
-    {
-      "template": {
-        "name": "java_library",
-        "origin": "synthtool.gcp",
-        "version": "2020.2.4"
+      "git": {
+        "name": "synthtool",
+        "remote": "https://github.com/googleapis/synthtool.git",
+        "sha": "6a17abc7652e2fe563e1288c6e8c23fc260dda97"
       }
     }
   ]
