@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.0.9](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.8...v0.0.9) (2020-03-25)
+
+
+### Dependencies
+
+* bump conformance-tests to 24a5e2373d1240ff3538f9999888053ba8b6a539 ([#108](https://www.github.com/googleapis/java-conformance-tests/issues/108)) ([787c4ae](https://www.github.com/googleapis/java-conformance-tests/commit/787c4ae1c6b01d7b5916e6fd2f09d2618fdae022)), closes [#27](https://www.github.com/googleapis/java-conformance-tests/issues/27)
+* update dependency com.google.cloud:google-cloud-bom to v0.122.5-alpha ([#98](https://www.github.com/googleapis/java-conformance-tests/issues/98)) ([4bfa69e](https://www.github.com/googleapis/java-conformance-tests/commit/4bfa69e2fbbd6585e8a3e1d649e55cfc95c5101c))
+
 ### [0.0.8](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.7...v0.0.8) (2020-03-10)
 
 
