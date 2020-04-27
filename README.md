@@ -30,14 +30,15 @@ git pull upstream master
 ./bump-conformance-tests.sh
 ```
 
+Upon successful run of the bump script, you will be on a new branch matching the pattern
+`bump/yyyy-mm-dd_HHMMSS`. Push this new branch up to GitHub and open a pull request.
+
+
 If an error occurs while trying to perform the update please check the `bump.log`
 written to the working directory for details.
 
 If an error occurs while generating the new resources please check the `generate.log`
 written to the working directory.
-
-Upon successful run of the bump script, push the generated branch up to GitHub and open
-a pull request.
 
 ## Test Suites
 
