@@ -1,36 +1,45 @@
 # Google cloud conformance tests
-This maven module is intended to function as a central location for integration with
+This Maven project functions as a central location for integration with
 [googleapis/conformance-tests](https://github.com/googleapis/conformance-tests).
 
 In this directory `conformance-tests` which is a git-submodule, containing the reference for which
-the various conformance test resources are updated to. 
+the various conformance test resources are updated to.
+
+This project contains scripts to help with updating the resources based on the state of the
+`conformance-tests` submodule. As well as performing the heavy lifting to ensure all resources
+are in the correct locations, generate protobuf classes from proto files and represent a
+released versioned jar of the conformance tests. 
 
 ## Updating conformance-tests
 
 #### Prerequisites
 
-Part of the process of updating the conformance tests involves running maven a maven build for 
-this module. Ensure that all parent modules have been installed locally so the build can run.
-```bash
-pushd cd ../../
-mvn -Dmaven.test.skip.exec=true install
-popd
-```
+Part of the process of updating the conformance tests involves running a maven build for
+this project. Ensure that maven 3.6+ is on your `PATH`.
 
 #### Performing the update
 
-To update the conformance tests run the following commands from this module directory:
+A bash script is available to perform an update. The script can be ran for any branch, so if you
+need to update for a branch other than `master` update the following snippet with your
+branch name. 
+
+To update the conformance tests run the following commands from the repository root:
 ```bash
-pushd conformance-tests
-git pull
-popd
-./generate-conformance-tests.sh
-git add .
+git checkout master
+git pull upstream master
+./bump-conformance-tests.sh
+git push
 ```
 
-If an error is encountered while generating the new resources please check the `generate.log`
-written to the working directory.
+Upon successful run of the bump script, you will be on a new branch matching the pattern
+`bump/yyyy-mm-dd_HHMMSS`. Push this new branch up to GitHub and open a pull request.
 
+
+If an error occurs while trying to perform the update please check the `bump.log`
+written to the working directory for details.
+
+If an error occurs while generating the new resources please check the `generate.log`
+written to the working directory.
 
 ## Test Suites
 
@@ -41,7 +50,7 @@ package.
 
 #### Files
 
-There are a number of files that together define the format of the tests as well as the tests 
+There are a number of files that together define the format of the tests as well as the tests
 themselves.
 
 * `src/main/java/com/google/cloud/conformance/firestore/v1/TestDefinition.java`
@@ -50,3 +59,13 @@ themselves.
   * The proto definition for the tests. `TestDefinition.java` is generated from this definition.
 * `src/main/resources/com/google/cloud/conformance/firestore/v1/*.json`
   * Each files is a json serialized `TestFile` definition (defined in tests.proto).
+
+### BigTable
+
+The conformance test suites for BigTable are located in the `com.google.cloud.conformance.bigtable`
+package.
+
+### Storage
+
+The conformance test suites for Storage are located in the `com.google.cloud.conformance.storage`
+package
