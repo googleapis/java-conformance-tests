@@ -1,5 +1,17 @@
 # Changelog
 
+### [0.0.10](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.9...v0.0.10) (2020-04-27)
+
+
+### Dependencies
+
+* bump conformance-tests to fa559a12df52515694ab2e493948b062c50db4e2 ([#121](https://www.github.com/googleapis/java-conformance-tests/issues/121)) ([ec8b477](https://www.github.com/googleapis/java-conformance-tests/commit/ec8b477ec1b14d5cb4ad8f12242ff610befed5c2)), closes [#31](https://www.github.com/googleapis/java-conformance-tests/issues/31) [#29](https://www.github.com/googleapis/java-conformance-tests/issues/29) [#28](https://www.github.com/googleapis/java-conformance-tests/issues/28)
+* update dependency com.google.cloud:google-cloud-bom to v0.123.0-alpha ([#109](https://www.github.com/googleapis/java-conformance-tests/issues/109)) ([15ef16c](https://www.github.com/googleapis/java-conformance-tests/commit/15ef16c76b14a715bf68bd79f03129ed0ef2d476))
+* update dependency com.google.cloud:google-cloud-bom to v0.123.1-alpha ([#113](https://www.github.com/googleapis/java-conformance-tests/issues/113)) ([856f8fe](https://www.github.com/googleapis/java-conformance-tests/commit/856f8fe15f81deeff4ea8be6c3e88fe77ef4d4d6))
+* update dependency com.google.cloud:google-cloud-bom to v0.124.0 ([#117](https://www.github.com/googleapis/java-conformance-tests/issues/117)) ([5d97767](https://www.github.com/googleapis/java-conformance-tests/commit/5d97767c51d48560765090a04b3755a8667e80c5))
+* update dependency com.google.cloud:google-cloud-bom to v0.125.0 ([#119](https://www.github.com/googleapis/java-conformance-tests/issues/119)) ([f4d0573](https://www.github.com/googleapis/java-conformance-tests/commit/f4d057329ba1ccaf38cb588d46e8fb9425043f39))
+* update dependency com.google.guava:guava to v29 ([#116](https://www.github.com/googleapis/java-conformance-tests/issues/116)) ([cca7466](https://www.github.com/googleapis/java-conformance-tests/commit/cca7466d99e9cf4dac758dcdb3ef39dfc9bedf35))
+
 ### [0.0.9](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.8...v0.0.9) (2020-03-25)
 
 
