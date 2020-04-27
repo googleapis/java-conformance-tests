@@ -28,6 +28,7 @@ To update the conformance tests run the following commands from the repository r
 git checkout master
 git pull upstream master
 ./bump-conformance-tests.sh
+git push
 ```
 
 Upon successful run of the bump script, you will be on a new branch matching the pattern
