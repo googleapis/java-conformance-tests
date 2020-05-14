@@ -1,5 +1,17 @@
 # Changelog
 
+### [0.0.11](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.10...v0.0.11) (2020-05-14)
+
+
+### Dependencies
+
+* bump conformance-tests to 0bb8520e48c35b3e0dd45c328a1b38be35664b91 ([#128](https://www.github.com/googleapis/java-conformance-tests/issues/128)) ([ccb0a5b](https://www.github.com/googleapis/java-conformance-tests/commit/ccb0a5b75d978b608d06fa33c81b1480cf41271c)), closes [#34](https://www.github.com/googleapis/java-conformance-tests/issues/34) [#32](https://www.github.com/googleapis/java-conformance-tests/issues/32)
+
+
+### Documentation
+
+* update CONTRIBUTING.md to include code formatting ([#534](https://www.github.com/googleapis/java-conformance-tests/issues/534)) ([#126](https://www.github.com/googleapis/java-conformance-tests/issues/126)) ([1f56f9f](https://www.github.com/googleapis/java-conformance-tests/commit/1f56f9f0f879bf1a37b49396bc90ccdce515d4df))
+
 ### [0.0.10](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.9...v0.0.10) (2020-04-27)
 
 
