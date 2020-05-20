@@ -15,7 +15,7 @@
 
   <properties>
     <guava.version>28.2-android</guava.version>
-    <protobuf.version>3.11.4</protobuf.version>
+    <protobuf.version>3.12.0</protobuf.version>
     <junit.version>4.13</junit.version>
     <truth.version>1.0.1</truth.version>
   </properties>
