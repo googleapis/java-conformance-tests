@@ -1,5 +1,18 @@
 # Changelog
 
+### [0.0.12](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.11...v0.0.12) (2020-06-17)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-bom to v0.126.0 ([#135](https://www.github.com/googleapis/java-conformance-tests/issues/135)) ([45d32c9](https://www.github.com/googleapis/java-conformance-tests/commit/45d32c92b7cb9e629febc970f85f09fd29c56d25))
+* update dependency com.google.cloud:google-cloud-bom to v0.127.0 ([#138](https://www.github.com/googleapis/java-conformance-tests/issues/138)) ([2d28669](https://www.github.com/googleapis/java-conformance-tests/commit/2d28669ccf79df184af6c561a2940615224f9af5))
+* update dependency com.google.cloud:google-cloud-bom to v0.128.0 ([#142](https://www.github.com/googleapis/java-conformance-tests/issues/142)) ([85c3740](https://www.github.com/googleapis/java-conformance-tests/commit/85c3740ed694d457789573f8b30294dfb927b6ac))
+* update dependency com.google.cloud:google-cloud-bom to v0.129.0 ([#147](https://www.github.com/googleapis/java-conformance-tests/issues/147)) ([3e54e4d](https://www.github.com/googleapis/java-conformance-tests/commit/3e54e4d9657bf6bbf63568d30f3c07deb43e6c47))
+* update dependency com.google.guava:guava-bom to v29 ([#136](https://www.github.com/googleapis/java-conformance-tests/issues/136)) ([b30c290](https://www.github.com/googleapis/java-conformance-tests/commit/b30c290d27aa41418d76793066e8e01b8ba60010))
+* update dependency com.google.protobuf:protobuf-java to v3.12.0 ([#130](https://www.github.com/googleapis/java-conformance-tests/issues/130)) ([c6bc33c](https://www.github.com/googleapis/java-conformance-tests/commit/c6bc33c5be530ea735dfa2e0c7da444d1c18d162))
+* update dependency com.google.protobuf:protobuf-java to v3.12.2 ([#134](https://www.github.com/googleapis/java-conformance-tests/issues/134)) ([6390ee2](https://www.github.com/googleapis/java-conformance-tests/commit/6390ee28cf7129587e01f70ad3d870fd8d022617))
+
 ### [0.0.11](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.10...v0.0.11) (2020-05-14)
 
 
