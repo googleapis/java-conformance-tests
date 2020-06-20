@@ -4,14 +4,14 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-conformance-tests.git",
-        "sha": "3e54e4d9657bf6bbf63568d30f3c07deb43e6c47"
+        "sha": "6d8de9694d2ec37f8cc29cc97304480a2d5ec426"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "c4f3059c27591eb24d6942a0e357ec94c80459f2"
+        "sha": "4f2c9f752a94042472fc03c5bd9e06e89817d2bd"
       }
     }
   ]
