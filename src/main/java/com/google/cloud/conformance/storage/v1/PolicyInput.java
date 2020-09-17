@@ -200,10 +200,17 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   public static final int SCHEME_FIELD_NUMBER = 1;
   private volatile java.lang.Object scheme_;
   /**
+   *
+   *
+   * <pre>
+   * http or https
+   * </pre>
+   *
    * <code>string scheme = 1;</code>
    *
    * @return The scheme.
    */
+  @java.lang.Override
   public java.lang.String getScheme() {
     java.lang.Object ref = scheme_;
     if (ref instanceof java.lang.String) {
@@ -216,10 +223,17 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
   }
   /**
+   *
+   *
+   * <pre>
+   * http or https
+   * </pre>
+   *
    * <code>string scheme = 1;</code>
    *
    * @return The bytes for scheme.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getSchemeBytes() {
     java.lang.Object ref = scheme_;
     if (ref instanceof java.lang.String) {
@@ -239,6 +253,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The enum numeric value on the wire for urlStyle.
    */
+  @java.lang.Override
   public int getUrlStyleValue() {
     return urlStyle_;
   }
@@ -247,6 +262,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The urlStyle.
    */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
     @SuppressWarnings("deprecation")
     com.google.cloud.conformance.storage.v1.UrlStyle result =
@@ -261,6 +277,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bucketBoundHostname.
    */
+  @java.lang.Override
   public java.lang.String getBucketBoundHostname() {
     java.lang.Object ref = bucketBoundHostname_;
     if (ref instanceof java.lang.String) {
@@ -277,6 +294,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for bucketBoundHostname.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getBucketBoundHostnameBytes() {
     java.lang.Object ref = bucketBoundHostname_;
     if (ref instanceof java.lang.String) {
@@ -296,6 +314,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bucket.
    */
+  @java.lang.Override
   public java.lang.String getBucket() {
     java.lang.Object ref = bucket_;
     if (ref instanceof java.lang.String) {
@@ -312,6 +331,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for bucket.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getBucketBytes() {
     java.lang.Object ref = bucket_;
     if (ref instanceof java.lang.String) {
@@ -331,6 +351,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The object.
    */
+  @java.lang.Override
   public java.lang.String getObject() {
     java.lang.Object ref = object_;
     if (ref instanceof java.lang.String) {
@@ -347,6 +368,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for object.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getObjectBytes() {
     java.lang.Object ref = object_;
     if (ref instanceof java.lang.String) {
@@ -366,6 +388,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The expiration.
    */
+  @java.lang.Override
   public int getExpiration() {
     return expiration_;
   }
@@ -377,6 +400,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return Whether the timestamp field is set.
    */
+  @java.lang.Override
   public boolean hasTimestamp() {
     return timestamp_ != null;
   }
@@ -385,10 +409,12 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The timestamp.
    */
+  @java.lang.Override
   public com.google.protobuf.Timestamp getTimestamp() {
     return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
   }
   /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
+  @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
     return getTimestamp();
   }
@@ -418,7 +444,22 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   public int getFieldsCount() {
     return internalGetFields().getMap().size();
   }
-  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * fields with strict equivalence which are added into
+   * PolicyOutput.expectedDecodedPolicy to generate the
+   * signature.
+   * Expectations
+   * E.1: Order them in lexigraphical order so it's the
+   * signature can be verified across different language
+   * implementations.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 8;</code>
+   */
+  @java.lang.Override
   public boolean containsFields(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -426,15 +467,46 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     return internalGetFields().getMap().containsKey(key);
   }
   /** Use {@link #getFieldsMap()} instead. */
+  @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.String, java.lang.String> getFields() {
     return getFieldsMap();
   }
-  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * fields with strict equivalence which are added into
+   * PolicyOutput.expectedDecodedPolicy to generate the
+   * signature.
+   * Expectations
+   * E.1: Order them in lexigraphical order so it's the
+   * signature can be verified across different language
+   * implementations.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 8;</code>
+   */
+  @java.lang.Override
   public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
     return internalGetFields().getMap();
   }
-  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * fields with strict equivalence which are added into
+   * PolicyOutput.expectedDecodedPolicy to generate the
+   * signature.
+   * Expectations
+   * E.1: Order them in lexigraphical order so it's the
+   * signature can be verified across different language
+   * implementations.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 8;</code>
+   */
+  @java.lang.Override
   public java.lang.String getFieldsOrDefault(java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -442,7 +514,22 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
-  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * fields with strict equivalence which are added into
+   * PolicyOutput.expectedDecodedPolicy to generate the
+   * signature.
+   * Expectations
+   * E.1: Order them in lexigraphical order so it's the
+   * signature can be verified across different language
+   * implementations.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 8;</code>
+   */
+  @java.lang.Override
   public java.lang.String getFieldsOrThrow(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -461,6 +548,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return Whether the conditions field is set.
    */
+  @java.lang.Override
   public boolean hasConditions() {
     return conditions_ != null;
   }
@@ -469,12 +557,14 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The conditions.
    */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PolicyConditions getConditions() {
     return conditions_ == null
         ? com.google.cloud.conformance.storage.v1.PolicyConditions.getDefaultInstance()
         : conditions_;
   }
   /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PolicyConditionsOrBuilder
       getConditionsOrBuilder() {
     return getConditions();
@@ -970,6 +1060,12 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object scheme_ = "";
     /**
+     *
+     *
+     * <pre>
+     * http or https
+     * </pre>
+     *
      * <code>string scheme = 1;</code>
      *
      * @return The scheme.
@@ -986,6 +1082,12 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
+     *
+     *
+     * <pre>
+     * http or https
+     * </pre>
+     *
      * <code>string scheme = 1;</code>
      *
      * @return The bytes for scheme.
@@ -1002,6 +1104,12 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
+     *
+     *
+     * <pre>
+     * http or https
+     * </pre>
+     *
      * <code>string scheme = 1;</code>
      *
      * @param value The scheme to set.
@@ -1017,6 +1125,12 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
+     *
+     *
+     * <pre>
+     * http or https
+     * </pre>
+     *
      * <code>string scheme = 1;</code>
      *
      * @return This builder for chaining.
@@ -1028,6 +1142,12 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
+     *
+     *
+     * <pre>
+     * http or https
+     * </pre>
+     *
      * <code>string scheme = 1;</code>
      *
      * @param value The bytes for scheme to set.
@@ -1050,6 +1170,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      *
      * @return The enum numeric value on the wire for urlStyle.
      */
+    @java.lang.Override
     public int getUrlStyleValue() {
       return urlStyle_;
     }
@@ -1060,6 +1181,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder setUrlStyleValue(int value) {
+
       urlStyle_ = value;
       onChanged();
       return this;
@@ -1069,6 +1191,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      *
      * @return The urlStyle.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
       @SuppressWarnings("deprecation")
       com.google.cloud.conformance.storage.v1.UrlStyle result =
@@ -1338,6 +1461,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      *
      * @return The expiration.
      */
+    @java.lang.Override
     public int getExpiration() {
       return expiration_;
     }
@@ -1501,7 +1625,22 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     public int getFieldsCount() {
       return internalGetFields().getMap().size();
     }
-    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * fields with strict equivalence which are added into
+     * PolicyOutput.expectedDecodedPolicy to generate the
+     * signature.
+     * Expectations
+     * E.1: Order them in lexigraphical order so it's the
+     * signature can be verified across different language
+     * implementations.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 8;</code>
+     */
+    @java.lang.Override
     public boolean containsFields(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -1509,15 +1648,46 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return internalGetFields().getMap().containsKey(key);
     }
     /** Use {@link #getFieldsMap()} instead. */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getFields() {
       return getFieldsMap();
     }
-    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * fields with strict equivalence which are added into
+     * PolicyOutput.expectedDecodedPolicy to generate the
+     * signature.
+     * Expectations
+     * E.1: Order them in lexigraphical order so it's the
+     * signature can be verified across different language
+     * implementations.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 8;</code>
+     */
+    @java.lang.Override
     public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
       return internalGetFields().getMap();
     }
-    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * fields with strict equivalence which are added into
+     * PolicyOutput.expectedDecodedPolicy to generate the
+     * signature.
+     * Expectations
+     * E.1: Order them in lexigraphical order so it's the
+     * signature can be verified across different language
+     * implementations.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 8;</code>
+     */
+    @java.lang.Override
     public java.lang.String getFieldsOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
@@ -1526,7 +1696,22 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
-    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * fields with strict equivalence which are added into
+     * PolicyOutput.expectedDecodedPolicy to generate the
+     * signature.
+     * Expectations
+     * E.1: Order them in lexigraphical order so it's the
+     * signature can be verified across different language
+     * implementations.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 8;</code>
+     */
+    @java.lang.Override
     public java.lang.String getFieldsOrThrow(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -1542,7 +1727,21 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableFields().getMutableMap().clear();
       return this;
     }
-    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * fields with strict equivalence which are added into
+     * PolicyOutput.expectedDecodedPolicy to generate the
+     * signature.
+     * Expectations
+     * E.1: Order them in lexigraphical order so it's the
+     * signature can be verified across different language
+     * implementations.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 8;</code>
+     */
     public Builder removeFields(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -1555,7 +1754,21 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     public java.util.Map<java.lang.String, java.lang.String> getMutableFields() {
       return internalGetMutableFields().getMutableMap();
     }
-    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * fields with strict equivalence which are added into
+     * PolicyOutput.expectedDecodedPolicy to generate the
+     * signature.
+     * Expectations
+     * E.1: Order them in lexigraphical order so it's the
+     * signature can be verified across different language
+     * implementations.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 8;</code>
+     */
     public Builder putFields(java.lang.String key, java.lang.String value) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -1566,7 +1779,21 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableFields().getMutableMap().put(key, value);
       return this;
     }
-    /** <code>map&lt;string, string&gt; fields = 8;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * fields with strict equivalence which are added into
+     * PolicyOutput.expectedDecodedPolicy to generate the
+     * signature.
+     * Expectations
+     * E.1: Order them in lexigraphical order so it's the
+     * signature can be verified across different language
+     * implementations.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 8;</code>
+     */
     public Builder putAllFields(java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableFields().getMutableMap().putAll(values);
       return this;

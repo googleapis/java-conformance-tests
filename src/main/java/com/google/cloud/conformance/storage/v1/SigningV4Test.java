@@ -255,6 +255,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The fileName.
    */
+  @java.lang.Override
   public java.lang.String getFileName() {
     java.lang.Object ref = fileName_;
     if (ref instanceof java.lang.String) {
@@ -271,6 +272,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for fileName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getFileNameBytes() {
     java.lang.Object ref = fileName_;
     if (ref instanceof java.lang.String) {
@@ -290,6 +292,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The description.
    */
+  @java.lang.Override
   public java.lang.String getDescription() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
@@ -306,6 +309,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for description.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getDescriptionBytes() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
@@ -325,6 +329,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bucket.
    */
+  @java.lang.Override
   public java.lang.String getBucket() {
     java.lang.Object ref = bucket_;
     if (ref instanceof java.lang.String) {
@@ -341,6 +346,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for bucket.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getBucketBytes() {
     java.lang.Object ref = bucket_;
     if (ref instanceof java.lang.String) {
@@ -360,6 +366,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The object.
    */
+  @java.lang.Override
   public java.lang.String getObject() {
     java.lang.Object ref = object_;
     if (ref instanceof java.lang.String) {
@@ -376,6 +383,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for object.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getObjectBytes() {
     java.lang.Object ref = object_;
     if (ref instanceof java.lang.String) {
@@ -395,6 +403,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The method.
    */
+  @java.lang.Override
   public java.lang.String getMethod() {
     java.lang.Object ref = method_;
     if (ref instanceof java.lang.String) {
@@ -411,6 +420,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for method.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getMethodBytes() {
     java.lang.Object ref = method_;
     if (ref instanceof java.lang.String) {
@@ -430,6 +440,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The expiration.
    */
+  @java.lang.Override
   public long getExpiration() {
     return expiration_;
   }
@@ -441,6 +452,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return Whether the timestamp field is set.
    */
+  @java.lang.Override
   public boolean hasTimestamp() {
     return timestamp_ != null;
   }
@@ -449,10 +461,12 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The timestamp.
    */
+  @java.lang.Override
   public com.google.protobuf.Timestamp getTimestamp() {
     return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
   }
   /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
+  @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
     return getTimestamp();
   }
@@ -464,6 +478,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The expectedUrl.
    */
+  @java.lang.Override
   public java.lang.String getExpectedUrl() {
     java.lang.Object ref = expectedUrl_;
     if (ref instanceof java.lang.String) {
@@ -480,6 +495,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for expectedUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getExpectedUrlBytes() {
     java.lang.Object ref = expectedUrl_;
     if (ref instanceof java.lang.String) {
@@ -518,6 +534,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     return internalGetHeaders().getMap().size();
   }
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
+  @java.lang.Override
   public boolean containsHeaders(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -525,15 +542,18 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     return internalGetHeaders().getMap().containsKey(key);
   }
   /** Use {@link #getHeadersMap()} instead. */
+  @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.String, java.lang.String> getHeaders() {
     return getHeadersMap();
   }
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
+  @java.lang.Override
   public java.util.Map<java.lang.String, java.lang.String> getHeadersMap() {
     return internalGetHeaders().getMap();
   }
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
+  @java.lang.Override
   public java.lang.String getHeadersOrDefault(java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -542,6 +562,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
+  @java.lang.Override
   public java.lang.String getHeadersOrThrow(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -581,6 +602,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     return internalGetQueryParameters().getMap().size();
   }
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  @java.lang.Override
   public boolean containsQueryParameters(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -588,15 +610,18 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     return internalGetQueryParameters().getMap().containsKey(key);
   }
   /** Use {@link #getQueryParametersMap()} instead. */
+  @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.String, java.lang.String> getQueryParameters() {
     return getQueryParametersMap();
   }
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  @java.lang.Override
   public java.util.Map<java.lang.String, java.lang.String> getQueryParametersMap() {
     return internalGetQueryParameters().getMap();
   }
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  @java.lang.Override
   public java.lang.String getQueryParametersOrDefault(
       java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
@@ -606,6 +631,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+  @java.lang.Override
   public java.lang.String getQueryParametersOrThrow(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -624,6 +650,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The scheme.
    */
+  @java.lang.Override
   public java.lang.String getScheme() {
     java.lang.Object ref = scheme_;
     if (ref instanceof java.lang.String) {
@@ -640,6 +667,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for scheme.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getSchemeBytes() {
     java.lang.Object ref = scheme_;
     if (ref instanceof java.lang.String) {
@@ -659,6 +687,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The enum numeric value on the wire for urlStyle.
    */
+  @java.lang.Override
   public int getUrlStyleValue() {
     return urlStyle_;
   }
@@ -667,6 +696,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The urlStyle.
    */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
     @SuppressWarnings("deprecation")
     com.google.cloud.conformance.storage.v1.UrlStyle result =
@@ -681,6 +711,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bucketBoundHostname.
    */
+  @java.lang.Override
   public java.lang.String getBucketBoundHostname() {
     java.lang.Object ref = bucketBoundHostname_;
     if (ref instanceof java.lang.String) {
@@ -697,6 +728,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for bucketBoundHostname.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getBucketBoundHostnameBytes() {
     java.lang.Object ref = bucketBoundHostname_;
     if (ref instanceof java.lang.String) {
@@ -716,6 +748,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The expectedCanonicalRequest.
    */
+  @java.lang.Override
   public java.lang.String getExpectedCanonicalRequest() {
     java.lang.Object ref = expectedCanonicalRequest_;
     if (ref instanceof java.lang.String) {
@@ -732,6 +765,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for expectedCanonicalRequest.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getExpectedCanonicalRequestBytes() {
     java.lang.Object ref = expectedCanonicalRequest_;
     if (ref instanceof java.lang.String) {
@@ -751,6 +785,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The expectedStringToSign.
    */
+  @java.lang.Override
   public java.lang.String getExpectedStringToSign() {
     java.lang.Object ref = expectedStringToSign_;
     if (ref instanceof java.lang.String) {
@@ -767,6 +802,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for expectedStringToSign.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getExpectedStringToSignBytes() {
     java.lang.Object ref = expectedStringToSign_;
     if (ref instanceof java.lang.String) {
@@ -1748,6 +1784,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      *
      * @return The expiration.
      */
+    @java.lang.Override
     public long getExpiration() {
       return expiration_;
     }
@@ -1988,6 +2025,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return internalGetHeaders().getMap().size();
     }
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
+    @java.lang.Override
     public boolean containsHeaders(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -1995,15 +2033,18 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return internalGetHeaders().getMap().containsKey(key);
     }
     /** Use {@link #getHeadersMap()} instead. */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getHeaders() {
       return getHeadersMap();
     }
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
+    @java.lang.Override
     public java.util.Map<java.lang.String, java.lang.String> getHeadersMap() {
       return internalGetHeaders().getMap();
     }
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
+    @java.lang.Override
     public java.lang.String getHeadersOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
@@ -2013,6 +2054,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
+    @java.lang.Override
     public java.lang.String getHeadersOrThrow(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -2088,6 +2130,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return internalGetQueryParameters().getMap().size();
     }
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+    @java.lang.Override
     public boolean containsQueryParameters(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -2095,15 +2138,18 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return internalGetQueryParameters().getMap().containsKey(key);
     }
     /** Use {@link #getQueryParametersMap()} instead. */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getQueryParameters() {
       return getQueryParametersMap();
     }
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+    @java.lang.Override
     public java.util.Map<java.lang.String, java.lang.String> getQueryParametersMap() {
       return internalGetQueryParameters().getMap();
     }
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+    @java.lang.Override
     public java.lang.String getQueryParametersOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
@@ -2113,6 +2159,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
+    @java.lang.Override
     public java.lang.String getQueryParametersOrThrow(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -2240,6 +2287,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      *
      * @return The enum numeric value on the wire for urlStyle.
      */
+    @java.lang.Override
     public int getUrlStyleValue() {
       return urlStyle_;
     }
@@ -2250,6 +2298,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder setUrlStyleValue(int value) {
+
       urlStyle_ = value;
       onChanged();
       return this;
@@ -2259,6 +2308,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      *
      * @return The urlStyle.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
       @SuppressWarnings("deprecation")
       com.google.cloud.conformance.storage.v1.UrlStyle result =

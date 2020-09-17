@@ -161,6 +161,7 @@ public final class TestDefinition {
     /**
      * <code>repeated .google.cloud.conformance.bigtable.v2.ReadRowsTest read_rows_tests = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.cloud.conformance.bigtable.v2.TestDefinition.ReadRowsTest>
         getReadRowsTestsList() {
       return readRowsTests_;
@@ -168,6 +169,7 @@ public final class TestDefinition {
     /**
      * <code>repeated .google.cloud.conformance.bigtable.v2.ReadRowsTest read_rows_tests = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<
             ? extends com.google.cloud.conformance.bigtable.v2.TestDefinition.ReadRowsTestOrBuilder>
         getReadRowsTestsOrBuilderList() {
@@ -176,12 +178,14 @@ public final class TestDefinition {
     /**
      * <code>repeated .google.cloud.conformance.bigtable.v2.ReadRowsTest read_rows_tests = 1;</code>
      */
+    @java.lang.Override
     public int getReadRowsTestsCount() {
       return readRowsTests_.size();
     }
     /**
      * <code>repeated .google.cloud.conformance.bigtable.v2.ReadRowsTest read_rows_tests = 1;</code>
      */
+    @java.lang.Override
     public com.google.cloud.conformance.bigtable.v2.TestDefinition.ReadRowsTest getReadRowsTests(
         int index) {
       return readRowsTests_.get(index);
@@ -189,6 +193,7 @@ public final class TestDefinition {
     /**
      * <code>repeated .google.cloud.conformance.bigtable.v2.ReadRowsTest read_rows_tests = 1;</code>
      */
+    @java.lang.Override
     public com.google.cloud.conformance.bigtable.v2.TestDefinition.ReadRowsTestOrBuilder
         getReadRowsTestsOrBuilder(int index) {
       return readRowsTests_.get(index);
@@ -1314,6 +1319,7 @@ public final class TestDefinition {
        *
        * @return The rowKey.
        */
+      @java.lang.Override
       public java.lang.String getRowKey() {
         java.lang.Object ref = rowKey_;
         if (ref instanceof java.lang.String) {
@@ -1330,6 +1336,7 @@ public final class TestDefinition {
        *
        * @return The bytes for rowKey.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getRowKeyBytes() {
         java.lang.Object ref = rowKey_;
         if (ref instanceof java.lang.String) {
@@ -1349,6 +1356,7 @@ public final class TestDefinition {
        *
        * @return The familyName.
        */
+      @java.lang.Override
       public java.lang.String getFamilyName() {
         java.lang.Object ref = familyName_;
         if (ref instanceof java.lang.String) {
@@ -1365,6 +1373,7 @@ public final class TestDefinition {
        *
        * @return The bytes for familyName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getFamilyNameBytes() {
         java.lang.Object ref = familyName_;
         if (ref instanceof java.lang.String) {
@@ -1384,6 +1393,7 @@ public final class TestDefinition {
        *
        * @return The qualifier.
        */
+      @java.lang.Override
       public java.lang.String getQualifier() {
         java.lang.Object ref = qualifier_;
         if (ref instanceof java.lang.String) {
@@ -1400,6 +1410,7 @@ public final class TestDefinition {
        *
        * @return The bytes for qualifier.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getQualifierBytes() {
         java.lang.Object ref = qualifier_;
         if (ref instanceof java.lang.String) {
@@ -1419,6 +1430,7 @@ public final class TestDefinition {
        *
        * @return The timestampMicros.
        */
+      @java.lang.Override
       public long getTimestampMicros() {
         return timestampMicros_;
       }
@@ -1430,6 +1442,7 @@ public final class TestDefinition {
        *
        * @return The value.
        */
+      @java.lang.Override
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
         if (ref instanceof java.lang.String) {
@@ -1446,6 +1459,7 @@ public final class TestDefinition {
        *
        * @return The bytes for value.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getValueBytes() {
         java.lang.Object ref = value_;
         if (ref instanceof java.lang.String) {
@@ -1465,6 +1479,7 @@ public final class TestDefinition {
        *
        * @return The label.
        */
+      @java.lang.Override
       public java.lang.String getLabel() {
         java.lang.Object ref = label_;
         if (ref instanceof java.lang.String) {
@@ -1481,6 +1496,7 @@ public final class TestDefinition {
        *
        * @return The bytes for label.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getLabelBytes() {
         java.lang.Object ref = label_;
         if (ref instanceof java.lang.String) {
@@ -1500,6 +1516,7 @@ public final class TestDefinition {
        *
        * @return The error.
        */
+      @java.lang.Override
       public boolean getError() {
         return error_;
       }
@@ -2180,6 +2197,7 @@ public final class TestDefinition {
          *
          * @return The timestampMicros.
          */
+        @java.lang.Override
         public long getTimestampMicros() {
           return timestampMicros_;
         }
@@ -2365,6 +2383,7 @@ public final class TestDefinition {
          *
          * @return The error.
          */
+        @java.lang.Override
         public boolean getError() {
           return error_;
         }
@@ -2456,6 +2475,7 @@ public final class TestDefinition {
      *
      * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -2472,6 +2492,7 @@ public final class TestDefinition {
      *
      * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -2487,23 +2508,28 @@ public final class TestDefinition {
     public static final int CHUNKS_FIELD_NUMBER = 2;
     private java.util.List<com.google.bigtable.v2.ReadRowsResponse.CellChunk> chunks_;
     /** <code>repeated .google.bigtable.v2.ReadRowsResponse.CellChunk chunks = 2;</code> */
+    @java.lang.Override
     public java.util.List<com.google.bigtable.v2.ReadRowsResponse.CellChunk> getChunksList() {
       return chunks_;
     }
     /** <code>repeated .google.bigtable.v2.ReadRowsResponse.CellChunk chunks = 2;</code> */
+    @java.lang.Override
     public java.util.List<? extends com.google.bigtable.v2.ReadRowsResponse.CellChunkOrBuilder>
         getChunksOrBuilderList() {
       return chunks_;
     }
     /** <code>repeated .google.bigtable.v2.ReadRowsResponse.CellChunk chunks = 2;</code> */
+    @java.lang.Override
     public int getChunksCount() {
       return chunks_.size();
     }
     /** <code>repeated .google.bigtable.v2.ReadRowsResponse.CellChunk chunks = 2;</code> */
+    @java.lang.Override
     public com.google.bigtable.v2.ReadRowsResponse.CellChunk getChunks(int index) {
       return chunks_.get(index);
     }
     /** <code>repeated .google.bigtable.v2.ReadRowsResponse.CellChunk chunks = 2;</code> */
+    @java.lang.Override
     public com.google.bigtable.v2.ReadRowsResponse.CellChunkOrBuilder getChunksOrBuilder(
         int index) {
       return chunks_.get(index);
@@ -2516,6 +2542,7 @@ public final class TestDefinition {
     /**
      * <code>repeated .google.cloud.conformance.bigtable.v2.ReadRowsTest.Result results = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<
             com.google.cloud.conformance.bigtable.v2.TestDefinition.ReadRowsTest.Result>
         getResultsList() {
@@ -2524,6 +2551,7 @@ public final class TestDefinition {
     /**
      * <code>repeated .google.cloud.conformance.bigtable.v2.ReadRowsTest.Result results = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<
             ? extends
                 com.google.cloud.conformance.bigtable.v2.TestDefinition.ReadRowsTest
@@ -2534,12 +2562,14 @@ public final class TestDefinition {
     /**
      * <code>repeated .google.cloud.conformance.bigtable.v2.ReadRowsTest.Result results = 3;</code>
      */
+    @java.lang.Override
     public int getResultsCount() {
       return results_.size();
     }
     /**
      * <code>repeated .google.cloud.conformance.bigtable.v2.ReadRowsTest.Result results = 3;</code>
      */
+    @java.lang.Override
     public com.google.cloud.conformance.bigtable.v2.TestDefinition.ReadRowsTest.Result getResults(
         int index) {
       return results_.get(index);
@@ -2547,6 +2577,7 @@ public final class TestDefinition {
     /**
      * <code>repeated .google.cloud.conformance.bigtable.v2.ReadRowsTest.Result results = 3;</code>
      */
+    @java.lang.Override
     public com.google.cloud.conformance.bigtable.v2.TestDefinition.ReadRowsTest.ResultOrBuilder
         getResultsOrBuilder(int index) {
       return results_.get(index);

@@ -152,25 +152,30 @@ public final class TestDefinition {
     public static final int TESTS_FIELD_NUMBER = 1;
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Test> tests_;
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
+    @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Test>
         getTestsList() {
       return tests_;
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
+    @java.lang.Override
     public java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.TestOrBuilder>
         getTestsOrBuilderList() {
       return tests_;
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
+    @java.lang.Override
     public int getTestsCount() {
       return tests_.size();
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Test getTests(int index) {
       return tests_.get(index);
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.TestOrBuilder getTestsOrBuilder(
         int index) {
       return tests_.get(index);
@@ -1363,6 +1368,7 @@ public final class TestDefinition {
      *
      * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -1385,6 +1391,7 @@ public final class TestDefinition {
      *
      * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -1410,6 +1417,7 @@ public final class TestDefinition {
      *
      * @return The comment.
      */
+    @java.lang.Override
     public java.lang.String getComment() {
       java.lang.Object ref = comment_;
       if (ref instanceof java.lang.String) {
@@ -1432,6 +1440,7 @@ public final class TestDefinition {
      *
      * @return The bytes for comment.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCommentBytes() {
       java.lang.Object ref = comment_;
       if (ref instanceof java.lang.String) {
@@ -1450,6 +1459,7 @@ public final class TestDefinition {
      *
      * @return Whether the get field is set.
      */
+    @java.lang.Override
     public boolean hasGet() {
       return testCase_ == 2;
     }
@@ -1458,6 +1468,7 @@ public final class TestDefinition {
      *
      * @return The get.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest getGet() {
       if (testCase_ == 2) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest) test_;
@@ -1465,6 +1476,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest.getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.GetTestOrBuilder
         getGetOrBuilder() {
       if (testCase_ == 2) {
@@ -1479,6 +1491,7 @@ public final class TestDefinition {
      *
      * @return Whether the create field is set.
      */
+    @java.lang.Override
     public boolean hasCreate() {
       return testCase_ == 3;
     }
@@ -1487,6 +1500,7 @@ public final class TestDefinition {
      *
      * @return The create.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest getCreate() {
       if (testCase_ == 3) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest) test_;
@@ -1495,6 +1509,7 @@ public final class TestDefinition {
           .getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTestOrBuilder
         getCreateOrBuilder() {
       if (testCase_ == 3) {
@@ -1510,6 +1525,7 @@ public final class TestDefinition {
      *
      * @return Whether the set field is set.
      */
+    @java.lang.Override
     public boolean hasSet() {
       return testCase_ == 4;
     }
@@ -1518,6 +1534,7 @@ public final class TestDefinition {
      *
      * @return The set.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest getSet() {
       if (testCase_ == 4) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest) test_;
@@ -1525,6 +1542,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest.getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SetTestOrBuilder
         getSetOrBuilder() {
       if (testCase_ == 4) {
@@ -1539,6 +1557,7 @@ public final class TestDefinition {
      *
      * @return Whether the update field is set.
      */
+    @java.lang.Override
     public boolean hasUpdate() {
       return testCase_ == 5;
     }
@@ -1547,6 +1566,7 @@ public final class TestDefinition {
      *
      * @return The update.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest getUpdate() {
       if (testCase_ == 5) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest) test_;
@@ -1555,6 +1575,7 @@ public final class TestDefinition {
           .getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTestOrBuilder
         getUpdateOrBuilder() {
       if (testCase_ == 5) {
@@ -1570,6 +1591,7 @@ public final class TestDefinition {
      *
      * @return Whether the updatePaths field is set.
      */
+    @java.lang.Override
     public boolean hasUpdatePaths() {
       return testCase_ == 6;
     }
@@ -1578,6 +1600,7 @@ public final class TestDefinition {
      *
      * @return The updatePaths.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest
         getUpdatePaths() {
       if (testCase_ == 6) {
@@ -1587,6 +1610,7 @@ public final class TestDefinition {
           .getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTestOrBuilder
         getUpdatePathsOrBuilder() {
       if (testCase_ == 6) {
@@ -1602,6 +1626,7 @@ public final class TestDefinition {
      *
      * @return Whether the delete field is set.
      */
+    @java.lang.Override
     public boolean hasDelete() {
       return testCase_ == 7;
     }
@@ -1610,6 +1635,7 @@ public final class TestDefinition {
      *
      * @return The delete.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest getDelete() {
       if (testCase_ == 7) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest) test_;
@@ -1618,6 +1644,7 @@ public final class TestDefinition {
           .getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTestOrBuilder
         getDeleteOrBuilder() {
       if (testCase_ == 7) {
@@ -1633,6 +1660,7 @@ public final class TestDefinition {
      *
      * @return Whether the query field is set.
      */
+    @java.lang.Override
     public boolean hasQuery() {
       return testCase_ == 8;
     }
@@ -1641,6 +1669,7 @@ public final class TestDefinition {
      *
      * @return The query.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest getQuery() {
       if (testCase_ == 8) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest) test_;
@@ -1649,6 +1678,7 @@ public final class TestDefinition {
           .getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTestOrBuilder
         getQueryOrBuilder() {
       if (testCase_ == 8) {
@@ -1664,6 +1694,7 @@ public final class TestDefinition {
      *
      * @return Whether the listen field is set.
      */
+    @java.lang.Override
     public boolean hasListen() {
       return testCase_ == 9;
     }
@@ -1672,6 +1703,7 @@ public final class TestDefinition {
      *
      * @return The listen.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest getListen() {
       if (testCase_ == 9) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest) test_;
@@ -1680,6 +1712,7 @@ public final class TestDefinition {
           .getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTestOrBuilder
         getListenOrBuilder() {
       if (testCase_ == 9) {
@@ -2511,6 +2544,7 @@ public final class TestDefinition {
        *
        * @return Whether the get field is set.
        */
+      @java.lang.Override
       public boolean hasGet() {
         return testCase_ == 2;
       }
@@ -2519,6 +2553,7 @@ public final class TestDefinition {
        *
        * @return The get.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest getGet() {
         if (getBuilder_ == null) {
           if (testCase_ == 2) {
@@ -2611,6 +2646,7 @@ public final class TestDefinition {
         return getGetFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.GetTestOrBuilder
           getGetOrBuilder() {
         if ((testCase_ == 2) && (getBuilder_ != null)) {
@@ -2661,6 +2697,7 @@ public final class TestDefinition {
        *
        * @return Whether the create field is set.
        */
+      @java.lang.Override
       public boolean hasCreate() {
         return testCase_ == 3;
       }
@@ -2669,6 +2706,7 @@ public final class TestDefinition {
        *
        * @return The create.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest getCreate() {
         if (createBuilder_ == null) {
           if (testCase_ == 3) {
@@ -2761,6 +2799,7 @@ public final class TestDefinition {
         return getCreateFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTestOrBuilder
           getCreateOrBuilder() {
         if ((testCase_ == 3) && (createBuilder_ != null)) {
@@ -2811,6 +2850,7 @@ public final class TestDefinition {
        *
        * @return Whether the set field is set.
        */
+      @java.lang.Override
       public boolean hasSet() {
         return testCase_ == 4;
       }
@@ -2819,6 +2859,7 @@ public final class TestDefinition {
        *
        * @return The set.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest getSet() {
         if (setBuilder_ == null) {
           if (testCase_ == 4) {
@@ -2911,6 +2952,7 @@ public final class TestDefinition {
         return getSetFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SetTestOrBuilder
           getSetOrBuilder() {
         if ((testCase_ == 4) && (setBuilder_ != null)) {
@@ -2961,6 +3003,7 @@ public final class TestDefinition {
        *
        * @return Whether the update field is set.
        */
+      @java.lang.Override
       public boolean hasUpdate() {
         return testCase_ == 5;
       }
@@ -2969,6 +3012,7 @@ public final class TestDefinition {
        *
        * @return The update.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest getUpdate() {
         if (updateBuilder_ == null) {
           if (testCase_ == 5) {
@@ -3061,6 +3105,7 @@ public final class TestDefinition {
         return getUpdateFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTestOrBuilder
           getUpdateOrBuilder() {
         if ((testCase_ == 5) && (updateBuilder_ != null)) {
@@ -3111,6 +3156,7 @@ public final class TestDefinition {
        *
        * @return Whether the updatePaths field is set.
        */
+      @java.lang.Override
       public boolean hasUpdatePaths() {
         return testCase_ == 6;
       }
@@ -3119,6 +3165,7 @@ public final class TestDefinition {
        *
        * @return The updatePaths.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest
           getUpdatePaths() {
         if (updatePathsBuilder_ == null) {
@@ -3213,6 +3260,7 @@ public final class TestDefinition {
         return getUpdatePathsFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTestOrBuilder
           getUpdatePathsOrBuilder() {
         if ((testCase_ == 6) && (updatePathsBuilder_ != null)) {
@@ -3264,6 +3312,7 @@ public final class TestDefinition {
        *
        * @return Whether the delete field is set.
        */
+      @java.lang.Override
       public boolean hasDelete() {
         return testCase_ == 7;
       }
@@ -3272,6 +3321,7 @@ public final class TestDefinition {
        *
        * @return The delete.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest getDelete() {
         if (deleteBuilder_ == null) {
           if (testCase_ == 7) {
@@ -3364,6 +3414,7 @@ public final class TestDefinition {
         return getDeleteFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTestOrBuilder
           getDeleteOrBuilder() {
         if ((testCase_ == 7) && (deleteBuilder_ != null)) {
@@ -3414,6 +3465,7 @@ public final class TestDefinition {
        *
        * @return Whether the query field is set.
        */
+      @java.lang.Override
       public boolean hasQuery() {
         return testCase_ == 8;
       }
@@ -3422,6 +3474,7 @@ public final class TestDefinition {
        *
        * @return The query.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest getQuery() {
         if (queryBuilder_ == null) {
           if (testCase_ == 8) {
@@ -3514,6 +3567,7 @@ public final class TestDefinition {
         return getQueryFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTestOrBuilder
           getQueryOrBuilder() {
         if ((testCase_ == 8) && (queryBuilder_ != null)) {
@@ -3564,6 +3618,7 @@ public final class TestDefinition {
        *
        * @return Whether the listen field is set.
        */
+      @java.lang.Override
       public boolean hasListen() {
         return testCase_ == 9;
       }
@@ -3572,6 +3627,7 @@ public final class TestDefinition {
        *
        * @return The listen.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest getListen() {
         if (listenBuilder_ == null) {
           if (testCase_ == 9) {
@@ -3664,6 +3720,7 @@ public final class TestDefinition {
         return getListenFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTestOrBuilder
           getListenOrBuilder() {
         if ((testCase_ == 9) && (listenBuilder_ != null)) {
@@ -3946,6 +4003,7 @@ public final class TestDefinition {
      *
      * @return The docRefPath.
      */
+    @java.lang.Override
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -3968,6 +4026,7 @@ public final class TestDefinition {
      *
      * @return The bytes for docRefPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -3993,6 +4052,7 @@ public final class TestDefinition {
      *
      * @return Whether the request field is set.
      */
+    @java.lang.Override
     public boolean hasRequest() {
       return request_ != null;
     }
@@ -4007,6 +4067,7 @@ public final class TestDefinition {
      *
      * @return The request.
      */
+    @java.lang.Override
     public com.google.firestore.v1.GetDocumentRequest getRequest() {
       return request_ == null
           ? com.google.firestore.v1.GetDocumentRequest.getDefaultInstance()
@@ -4021,6 +4082,7 @@ public final class TestDefinition {
      *
      * <code>.google.firestore.v1.GetDocumentRequest request = 2;</code>
      */
+    @java.lang.Override
     public com.google.firestore.v1.GetDocumentRequestOrBuilder getRequestOrBuilder() {
       return getRequest();
     }
@@ -4974,6 +5036,7 @@ public final class TestDefinition {
      *
      * @return The docRefPath.
      */
+    @java.lang.Override
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -4996,6 +5059,7 @@ public final class TestDefinition {
      *
      * @return The bytes for docRefPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -5023,6 +5087,7 @@ public final class TestDefinition {
      *
      * @return The jsonData.
      */
+    @java.lang.Override
     public java.lang.String getJsonData() {
       java.lang.Object ref = jsonData_;
       if (ref instanceof java.lang.String) {
@@ -5047,6 +5112,7 @@ public final class TestDefinition {
      *
      * @return The bytes for jsonData.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getJsonDataBytes() {
       java.lang.Object ref = jsonData_;
       if (ref instanceof java.lang.String) {
@@ -5072,6 +5138,7 @@ public final class TestDefinition {
      *
      * @return Whether the request field is set.
      */
+    @java.lang.Override
     public boolean hasRequest() {
       return request_ != null;
     }
@@ -5086,6 +5153,7 @@ public final class TestDefinition {
      *
      * @return The request.
      */
+    @java.lang.Override
     public com.google.firestore.v1.CommitRequest getRequest() {
       return request_ == null
           ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
@@ -5100,6 +5168,7 @@ public final class TestDefinition {
      *
      * <code>.google.firestore.v1.CommitRequest request = 3;</code>
      */
+    @java.lang.Override
     public com.google.firestore.v1.CommitRequestOrBuilder getRequestOrBuilder() {
       return getRequest();
     }
@@ -5118,6 +5187,7 @@ public final class TestDefinition {
      *
      * @return The isError.
      */
+    @java.lang.Override
     public boolean getIsError() {
       return isError_;
     }
@@ -5932,6 +6002,7 @@ public final class TestDefinition {
        *
        * @return The isError.
        */
+      @java.lang.Override
       public boolean getIsError() {
         return isError_;
       }
@@ -6320,6 +6391,7 @@ public final class TestDefinition {
      *
      * @return The docRefPath.
      */
+    @java.lang.Override
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -6342,6 +6414,7 @@ public final class TestDefinition {
      *
      * @return The bytes for docRefPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -6367,6 +6440,7 @@ public final class TestDefinition {
      *
      * @return Whether the option field is set.
      */
+    @java.lang.Override
     public boolean hasOption() {
       return option_ != null;
     }
@@ -6381,6 +6455,7 @@ public final class TestDefinition {
      *
      * @return The option.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption getOption() {
       return option_ == null
           ? com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption.getDefaultInstance()
@@ -6395,6 +6470,7 @@ public final class TestDefinition {
      *
      * <code>.google.cloud.conformance.firestore.v1.SetOption option = 2;</code>
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SetOptionOrBuilder
         getOptionOrBuilder() {
       return getOption();
@@ -6413,6 +6489,7 @@ public final class TestDefinition {
      *
      * @return The jsonData.
      */
+    @java.lang.Override
     public java.lang.String getJsonData() {
       java.lang.Object ref = jsonData_;
       if (ref instanceof java.lang.String) {
@@ -6435,6 +6512,7 @@ public final class TestDefinition {
      *
      * @return The bytes for jsonData.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getJsonDataBytes() {
       java.lang.Object ref = jsonData_;
       if (ref instanceof java.lang.String) {
@@ -6460,6 +6538,7 @@ public final class TestDefinition {
      *
      * @return Whether the request field is set.
      */
+    @java.lang.Override
     public boolean hasRequest() {
       return request_ != null;
     }
@@ -6474,6 +6553,7 @@ public final class TestDefinition {
      *
      * @return The request.
      */
+    @java.lang.Override
     public com.google.firestore.v1.CommitRequest getRequest() {
       return request_ == null
           ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
@@ -6488,6 +6568,7 @@ public final class TestDefinition {
      *
      * <code>.google.firestore.v1.CommitRequest request = 4;</code>
      */
+    @java.lang.Override
     public com.google.firestore.v1.CommitRequestOrBuilder getRequestOrBuilder() {
       return getRequest();
     }
@@ -6505,6 +6586,7 @@ public final class TestDefinition {
      *
      * @return The isError.
      */
+    @java.lang.Override
     public boolean getIsError() {
       return isError_;
     }
@@ -7530,6 +7612,7 @@ public final class TestDefinition {
        *
        * @return The isError.
        */
+      @java.lang.Override
       public boolean getIsError() {
         return isError_;
       }
@@ -7914,6 +7997,7 @@ public final class TestDefinition {
      *
      * @return The docRefPath.
      */
+    @java.lang.Override
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -7936,6 +8020,7 @@ public final class TestDefinition {
      *
      * @return The bytes for docRefPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -7961,6 +8046,7 @@ public final class TestDefinition {
      *
      * @return Whether the precondition field is set.
      */
+    @java.lang.Override
     public boolean hasPrecondition() {
       return precondition_ != null;
     }
@@ -7975,6 +8061,7 @@ public final class TestDefinition {
      *
      * @return The precondition.
      */
+    @java.lang.Override
     public com.google.firestore.v1.Precondition getPrecondition() {
       return precondition_ == null
           ? com.google.firestore.v1.Precondition.getDefaultInstance()
@@ -7989,6 +8076,7 @@ public final class TestDefinition {
      *
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
      */
+    @java.lang.Override
     public com.google.firestore.v1.PreconditionOrBuilder getPreconditionOrBuilder() {
       return getPrecondition();
     }
@@ -8006,6 +8094,7 @@ public final class TestDefinition {
      *
      * @return The jsonData.
      */
+    @java.lang.Override
     public java.lang.String getJsonData() {
       java.lang.Object ref = jsonData_;
       if (ref instanceof java.lang.String) {
@@ -8028,6 +8117,7 @@ public final class TestDefinition {
      *
      * @return The bytes for jsonData.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getJsonDataBytes() {
       java.lang.Object ref = jsonData_;
       if (ref instanceof java.lang.String) {
@@ -8053,6 +8143,7 @@ public final class TestDefinition {
      *
      * @return Whether the request field is set.
      */
+    @java.lang.Override
     public boolean hasRequest() {
       return request_ != null;
     }
@@ -8067,6 +8158,7 @@ public final class TestDefinition {
      *
      * @return The request.
      */
+    @java.lang.Override
     public com.google.firestore.v1.CommitRequest getRequest() {
       return request_ == null
           ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
@@ -8081,6 +8173,7 @@ public final class TestDefinition {
      *
      * <code>.google.firestore.v1.CommitRequest request = 4;</code>
      */
+    @java.lang.Override
     public com.google.firestore.v1.CommitRequestOrBuilder getRequestOrBuilder() {
       return getRequest();
     }
@@ -8098,6 +8191,7 @@ public final class TestDefinition {
      *
      * @return The isError.
      */
+    @java.lang.Override
     public boolean getIsError() {
       return isError_;
     }
@@ -9115,6 +9209,7 @@ public final class TestDefinition {
        *
        * @return The isError.
        */
+      @java.lang.Override
       public boolean getIsError() {
         return isError_;
       }
@@ -9606,6 +9701,7 @@ public final class TestDefinition {
      *
      * @return The docRefPath.
      */
+    @java.lang.Override
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -9628,6 +9724,7 @@ public final class TestDefinition {
      *
      * @return The bytes for docRefPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -9653,6 +9750,7 @@ public final class TestDefinition {
      *
      * @return Whether the precondition field is set.
      */
+    @java.lang.Override
     public boolean hasPrecondition() {
       return precondition_ != null;
     }
@@ -9667,6 +9765,7 @@ public final class TestDefinition {
      *
      * @return The precondition.
      */
+    @java.lang.Override
     public com.google.firestore.v1.Precondition getPrecondition() {
       return precondition_ == null
           ? com.google.firestore.v1.Precondition.getDefaultInstance()
@@ -9681,6 +9780,7 @@ public final class TestDefinition {
      *
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
      */
+    @java.lang.Override
     public com.google.firestore.v1.PreconditionOrBuilder getPreconditionOrBuilder() {
       return getPrecondition();
     }
@@ -9697,6 +9797,7 @@ public final class TestDefinition {
      *
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath field_paths = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         getFieldPathsList() {
       return fieldPaths_;
@@ -9710,6 +9811,7 @@ public final class TestDefinition {
      *
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath field_paths = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>
         getFieldPathsOrBuilderList() {
@@ -9724,6 +9826,7 @@ public final class TestDefinition {
      *
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath field_paths = 3;</code>
      */
+    @java.lang.Override
     public int getFieldPathsCount() {
       return fieldPaths_.size();
     }
@@ -9736,6 +9839,7 @@ public final class TestDefinition {
      *
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath field_paths = 3;</code>
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getFieldPaths(
         int index) {
       return fieldPaths_.get(index);
@@ -9749,6 +9853,7 @@ public final class TestDefinition {
      *
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath field_paths = 3;</code>
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
         getFieldPathsOrBuilder(int index) {
       return fieldPaths_.get(index);
@@ -9828,6 +9933,7 @@ public final class TestDefinition {
      *
      * @return Whether the request field is set.
      */
+    @java.lang.Override
     public boolean hasRequest() {
       return request_ != null;
     }
@@ -9842,6 +9948,7 @@ public final class TestDefinition {
      *
      * @return The request.
      */
+    @java.lang.Override
     public com.google.firestore.v1.CommitRequest getRequest() {
       return request_ == null
           ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
@@ -9856,6 +9963,7 @@ public final class TestDefinition {
      *
      * <code>.google.firestore.v1.CommitRequest request = 5;</code>
      */
+    @java.lang.Override
     public com.google.firestore.v1.CommitRequestOrBuilder getRequestOrBuilder() {
       return getRequest();
     }
@@ -9873,6 +9981,7 @@ public final class TestDefinition {
      *
      * @return The isError.
      */
+    @java.lang.Override
     public boolean getIsError() {
       return isError_;
     }
@@ -11413,6 +11522,7 @@ public final class TestDefinition {
        *
        * @return The isError.
        */
+      @java.lang.Override
       public boolean getIsError() {
         return isError_;
       }
@@ -11744,6 +11854,7 @@ public final class TestDefinition {
      *
      * @return The docRefPath.
      */
+    @java.lang.Override
     public java.lang.String getDocRefPath() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -11766,6 +11877,7 @@ public final class TestDefinition {
      *
      * @return The bytes for docRefPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getDocRefPathBytes() {
       java.lang.Object ref = docRefPath_;
       if (ref instanceof java.lang.String) {
@@ -11785,6 +11897,7 @@ public final class TestDefinition {
      *
      * @return Whether the precondition field is set.
      */
+    @java.lang.Override
     public boolean hasPrecondition() {
       return precondition_ != null;
     }
@@ -11793,12 +11906,14 @@ public final class TestDefinition {
      *
      * @return The precondition.
      */
+    @java.lang.Override
     public com.google.firestore.v1.Precondition getPrecondition() {
       return precondition_ == null
           ? com.google.firestore.v1.Precondition.getDefaultInstance()
           : precondition_;
     }
     /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
+    @java.lang.Override
     public com.google.firestore.v1.PreconditionOrBuilder getPreconditionOrBuilder() {
       return getPrecondition();
     }
@@ -11816,6 +11931,7 @@ public final class TestDefinition {
      *
      * @return Whether the request field is set.
      */
+    @java.lang.Override
     public boolean hasRequest() {
       return request_ != null;
     }
@@ -11830,6 +11946,7 @@ public final class TestDefinition {
      *
      * @return The request.
      */
+    @java.lang.Override
     public com.google.firestore.v1.CommitRequest getRequest() {
       return request_ == null
           ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
@@ -11844,6 +11961,7 @@ public final class TestDefinition {
      *
      * <code>.google.firestore.v1.CommitRequest request = 3;</code>
      */
+    @java.lang.Override
     public com.google.firestore.v1.CommitRequestOrBuilder getRequestOrBuilder() {
       return getRequest();
     }
@@ -11861,6 +11979,7 @@ public final class TestDefinition {
      *
      * @return The isError.
      */
+    @java.lang.Override
     public boolean getIsError() {
       return isError_;
     }
@@ -12687,6 +12806,7 @@ public final class TestDefinition {
        *
        * @return The isError.
        */
+      @java.lang.Override
       public boolean getIsError() {
         return isError_;
       }
@@ -12976,6 +13096,7 @@ public final class TestDefinition {
      *
      * @return The all.
      */
+    @java.lang.Override
     public boolean getAll() {
       return all_;
     }
@@ -12992,6 +13113,7 @@ public final class TestDefinition {
      *
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         getFieldsList() {
       return fields_;
@@ -13005,6 +13127,7 @@ public final class TestDefinition {
      *
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>
         getFieldsOrBuilderList() {
@@ -13019,6 +13142,7 @@ public final class TestDefinition {
      *
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 2;</code>
      */
+    @java.lang.Override
     public int getFieldsCount() {
       return fields_.size();
     }
@@ -13031,6 +13155,7 @@ public final class TestDefinition {
      *
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 2;</code>
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getFields(int index) {
       return fields_.get(index);
     }
@@ -13043,6 +13168,7 @@ public final class TestDefinition {
      *
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 2;</code>
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
         getFieldsOrBuilder(int index) {
       return fields_.get(index);
@@ -13448,6 +13574,7 @@ public final class TestDefinition {
        *
        * @return The all.
        */
+      @java.lang.Override
       public boolean getAll() {
         return all_;
       }
@@ -14122,6 +14249,7 @@ public final class TestDefinition {
      *
      * @return The collPath.
      */
+    @java.lang.Override
     public java.lang.String getCollPath() {
       java.lang.Object ref = collPath_;
       if (ref instanceof java.lang.String) {
@@ -14144,6 +14272,7 @@ public final class TestDefinition {
      *
      * @return The bytes for collPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCollPathBytes() {
       java.lang.Object ref = collPath_;
       if (ref instanceof java.lang.String) {
@@ -14160,25 +14289,30 @@ public final class TestDefinition {
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Clause>
         clauses_;
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
+    @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Clause>
         getClausesList() {
       return clauses_;
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
+    @java.lang.Override
     public java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.ClauseOrBuilder>
         getClausesOrBuilderList() {
       return clauses_;
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
+    @java.lang.Override
     public int getClausesCount() {
       return clauses_.size();
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Clause getClauses(int index) {
       return clauses_.get(index);
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.ClauseOrBuilder
         getClausesOrBuilder(int index) {
       return clauses_.get(index);
@@ -14191,6 +14325,7 @@ public final class TestDefinition {
      *
      * @return Whether the query field is set.
      */
+    @java.lang.Override
     public boolean hasQuery() {
       return query_ != null;
     }
@@ -14199,10 +14334,12 @@ public final class TestDefinition {
      *
      * @return The query.
      */
+    @java.lang.Override
     public com.google.firestore.v1.StructuredQuery getQuery() {
       return query_ == null ? com.google.firestore.v1.StructuredQuery.getDefaultInstance() : query_;
     }
     /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
+    @java.lang.Override
     public com.google.firestore.v1.StructuredQueryOrBuilder getQueryOrBuilder() {
       return getQuery();
     }
@@ -14214,6 +14351,7 @@ public final class TestDefinition {
      *
      * @return The isError.
      */
+    @java.lang.Override
     public boolean getIsError() {
       return isError_;
     }
@@ -15097,6 +15235,7 @@ public final class TestDefinition {
        *
        * @return The isError.
        */
+      @java.lang.Override
       public boolean getIsError() {
         return isError_;
       }
@@ -15617,6 +15756,7 @@ public final class TestDefinition {
      *
      * @return Whether the select field is set.
      */
+    @java.lang.Override
     public boolean hasSelect() {
       return clauseCase_ == 1;
     }
@@ -15625,6 +15765,7 @@ public final class TestDefinition {
      *
      * @return The select.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Select getSelect() {
       if (clauseCase_ == 1) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Select) clause_;
@@ -15632,6 +15773,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Select.getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SelectOrBuilder
         getSelectOrBuilder() {
       if (clauseCase_ == 1) {
@@ -15646,6 +15788,7 @@ public final class TestDefinition {
      *
      * @return Whether the where field is set.
      */
+    @java.lang.Override
     public boolean hasWhere() {
       return clauseCase_ == 2;
     }
@@ -15654,6 +15797,7 @@ public final class TestDefinition {
      *
      * @return The where.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Where getWhere() {
       if (clauseCase_ == 2) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Where) clause_;
@@ -15661,6 +15805,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Where.getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.WhereOrBuilder
         getWhereOrBuilder() {
       if (clauseCase_ == 2) {
@@ -15675,6 +15820,7 @@ public final class TestDefinition {
      *
      * @return Whether the orderBy field is set.
      */
+    @java.lang.Override
     public boolean hasOrderBy() {
       return clauseCase_ == 3;
     }
@@ -15683,6 +15829,7 @@ public final class TestDefinition {
      *
      * @return The orderBy.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy getOrderBy() {
       if (clauseCase_ == 3) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy) clause_;
@@ -15690,6 +15837,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy.getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.OrderByOrBuilder
         getOrderByOrBuilder() {
       if (clauseCase_ == 3) {
@@ -15704,6 +15852,7 @@ public final class TestDefinition {
      *
      * @return The offset.
      */
+    @java.lang.Override
     public int getOffset() {
       if (clauseCase_ == 4) {
         return (java.lang.Integer) clause_;
@@ -15717,6 +15866,7 @@ public final class TestDefinition {
      *
      * @return The limit.
      */
+    @java.lang.Override
     public int getLimit() {
       if (clauseCase_ == 5) {
         return (java.lang.Integer) clause_;
@@ -15730,6 +15880,7 @@ public final class TestDefinition {
      *
      * @return Whether the startAt field is set.
      */
+    @java.lang.Override
     public boolean hasStartAt() {
       return clauseCase_ == 6;
     }
@@ -15738,6 +15889,7 @@ public final class TestDefinition {
      *
      * @return The startAt.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAt() {
       if (clauseCase_ == 6) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_;
@@ -15745,6 +15897,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
         getStartAtOrBuilder() {
       if (clauseCase_ == 6) {
@@ -15759,6 +15912,7 @@ public final class TestDefinition {
      *
      * @return Whether the startAfter field is set.
      */
+    @java.lang.Override
     public boolean hasStartAfter() {
       return clauseCase_ == 7;
     }
@@ -15767,6 +15921,7 @@ public final class TestDefinition {
      *
      * @return The startAfter.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAfter() {
       if (clauseCase_ == 7) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_;
@@ -15774,6 +15929,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
         getStartAfterOrBuilder() {
       if (clauseCase_ == 7) {
@@ -15788,6 +15944,7 @@ public final class TestDefinition {
      *
      * @return Whether the endAt field is set.
      */
+    @java.lang.Override
     public boolean hasEndAt() {
       return clauseCase_ == 8;
     }
@@ -15796,6 +15953,7 @@ public final class TestDefinition {
      *
      * @return The endAt.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndAt() {
       if (clauseCase_ == 8) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_;
@@ -15803,6 +15961,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
         getEndAtOrBuilder() {
       if (clauseCase_ == 8) {
@@ -15817,6 +15976,7 @@ public final class TestDefinition {
      *
      * @return Whether the endBefore field is set.
      */
+    @java.lang.Override
     public boolean hasEndBefore() {
       return clauseCase_ == 9;
     }
@@ -15825,6 +15985,7 @@ public final class TestDefinition {
      *
      * @return The endBefore.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndBefore() {
       if (clauseCase_ == 9) {
         return (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_;
@@ -15832,6 +15993,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.getDefaultInstance();
     }
     /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
         getEndBeforeOrBuilder() {
       if (clauseCase_ == 9) {
@@ -16429,6 +16591,7 @@ public final class TestDefinition {
        *
        * @return Whether the select field is set.
        */
+      @java.lang.Override
       public boolean hasSelect() {
         return clauseCase_ == 1;
       }
@@ -16437,6 +16600,7 @@ public final class TestDefinition {
        *
        * @return The select.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Select getSelect() {
         if (selectBuilder_ == null) {
           if (clauseCase_ == 1) {
@@ -16528,6 +16692,7 @@ public final class TestDefinition {
         return getSelectFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SelectOrBuilder
           getSelectOrBuilder() {
         if ((clauseCase_ == 1) && (selectBuilder_ != null)) {
@@ -16578,6 +16743,7 @@ public final class TestDefinition {
        *
        * @return Whether the where field is set.
        */
+      @java.lang.Override
       public boolean hasWhere() {
         return clauseCase_ == 2;
       }
@@ -16586,6 +16752,7 @@ public final class TestDefinition {
        *
        * @return The where.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Where getWhere() {
         if (whereBuilder_ == null) {
           if (clauseCase_ == 2) {
@@ -16677,6 +16844,7 @@ public final class TestDefinition {
         return getWhereFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.WhereOrBuilder
           getWhereOrBuilder() {
         if ((clauseCase_ == 2) && (whereBuilder_ != null)) {
@@ -16726,6 +16894,7 @@ public final class TestDefinition {
        *
        * @return Whether the orderBy field is set.
        */
+      @java.lang.Override
       public boolean hasOrderBy() {
         return clauseCase_ == 3;
       }
@@ -16734,6 +16903,7 @@ public final class TestDefinition {
        *
        * @return The orderBy.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy getOrderBy() {
         if (orderByBuilder_ == null) {
           if (clauseCase_ == 3) {
@@ -16826,6 +16996,7 @@ public final class TestDefinition {
         return getOrderByFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.OrderByOrBuilder
           getOrderByOrBuilder() {
         if ((clauseCase_ == 3) && (orderByBuilder_ != null)) {
@@ -16950,6 +17121,7 @@ public final class TestDefinition {
        *
        * @return Whether the startAt field is set.
        */
+      @java.lang.Override
       public boolean hasStartAt() {
         return clauseCase_ == 6;
       }
@@ -16958,6 +17130,7 @@ public final class TestDefinition {
        *
        * @return The startAt.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAt() {
         if (startAtBuilder_ == null) {
           if (clauseCase_ == 6) {
@@ -17049,6 +17222,7 @@ public final class TestDefinition {
         return getStartAtFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
           getStartAtOrBuilder() {
         if ((clauseCase_ == 6) && (startAtBuilder_ != null)) {
@@ -17099,6 +17273,7 @@ public final class TestDefinition {
        *
        * @return Whether the startAfter field is set.
        */
+      @java.lang.Override
       public boolean hasStartAfter() {
         return clauseCase_ == 7;
       }
@@ -17107,6 +17282,7 @@ public final class TestDefinition {
        *
        * @return The startAfter.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAfter() {
         if (startAfterBuilder_ == null) {
           if (clauseCase_ == 7) {
@@ -17198,6 +17374,7 @@ public final class TestDefinition {
         return getStartAfterFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
           getStartAfterOrBuilder() {
         if ((clauseCase_ == 7) && (startAfterBuilder_ != null)) {
@@ -17248,6 +17425,7 @@ public final class TestDefinition {
        *
        * @return Whether the endAt field is set.
        */
+      @java.lang.Override
       public boolean hasEndAt() {
         return clauseCase_ == 8;
       }
@@ -17256,6 +17434,7 @@ public final class TestDefinition {
        *
        * @return The endAt.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndAt() {
         if (endAtBuilder_ == null) {
           if (clauseCase_ == 8) {
@@ -17347,6 +17526,7 @@ public final class TestDefinition {
         return getEndAtFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
           getEndAtOrBuilder() {
         if ((clauseCase_ == 8) && (endAtBuilder_ != null)) {
@@ -17397,6 +17577,7 @@ public final class TestDefinition {
        *
        * @return Whether the endBefore field is set.
        */
+      @java.lang.Override
       public boolean hasEndBefore() {
         return clauseCase_ == 9;
       }
@@ -17405,6 +17586,7 @@ public final class TestDefinition {
        *
        * @return The endBefore.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndBefore() {
         if (endBeforeBuilder_ == null) {
           if (clauseCase_ == 9) {
@@ -17496,6 +17678,7 @@ public final class TestDefinition {
         return getEndBeforeFieldBuilder().getBuilder();
       }
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
           getEndBeforeOrBuilder() {
         if ((clauseCase_ == 9) && (endBeforeBuilder_ != null)) {
@@ -17711,25 +17894,30 @@ public final class TestDefinition {
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         fields_;
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
+    @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         getFieldsList() {
       return fields_;
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
+    @java.lang.Override
     public java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>
         getFieldsOrBuilderList() {
       return fields_;
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
+    @java.lang.Override
     public int getFieldsCount() {
       return fields_.size();
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getFields(int index) {
       return fields_.get(index);
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
         getFieldsOrBuilder(int index) {
       return fields_.get(index);
@@ -18548,6 +18736,7 @@ public final class TestDefinition {
      *
      * @return Whether the path field is set.
      */
+    @java.lang.Override
     public boolean hasPath() {
       return path_ != null;
     }
@@ -18556,12 +18745,14 @@ public final class TestDefinition {
      *
      * @return The path.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getPath() {
       return path_ == null
           ? com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.getDefaultInstance()
           : path_;
     }
     /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
         getPathOrBuilder() {
       return getPath();
@@ -18574,6 +18765,7 @@ public final class TestDefinition {
      *
      * @return The op.
      */
+    @java.lang.Override
     public java.lang.String getOp() {
       java.lang.Object ref = op_;
       if (ref instanceof java.lang.String) {
@@ -18590,6 +18782,7 @@ public final class TestDefinition {
      *
      * @return The bytes for op.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getOpBytes() {
       java.lang.Object ref = op_;
       if (ref instanceof java.lang.String) {
@@ -18609,6 +18802,7 @@ public final class TestDefinition {
      *
      * @return The jsonValue.
      */
+    @java.lang.Override
     public java.lang.String getJsonValue() {
       java.lang.Object ref = jsonValue_;
       if (ref instanceof java.lang.String) {
@@ -18625,6 +18819,7 @@ public final class TestDefinition {
      *
      * @return The bytes for jsonValue.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getJsonValueBytes() {
       java.lang.Object ref = jsonValue_;
       if (ref instanceof java.lang.String) {
@@ -19487,6 +19682,7 @@ public final class TestDefinition {
      *
      * @return Whether the path field is set.
      */
+    @java.lang.Override
     public boolean hasPath() {
       return path_ != null;
     }
@@ -19495,12 +19691,14 @@ public final class TestDefinition {
      *
      * @return The path.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getPath() {
       return path_ == null
           ? com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.getDefaultInstance()
           : path_;
     }
     /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
         getPathOrBuilder() {
       return getPath();
@@ -19519,6 +19717,7 @@ public final class TestDefinition {
      *
      * @return The direction.
      */
+    @java.lang.Override
     public java.lang.String getDirection() {
       java.lang.Object ref = direction_;
       if (ref instanceof java.lang.String) {
@@ -19541,6 +19740,7 @@ public final class TestDefinition {
      *
      * @return The bytes for direction.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getDirectionBytes() {
       java.lang.Object ref = direction_;
       if (ref instanceof java.lang.String) {
@@ -20382,6 +20582,7 @@ public final class TestDefinition {
      *
      * @return Whether the docSnapshot field is set.
      */
+    @java.lang.Override
     public boolean hasDocSnapshot() {
       return docSnapshot_ != null;
     }
@@ -20396,6 +20597,7 @@ public final class TestDefinition {
      *
      * @return The docSnapshot.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot getDocSnapshot() {
       return docSnapshot_ == null
           ? com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot
@@ -20411,6 +20613,7 @@ public final class TestDefinition {
      *
      * <code>.google.cloud.conformance.firestore.v1.DocSnapshot doc_snapshot = 1;</code>
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshotOrBuilder
         getDocSnapshotOrBuilder() {
       return getDocSnapshot();
@@ -21316,6 +21519,7 @@ public final class TestDefinition {
      *
      * @return The path.
      */
+    @java.lang.Override
     public java.lang.String getPath() {
       java.lang.Object ref = path_;
       if (ref instanceof java.lang.String) {
@@ -21332,6 +21536,7 @@ public final class TestDefinition {
      *
      * @return The bytes for path.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPathBytes() {
       java.lang.Object ref = path_;
       if (ref instanceof java.lang.String) {
@@ -21351,6 +21556,7 @@ public final class TestDefinition {
      *
      * @return The jsonData.
      */
+    @java.lang.Override
     public java.lang.String getJsonData() {
       java.lang.Object ref = jsonData_;
       if (ref instanceof java.lang.String) {
@@ -21367,6 +21573,7 @@ public final class TestDefinition {
      *
      * @return The bytes for jsonData.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getJsonDataBytes() {
       java.lang.Object ref = jsonData_;
       if (ref instanceof java.lang.String) {
@@ -22773,23 +22980,28 @@ public final class TestDefinition {
     public static final int RESPONSES_FIELD_NUMBER = 1;
     private java.util.List<com.google.firestore.v1.ListenResponse> responses_;
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
+    @java.lang.Override
     public java.util.List<com.google.firestore.v1.ListenResponse> getResponsesList() {
       return responses_;
     }
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
+    @java.lang.Override
     public java.util.List<? extends com.google.firestore.v1.ListenResponseOrBuilder>
         getResponsesOrBuilderList() {
       return responses_;
     }
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
+    @java.lang.Override
     public int getResponsesCount() {
       return responses_.size();
     }
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
+    @java.lang.Override
     public com.google.firestore.v1.ListenResponse getResponses(int index) {
       return responses_.get(index);
     }
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
+    @java.lang.Override
     public com.google.firestore.v1.ListenResponseOrBuilder getResponsesOrBuilder(int index) {
       return responses_.get(index);
     }
@@ -22798,26 +23010,31 @@ public final class TestDefinition {
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot>
         snapshots_;
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
+    @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot>
         getSnapshotsList() {
       return snapshots_;
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
+    @java.lang.Override
     public java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.SnapshotOrBuilder>
         getSnapshotsOrBuilderList() {
       return snapshots_;
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
+    @java.lang.Override
     public int getSnapshotsCount() {
       return snapshots_.size();
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot getSnapshots(
         int index) {
       return snapshots_.get(index);
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SnapshotOrBuilder
         getSnapshotsOrBuilder(int index) {
       return snapshots_.get(index);
@@ -22830,6 +23047,7 @@ public final class TestDefinition {
      *
      * @return The isError.
      */
+    @java.lang.Override
     public boolean getIsError() {
       return isError_;
     }
@@ -23726,6 +23944,7 @@ public final class TestDefinition {
        *
        * @return The isError.
        */
+      @java.lang.Override
       public boolean getIsError() {
         return isError_;
       }
@@ -23983,23 +24202,28 @@ public final class TestDefinition {
     public static final int DOCS_FIELD_NUMBER = 1;
     private java.util.List<com.google.firestore.v1.Document> docs_;
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
+    @java.lang.Override
     public java.util.List<com.google.firestore.v1.Document> getDocsList() {
       return docs_;
     }
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
+    @java.lang.Override
     public java.util.List<? extends com.google.firestore.v1.DocumentOrBuilder>
         getDocsOrBuilderList() {
       return docs_;
     }
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
+    @java.lang.Override
     public int getDocsCount() {
       return docs_.size();
     }
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
+    @java.lang.Override
     public com.google.firestore.v1.Document getDocs(int index) {
       return docs_.get(index);
     }
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
+    @java.lang.Override
     public com.google.firestore.v1.DocumentOrBuilder getDocsOrBuilder(int index) {
       return docs_.get(index);
     }
@@ -24008,26 +24232,31 @@ public final class TestDefinition {
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange>
         changes_;
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
+    @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange>
         getChangesList() {
       return changes_;
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
+    @java.lang.Override
     public java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.DocChangeOrBuilder>
         getChangesOrBuilderList() {
       return changes_;
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
+    @java.lang.Override
     public int getChangesCount() {
       return changes_.size();
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange getChanges(
         int index) {
       return changes_.get(index);
     }
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChangeOrBuilder
         getChangesOrBuilder(int index) {
       return changes_.get(index);
@@ -24040,6 +24269,7 @@ public final class TestDefinition {
      *
      * @return Whether the readTime field is set.
      */
+    @java.lang.Override
     public boolean hasReadTime() {
       return readTime_ != null;
     }
@@ -24048,10 +24278,12 @@ public final class TestDefinition {
      *
      * @return The readTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getReadTime() {
       return readTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : readTime_;
     }
     /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getReadTimeOrBuilder() {
       return getReadTime();
     }
@@ -25330,6 +25562,10 @@ public final class TestDefinition {
           };
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
 
@@ -25371,6 +25607,7 @@ public final class TestDefinition {
      *
      * @return The enum numeric value on the wire for kind.
      */
+    @java.lang.Override
     public int getKindValue() {
       return kind_;
     }
@@ -25379,6 +25616,7 @@ public final class TestDefinition {
      *
      * @return The kind.
      */
+    @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind getKind() {
       @SuppressWarnings("deprecation")
       com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind result =
@@ -25395,6 +25633,7 @@ public final class TestDefinition {
      *
      * @return Whether the doc field is set.
      */
+    @java.lang.Override
     public boolean hasDoc() {
       return doc_ != null;
     }
@@ -25403,10 +25642,12 @@ public final class TestDefinition {
      *
      * @return The doc.
      */
+    @java.lang.Override
     public com.google.firestore.v1.Document getDoc() {
       return doc_ == null ? com.google.firestore.v1.Document.getDefaultInstance() : doc_;
     }
     /** <code>.google.firestore.v1.Document doc = 2;</code> */
+    @java.lang.Override
     public com.google.firestore.v1.DocumentOrBuilder getDocOrBuilder() {
       return getDoc();
     }
@@ -25418,6 +25659,7 @@ public final class TestDefinition {
      *
      * @return The oldIndex.
      */
+    @java.lang.Override
     public int getOldIndex() {
       return oldIndex_;
     }
@@ -25429,6 +25671,7 @@ public final class TestDefinition {
      *
      * @return The newIndex.
      */
+    @java.lang.Override
     public int getNewIndex() {
       return newIndex_;
     }
@@ -25825,6 +26068,7 @@ public final class TestDefinition {
        *
        * @return The enum numeric value on the wire for kind.
        */
+      @java.lang.Override
       public int getKindValue() {
         return kind_;
       }
@@ -25835,6 +26079,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder setKindValue(int value) {
+
         kind_ = value;
         onChanged();
         return this;
@@ -25844,6 +26089,7 @@ public final class TestDefinition {
        *
        * @return The kind.
        */
+      @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind getKind() {
         @SuppressWarnings("deprecation")
         com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind result =
@@ -25997,6 +26243,7 @@ public final class TestDefinition {
        *
        * @return The oldIndex.
        */
+      @java.lang.Override
       public int getOldIndex() {
         return oldIndex_;
       }
@@ -26030,6 +26277,7 @@ public final class TestDefinition {
        *
        * @return The newIndex.
        */
+      @java.lang.Override
       public int getNewIndex() {
         return newIndex_;
       }
