@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-conformance-tests.git",
-        "sha": "b48bb688eec9ebf052d5dac3091d3c6320ca12f5"
+        "sha": "5b7694da05b9701c7b581d9c663c93aecc45bf60"
       }
     },
     {
