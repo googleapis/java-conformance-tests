@@ -137,6 +137,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.SigningV4Test signing_v4_tests = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.cloud.conformance.storage.v1.SigningV4Test>
       getSigningV4TestsList() {
     return signingV4Tests_;
@@ -144,6 +145,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.SigningV4Test signing_v4_tests = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.cloud.conformance.storage.v1.SigningV4TestOrBuilder>
       getSigningV4TestsOrBuilderList() {
     return signingV4Tests_;
@@ -151,18 +153,21 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.SigningV4Test signing_v4_tests = 1;</code>
    */
+  @java.lang.Override
   public int getSigningV4TestsCount() {
     return signingV4Tests_.size();
   }
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.SigningV4Test signing_v4_tests = 1;</code>
    */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.SigningV4Test getSigningV4Tests(int index) {
     return signingV4Tests_.get(index);
   }
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.SigningV4Test signing_v4_tests = 1;</code>
    */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.SigningV4TestOrBuilder getSigningV4TestsOrBuilder(
       int index) {
     return signingV4Tests_.get(index);
@@ -175,6 +180,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
    * </code>
    */
+  @java.lang.Override
   public java.util.List<com.google.cloud.conformance.storage.v1.PostPolicyV4Test>
       getPostPolicyV4TestsList() {
     return postPolicyV4Tests_;
@@ -183,6 +189,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
    * </code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder>
       getPostPolicyV4TestsOrBuilderList() {
     return postPolicyV4Tests_;
@@ -191,6 +198,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
    * </code>
    */
+  @java.lang.Override
   public int getPostPolicyV4TestsCount() {
     return postPolicyV4Tests_.size();
   }
@@ -198,6 +206,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
    * </code>
    */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PostPolicyV4Test getPostPolicyV4Tests(int index) {
     return postPolicyV4Tests_.get(index);
   }
@@ -205,6 +214,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
    * </code>
    */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder
       getPostPolicyV4TestsOrBuilder(int index) {
     return postPolicyV4Tests_.get(index);

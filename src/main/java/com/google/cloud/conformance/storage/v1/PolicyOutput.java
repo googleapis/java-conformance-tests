@@ -143,6 +143,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The url.
    */
+  @java.lang.Override
   public java.lang.String getUrl() {
     java.lang.Object ref = url_;
     if (ref instanceof java.lang.String) {
@@ -159,6 +160,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for url.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getUrlBytes() {
     java.lang.Object ref = url_;
     if (ref instanceof java.lang.String) {
@@ -196,7 +198,60 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
   public int getFieldsCount() {
     return internalGetFields().getMap().size();
   }
-  /** <code>map&lt;string, string&gt; fields = 2;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * Expectations
+   * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+   * for consistent result across languages. Ordering doesn't matter to the
+   * service but the decision is made to make it easier to conform implementations
+   * in implementation.
+   * Example:
+   * # Step 1
+   * PolicyInput.fields has:
+   * {
+   * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
+   * "content-encoding":"gzip",
+   * "content-type":"text/plain",
+   * "success_action_redirect":"http://www.google.com/"
+   * }
+   * # Step 2
+   * The expectedDecodedPolicy before prepending the PolicyInput.fields
+   * would look like this:
+   * {
+   * "conditions":[
+   * ...prepend here in the same order provided in PolicyInput.fields...
+   * {"bucket":"bucket-name"},
+   * {"key":"test-object"},
+   * {"x-goog-date":"20200123T043530Z"},
+   * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+   * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+   * ],
+   * "expiration":"2020-01-23T04:35:40Z"
+   * }
+   * # Step 3
+   * Then expectedDecodedPolicy should prepends PolicyInput.fields in
+   * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   * {
+   * "conditions":[
+   * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
+   * {"content-encoding":"gzip"},
+   * {"content-type":"text/plain"},
+   * {"success_action_redirect":"http://www.google.com/"},
+   * {"bucket":"bucket-name"},
+   * {"key":"test-object"},
+   * {"x-goog-date":"20200123T043530Z"},
+   * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+   * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+   * ],
+   * "expiration":"2020-01-23T04:35:40Z"
+   * }
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 2;</code>
+   */
+  @java.lang.Override
   public boolean containsFields(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -204,15 +259,122 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     return internalGetFields().getMap().containsKey(key);
   }
   /** Use {@link #getFieldsMap()} instead. */
+  @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.String, java.lang.String> getFields() {
     return getFieldsMap();
   }
-  /** <code>map&lt;string, string&gt; fields = 2;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * Expectations
+   * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+   * for consistent result across languages. Ordering doesn't matter to the
+   * service but the decision is made to make it easier to conform implementations
+   * in implementation.
+   * Example:
+   * # Step 1
+   * PolicyInput.fields has:
+   * {
+   * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
+   * "content-encoding":"gzip",
+   * "content-type":"text/plain",
+   * "success_action_redirect":"http://www.google.com/"
+   * }
+   * # Step 2
+   * The expectedDecodedPolicy before prepending the PolicyInput.fields
+   * would look like this:
+   * {
+   * "conditions":[
+   * ...prepend here in the same order provided in PolicyInput.fields...
+   * {"bucket":"bucket-name"},
+   * {"key":"test-object"},
+   * {"x-goog-date":"20200123T043530Z"},
+   * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+   * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+   * ],
+   * "expiration":"2020-01-23T04:35:40Z"
+   * }
+   * # Step 3
+   * Then expectedDecodedPolicy should prepends PolicyInput.fields in
+   * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   * {
+   * "conditions":[
+   * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
+   * {"content-encoding":"gzip"},
+   * {"content-type":"text/plain"},
+   * {"success_action_redirect":"http://www.google.com/"},
+   * {"bucket":"bucket-name"},
+   * {"key":"test-object"},
+   * {"x-goog-date":"20200123T043530Z"},
+   * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+   * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+   * ],
+   * "expiration":"2020-01-23T04:35:40Z"
+   * }
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 2;</code>
+   */
+  @java.lang.Override
   public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
     return internalGetFields().getMap();
   }
-  /** <code>map&lt;string, string&gt; fields = 2;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * Expectations
+   * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+   * for consistent result across languages. Ordering doesn't matter to the
+   * service but the decision is made to make it easier to conform implementations
+   * in implementation.
+   * Example:
+   * # Step 1
+   * PolicyInput.fields has:
+   * {
+   * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
+   * "content-encoding":"gzip",
+   * "content-type":"text/plain",
+   * "success_action_redirect":"http://www.google.com/"
+   * }
+   * # Step 2
+   * The expectedDecodedPolicy before prepending the PolicyInput.fields
+   * would look like this:
+   * {
+   * "conditions":[
+   * ...prepend here in the same order provided in PolicyInput.fields...
+   * {"bucket":"bucket-name"},
+   * {"key":"test-object"},
+   * {"x-goog-date":"20200123T043530Z"},
+   * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+   * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+   * ],
+   * "expiration":"2020-01-23T04:35:40Z"
+   * }
+   * # Step 3
+   * Then expectedDecodedPolicy should prepends PolicyInput.fields in
+   * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   * {
+   * "conditions":[
+   * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
+   * {"content-encoding":"gzip"},
+   * {"content-type":"text/plain"},
+   * {"success_action_redirect":"http://www.google.com/"},
+   * {"bucket":"bucket-name"},
+   * {"key":"test-object"},
+   * {"x-goog-date":"20200123T043530Z"},
+   * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+   * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+   * ],
+   * "expiration":"2020-01-23T04:35:40Z"
+   * }
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 2;</code>
+   */
+  @java.lang.Override
   public java.lang.String getFieldsOrDefault(java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -220,7 +382,60 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
-  /** <code>map&lt;string, string&gt; fields = 2;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * Expectations
+   * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+   * for consistent result across languages. Ordering doesn't matter to the
+   * service but the decision is made to make it easier to conform implementations
+   * in implementation.
+   * Example:
+   * # Step 1
+   * PolicyInput.fields has:
+   * {
+   * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
+   * "content-encoding":"gzip",
+   * "content-type":"text/plain",
+   * "success_action_redirect":"http://www.google.com/"
+   * }
+   * # Step 2
+   * The expectedDecodedPolicy before prepending the PolicyInput.fields
+   * would look like this:
+   * {
+   * "conditions":[
+   * ...prepend here in the same order provided in PolicyInput.fields...
+   * {"bucket":"bucket-name"},
+   * {"key":"test-object"},
+   * {"x-goog-date":"20200123T043530Z"},
+   * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+   * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+   * ],
+   * "expiration":"2020-01-23T04:35:40Z"
+   * }
+   * # Step 3
+   * Then expectedDecodedPolicy should prepends PolicyInput.fields in
+   * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   * {
+   * "conditions":[
+   * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
+   * {"content-encoding":"gzip"},
+   * {"content-type":"text/plain"},
+   * {"success_action_redirect":"http://www.google.com/"},
+   * {"bucket":"bucket-name"},
+   * {"key":"test-object"},
+   * {"x-goog-date":"20200123T043530Z"},
+   * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+   * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+   * ],
+   * "expiration":"2020-01-23T04:35:40Z"
+   * }
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 2;</code>
+   */
+  @java.lang.Override
   public java.lang.String getFieldsOrThrow(java.lang.String key) {
     if (key == null) {
       throw new java.lang.NullPointerException();
@@ -239,6 +454,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The expectedDecodedPolicy.
    */
+  @java.lang.Override
   public java.lang.String getExpectedDecodedPolicy() {
     java.lang.Object ref = expectedDecodedPolicy_;
     if (ref instanceof java.lang.String) {
@@ -255,6 +471,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    *
    * @return The bytes for expectedDecodedPolicy.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getExpectedDecodedPolicyBytes() {
     java.lang.Object ref = expectedDecodedPolicy_;
     if (ref instanceof java.lang.String) {
@@ -738,7 +955,60 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     public int getFieldsCount() {
       return internalGetFields().getMap().size();
     }
-    /** <code>map&lt;string, string&gt; fields = 2;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * Expectations
+     * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+     * for consistent result across languages. Ordering doesn't matter to the
+     * service but the decision is made to make it easier to conform implementations
+     * in implementation.
+     * Example:
+     * # Step 1
+     * PolicyInput.fields has:
+     * {
+     * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
+     * "content-encoding":"gzip",
+     * "content-type":"text/plain",
+     * "success_action_redirect":"http://www.google.com/"
+     * }
+     * # Step 2
+     * The expectedDecodedPolicy before prepending the PolicyInput.fields
+     * would look like this:
+     * {
+     * "conditions":[
+     * ...prepend here in the same order provided in PolicyInput.fields...
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * # Step 3
+     * Then expectedDecodedPolicy should prepends PolicyInput.fields in
+     * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     * {
+     * "conditions":[
+     * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
+     * {"content-encoding":"gzip"},
+     * {"content-type":"text/plain"},
+     * {"success_action_redirect":"http://www.google.com/"},
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 2;</code>
+     */
+    @java.lang.Override
     public boolean containsFields(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -746,15 +1016,122 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       return internalGetFields().getMap().containsKey(key);
     }
     /** Use {@link #getFieldsMap()} instead. */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getFields() {
       return getFieldsMap();
     }
-    /** <code>map&lt;string, string&gt; fields = 2;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * Expectations
+     * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+     * for consistent result across languages. Ordering doesn't matter to the
+     * service but the decision is made to make it easier to conform implementations
+     * in implementation.
+     * Example:
+     * # Step 1
+     * PolicyInput.fields has:
+     * {
+     * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
+     * "content-encoding":"gzip",
+     * "content-type":"text/plain",
+     * "success_action_redirect":"http://www.google.com/"
+     * }
+     * # Step 2
+     * The expectedDecodedPolicy before prepending the PolicyInput.fields
+     * would look like this:
+     * {
+     * "conditions":[
+     * ...prepend here in the same order provided in PolicyInput.fields...
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * # Step 3
+     * Then expectedDecodedPolicy should prepends PolicyInput.fields in
+     * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     * {
+     * "conditions":[
+     * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
+     * {"content-encoding":"gzip"},
+     * {"content-type":"text/plain"},
+     * {"success_action_redirect":"http://www.google.com/"},
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 2;</code>
+     */
+    @java.lang.Override
     public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
       return internalGetFields().getMap();
     }
-    /** <code>map&lt;string, string&gt; fields = 2;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * Expectations
+     * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+     * for consistent result across languages. Ordering doesn't matter to the
+     * service but the decision is made to make it easier to conform implementations
+     * in implementation.
+     * Example:
+     * # Step 1
+     * PolicyInput.fields has:
+     * {
+     * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
+     * "content-encoding":"gzip",
+     * "content-type":"text/plain",
+     * "success_action_redirect":"http://www.google.com/"
+     * }
+     * # Step 2
+     * The expectedDecodedPolicy before prepending the PolicyInput.fields
+     * would look like this:
+     * {
+     * "conditions":[
+     * ...prepend here in the same order provided in PolicyInput.fields...
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * # Step 3
+     * Then expectedDecodedPolicy should prepends PolicyInput.fields in
+     * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     * {
+     * "conditions":[
+     * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
+     * {"content-encoding":"gzip"},
+     * {"content-type":"text/plain"},
+     * {"success_action_redirect":"http://www.google.com/"},
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 2;</code>
+     */
+    @java.lang.Override
     public java.lang.String getFieldsOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
@@ -763,7 +1140,60 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
-    /** <code>map&lt;string, string&gt; fields = 2;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * Expectations
+     * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+     * for consistent result across languages. Ordering doesn't matter to the
+     * service but the decision is made to make it easier to conform implementations
+     * in implementation.
+     * Example:
+     * # Step 1
+     * PolicyInput.fields has:
+     * {
+     * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
+     * "content-encoding":"gzip",
+     * "content-type":"text/plain",
+     * "success_action_redirect":"http://www.google.com/"
+     * }
+     * # Step 2
+     * The expectedDecodedPolicy before prepending the PolicyInput.fields
+     * would look like this:
+     * {
+     * "conditions":[
+     * ...prepend here in the same order provided in PolicyInput.fields...
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * # Step 3
+     * Then expectedDecodedPolicy should prepends PolicyInput.fields in
+     * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     * {
+     * "conditions":[
+     * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
+     * {"content-encoding":"gzip"},
+     * {"content-type":"text/plain"},
+     * {"success_action_redirect":"http://www.google.com/"},
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 2;</code>
+     */
+    @java.lang.Override
     public java.lang.String getFieldsOrThrow(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -779,7 +1209,59 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableFields().getMutableMap().clear();
       return this;
     }
-    /** <code>map&lt;string, string&gt; fields = 2;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * Expectations
+     * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+     * for consistent result across languages. Ordering doesn't matter to the
+     * service but the decision is made to make it easier to conform implementations
+     * in implementation.
+     * Example:
+     * # Step 1
+     * PolicyInput.fields has:
+     * {
+     * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
+     * "content-encoding":"gzip",
+     * "content-type":"text/plain",
+     * "success_action_redirect":"http://www.google.com/"
+     * }
+     * # Step 2
+     * The expectedDecodedPolicy before prepending the PolicyInput.fields
+     * would look like this:
+     * {
+     * "conditions":[
+     * ...prepend here in the same order provided in PolicyInput.fields...
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * # Step 3
+     * Then expectedDecodedPolicy should prepends PolicyInput.fields in
+     * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     * {
+     * "conditions":[
+     * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
+     * {"content-encoding":"gzip"},
+     * {"content-type":"text/plain"},
+     * {"success_action_redirect":"http://www.google.com/"},
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 2;</code>
+     */
     public Builder removeFields(java.lang.String key) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -792,7 +1274,59 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     public java.util.Map<java.lang.String, java.lang.String> getMutableFields() {
       return internalGetMutableFields().getMutableMap();
     }
-    /** <code>map&lt;string, string&gt; fields = 2;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * Expectations
+     * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+     * for consistent result across languages. Ordering doesn't matter to the
+     * service but the decision is made to make it easier to conform implementations
+     * in implementation.
+     * Example:
+     * # Step 1
+     * PolicyInput.fields has:
+     * {
+     * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
+     * "content-encoding":"gzip",
+     * "content-type":"text/plain",
+     * "success_action_redirect":"http://www.google.com/"
+     * }
+     * # Step 2
+     * The expectedDecodedPolicy before prepending the PolicyInput.fields
+     * would look like this:
+     * {
+     * "conditions":[
+     * ...prepend here in the same order provided in PolicyInput.fields...
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * # Step 3
+     * Then expectedDecodedPolicy should prepends PolicyInput.fields in
+     * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     * {
+     * "conditions":[
+     * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
+     * {"content-encoding":"gzip"},
+     * {"content-type":"text/plain"},
+     * {"success_action_redirect":"http://www.google.com/"},
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 2;</code>
+     */
     public Builder putFields(java.lang.String key, java.lang.String value) {
       if (key == null) {
         throw new java.lang.NullPointerException();
@@ -803,7 +1337,59 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableFields().getMutableMap().put(key, value);
       return this;
     }
-    /** <code>map&lt;string, string&gt; fields = 2;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * Expectations
+     * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+     * for consistent result across languages. Ordering doesn't matter to the
+     * service but the decision is made to make it easier to conform implementations
+     * in implementation.
+     * Example:
+     * # Step 1
+     * PolicyInput.fields has:
+     * {
+     * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
+     * "content-encoding":"gzip",
+     * "content-type":"text/plain",
+     * "success_action_redirect":"http://www.google.com/"
+     * }
+     * # Step 2
+     * The expectedDecodedPolicy before prepending the PolicyInput.fields
+     * would look like this:
+     * {
+     * "conditions":[
+     * ...prepend here in the same order provided in PolicyInput.fields...
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * # Step 3
+     * Then expectedDecodedPolicy should prepends PolicyInput.fields in
+     * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     * {
+     * "conditions":[
+     * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
+     * {"content-encoding":"gzip"},
+     * {"content-type":"text/plain"},
+     * {"success_action_redirect":"http://www.google.com/"},
+     * {"bucket":"bucket-name"},
+     * {"key":"test-object"},
+     * {"x-goog-date":"20200123T043530Z"},
+     * {"x-goog-credential":"test-iam-credentials&#64;dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+     * {"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+     * ],
+     * "expiration":"2020-01-23T04:35:40Z"
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; fields = 2;</code>
+     */
     public Builder putAllFields(java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableFields().getMutableMap().putAll(values);
       return this;

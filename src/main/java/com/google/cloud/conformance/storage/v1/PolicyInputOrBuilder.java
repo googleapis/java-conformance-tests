@@ -24,12 +24,24 @@ public interface PolicyInputOrBuilder
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
+   * <pre>
+   * http or https
+   * </pre>
+   *
    * <code>string scheme = 1;</code>
    *
    * @return The scheme.
    */
   java.lang.String getScheme();
   /**
+   *
+   *
+   * <pre>
+   * http or https
+   * </pre>
+   *
    * <code>string scheme = 1;</code>
    *
    * @return The bytes for scheme.
@@ -110,18 +122,88 @@ public interface PolicyInputOrBuilder
   /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
   com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
-  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * fields with strict equivalence which are added into
+   * PolicyOutput.expectedDecodedPolicy to generate the
+   * signature.
+   * Expectations
+   * E.1: Order them in lexigraphical order so it's the
+   * signature can be verified across different language
+   * implementations.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 8;</code>
+   */
   int getFieldsCount();
-  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * fields with strict equivalence which are added into
+   * PolicyOutput.expectedDecodedPolicy to generate the
+   * signature.
+   * Expectations
+   * E.1: Order them in lexigraphical order so it's the
+   * signature can be verified across different language
+   * implementations.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 8;</code>
+   */
   boolean containsFields(java.lang.String key);
   /** Use {@link #getFieldsMap()} instead. */
   @java.lang.Deprecated
   java.util.Map<java.lang.String, java.lang.String> getFields();
-  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * fields with strict equivalence which are added into
+   * PolicyOutput.expectedDecodedPolicy to generate the
+   * signature.
+   * Expectations
+   * E.1: Order them in lexigraphical order so it's the
+   * signature can be verified across different language
+   * implementations.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 8;</code>
+   */
   java.util.Map<java.lang.String, java.lang.String> getFieldsMap();
-  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * fields with strict equivalence which are added into
+   * PolicyOutput.expectedDecodedPolicy to generate the
+   * signature.
+   * Expectations
+   * E.1: Order them in lexigraphical order so it's the
+   * signature can be verified across different language
+   * implementations.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 8;</code>
+   */
   java.lang.String getFieldsOrDefault(java.lang.String key, java.lang.String defaultValue);
-  /** <code>map&lt;string, string&gt; fields = 8;</code> */
+  /**
+   *
+   *
+   * <pre>
+   * fields with strict equivalence which are added into
+   * PolicyOutput.expectedDecodedPolicy to generate the
+   * signature.
+   * Expectations
+   * E.1: Order them in lexigraphical order so it's the
+   * signature can be verified across different language
+   * implementations.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; fields = 8;</code>
+   */
   java.lang.String getFieldsOrThrow(java.lang.String key);
 
   /**

@@ -144,6 +144,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
    *
    * @return The description.
    */
+  @java.lang.Override
   public java.lang.String getDescription() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
@@ -160,6 +161,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
    *
    * @return The bytes for description.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString getDescriptionBytes() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
@@ -179,6 +181,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
    *
    * @return Whether the policyInput field is set.
    */
+  @java.lang.Override
   public boolean hasPolicyInput() {
     return policyInput_ != null;
   }
@@ -187,12 +190,14 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
    *
    * @return The policyInput.
    */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PolicyInput getPolicyInput() {
     return policyInput_ == null
         ? com.google.cloud.conformance.storage.v1.PolicyInput.getDefaultInstance()
         : policyInput_;
   }
   /** <code>.google.cloud.conformance.storage.v1.PolicyInput policyInput = 2;</code> */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PolicyInputOrBuilder getPolicyInputOrBuilder() {
     return getPolicyInput();
   }
@@ -204,6 +209,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
    *
    * @return Whether the policyOutput field is set.
    */
+  @java.lang.Override
   public boolean hasPolicyOutput() {
     return policyOutput_ != null;
   }
@@ -212,12 +218,14 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
    *
    * @return The policyOutput.
    */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PolicyOutput getPolicyOutput() {
     return policyOutput_ == null
         ? com.google.cloud.conformance.storage.v1.PolicyOutput.getDefaultInstance()
         : policyOutput_;
   }
   /** <code>.google.cloud.conformance.storage.v1.PolicyOutput policyOutput = 3;</code> */
+  @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PolicyOutputOrBuilder getPolicyOutputOrBuilder() {
     return getPolicyOutput();
   }
