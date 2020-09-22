@@ -20,11 +20,24 @@ LOG_FILE_NAME="generate.log"
 LOG_FILE=${MODULE_DIR}/${LOG_FILE_NAME}
 
 function errNotify() {
-    echo "Error while generating conformance tests" >&2;
-    echo "See ${LOG_FILE_NAME} for details" >&2;
+    println "Error while generating conformance tests";
+    if [[ ${CI:-false} == true ]]; then
+      println "Dumping log file to stderr..."
+      println "--- ${LOG_FILE_NAME} -----------------------------------------------"
+      cat ${LOG_FILE_NAME} | sed 's/^/>> /g' >&2;
+      println "----------------------------------------------------------------"
+    else
+      println "See ${LOG_FILE_NAME} for details";
+    fi
     return 1
 }
 trap errNotify ERR
+
+function reportMaven() {
+  if [[ ${CI:-false} == true ]]; then
+    mvn --version >> $1 2>&1
+  fi
+}
 
 function cpDir() {
   mkdir -p $1
@@ -33,6 +46,7 @@ function cpDir() {
 
 function main() {
   rm ${LOG_FILE} 2> /dev/null || true
+  reportMaven "${LOG_FILE}"
 
   local javaBasePackage="com/google/cloud/conformance"
   local firestorePackage="${javaBasePackage}/firestore/v1"
