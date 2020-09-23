@@ -5,5 +5,6 @@
   "repo": "googleapis/java-conformance-tests",
   "repo_short": "java-conformance-tests",
   "language": "java",
-  "distribution_name": "com.google.cloud:google-cloud-conformance-tests"
+  "distribution_name": "com.google.cloud:google-cloud-conformance-tests",
+  "codeowner_team": "@googleapis/storage-dpe @googleapis/api-bigtable @googleapis/api-firestore @googleapis/firestore-dpe"
 }
