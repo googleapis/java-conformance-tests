@@ -1,71 +1,139 @@
-# Google cloud conformance tests
-This Maven project functions as a central location for integration with
-[googleapis/conformance-tests](https://github.com/googleapis/conformance-tests).
+# Google Google Cloud Java Conformance Tests Client for Java
 
-In this directory `conformance-tests` which is a git-submodule, containing the reference for which
-the various conformance test resources are updated to.
+Java idiomatic client for [Google Cloud Java Conformance Tests][product-docs].
 
-This project contains scripts to help with updating the resources based on the state of the
-`conformance-tests` submodule. As well as performing the heavy lifting to ensure all resources
-are in the correct locations, generate protobuf classes from proto files and represent a
-released versioned jar of the conformance tests. 
+[![Maven][maven-version-image]][maven-version-link]
+![Stability][stability-image]
 
-## Updating conformance-tests
+- [Product Documentation][product-docs]
+- [Client Library Documentation][javadocs]
 
-#### Prerequisites
+> Note: This client is a work-in-progress, and may occasionally
+> make backwards-incompatible changes.
 
-Part of the process of updating the conformance tests involves running a maven build for
-this project. Ensure that maven 3.6+ is on your `PATH`.
+## Quickstart
 
-#### Performing the update
 
-A bash script is available to perform an update. The script can be ran for any branch, so if you
-need to update for a branch other than `master` update the following snippet with your
-branch name. 
+If you are using Maven, add this to your pom.xml file:
 
-To update the conformance tests run the following commands from the repository root:
-```bash
-git checkout master
-git pull upstream master
-./bump-conformance-tests.sh
-git push
+```xml
+<dependency>
+  <groupId>com.google.cloud</groupId>
+  <artifactId>google-cloud-conformance-tests</artifactId>
+  <version>0.0.12</version>
+</dependency>
 ```
 
-Upon successful run of the bump script, you will be on a new branch matching the pattern
-`bump/yyyy-mm-dd_HHMMSS`. Push this new branch up to GitHub and open a pull request.
+[//]: # ({x-version-update-start:google-cloud-conformance-tests:released})
+
+If you are using Gradle, add this to your dependencies
+```Groovy
+compile 'com.google.cloud:google-cloud-conformance-tests:0.0.12'
+```
+If you are using SBT, add this to your dependencies
+```Scala
+libraryDependencies += "com.google.cloud" % "google-cloud-conformance-tests" % "0.0.12"
+```
+[//]: # ({x-version-update-end})
+
+## Authentication
+
+See the [Authentication][authentication] section in the base directory's README.
+
+## Getting Started
+
+### Prerequisites
+
+You will need a [Google Cloud Platform Console][developer-console] project with the Google Cloud Java Conformance Tests [API enabled][enable-api].
+
+[Follow these instructions][create-project] to get your project set up. You will also need to set up the local development environment by
+[installing the Google Cloud SDK][cloud-sdk] and running the following commands in command line:
+`gcloud auth login` and `gcloud config set project [YOUR PROJECT ID]`.
+
+### Installation and setup
+
+You'll need to obtain the `google-cloud-conformance-tests` library.  See the [Quickstart](#quickstart) section
+to add `google-cloud-conformance-tests` as a dependency in your code.
+
+## About Google Cloud Java Conformance Tests
 
 
-If an error occurs while trying to perform the update please check the `bump.log`
-written to the working directory for details.
+[Google Cloud Java Conformance Tests][product-docs] 
 
-If an error occurs while generating the new resources please check the `generate.log`
-written to the working directory.
+See the [Google Cloud Java Conformance Tests client library docs][javadocs] to learn how to
+use this Google Cloud Java Conformance Tests Client Library.
 
-## Test Suites
 
-### Firestore
 
-The conformance test suites for Firestore are located in the `com.google.cloud.conformance.firestore`
-package.
 
-#### Files
 
-There are a number of files that together define the format of the tests as well as the tests
-themselves.
 
-* `src/main/java/com/google/cloud/conformance/firestore/v1/TestDefinition.java`
-  * The generated protobuf objects used to read the tests definitions
-* `src/main/proto/google/cloud/conformance/firestore/v1/tests.proto`
-  * The proto definition for the tests. `TestDefinition.java` is generated from this definition.
-* `src/main/resources/com/google/cloud/conformance/firestore/v1/*.json`
-  * Each files is a json serialized `TestFile` definition (defined in tests.proto).
+## Troubleshooting
 
-### BigTable
+To get help, follow the instructions in the [shared Troubleshooting document][troubleshooting].
 
-The conformance test suites for BigTable are located in the `com.google.cloud.conformance.bigtable`
-package.
+## Java Versions
 
-### Storage
+Java 7 or above is required for using this client.
 
-The conformance test suites for Storage are located in the `com.google.cloud.conformance.storage`
-package
+## Versioning
+
+
+This library follows [Semantic Versioning](http://semver.org/).
+
+
+It is currently in major version zero (``0.y.z``), which means that anything may change at any time
+and the public API should not be considered stable.
+
+## Contributing
+
+
+Contributions to this library are always welcome and highly encouraged.
+
+See [CONTRIBUTING][contributing] for more information how to get started.
+
+Please note that this project is released with a Contributor Code of Conduct. By participating in
+this project you agree to abide by its terms. See [Code of Conduct][code-of-conduct] for more
+information.
+
+## License
+
+Apache 2.0 - See [LICENSE][license] for more information.
+
+## CI Status
+
+Java Version | Status
+------------ | ------
+Java 7 | [![Kokoro CI][kokoro-badge-image-1]][kokoro-badge-link-1]
+Java 8 | [![Kokoro CI][kokoro-badge-image-2]][kokoro-badge-link-2]
+Java 8 OSX | [![Kokoro CI][kokoro-badge-image-3]][kokoro-badge-link-3]
+Java 8 Windows | [![Kokoro CI][kokoro-badge-image-4]][kokoro-badge-link-4]
+Java 11 | [![Kokoro CI][kokoro-badge-image-5]][kokoro-badge-link-5]
+
+[product-docs]: 
+[javadocs]: 
+[kokoro-badge-image-1]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-conformance-tests/java7.svg
+[kokoro-badge-link-1]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-conformance-tests/java7.html
+[kokoro-badge-image-2]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-conformance-tests/java8.svg
+[kokoro-badge-link-2]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-conformance-tests/java8.html
+[kokoro-badge-image-3]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-conformance-tests/java8-osx.svg
+[kokoro-badge-link-3]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-conformance-tests/java8-osx.html
+[kokoro-badge-image-4]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-conformance-tests/java8-win.svg
+[kokoro-badge-link-4]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-conformance-tests/java8-win.html
+[kokoro-badge-image-5]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-conformance-tests/java11.svg
+[kokoro-badge-link-5]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-conformance-tests/java11.html
+[stability-image]: https://img.shields.io/badge/stability-beta-yellow
+[maven-version-image]: https://img.shields.io/maven-central/v/com.google.cloud/google-cloud-conformance-tests.svg
+[maven-version-link]: https://search.maven.org/search?q=g:com.google.cloud%20AND%20a:google-cloud-conformance-tests&core=gav
+[authentication]: https://github.com/googleapis/google-cloud-java#authentication
+[developer-console]: https://console.developers.google.com/
+[create-project]: https://cloud.google.com/resource-manager/docs/creating-managing-projects
+[cloud-sdk]: https://cloud.google.com/sdk/
+[troubleshooting]: https://github.com/googleapis/google-cloud-common/blob/master/troubleshooting/readme.md#troubleshooting
+[contributing]: https://github.com/googleapis/java-conformance-tests/blob/master/CONTRIBUTING.md
+[code-of-conduct]: https://github.com/googleapis/java-conformance-tests/blob/master/CODE_OF_CONDUCT.md#contributor-code-of-conduct
+[license]: https://github.com/googleapis/java-conformance-tests/blob/master/LICENSE
+
+
+[libraries-bom]: https://github.com/GoogleCloudPlatform/cloud-opensource-java/wiki/The-Google-Cloud-Platform-Libraries-BOM
+[shell_img]: https://gstatic.com/cloudssh/images/open-btn.png
