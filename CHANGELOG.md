@@ -1,5 +1,19 @@
 # Changelog
 
+### [0.0.13](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.12...v0.0.13) (2020-10-13)
+
+
+### Dependencies
+
+* bump conformance-tests to a3a00aad8168947501ff007e49d9842fdf6328c9 ([#219](https://www.github.com/googleapis/java-conformance-tests/issues/219)) ([90b50f9](https://www.github.com/googleapis/java-conformance-tests/commit/90b50f95b809f3620f7509be048cd4b787605ada)), closes [#41](https://www.github.com/googleapis/java-conformance-tests/issues/41)
+* update dependency com.google.cloud:google-cloud-bom to v0.136.0 ([#189](https://www.github.com/googleapis/java-conformance-tests/issues/189)) ([f4c5811](https://www.github.com/googleapis/java-conformance-tests/commit/f4c58115a3bec755971b6b6728290e59acefa20f))
+* update dependency com.google.cloud:google-cloud-bom to v0.137.0 ([#209](https://www.github.com/googleapis/java-conformance-tests/issues/209)) ([4a3034a](https://www.github.com/googleapis/java-conformance-tests/commit/4a3034a5a5d166764d11bf9f69b326ac34d11943))
+* update dependency com.google.cloud:google-cloud-bom to v0.138.0 ([#211](https://www.github.com/googleapis/java-conformance-tests/issues/211)) ([9382120](https://www.github.com/googleapis/java-conformance-tests/commit/9382120bf5d80556bd177fd788cf71f53bc81a84))
+* update dependency com.google.cloud:google-cloud-bom to v0.139.0 ([#212](https://www.github.com/googleapis/java-conformance-tests/issues/212)) ([802469c](https://www.github.com/googleapis/java-conformance-tests/commit/802469caab2e34a939db3c03f4e38de2d5885635))
+* update dependency com.google.cloud:google-cloud-bom to v0.140.0 ([#218](https://www.github.com/googleapis/java-conformance-tests/issues/218)) ([a4f825e](https://www.github.com/googleapis/java-conformance-tests/commit/a4f825eb5e1e1e1760727779a5419ce3922fe558))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.0 ([#206](https://www.github.com/googleapis/java-conformance-tests/issues/206)) ([498695e](https://www.github.com/googleapis/java-conformance-tests/commit/498695e26d605404d00a71520c1bf49007771ff4))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.2 ([#213](https://www.github.com/googleapis/java-conformance-tests/issues/213)) ([5db0eff](https://www.github.com/googleapis/java-conformance-tests/commit/5db0efff28aeace353954b2b67f214bb2eee5843))
+
 ### [0.0.12](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.11...v0.0.12) (2020-09-17)
 
 
