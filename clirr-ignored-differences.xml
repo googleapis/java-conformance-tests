@@ -76,4 +76,16 @@
     <className>com/google/cloud/conformance/storage/v1/SigningV4Test$UrlStyle
     </className>
   </difference>
+
+  <!--
+  generation behavior change in protobuf 3.15.0:
+    Now Proto3 Oneof fields have "has" methods for checking their presence in Java.
+    https://github.com/protocolbuffers/protobuf/releases/tag/v3.15.0
+  -->
+  <difference>
+    <differenceType>7012</differenceType>
+    <className>com/google/cloud/conformance/firestore/v1/*OrBuilder</className>
+    <method>boolean has*(*)</method>
+  </difference>
+
 </differences>
