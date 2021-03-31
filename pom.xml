@@ -119,7 +119,7 @@
           <plugin>
             <groupId>com.mycila</groupId>
             <artifactId>license-maven-plugin</artifactId>
-            <version>3.0</version>
+            <version>4.0</version>
             <executions>
               <execution>
                 <id>license-main</id>
@@ -128,10 +128,14 @@
                 </goals>
                 <phase>process-sources</phase>
                 <configuration>
-                  <includes>
-                    <include>src/main/java/**</include>
-                    <include>target/generated-sources/**/java/**</include>
-                  </includes>
+                  <licenseSets>
+                    <licenseSet>
+                      <includes>
+                        <include>src/main/java/**</include>
+                        <include>target/generated-sources/**/java/**</include>
+                      </includes>
+                    </licenseSet>
+                  </licenseSets>
                 </configuration>
               </execution>
               <execution>
@@ -141,15 +145,23 @@
                 </goals>
                 <phase>process-test-sources</phase>
                 <configuration>
-                  <includes>
-                    <include>src/test/java/**</include>
-                    <include>target/generated-test-sources/**/java/**</include>
-                  </includes>
+                  <licenseSets>
+                    <licenseSet>
+                      <includes>
+                        <include>src/test/java/**</include>
+                        <include>target/generated-test-sources/**/java/**</include>
+                      </includes>
+                    </licenseSet>
+                  </licenseSets>
                 </configuration>
               </execution>
             </executions>
             <configuration>
-              <header>copyright-header.txt</header>
+              <licenseSets>
+                <licenseSet>
+                  <header>copyright-header.txt</header>
+                </licenseSet>
+              </licenseSets>
               <mapping>
                 <java>SLASHSTAR_STYLE</java>
               </mapping>
