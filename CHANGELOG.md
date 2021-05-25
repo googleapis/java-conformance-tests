@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.0](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.14...v0.1.0) (2021-05-25)
+
+
+### Features
+
+* add `gcf-owl-bot[bot]` to `ignoreAuthors` ([#321](https://www.github.com/googleapis/java-conformance-tests/issues/321)) ([dcd1095](https://www.github.com/googleapis/java-conformance-tests/commit/dcd1095671dab4ac47e2fabefcd597c04a38dfb6))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-bom to v0.154.0 ([#318](https://www.github.com/googleapis/java-conformance-tests/issues/318)) ([0fee569](https://www.github.com/googleapis/java-conformance-tests/commit/0fee569b5ba2e0bebee6315b0533d9be5a8756ed))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.2.0 ([#320](https://www.github.com/googleapis/java-conformance-tests/issues/320)) ([8f1d6c2](https://www.github.com/googleapis/java-conformance-tests/commit/8f1d6c296db4934e79dec45356bd8acbff6dd848))
+* update dependency com.google.protobuf:protobuf-java to v3.17.1 ([#325](https://www.github.com/googleapis/java-conformance-tests/issues/325)) ([01fa04d](https://www.github.com/googleapis/java-conformance-tests/commit/01fa04d04a6e9928dd3f5f9b4f2f3c27dbbd0c7b))
+
 ### [0.0.14](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.13...v0.0.14) (2021-05-17)
 
 
