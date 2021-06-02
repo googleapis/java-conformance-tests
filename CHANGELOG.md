@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.1](https://www.github.com/googleapis/java-conformance-tests/compare/v0.1.0...v0.1.1) (2021-06-02)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-bom to v0.155.0 ([#329](https://www.github.com/googleapis/java-conformance-tests/issues/329)) ([70117e5](https://www.github.com/googleapis/java-conformance-tests/commit/70117e5fffa50cdd4732b13d6bfdb89e70a39304))
+
 ## [0.1.0](https://www.github.com/googleapis/java-conformance-tests/compare/v0.0.14...v0.1.0) (2021-05-25)
 
 
