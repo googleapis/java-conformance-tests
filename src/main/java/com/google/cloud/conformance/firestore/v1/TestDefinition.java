@@ -15371,10 +15371,22 @@ public final class TestDefinition {
     /**
      * <code>int32 offset = 4;</code>
      *
+     * @return Whether the offset field is set.
+     */
+    boolean hasOffset();
+    /**
+     * <code>int32 offset = 4;</code>
+     *
      * @return The offset.
      */
     int getOffset();
 
+    /**
+     * <code>int32 limit = 5;</code>
+     *
+     * @return Whether the limit field is set.
+     */
+    boolean hasLimit();
     /**
      * <code>int32 limit = 5;</code>
      *
@@ -15850,6 +15862,15 @@ public final class TestDefinition {
     /**
      * <code>int32 offset = 4;</code>
      *
+     * @return Whether the offset field is set.
+     */
+    @java.lang.Override
+    public boolean hasOffset() {
+      return clauseCase_ == 4;
+    }
+    /**
+     * <code>int32 offset = 4;</code>
+     *
      * @return The offset.
      */
     @java.lang.Override
@@ -15861,6 +15882,15 @@ public final class TestDefinition {
     }
 
     public static final int LIMIT_FIELD_NUMBER = 5;
+    /**
+     * <code>int32 limit = 5;</code>
+     *
+     * @return Whether the limit field is set.
+     */
+    @java.lang.Override
+    public boolean hasLimit() {
+      return clauseCase_ == 5;
+    }
     /**
      * <code>int32 limit = 5;</code>
      *
@@ -17040,6 +17070,14 @@ public final class TestDefinition {
       /**
        * <code>int32 offset = 4;</code>
        *
+       * @return Whether the offset field is set.
+       */
+      public boolean hasOffset() {
+        return clauseCase_ == 4;
+      }
+      /**
+       * <code>int32 offset = 4;</code>
+       *
        * @return The offset.
        */
       public int getOffset() {
@@ -17074,6 +17112,14 @@ public final class TestDefinition {
         return this;
       }
 
+      /**
+       * <code>int32 limit = 5;</code>
+       *
+       * @return Whether the limit field is set.
+       */
+      public boolean hasLimit() {
+        return clauseCase_ == 5;
+      }
       /**
        * <code>int32 limit = 5;</code>
        *
