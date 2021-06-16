@@ -76,11 +76,17 @@ function main() {
   cpDir "src/main/resources/${bigtablePackage}/" conformance-tests/bigtable/v2/*.json
 
   msg "Generating protos"
+  set +o errexit
   mvn -Pgen-conformance-protos clean verify >> ${LOG_FILE} 2>&1
+  mvnExitCode=$?
+  set -o errexit
 
   ## move generated proto class(es) into the main src root
   cpDir src/main/java/ target/generated-sources/protobuf/java/*
 
+  if [ $mvnExitCode -ne 0 ]; then
+    exit $mvnExitCode
+  fi
   ## cleanup any generated files that may have not been moved over
   mvn clean >> ${LOG_FILE} 2>&1
 
