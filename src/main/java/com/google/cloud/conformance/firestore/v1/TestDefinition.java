@@ -26588,11 +26588,12 @@ public final class TestDefinition {
           + "nge.Kind\022*\n\003doc\030\002 \001(\0132\035.google.firestore"
           + ".v1.Document\022\021\n\told_index\030\003 \001(\005\022\021\n\tnew_i"
           + "ndex\030\004 \001(\005\"B\n\004Kind\022\024\n\020KIND_UNSPECIFIED\020\000"
-          + "\022\t\n\005ADDED\020\001\022\013\n\007REMOVED\020\002\022\014\n\010MODIFIED\020\003B\213"
+          + "\022\t\n\005ADDED\020\001\022\013\n\007REMOVED\020\002\022\014\n\010MODIFIED\020\003B\262"
           + "\001\n)com.google.cloud.conformance.firestor"
-          + "e.v1B\016TestDefinition\252\002\"Google.Cloud.Fire"
-          + "store.Tests.Proto\312\002(Google\\Cloud\\Firesto"
-          + "re\\Tests\\Conformanceb\006proto3"
+          + "e.v1B\016TestDefinitionZ%google/cloud/confo"
+          + "rmance/firestore/v1\252\002\"Google.Cloud.Fires"
+          + "tore.Tests.Proto\312\002(Google\\Cloud\\Firestor"
+          + "e\\Tests\\Conformanceb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
