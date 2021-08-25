@@ -1,5 +1,24 @@
 # Changelog
 
+### [0.1.2](https://www.github.com/googleapis/java-conformance-tests/compare/v0.1.1...v0.1.2) (2021-08-25)
+
+
+### Bug Fixes
+
+* Add `shopt -s nullglob` to dependencies script ([#338](https://www.github.com/googleapis/java-conformance-tests/issues/338)) ([0aeb37d](https://www.github.com/googleapis/java-conformance-tests/commit/0aeb37d1619e31cb86bd0e0411463763017d1155))
+* Update dependencies.sh to not break on mac ([#336](https://www.github.com/googleapis/java-conformance-tests/issues/336)) ([6bc892e](https://www.github.com/googleapis/java-conformance-tests/commit/6bc892e770ed6b250301aa6bea78f491d2cdc59a))
+
+
+### Dependencies
+
+* bump conformance-tests to 37ddc58e5c7ebc2847e67e1cba39bdee9e86e260 ([#350](https://www.github.com/googleapis/java-conformance-tests/issues/350)) ([79eb9d7](https://www.github.com/googleapis/java-conformance-tests/commit/79eb9d7ef836a992faaf1f4b3d75321272e2d9b0))
+* update dependency com.google.cloud:google-cloud-bom to v0.156.0 ([#339](https://www.github.com/googleapis/java-conformance-tests/issues/339)) ([6286ee1](https://www.github.com/googleapis/java-conformance-tests/commit/6286ee11fdbeb86c8b581fbad502e24af0f26685))
+* update dependency com.google.cloud:google-cloud-bom to v0.159.0 ([#341](https://www.github.com/googleapis/java-conformance-tests/issues/341)) ([7d8ff5d](https://www.github.com/googleapis/java-conformance-tests/commit/7d8ff5db478582241ffbc5455f83329e36587592))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.3.0 ([#332](https://www.github.com/googleapis/java-conformance-tests/issues/332)) ([c7d9709](https://www.github.com/googleapis/java-conformance-tests/commit/c7d970956259cbfa3c9e14d68a6bcec9b96da287))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.4.0 ([#340](https://www.github.com/googleapis/java-conformance-tests/issues/340)) ([daecdb7](https://www.github.com/googleapis/java-conformance-tests/commit/daecdb7c5043a6d14f12569114053d0eb75228e9))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2 ([#349](https://www.github.com/googleapis/java-conformance-tests/issues/349)) ([135db93](https://www.github.com/googleapis/java-conformance-tests/commit/135db93a6f99c1c250e975337d17cc88526eff21))
+* update protobuf-java to v3.17.2 ([#334](https://www.github.com/googleapis/java-conformance-tests/issues/334)) ([e6732c0](https://www.github.com/googleapis/java-conformance-tests/commit/e6732c0193577a62e8874f2b60f9eceb64388cfb))
+
 ### [0.1.1](https://www.github.com/googleapis/java-conformance-tests/compare/v0.1.0...v0.1.1) (2021-06-02)
 
 
