@@ -1,7 +1,11 @@
 # Changelog
 
-### [0.1.2](https://www.github.com/googleapis/java-conformance-tests/compare/v0.1.1...v0.1.2) (2021-08-25)
+### [0.2.0](https://www.github.com/googleapis/java-conformance-tests/compare/v0.1.1...v0.2.0) (2021-08-25)
 
+
+### ⚠ BREAKING CHANGES
+
+* migrate to java8 (#347)
 
 ### Bug Fixes
 
