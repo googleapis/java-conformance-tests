@@ -19,7 +19,7 @@
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-bom</artifactId>
-        <version>0.156.0</version>
+        <version>0.159.0</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -86,7 +86,7 @@
     <profile>
       <id>gen-conformance-protos</id>
       <properties>
-        <protobuf.version>3.17.2</protobuf.version>
+        <protobuf.version>3.17.3</protobuf.version>
       </properties>
       <dependencies>
         <dependency>
