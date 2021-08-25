@@ -3688,10 +3688,11 @@ public final class TestDefinition {
           + "t\022\017\n\007row_key\030\001 \001(\t\022\023\n\013family_name\030\002 \001(\t\022"
           + "\021\n\tqualifier\030\003 \001(\t\022\030\n\020timestamp_micros\030\004"
           + " \001(\003\022\r\n\005value\030\005 \001(\t\022\r\n\005label\030\006 \001(\t\022\r\n\005er"
-          + "ror\030\007 \001(\010Bg\n(com.google.cloud.conformanc"
-          + "e.bigtable.v2B\016TestDefinition\252\002*Google.C"
-          + "loud.Bigtable.V2.Tests.Conformanceb\006prot"
-          + "o3"
+          + "ror\030\007 \001(\010B\215\001\n(com.google.cloud.conforman"
+          + "ce.bigtable.v2B\016TestDefinitionZ$google/c"
+          + "loud/conformance/bigtable/v2\252\002*Google.Cl"
+          + "oud.Bigtable.V2.Tests.Conformanceb\006proto"
+          + "3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(

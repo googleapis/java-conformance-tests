@@ -71,6 +71,22 @@ public final class Tests {
       internal_static_google_cloud_conformance_storage_v1_PostPolicyV4Test_descriptor;
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_conformance_storage_v1_PostPolicyV4Test_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_conformance_storage_v1_RetryTests_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_conformance_storage_v1_RetryTests_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_conformance_storage_v1_InstructionList_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_conformance_storage_v1_InstructionList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_conformance_storage_v1_Method_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_conformance_storage_v1_Method_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_conformance_storage_v1_RetryTest_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_conformance_storage_v1_RetryTest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
     return descriptor;
@@ -126,11 +142,25 @@ public final class Tests {
           + "yInput\030\002 \001(\01320.google.cloud.conformance."
           + "storage.v1.PolicyInput\022G\n\014policyOutput\030\003"
           + " \001(\01321.google.cloud.conformance.storage."
-          + "v1.PolicyOutput*O\n\010UrlStyle\022\016\n\nPATH_STYL"
-          + "E\020\000\022\030\n\024VIRTUAL_HOSTED_STYLE\020\001\022\031\n\025BUCKET_"
-          + "BOUND_HOSTNAME\020\002BW\n\'com.google.cloud.con"
-          + "formance.storage.v1P\001\252\002)Google.Cloud.Sto"
-          + "rage.V1.Tests.Conformanceb\006proto3"
+          + "v1.PolicyOutput\"P\n\nRetryTests\022B\n\nretryTe"
+          + "sts\030\001 \003(\0132..google.cloud.conformance.sto"
+          + "rage.v1.RetryTest\"\'\n\017InstructionList\022\024\n\014"
+          + "instructions\030\001 \003(\t\"X\n\006Method\022\014\n\004name\030\001 \001"
+          + "(\t\022@\n\tresources\030\002 \003(\0162-.google.cloud.con"
+          + "formance.storage.v1.Resource\"\344\001\n\tRetryTe"
+          + "st\022\n\n\002id\030\001 \001(\005\022\023\n\013description\030\002 \001(\t\022C\n\005c"
+          + "ases\030\003 \003(\01324.google.cloud.conformance.st"
+          + "orage.v1.InstructionList\022<\n\007methods\030\004 \003("
+          + "\0132+.google.cloud.conformance.storage.v1."
+          + "Method\022\034\n\024preconditionProvided\030\005 \001(\010\022\025\n\r"
+          + "expectSuccess\030\006 \001(\010*O\n\010UrlStyle\022\016\n\nPATH_"
+          + "STYLE\020\000\022\030\n\024VIRTUAL_HOSTED_STYLE\020\001\022\031\n\025BUC"
+          + "KET_BOUND_HOSTNAME\020\002*B\n\010Resource\022\n\n\006BUCK"
+          + "ET\020\000\022\n\n\006OBJECT\020\001\022\020\n\014NOTIFICATION\020\002\022\014\n\010HM"
+          + "AC_KEY\020\003B|\n\'com.google.cloud.conformance"
+          + ".storage.v1P\001Z#google/cloud/conformance/"
+          + "storage/v1\252\002)Google.Cloud.Storage.V1.Tes"
+          + "ts.Conformanceb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -255,6 +285,38 @@ public final class Tests {
             internal_static_google_cloud_conformance_storage_v1_PostPolicyV4Test_descriptor,
             new java.lang.String[] {
               "Description", "PolicyInput", "PolicyOutput",
+            });
+    internal_static_google_cloud_conformance_storage_v1_RetryTests_descriptor =
+        getDescriptor().getMessageTypes().get(7);
+    internal_static_google_cloud_conformance_storage_v1_RetryTests_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_conformance_storage_v1_RetryTests_descriptor,
+            new java.lang.String[] {
+              "RetryTests",
+            });
+    internal_static_google_cloud_conformance_storage_v1_InstructionList_descriptor =
+        getDescriptor().getMessageTypes().get(8);
+    internal_static_google_cloud_conformance_storage_v1_InstructionList_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_conformance_storage_v1_InstructionList_descriptor,
+            new java.lang.String[] {
+              "Instructions",
+            });
+    internal_static_google_cloud_conformance_storage_v1_Method_descriptor =
+        getDescriptor().getMessageTypes().get(9);
+    internal_static_google_cloud_conformance_storage_v1_Method_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_conformance_storage_v1_Method_descriptor,
+            new java.lang.String[] {
+              "Name", "Resources",
+            });
+    internal_static_google_cloud_conformance_storage_v1_RetryTest_descriptor =
+        getDescriptor().getMessageTypes().get(10);
+    internal_static_google_cloud_conformance_storage_v1_RetryTest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_conformance_storage_v1_RetryTest_descriptor,
+            new java.lang.String[] {
+              "Id", "Description", "Cases", "Methods", "PreconditionProvided", "ExpectSuccess",
             });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
