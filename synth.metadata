@@ -4,14 +4,14 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-conformance-tests.git",
-        "sha": "2c864144c44a4e06d1f363ea351bba51a080387c"
+        "sha": "cef3b2b86377fb695136ea6a19a25ebaf5d7f184"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "1a2878d6909dd10ca4e3c1b5943d6622e996054e"
+        "sha": "e2aa5bcc3356d9e3b8b53de3b5c86226447d3a22"
       }
     }
   ],
@@ -25,6 +25,7 @@
     ".github/generated-files-bot.yml",
     ".github/readme/synth.py",
     ".github/release-please.yml",
+    ".github/release-trigger.yml",
     ".github/snippet-bot.yml",
     ".github/sync-repo-settings.yaml",
     ".github/trusted-contribution.yml",
