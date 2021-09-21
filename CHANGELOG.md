@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.3](https://www.github.com/googleapis/java-conformance-tests/compare/v0.2.2...v0.2.3) (2021-09-21)
+
+
+### Dependencies
+
+* bump conformance-tests to ca227f07c1991ca2a2d26c4601b12e8264fca01d ([#373](https://www.github.com/googleapis/java-conformance-tests/issues/373)) ([9832da8](https://www.github.com/googleapis/java-conformance-tests/commit/9832da80a5ffda85d3bf73b21a36876c42845540))
+
 ### [0.2.2](https://www.github.com/googleapis/java-conformance-tests/compare/v0.2.1...v0.2.2) (2021-09-14)
 
 
