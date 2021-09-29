@@ -20,13 +20,13 @@ this project. Ensure that maven 3.6+ is on your `PATH`.
 #### Performing the update
 
 A bash script is available to perform an update. The script can be ran for any branch, so if you
-need to update for a branch other than `master` update the following snippet with your
+need to update for a branch other than `main` update the following snippet with your
 branch name. 
 
 To update the conformance tests run the following commands from the repository root:
 ```bash
-git checkout master
-git pull upstream master
+git checkout main
+git pull upstream main
 ./bump-conformance-tests.sh
 git push
 ```
