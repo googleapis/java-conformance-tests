@@ -1535,22 +1535,22 @@ public final class TestDefinition {
 
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-        if (!getRowKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rowKey_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rowKey_);
         }
-        if (!getFamilyNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(familyName_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, familyName_);
         }
-        if (!getQualifierBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(qualifier_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, qualifier_);
         }
         if (timestampMicros_ != 0L) {
           output.writeInt64(4, timestampMicros_);
         }
-        if (!getValueBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 5, value_);
         }
-        if (!getLabelBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 6, label_);
         }
         if (error_ != false) {
@@ -1565,22 +1565,22 @@ public final class TestDefinition {
         if (size != -1) return size;
 
         size = 0;
-        if (!getRowKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rowKey_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rowKey_);
         }
-        if (!getFamilyNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(familyName_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, familyName_);
         }
-        if (!getQualifierBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(qualifier_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, qualifier_);
         }
         if (timestampMicros_ != 0L) {
           size += com.google.protobuf.CodedOutputStream.computeInt64Size(4, timestampMicros_);
         }
-        if (!getValueBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, value_);
         }
-        if (!getLabelBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, label_);
         }
         if (error_ != false) {
@@ -2597,7 +2597,7 @@ public final class TestDefinition {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
       }
       for (int i = 0; i < chunks_.size(); i++) {
@@ -2615,7 +2615,7 @@ public final class TestDefinition {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
       }
       for (int i = 0; i < chunks_.size(); i++) {

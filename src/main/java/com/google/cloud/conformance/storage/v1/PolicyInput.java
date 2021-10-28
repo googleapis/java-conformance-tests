@@ -584,19 +584,19 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!getSchemeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scheme_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scheme_);
     }
     if (urlStyle_ != com.google.cloud.conformance.storage.v1.UrlStyle.PATH_STYLE.getNumber()) {
       output.writeEnum(2, urlStyle_);
     }
-    if (!getBucketBoundHostnameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketBoundHostname_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bucketBoundHostname_);
     }
-    if (!getBucketBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bucket_);
     }
-    if (!getObjectBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(object_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, object_);
     }
     if (expiration_ != 0) {
@@ -619,19 +619,19 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     if (size != -1) return size;
 
     size = 0;
-    if (!getSchemeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scheme_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scheme_);
     }
     if (urlStyle_ != com.google.cloud.conformance.storage.v1.UrlStyle.PATH_STYLE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream.computeEnumSize(2, urlStyle_);
     }
-    if (!getBucketBoundHostnameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketBoundHostname_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bucketBoundHostname_);
     }
-    if (!getBucketBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bucket_);
     }
-    if (!getObjectBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(object_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, object_);
     }
     if (expiration_ != 0) {

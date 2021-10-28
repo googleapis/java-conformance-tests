@@ -829,19 +829,19 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!getFileNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fileName_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
-    if (!getBucketBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bucket_);
     }
-    if (!getObjectBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(object_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, object_);
     }
-    if (!getMethodBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(method_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, method_);
     }
     if (expiration_ != 0L) {
@@ -850,26 +850,26 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (timestamp_ != null) {
       output.writeMessage(7, getTimestamp());
     }
-    if (!getExpectedUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, expectedUrl_);
     }
     com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
         output, internalGetHeaders(), HeadersDefaultEntryHolder.defaultEntry, 9);
     com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
         output, internalGetQueryParameters(), QueryParametersDefaultEntryHolder.defaultEntry, 10);
-    if (!getSchemeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scheme_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, scheme_);
     }
     if (urlStyle_ != com.google.cloud.conformance.storage.v1.UrlStyle.PATH_STYLE.getNumber()) {
       output.writeEnum(12, urlStyle_);
     }
-    if (!getBucketBoundHostnameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketBoundHostname_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, bucketBoundHostname_);
     }
-    if (!getExpectedCanonicalRequestBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedCanonicalRequest_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, expectedCanonicalRequest_);
     }
-    if (!getExpectedStringToSignBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedStringToSign_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, expectedStringToSign_);
     }
     unknownFields.writeTo(output);
@@ -881,19 +881,19 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (size != -1) return size;
 
     size = 0;
-    if (!getFileNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fileName_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
     }
-    if (!getBucketBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bucket_);
     }
-    if (!getObjectBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(object_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, object_);
     }
-    if (!getMethodBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(method_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, method_);
     }
     if (expiration_ != 0L) {
@@ -902,7 +902,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (timestamp_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(7, getTimestamp());
     }
-    if (!getExpectedUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, expectedUrl_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :
@@ -925,20 +925,20 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
               .build();
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(10, queryParameters__);
     }
-    if (!getSchemeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scheme_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, scheme_);
     }
     if (urlStyle_ != com.google.cloud.conformance.storage.v1.UrlStyle.PATH_STYLE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream.computeEnumSize(12, urlStyle_);
     }
-    if (!getBucketBoundHostnameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketBoundHostname_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, bucketBoundHostname_);
     }
-    if (!getExpectedCanonicalRequestBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedCanonicalRequest_)) {
       size +=
           com.google.protobuf.GeneratedMessageV3.computeStringSize(14, expectedCanonicalRequest_);
     }
-    if (!getExpectedStringToSignBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedStringToSign_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, expectedStringToSign_);
     }
     size += unknownFields.getSerializedSize();
