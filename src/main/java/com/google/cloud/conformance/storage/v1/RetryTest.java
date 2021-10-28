@@ -423,7 +423,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     if (id_ != 0) {
       output.writeInt32(1, id_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
     for (int i = 0; i < cases_.size(); i++) {
@@ -450,7 +450,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     if (id_ != 0) {
       size += com.google.protobuf.CodedOutputStream.computeInt32Size(1, id_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
     }
     for (int i = 0; i < cases_.size(); i++) {

@@ -498,12 +498,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!getUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
     }
     com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
         output, internalGetFields(), FieldsDefaultEntryHolder.defaultEntry, 2);
-    if (!getExpectedDecodedPolicyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedDecodedPolicy_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, expectedDecodedPolicy_);
     }
     unknownFields.writeTo(output);
@@ -515,7 +515,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     if (size != -1) return size;
 
     size = 0;
-    if (!getUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :
@@ -528,7 +528,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
               .build();
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, fields__);
     }
-    if (!getExpectedDecodedPolicyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedDecodedPolicy_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, expectedDecodedPolicy_);
     }
     size += unknownFields.getSerializedSize();
