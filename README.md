@@ -17,9 +17,12 @@ released versioned jar of the conformance tests.
 Part of the process of updating the conformance tests involves running a maven build for
 this project. Ensure that maven 3.6+ is on your `PATH`.
 
+The code formatter we use `google-java-format` requires Java 11+ in order to run. Please
+ensure the version of Java used to run Maven meets this requirement.
+
 #### Performing the update
 
-A bash script is available to perform an update. The script can be ran for any branch, so if you
+A bash script is available to perform an update. The script can be run for any branch, if you
 need to update for a branch other than `main` update the following snippet with your
 branch name. 
 
