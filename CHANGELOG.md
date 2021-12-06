@@ -1,5 +1,22 @@
 # Changelog
 
+### [0.2.5](https://www.github.com/googleapis/java-conformance-tests/compare/v0.2.4...v0.2.5) (2021-12-06)
+
+
+### Bug Fixes
+
+* **java:** add -ntp flag to native image testing command ([#1299](https://www.github.com/googleapis/java-conformance-tests/issues/1299)) ([#409](https://www.github.com/googleapis/java-conformance-tests/issues/409)) ([a413bf2](https://www.github.com/googleapis/java-conformance-tests/commit/a413bf28f706a025530137b763338ccf746ed725))
+* **java:** java 17 dependency arguments ([#1266](https://www.github.com/googleapis/java-conformance-tests/issues/1266)) ([#394](https://www.github.com/googleapis/java-conformance-tests/issues/394)) ([7034a4d](https://www.github.com/googleapis/java-conformance-tests/commit/7034a4de03411a6b4a5f24bc64c9d44d14f0867f))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-bom to v0.163.0 ([#396](https://www.github.com/googleapis/java-conformance-tests/issues/396)) ([2d1cbb3](https://www.github.com/googleapis/java-conformance-tests/commit/2d1cbb3a430af57a8c4022176dde26fdf7df9e59))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.4.0 ([#391](https://www.github.com/googleapis/java-conformance-tests/issues/391)) ([dfa33b2](https://www.github.com/googleapis/java-conformance-tests/commit/dfa33b242a4d4012bdc5bc51dd2bd18e0e52cbdb))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.0 ([#402](https://www.github.com/googleapis/java-conformance-tests/issues/402)) ([406306b](https://www.github.com/googleapis/java-conformance-tests/commit/406306be830ac12f6dbcf7999651cdbac3bb19f7))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.1 ([#408](https://www.github.com/googleapis/java-conformance-tests/issues/408)) ([dfad59b](https://www.github.com/googleapis/java-conformance-tests/commit/dfad59bcfc311e78688e7e97774923aaa113a234))
+* update dependency com.google.googlejavaformat:google-java-format to v1.13.0 ([#404](https://www.github.com/googleapis/java-conformance-tests/issues/404)) ([1c7ff11](https://www.github.com/googleapis/java-conformance-tests/commit/1c7ff11e5ef449364b54d04ed642331ce546a61f))
+
 ### [0.2.4](https://www.github.com/googleapis/java-conformance-tests/compare/v0.2.3...v0.2.4) (2021-10-18)
 
 
