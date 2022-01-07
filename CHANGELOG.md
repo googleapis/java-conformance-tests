@@ -1,5 +1,19 @@
 # Changelog
 
+### [0.2.6](https://www.github.com/googleapis/java-conformance-tests/compare/v0.2.5...v0.2.6) (2022-01-07)
+
+
+### Bug Fixes
+
+* **java:** run Maven in plain console-friendly mode ([#1301](https://www.github.com/googleapis/java-conformance-tests/issues/1301)) ([#416](https://www.github.com/googleapis/java-conformance-tests/issues/416)) ([78f0a39](https://www.github.com/googleapis/java-conformance-tests/commit/78f0a393d4946a81ba4b27b3d480b0325baf9c61))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-bom to v0.164.0 ([#411](https://www.github.com/googleapis/java-conformance-tests/issues/411)) ([e586425](https://www.github.com/googleapis/java-conformance-tests/commit/e586425e88534184559cc9ab7bbe6bbf1210406f))
+* update dependency com.google.cloud:google-cloud-bom to v0.165.0 ([#412](https://www.github.com/googleapis/java-conformance-tests/issues/412)) ([2bcf56b](https://www.github.com/googleapis/java-conformance-tests/commit/2bcf56b6edd06e567306d83b6b242e4441a64d17))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.6.0 ([#420](https://www.github.com/googleapis/java-conformance-tests/issues/420)) ([8d6c647](https://www.github.com/googleapis/java-conformance-tests/commit/8d6c64702223d5eef7435b6b9818c04df1f87ba7))
+
 ### [0.2.5](https://www.github.com/googleapis/java-conformance-tests/compare/v0.2.4...v0.2.5) (2021-12-06)
 
 
