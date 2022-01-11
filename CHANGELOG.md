@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.2.7](https://github.com/googleapis/java-conformance-tests/compare/v0.2.6...v0.2.7) (2022-01-11)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-bom to v0.166.0 ([#424](https://github.com/googleapis/java-conformance-tests/issues/424)) ([7f7afd6](https://github.com/googleapis/java-conformance-tests/commit/7f7afd65863eb65032b051d90db8a64dedbc0775))
+* update dependency kr.motd.maven:os-maven-plugin to v1.7.0 ([#425](https://github.com/googleapis/java-conformance-tests/issues/425)) ([9c9136e](https://github.com/googleapis/java-conformance-tests/commit/9c9136ee0074779fbd7abd688875c01010aa5eb7))
+
 ### [0.2.6](https://www.github.com/googleapis/java-conformance-tests/compare/v0.2.5...v0.2.6) (2022-01-07)
 
 
