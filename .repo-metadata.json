@@ -1,7 +1,7 @@
 {
   "api_shortname": "conformance-tests",
   "name_pretty": "Google Cloud Java Conformance Tests",
-  "release_level": "beta",
+  "release_level": "preview",
   "repo": "googleapis/java-conformance-tests",
   "repo_short": "java-conformance-tests",
   "language": "java",
