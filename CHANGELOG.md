@@ -1,5 +1,16 @@
 # Changelog
 
+### [0.2.7](https://github.com/googleapis/java-conformance-tests/compare/v0.2.6...v0.2.7) (2022-02-03)
+
+
+### Dependencies
+
+* **java:** update actions/github-script action to v5 ([#1339](https://github.com/googleapis/java-conformance-tests/issues/1339)) ([#437](https://github.com/googleapis/java-conformance-tests/issues/437)) ([6129b78](https://github.com/googleapis/java-conformance-tests/commit/6129b78a2835b1754286fc8e457731bb06527a31))
+* update actions/github-script action to v5 ([#436](https://github.com/googleapis/java-conformance-tests/issues/436)) ([dad786a](https://github.com/googleapis/java-conformance-tests/commit/dad786a0fe0a963c96bec89f906da01c4e863786))
+* update dependency com.google.cloud:google-cloud-bom to v0.166.0 ([#424](https://github.com/googleapis/java-conformance-tests/issues/424)) ([7f7afd6](https://github.com/googleapis/java-conformance-tests/commit/7f7afd65863eb65032b051d90db8a64dedbc0775))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.7.0 ([#438](https://github.com/googleapis/java-conformance-tests/issues/438)) ([8bc9000](https://github.com/googleapis/java-conformance-tests/commit/8bc90005cc865c8990fc2cf64292866a92cd9d0d))
+* update dependency kr.motd.maven:os-maven-plugin to v1.7.0 ([#425](https://github.com/googleapis/java-conformance-tests/issues/425)) ([9c9136e](https://github.com/googleapis/java-conformance-tests/commit/9c9136ee0074779fbd7abd688875c01010aa5eb7))
+
 ### [0.2.6](https://www.github.com/googleapis/java-conformance-tests/compare/v0.2.5...v0.2.6) (2022-01-07)
 
 
