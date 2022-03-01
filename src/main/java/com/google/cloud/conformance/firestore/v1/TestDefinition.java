@@ -15566,14 +15566,14 @@ public final class TestDefinition {
               }
             case 32:
               {
-                clauseCase_ = 4;
                 clause_ = input.readInt32();
+                clauseCase_ = 4;
                 break;
               }
             case 40:
               {
-                clauseCase_ = 5;
                 clause_ = input.readInt32();
+                clauseCase_ = 5;
                 break;
               }
             case 50:

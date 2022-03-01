@@ -254,7 +254,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean containsFields(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     return internalGetFields().getMap().containsKey(key);
   }
@@ -377,7 +377,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public java.lang.String getFieldsOrDefault(java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -438,7 +438,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public java.lang.String getFieldsOrThrow(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
     if (!map.containsKey(key)) {
@@ -1011,7 +1011,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public boolean containsFields(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetFields().getMap().containsKey(key);
     }
@@ -1135,7 +1135,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     public java.lang.String getFieldsOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1196,7 +1196,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public java.lang.String getFieldsOrThrow(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
       if (!map.containsKey(key)) {
@@ -1264,7 +1264,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder removeFields(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       internalGetMutableFields().getMutableMap().remove(key);
       return this;
@@ -1329,11 +1329,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder putFields(java.lang.String key, java.lang.String value) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       if (value == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map value");
       }
+
       internalGetMutableFields().getMutableMap().put(key, value);
       return this;
     }
