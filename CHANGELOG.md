@@ -1,5 +1,19 @@
 # Changelog
 
+### [0.2.8](https://github.com/googleapis/java-conformance-tests/compare/v0.2.7...v0.2.8) (2022-03-08)
+
+
+### Dependencies
+
+* bump conformance-tests to 6f88335938cd1d90372a447e01d7d71014e37ceb ([#451](https://github.com/googleapis/java-conformance-tests/issues/451)) ([b59bd3f](https://github.com/googleapis/java-conformance-tests/commit/b59bd3fb5711089645fbe3f05551c56a266e0b66))
+* update actions/checkout action to v3 ([#450](https://github.com/googleapis/java-conformance-tests/issues/450)) ([9f6a899](https://github.com/googleapis/java-conformance-tests/commit/9f6a899082011bc6faff1ce6ddecba03fbaeb158))
+* update actions/github-script action to v6 ([#445](https://github.com/googleapis/java-conformance-tests/issues/445)) ([fe45e53](https://github.com/googleapis/java-conformance-tests/commit/fe45e53dc0a07da237f64d87d7e9cc2896a21036))
+* update dependency com.google.cloud:google-cloud-bom to v0.167.0 ([#442](https://github.com/googleapis/java-conformance-tests/issues/442)) ([08b4fd6](https://github.com/googleapis/java-conformance-tests/commit/08b4fd69e0230312a79f362cf3106ec3e6cd322c))
+* update dependency com.google.cloud:google-cloud-bom to v0.168.1 ([#449](https://github.com/googleapis/java-conformance-tests/issues/449)) ([d41c48d](https://github.com/googleapis/java-conformance-tests/commit/d41c48d46f648fb6d018cad8c40e621fc75a2d98))
+* update dependency com.google.cloud:google-cloud-bom to v0.169.0 ([#454](https://github.com/googleapis/java-conformance-tests/issues/454)) ([5359cfc](https://github.com/googleapis/java-conformance-tests/commit/5359cfcbf729766445a25a233f1db41ec7498bb3))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.8.0 ([#453](https://github.com/googleapis/java-conformance-tests/issues/453)) ([bb6f23d](https://github.com/googleapis/java-conformance-tests/commit/bb6f23dae60582e3ec77ccb6a70004de21460bc8))
+* update dependency com.google.googlejavaformat:google-java-format to v1.14.0 ([#446](https://github.com/googleapis/java-conformance-tests/issues/446)) ([e13c6f9](https://github.com/googleapis/java-conformance-tests/commit/e13c6f964cc359528a8553a3af59da36cd3ff9d9))
+
 ### [0.2.7](https://github.com/googleapis/java-conformance-tests/compare/v0.2.6...v0.2.7) (2022-02-03)
 
 
