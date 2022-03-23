@@ -41,6 +41,7 @@ public final class Method extends com.google.protobuf.GeneratedMessageV3
   private Method() {
     name_ = "";
     resources_ = java.util.Collections.emptyList();
+    group_ = "";
   }
 
   @java.lang.Override
@@ -103,6 +104,13 @@ public final class Method extends com.google.protobuf.GeneratedMessageV3
                 resources_.add(rawValue);
               }
               input.popLimit(oldLimit);
+              break;
+            }
+          case 26:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              group_ = s;
               break;
             }
           default:
@@ -260,6 +268,55 @@ public final class Method extends com.google.protobuf.GeneratedMessageV3
 
   private int resourcesMemoizedSerializedSize;
 
+  public static final int GROUP_FIELD_NUMBER = 3;
+  private volatile java.lang.Object group_;
+  /**
+   *
+   *
+   * <pre>
+   * e.g. storage.resumable.upload
+   * </pre>
+   *
+   * <code>string group = 3;</code>
+   *
+   * @return The group.
+   */
+  @java.lang.Override
+  public java.lang.String getGroup() {
+    java.lang.Object ref = group_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      group_ = s;
+      return s;
+    }
+  }
+  /**
+   *
+   *
+   * <pre>
+   * e.g. storage.resumable.upload
+   * </pre>
+   *
+   * <code>string group = 3;</code>
+   *
+   * @return The bytes for group.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getGroupBytes() {
+    java.lang.Object ref = group_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      group_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -285,6 +342,9 @@ public final class Method extends com.google.protobuf.GeneratedMessageV3
     for (int i = 0; i < resources_.size(); i++) {
       output.writeEnumNoTag(resources_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(group_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, group_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -309,6 +369,9 @@ public final class Method extends com.google.protobuf.GeneratedMessageV3
       }
       resourcesMemoizedSerializedSize = dataSize;
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(group_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, group_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -327,6 +390,7 @@ public final class Method extends com.google.protobuf.GeneratedMessageV3
 
     if (!getName().equals(other.getName())) return false;
     if (!resources_.equals(other.resources_)) return false;
+    if (!getGroup().equals(other.getGroup())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -344,6 +408,8 @@ public final class Method extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
       hash = (53 * hash) + resources_.hashCode();
     }
+    hash = (37 * hash) + GROUP_FIELD_NUMBER;
+    hash = (53 * hash) + getGroup().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -494,6 +560,8 @@ public final class Method extends com.google.protobuf.GeneratedMessageV3
 
       resources_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      group_ = "";
+
       return this;
     }
 
@@ -528,6 +596,7 @@ public final class Method extends com.google.protobuf.GeneratedMessageV3
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.resources_ = resources_;
+      result.group_ = group_;
       onBuilt();
       return result;
     }
@@ -589,6 +658,10 @@ public final class Method extends com.google.protobuf.GeneratedMessageV3
           ensureResourcesIsMutable();
           resources_.addAll(other.resources_);
         }
+        onChanged();
+      }
+      if (!other.getGroup().isEmpty()) {
+        group_ = other.group_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -873,6 +946,112 @@ public final class Method extends com.google.protobuf.GeneratedMessageV3
       for (int value : values) {
         resources_.add(value);
       }
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object group_ = "";
+    /**
+     *
+     *
+     * <pre>
+     * e.g. storage.resumable.upload
+     * </pre>
+     *
+     * <code>string group = 3;</code>
+     *
+     * @return The group.
+     */
+    public java.lang.String getGroup() {
+      java.lang.Object ref = group_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        group_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * e.g. storage.resumable.upload
+     * </pre>
+     *
+     * <code>string group = 3;</code>
+     *
+     * @return The bytes for group.
+     */
+    public com.google.protobuf.ByteString getGroupBytes() {
+      java.lang.Object ref = group_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        group_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * e.g. storage.resumable.upload
+     * </pre>
+     *
+     * <code>string group = 3;</code>
+     *
+     * @param value The group to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGroup(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+
+      group_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * e.g. storage.resumable.upload
+     * </pre>
+     *
+     * <code>string group = 3;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearGroup() {
+
+      group_ = getDefaultInstance().getGroup();
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * e.g. storage.resumable.upload
+     * </pre>
+     *
+     * <code>string group = 3;</code>
+     *
+     * @param value The bytes for group to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGroupBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
+      group_ = value;
       onChanged();
       return this;
     }

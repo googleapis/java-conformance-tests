@@ -80,4 +80,29 @@ public interface MethodOrBuilder
    * @return The enum numeric value on the wire of resources at the given index.
    */
   int getResourcesValue(int index);
+
+  /**
+   *
+   *
+   * <pre>
+   * e.g. storage.resumable.upload
+   * </pre>
+   *
+   * <code>string group = 3;</code>
+   *
+   * @return The group.
+   */
+  java.lang.String getGroup();
+  /**
+   *
+   *
+   * <pre>
+   * e.g. storage.resumable.upload
+   * </pre>
+   *
+   * <code>string group = 3;</code>
+   *
+   * @return The bytes for group.
+   */
+  com.google.protobuf.ByteString getGroupBytes();
 }
