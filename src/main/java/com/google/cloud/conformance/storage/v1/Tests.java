@@ -145,22 +145,22 @@ public final class Tests {
           + "v1.PolicyOutput\"P\n\nRetryTests\022B\n\nretryTe"
           + "sts\030\001 \003(\0132..google.cloud.conformance.sto"
           + "rage.v1.RetryTest\"\'\n\017InstructionList\022\024\n\014"
-          + "instructions\030\001 \003(\t\"X\n\006Method\022\014\n\004name\030\001 \001"
+          + "instructions\030\001 \003(\t\"g\n\006Method\022\014\n\004name\030\001 \001"
           + "(\t\022@\n\tresources\030\002 \003(\0162-.google.cloud.con"
-          + "formance.storage.v1.Resource\"\344\001\n\tRetryTe"
-          + "st\022\n\n\002id\030\001 \001(\005\022\023\n\013description\030\002 \001(\t\022C\n\005c"
-          + "ases\030\003 \003(\01324.google.cloud.conformance.st"
-          + "orage.v1.InstructionList\022<\n\007methods\030\004 \003("
-          + "\0132+.google.cloud.conformance.storage.v1."
-          + "Method\022\034\n\024preconditionProvided\030\005 \001(\010\022\025\n\r"
-          + "expectSuccess\030\006 \001(\010*O\n\010UrlStyle\022\016\n\nPATH_"
-          + "STYLE\020\000\022\030\n\024VIRTUAL_HOSTED_STYLE\020\001\022\031\n\025BUC"
-          + "KET_BOUND_HOSTNAME\020\002*B\n\010Resource\022\n\n\006BUCK"
-          + "ET\020\000\022\n\n\006OBJECT\020\001\022\020\n\014NOTIFICATION\020\002\022\014\n\010HM"
-          + "AC_KEY\020\003B|\n\'com.google.cloud.conformance"
-          + ".storage.v1P\001Z#google/cloud/conformance/"
-          + "storage/v1\252\002)Google.Cloud.Storage.V1.Tes"
-          + "ts.Conformanceb\006proto3"
+          + "formance.storage.v1.Resource\022\r\n\005group\030\003 "
+          + "\001(\t\"\344\001\n\tRetryTest\022\n\n\002id\030\001 \001(\005\022\023\n\013descrip"
+          + "tion\030\002 \001(\t\022C\n\005cases\030\003 \003(\01324.google.cloud"
+          + ".conformance.storage.v1.InstructionList\022"
+          + "<\n\007methods\030\004 \003(\0132+.google.cloud.conforma"
+          + "nce.storage.v1.Method\022\034\n\024preconditionPro"
+          + "vided\030\005 \001(\010\022\025\n\rexpectSuccess\030\006 \001(\010*O\n\010Ur"
+          + "lStyle\022\016\n\nPATH_STYLE\020\000\022\030\n\024VIRTUAL_HOSTED"
+          + "_STYLE\020\001\022\031\n\025BUCKET_BOUND_HOSTNAME\020\002*B\n\010R"
+          + "esource\022\n\n\006BUCKET\020\000\022\n\n\006OBJECT\020\001\022\020\n\014NOTIF"
+          + "ICATION\020\002\022\014\n\010HMAC_KEY\020\003B|\n\'com.google.cl"
+          + "oud.conformance.storage.v1P\001Z#google/clo"
+          + "ud/conformance/storage/v1\252\002)Google.Cloud"
+          + ".Storage.V1.Tests.Conformanceb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -308,7 +308,7 @@ public final class Tests {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_conformance_storage_v1_Method_descriptor,
             new java.lang.String[] {
-              "Name", "Resources",
+              "Name", "Resources", "Group",
             });
     internal_static_google_cloud_conformance_storage_v1_RetryTest_descriptor =
         getDescriptor().getMessageTypes().get(10);
