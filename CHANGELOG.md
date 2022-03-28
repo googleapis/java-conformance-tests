@@ -1,5 +1,14 @@
 # Changelog
 
+### [0.2.9](https://github.com/googleapis/java-conformance-tests/compare/v0.2.8...v0.2.9) (2022-03-28)
+
+
+### Dependencies
+
+* bump conformance-tests to ec2e8c3d312e7122e07f65e98639169515449aa8 ([#462](https://github.com/googleapis/java-conformance-tests/issues/462)) ([3df311e](https://github.com/googleapis/java-conformance-tests/commit/3df311e51c48d7aa14bd8e97dc3fc04b74140182))
+* update dependency com.google.cloud:google-cloud-bom to v0.171.0 ([#461](https://github.com/googleapis/java-conformance-tests/issues/461)) ([af02e0a](https://github.com/googleapis/java-conformance-tests/commit/af02e0aa6fb6c5f2742f93d0afdefed03c4eafa4))
+* update dependency com.google.googlejavaformat:google-java-format to v1.15.0 ([#458](https://github.com/googleapis/java-conformance-tests/issues/458)) ([25c3d31](https://github.com/googleapis/java-conformance-tests/commit/25c3d31c0d57d3b8954388b34b1309437e9e80fb))
+
 ### [0.2.8](https://github.com/googleapis/java-conformance-tests/compare/v0.2.7...v0.2.8) (2022-03-08)
 
 
