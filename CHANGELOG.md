@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.10](https://github.com/googleapis/java-conformance-tests/compare/v0.2.9...v0.2.10) (2022-03-29)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.9.0 ([#465](https://github.com/googleapis/java-conformance-tests/issues/465)) ([c8a29b8](https://github.com/googleapis/java-conformance-tests/commit/c8a29b8801311428b23b9d4fd65568e02c13ec64))
+
 ### [0.2.9](https://github.com/googleapis/java-conformance-tests/compare/v0.2.8...v0.2.9) (2022-03-28)
 
 
