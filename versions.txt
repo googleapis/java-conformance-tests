@@ -1,4 +1,4 @@
 # Format:
 # module:released-version:current-version
 
-google-cloud-conformance-tests:0.2.10:0.2.10
+google-cloud-conformance-tests:0.2.10:0.2.11-SNAPSHOT
