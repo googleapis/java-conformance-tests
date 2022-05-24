@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0](https://github.com/googleapis/java-conformance-tests/compare/v0.2.11...v0.3.0) (2022-05-19)
+
+
+### Features
+
+* add build scripts for native image testing in Java 17 ([#1440](https://github.com/googleapis/java-conformance-tests/issues/1440)) ([#479](https://github.com/googleapis/java-conformance-tests/issues/479)) ([74e48a2](https://github.com/googleapis/java-conformance-tests/commit/74e48a2139da4c3f6f0972302fea33cc59155baf))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-bom to v0.173.0 ([#474](https://github.com/googleapis/java-conformance-tests/issues/474)) ([b04164f](https://github.com/googleapis/java-conformance-tests/commit/b04164fcb50c5f6fa128c27fafcc4481ac39e7d0))
+* update dependency com.google.cloud:google-cloud-bom to v0.174.0 ([#477](https://github.com/googleapis/java-conformance-tests/issues/477)) ([03cb953](https://github.com/googleapis/java-conformance-tests/commit/03cb95306b831e3d92012e856ad6b9ddb635a7fd))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.11.0 ([#478](https://github.com/googleapis/java-conformance-tests/issues/478)) ([1ca9850](https://github.com/googleapis/java-conformance-tests/commit/1ca98507254d98eadec41f6630f7a6170547ad90))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.12.0 ([#480](https://github.com/googleapis/java-conformance-tests/issues/480)) ([e82759a](https://github.com/googleapis/java-conformance-tests/commit/e82759a8a63b161928e013fcf714395eaa33d846))
+
 ### [0.2.11](https://github.com/googleapis/java-conformance-tests/compare/v0.2.10...v0.2.11) (2022-04-20)
 
 
