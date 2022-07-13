@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/googleapis/java-conformance-tests/compare/v0.3.2...v0.3.3) (2022-07-13)
+
+
+### Bug Fixes
+
+* enable longpaths support for windows test ([#1485](https://github.com/googleapis/java-conformance-tests/issues/1485)) ([#493](https://github.com/googleapis/java-conformance-tests/issues/493)) ([a3a1cc1](https://github.com/googleapis/java-conformance-tests/commit/a3a1cc1332a1e4070d314250476d4f67de25d6b1))
+
 ## [0.3.2](https://github.com/googleapis/java-conformance-tests/compare/v0.3.1...v0.3.2) (2022-07-11)
 
 
