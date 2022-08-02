@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.4](https://github.com/googleapis/java-conformance-tests/compare/v0.3.3...v0.3.4) (2022-08-02)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v3 ([#500](https://github.com/googleapis/java-conformance-tests/issues/500)) ([279827c](https://github.com/googleapis/java-conformance-tests/commit/279827c8a2a113e670d8d921c0f8b04477fae8eb))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.1 ([#502](https://github.com/googleapis/java-conformance-tests/issues/502)) ([40fe04f](https://github.com/googleapis/java-conformance-tests/commit/40fe04f7546af3b3f6562fd663e9b1ff803ca84f))
+
 ## [0.3.3](https://github.com/googleapis/java-conformance-tests/compare/v0.3.2...v0.3.3) (2022-07-13)
 
 
