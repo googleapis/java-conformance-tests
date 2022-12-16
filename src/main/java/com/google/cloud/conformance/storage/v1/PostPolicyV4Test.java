@@ -44,84 +44,6 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
     return this.unknownFields;
   }
 
-  private PostPolicyV4Test(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              description_ = s;
-              break;
-            }
-          case 18:
-            {
-              com.google.cloud.conformance.storage.v1.PolicyInput.Builder subBuilder = null;
-              if (policyInput_ != null) {
-                subBuilder = policyInput_.toBuilder();
-              }
-              policyInput_ =
-                  input.readMessage(
-                      com.google.cloud.conformance.storage.v1.PolicyInput.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(policyInput_);
-                policyInput_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 26:
-            {
-              com.google.cloud.conformance.storage.v1.PolicyOutput.Builder subBuilder = null;
-              if (policyOutput_ != null) {
-                subBuilder = policyOutput_.toBuilder();
-              }
-              policyOutput_ =
-                  input.readMessage(
-                      com.google.cloud.conformance.storage.v1.PolicyOutput.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(policyOutput_);
-                policyOutput_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.conformance.storage.v1.Tests
         .internal_static_google_cloud_conformance_storage_v1_PostPolicyV4Test_descriptor;
@@ -138,7 +60,9 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 1;
-  private volatile java.lang.Object description_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <code>string description = 1;</code>
    *
@@ -199,7 +123,9 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
   /** <code>.google.cloud.conformance.storage.v1.PolicyInput policyInput = 2;</code> */
   @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PolicyInputOrBuilder getPolicyInputOrBuilder() {
-    return getPolicyInput();
+    return policyInput_ == null
+        ? com.google.cloud.conformance.storage.v1.PolicyInput.getDefaultInstance()
+        : policyInput_;
   }
 
   public static final int POLICYOUTPUT_FIELD_NUMBER = 3;
@@ -227,7 +153,9 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
   /** <code>.google.cloud.conformance.storage.v1.PolicyOutput policyOutput = 3;</code> */
   @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PolicyOutputOrBuilder getPolicyOutputOrBuilder() {
-    return getPolicyOutput();
+    return policyOutput_ == null
+        ? com.google.cloud.conformance.storage.v1.PolicyOutput.getDefaultInstance()
+        : policyOutput_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -253,7 +181,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
     if (policyOutput_ != null) {
       output.writeMessage(3, getPolicyOutput());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -271,7 +199,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
     if (policyOutput_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getPolicyOutput());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -296,7 +224,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
     if (hasPolicyOutput()) {
       if (!getPolicyOutput().equals(other.getPolicyOutput())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -317,7 +245,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
       hash = (37 * hash) + POLICYOUTPUT_FIELD_NUMBER;
       hash = (53 * hash) + getPolicyOutput().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -439,34 +367,25 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
     }
 
     // Construct using com.google.cloud.conformance.storage.v1.PostPolicyV4Test.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       description_ = "";
-
-      if (policyInputBuilder_ == null) {
-        policyInput_ = null;
-      } else {
-        policyInput_ = null;
+      policyInput_ = null;
+      if (policyInputBuilder_ != null) {
+        policyInputBuilder_.dispose();
         policyInputBuilder_ = null;
       }
-      if (policyOutputBuilder_ == null) {
-        policyOutput_ = null;
-      } else {
-        policyOutput_ = null;
+      policyOutput_ = null;
+      if (policyOutputBuilder_ != null) {
+        policyOutputBuilder_.dispose();
         policyOutputBuilder_ = null;
       }
       return this;
@@ -496,19 +415,26 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
     public com.google.cloud.conformance.storage.v1.PostPolicyV4Test buildPartial() {
       com.google.cloud.conformance.storage.v1.PostPolicyV4Test result =
           new com.google.cloud.conformance.storage.v1.PostPolicyV4Test(this);
-      result.description_ = description_;
-      if (policyInputBuilder_ == null) {
-        result.policyInput_ = policyInput_;
-      } else {
-        result.policyInput_ = policyInputBuilder_.build();
-      }
-      if (policyOutputBuilder_ == null) {
-        result.policyOutput_ = policyOutput_;
-      } else {
-        result.policyOutput_ = policyOutputBuilder_.build();
+      if (bitField0_ != 0) {
+        buildPartial0(result);
       }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.cloud.conformance.storage.v1.PostPolicyV4Test result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.policyInput_ =
+            policyInputBuilder_ == null ? policyInput_ : policyInputBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.policyOutput_ =
+            policyOutputBuilder_ == null ? policyOutput_ : policyOutputBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -559,6 +485,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
         return this;
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasPolicyInput()) {
@@ -567,7 +494,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
       if (other.hasPolicyOutput()) {
         mergePolicyOutput(other.getPolicyOutput());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -582,20 +509,53 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.cloud.conformance.storage.v1.PostPolicyV4Test parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+            case 18:
+              {
+                input.readMessage(getPolicyInputFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+            case 26:
+              {
+                input.readMessage(getPolicyOutputFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage =
-            (com.google.cloud.conformance.storage.v1.PostPolicyV4Test) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+
+    private int bitField0_;
 
     private java.lang.Object description_ = "";
     /**
@@ -640,8 +600,8 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
       if (value == null) {
         throw new NullPointerException();
       }
-
       description_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -651,8 +611,8 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -667,8 +627,8 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       description_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -685,7 +645,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
      * @return Whether the policyInput field is set.
      */
     public boolean hasPolicyInput() {
-      return policyInputBuilder_ != null || policyInput_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.cloud.conformance.storage.v1.PolicyInput policyInput = 2;</code>
@@ -708,11 +668,11 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
           throw new NullPointerException();
         }
         policyInput_ = value;
-        onChanged();
       } else {
         policyInputBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyInput policyInput = 2;</code> */
@@ -720,46 +680,45 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
         com.google.cloud.conformance.storage.v1.PolicyInput.Builder builderForValue) {
       if (policyInputBuilder_ == null) {
         policyInput_ = builderForValue.build();
-        onChanged();
       } else {
         policyInputBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyInput policyInput = 2;</code> */
     public Builder mergePolicyInput(com.google.cloud.conformance.storage.v1.PolicyInput value) {
       if (policyInputBuilder_ == null) {
-        if (policyInput_ != null) {
-          policyInput_ =
-              com.google.cloud.conformance.storage.v1.PolicyInput.newBuilder(policyInput_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (((bitField0_ & 0x00000002) != 0)
+            && policyInput_ != null
+            && policyInput_
+                != com.google.cloud.conformance.storage.v1.PolicyInput.getDefaultInstance()) {
+          getPolicyInputBuilder().mergeFrom(value);
         } else {
           policyInput_ = value;
         }
-        onChanged();
       } else {
         policyInputBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyInput policyInput = 2;</code> */
     public Builder clearPolicyInput() {
-      if (policyInputBuilder_ == null) {
-        policyInput_ = null;
-        onChanged();
-      } else {
-        policyInput_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      policyInput_ = null;
+      if (policyInputBuilder_ != null) {
+        policyInputBuilder_.dispose();
         policyInputBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyInput policyInput = 2;</code> */
     public com.google.cloud.conformance.storage.v1.PolicyInput.Builder getPolicyInputBuilder() {
-
+      bitField0_ |= 0x00000002;
       onChanged();
       return getPolicyInputFieldBuilder().getBuilder();
     }
@@ -803,7 +762,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
      * @return Whether the policyOutput field is set.
      */
     public boolean hasPolicyOutput() {
-      return policyOutputBuilder_ != null || policyOutput_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.cloud.conformance.storage.v1.PolicyOutput policyOutput = 3;</code>
@@ -826,11 +785,11 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
           throw new NullPointerException();
         }
         policyOutput_ = value;
-        onChanged();
       } else {
         policyOutputBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyOutput policyOutput = 3;</code> */
@@ -838,46 +797,45 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
         com.google.cloud.conformance.storage.v1.PolicyOutput.Builder builderForValue) {
       if (policyOutputBuilder_ == null) {
         policyOutput_ = builderForValue.build();
-        onChanged();
       } else {
         policyOutputBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyOutput policyOutput = 3;</code> */
     public Builder mergePolicyOutput(com.google.cloud.conformance.storage.v1.PolicyOutput value) {
       if (policyOutputBuilder_ == null) {
-        if (policyOutput_ != null) {
-          policyOutput_ =
-              com.google.cloud.conformance.storage.v1.PolicyOutput.newBuilder(policyOutput_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (((bitField0_ & 0x00000004) != 0)
+            && policyOutput_ != null
+            && policyOutput_
+                != com.google.cloud.conformance.storage.v1.PolicyOutput.getDefaultInstance()) {
+          getPolicyOutputBuilder().mergeFrom(value);
         } else {
           policyOutput_ = value;
         }
-        onChanged();
       } else {
         policyOutputBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyOutput policyOutput = 3;</code> */
     public Builder clearPolicyOutput() {
-      if (policyOutputBuilder_ == null) {
-        policyOutput_ = null;
-        onChanged();
-      } else {
-        policyOutput_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      policyOutput_ = null;
+      if (policyOutputBuilder_ != null) {
+        policyOutputBuilder_.dispose();
         policyOutputBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyOutput policyOutput = 3;</code> */
     public com.google.cloud.conformance.storage.v1.PolicyOutput.Builder getPolicyOutputBuilder() {
-
+      bitField0_ |= 0x00000004;
       onChanged();
       return getPolicyOutputFieldBuilder().getBuilder();
     }
@@ -942,7 +900,18 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PostPolicyV4Test(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 

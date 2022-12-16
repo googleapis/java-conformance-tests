@@ -188,7 +188,11 @@ public interface PolicyInputOrBuilder
    *
    * <code>map&lt;string, string&gt; fields = 8;</code>
    */
-  java.lang.String getFieldsOrDefault(java.lang.String key, java.lang.String defaultValue);
+  /* nullable */
+  java.lang.String getFieldsOrDefault(
+      java.lang.String key,
+      /* nullable */
+      java.lang.String defaultValue);
   /**
    *
    *

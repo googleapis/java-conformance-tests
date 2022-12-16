@@ -133,7 +133,11 @@ public interface SigningV4TestOrBuilder
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   java.util.Map<java.lang.String, java.lang.String> getHeadersMap();
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
-  java.lang.String getHeadersOrDefault(java.lang.String key, java.lang.String defaultValue);
+  /* nullable */
+  java.lang.String getHeadersOrDefault(
+      java.lang.String key,
+      /* nullable */
+      java.lang.String defaultValue);
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   java.lang.String getHeadersOrThrow(java.lang.String key);
 
@@ -147,7 +151,11 @@ public interface SigningV4TestOrBuilder
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   java.util.Map<java.lang.String, java.lang.String> getQueryParametersMap();
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
-  java.lang.String getQueryParametersOrDefault(java.lang.String key, java.lang.String defaultValue);
+  /* nullable */
+  java.lang.String getQueryParametersOrDefault(
+      java.lang.String key,
+      /* nullable */
+      java.lang.String defaultValue);
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   java.lang.String getQueryParametersOrThrow(java.lang.String key);
 

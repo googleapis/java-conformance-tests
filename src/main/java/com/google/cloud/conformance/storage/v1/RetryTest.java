@@ -55,98 +55,6 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     return this.unknownFields;
   }
 
-  private RetryTest(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8:
-            {
-              id_ = input.readInt32();
-              break;
-            }
-          case 18:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              description_ = s;
-              break;
-            }
-          case 26:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                cases_ =
-                    new java.util.ArrayList<
-                        com.google.cloud.conformance.storage.v1.InstructionList>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              cases_.add(
-                  input.readMessage(
-                      com.google.cloud.conformance.storage.v1.InstructionList.parser(),
-                      extensionRegistry));
-              break;
-            }
-          case 34:
-            {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                methods_ =
-                    new java.util.ArrayList<com.google.cloud.conformance.storage.v1.Method>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              methods_.add(
-                  input.readMessage(
-                      com.google.cloud.conformance.storage.v1.Method.parser(), extensionRegistry));
-              break;
-            }
-          case 40:
-            {
-              preconditionProvided_ = input.readBool();
-              break;
-            }
-          case 48:
-            {
-              expectSuccess_ = input.readBool();
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        cases_ = java.util.Collections.unmodifiableList(cases_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        methods_ = java.util.Collections.unmodifiableList(methods_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.conformance.storage.v1.Tests
         .internal_static_google_cloud_conformance_storage_v1_RetryTest_descriptor;
@@ -163,7 +71,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int ID_FIELD_NUMBER = 1;
-  private int id_;
+  private int id_ = 0;
   /**
    *
    *
@@ -181,7 +89,9 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
-  private volatile java.lang.Object description_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    *
    *
@@ -230,6 +140,8 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int CASES_FIELD_NUMBER = 3;
+
+  @SuppressWarnings("serial")
   private java.util.List<com.google.cloud.conformance.storage.v1.InstructionList> cases_;
   /**
    *
@@ -300,6 +212,8 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int METHODS_FIELD_NUMBER = 4;
+
+  @SuppressWarnings("serial")
   private java.util.List<com.google.cloud.conformance.storage.v1.Method> methods_;
   /**
    *
@@ -369,7 +283,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int PRECONDITIONPROVIDED_FIELD_NUMBER = 5;
-  private boolean preconditionProvided_;
+  private boolean preconditionProvided_ = false;
   /**
    *
    *
@@ -388,7 +302,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int EXPECTSUCCESS_FIELD_NUMBER = 6;
-  private boolean expectSuccess_;
+  private boolean expectSuccess_ = false;
   /**
    *
    *
@@ -438,7 +352,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     if (expectSuccess_ != false) {
       output.writeBool(6, expectSuccess_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -465,7 +379,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     if (expectSuccess_ != false) {
       size += com.google.protobuf.CodedOutputStream.computeBoolSize(6, expectSuccess_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -487,7 +401,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     if (!getMethodsList().equals(other.getMethodsList())) return false;
     if (getPreconditionProvided() != other.getPreconditionProvided()) return false;
     if (getExpectSuccess() != other.getExpectSuccess()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -514,7 +428,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getPreconditionProvided());
     hash = (37 * hash) + EXPECTSUCCESS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getExpectSuccess());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -644,45 +558,34 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     }
 
     // Construct using com.google.cloud.conformance.storage.v1.RetryTest.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-        getCasesFieldBuilder();
-        getMethodsFieldBuilder();
-      }
     }
 
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       id_ = 0;
-
       description_ = "";
-
       if (casesBuilder_ == null) {
         cases_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        cases_ = null;
         casesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       if (methodsBuilder_ == null) {
         methods_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        methods_ = null;
         methodsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000008);
       preconditionProvided_ = false;
-
       expectSuccess_ = false;
-
       return this;
     }
 
@@ -710,31 +613,50 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     public com.google.cloud.conformance.storage.v1.RetryTest buildPartial() {
       com.google.cloud.conformance.storage.v1.RetryTest result =
           new com.google.cloud.conformance.storage.v1.RetryTest(this);
-      int from_bitField0_ = bitField0_;
-      result.id_ = id_;
-      result.description_ = description_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) {
+        buildPartial0(result);
+      }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(
+        com.google.cloud.conformance.storage.v1.RetryTest result) {
       if (casesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           cases_ = java.util.Collections.unmodifiableList(cases_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.cases_ = cases_;
       } else {
         result.cases_ = casesBuilder_.build();
       }
       if (methodsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           methods_ = java.util.Collections.unmodifiableList(methods_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.methods_ = methods_;
       } else {
         result.methods_ = methodsBuilder_.build();
       }
-      result.preconditionProvided_ = preconditionProvided_;
-      result.expectSuccess_ = expectSuccess_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.cloud.conformance.storage.v1.RetryTest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.preconditionProvided_ = preconditionProvided_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.expectSuccess_ = expectSuccess_;
+      }
     }
 
     @java.lang.Override
@@ -788,13 +710,14 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (casesBuilder_ == null) {
         if (!other.cases_.isEmpty()) {
           if (cases_.isEmpty()) {
             cases_ = other.cases_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureCasesIsMutable();
             cases_.addAll(other.cases_);
@@ -807,7 +730,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
             casesBuilder_.dispose();
             casesBuilder_ = null;
             cases_ = other.cases_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
             casesBuilder_ =
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
                     ? getCasesFieldBuilder()
@@ -821,7 +744,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
         if (!other.methods_.isEmpty()) {
           if (methods_.isEmpty()) {
             methods_ = other.methods_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureMethodsIsMutable();
             methods_.addAll(other.methods_);
@@ -834,7 +757,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
             methodsBuilder_.dispose();
             methodsBuilder_ = null;
             methods_ = other.methods_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
             methodsBuilder_ =
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
                     ? getMethodsFieldBuilder()
@@ -850,7 +773,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
       if (other.getExpectSuccess() != false) {
         setExpectSuccess(other.getExpectSuccess());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -865,18 +788,82 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.cloud.conformance.storage.v1.RetryTest parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8:
+              {
+                id_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+            case 18:
+              {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+            case 26:
+              {
+                com.google.cloud.conformance.storage.v1.InstructionList m =
+                    input.readMessage(
+                        com.google.cloud.conformance.storage.v1.InstructionList.parser(),
+                        extensionRegistry);
+                if (casesBuilder_ == null) {
+                  ensureCasesIsMutable();
+                  cases_.add(m);
+                } else {
+                  casesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+            case 34:
+              {
+                com.google.cloud.conformance.storage.v1.Method m =
+                    input.readMessage(
+                        com.google.cloud.conformance.storage.v1.Method.parser(), extensionRegistry);
+                if (methodsBuilder_ == null) {
+                  ensureMethodsIsMutable();
+                  methods_.add(m);
+                } else {
+                  methodsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+            case 40:
+              {
+                preconditionProvided_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+            case 48:
+              {
+                expectSuccess_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage =
-            (com.google.cloud.conformance.storage.v1.RetryTest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -913,6 +900,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     public Builder setId(int value) {
 
       id_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -928,7 +916,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearId() {
-
+      bitField0_ = (bitField0_ & ~0x00000001);
       id_ = 0;
       onChanged();
       return this;
@@ -995,8 +983,8 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1012,8 +1000,8 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1034,8 +1022,8 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1044,11 +1032,11 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
         java.util.Collections.emptyList();
 
     private void ensureCasesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         cases_ =
             new java.util.ArrayList<com.google.cloud.conformance.storage.v1.InstructionList>(
                 cases_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
       }
     }
 
@@ -1269,7 +1257,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     public Builder clearCases() {
       if (casesBuilder_ == null) {
         cases_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         casesBuilder_.clear();
@@ -1396,7 +1384,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
                 com.google.cloud.conformance.storage.v1.InstructionList,
                 com.google.cloud.conformance.storage.v1.InstructionList.Builder,
                 com.google.cloud.conformance.storage.v1.InstructionListOrBuilder>(
-                cases_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+                cases_, ((bitField0_ & 0x00000004) != 0), getParentForChildren(), isClean());
         cases_ = null;
       }
       return casesBuilder_;
@@ -1406,10 +1394,10 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
         java.util.Collections.emptyList();
 
     private void ensureMethodsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         methods_ =
             new java.util.ArrayList<com.google.cloud.conformance.storage.v1.Method>(methods_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000008;
       }
     }
 
@@ -1625,7 +1613,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     public Builder clearMethods() {
       if (methodsBuilder_ == null) {
         methods_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         methodsBuilder_.clear();
@@ -1747,7 +1735,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
                 com.google.cloud.conformance.storage.v1.Method,
                 com.google.cloud.conformance.storage.v1.Method.Builder,
                 com.google.cloud.conformance.storage.v1.MethodOrBuilder>(
-                methods_, ((bitField0_ & 0x00000002) != 0), getParentForChildren(), isClean());
+                methods_, ((bitField0_ & 0x00000008) != 0), getParentForChildren(), isClean());
         methods_ = null;
       }
       return methodsBuilder_;
@@ -1786,6 +1774,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     public Builder setPreconditionProvided(boolean value) {
 
       preconditionProvided_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1802,7 +1791,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearPreconditionProvided() {
-
+      bitField0_ = (bitField0_ & ~0x00000010);
       preconditionProvided_ = false;
       onChanged();
       return this;
@@ -1841,6 +1830,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
     public Builder setExpectSuccess(boolean value) {
 
       expectSuccess_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1857,7 +1847,7 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearExpectSuccess() {
-
+      bitField0_ = (bitField0_ & ~0x00000020);
       expectSuccess_ = false;
       onChanged();
       return this;
@@ -1895,7 +1885,18 @@ public final class RetryTest extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new RetryTest(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
