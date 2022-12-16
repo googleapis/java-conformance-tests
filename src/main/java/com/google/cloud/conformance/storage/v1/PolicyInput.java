@@ -48,129 +48,6 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     return this.unknownFields;
   }
 
-  private PolicyInput(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              scheme_ = s;
-              break;
-            }
-          case 16:
-            {
-              int rawValue = input.readEnum();
-
-              urlStyle_ = rawValue;
-              break;
-            }
-          case 26:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              bucketBoundHostname_ = s;
-              break;
-            }
-          case 34:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              bucket_ = s;
-              break;
-            }
-          case 42:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              object_ = s;
-              break;
-            }
-          case 48:
-            {
-              expiration_ = input.readInt32();
-              break;
-            }
-          case 58:
-            {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (timestamp_ != null) {
-                subBuilder = timestamp_.toBuilder();
-              }
-              timestamp_ =
-                  input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(timestamp_);
-                timestamp_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 66:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                fields_ =
-                    com.google.protobuf.MapField.newMapField(FieldsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String> fields__ =
-                  input.readMessage(
-                      FieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              fields_.getMutableMap().put(fields__.getKey(), fields__.getValue());
-              break;
-            }
-          case 74:
-            {
-              com.google.cloud.conformance.storage.v1.PolicyConditions.Builder subBuilder = null;
-              if (conditions_ != null) {
-                subBuilder = conditions_.toBuilder();
-              }
-              conditions_ =
-                  input.readMessage(
-                      com.google.cloud.conformance.storage.v1.PolicyConditions.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(conditions_);
-                conditions_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.conformance.storage.v1.Tests
         .internal_static_google_cloud_conformance_storage_v1_PolicyInput_descriptor;
@@ -198,7 +75,9 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int SCHEME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object scheme_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object scheme_ = "";
   /**
    *
    *
@@ -247,7 +126,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int URLSTYLE_FIELD_NUMBER = 2;
-  private int urlStyle_;
+  private int urlStyle_ = 0;
   /**
    * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
    *
@@ -264,14 +143,15 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    */
   @java.lang.Override
   public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
-    @SuppressWarnings("deprecation")
     com.google.cloud.conformance.storage.v1.UrlStyle result =
-        com.google.cloud.conformance.storage.v1.UrlStyle.valueOf(urlStyle_);
+        com.google.cloud.conformance.storage.v1.UrlStyle.forNumber(urlStyle_);
     return result == null ? com.google.cloud.conformance.storage.v1.UrlStyle.UNRECOGNIZED : result;
   }
 
   public static final int BUCKETBOUNDHOSTNAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object bucketBoundHostname_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object bucketBoundHostname_ = "";
   /**
    * <code>string bucketBoundHostname = 3;</code>
    *
@@ -308,7 +188,9 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int BUCKET_FIELD_NUMBER = 4;
-  private volatile java.lang.Object bucket_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object bucket_ = "";
   /**
    * <code>string bucket = 4;</code>
    *
@@ -345,7 +227,9 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int OBJECT_FIELD_NUMBER = 5;
-  private volatile java.lang.Object object_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object object_ = "";
   /**
    * <code>string object = 5;</code>
    *
@@ -382,7 +266,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int EXPIRATION_FIELD_NUMBER = 6;
-  private int expiration_;
+  private int expiration_ = 0;
   /**
    * <code>int32 expiration = 6;</code>
    *
@@ -416,7 +300,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
-    return getTimestamp();
+    return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
   }
 
   public static final int FIELDS_FIELD_NUMBER = 8;
@@ -432,6 +316,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
             "");
   }
 
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<java.lang.String, java.lang.String> fields_;
 
   private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetFields() {
@@ -507,7 +392,10 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
    * <code>map&lt;string, string&gt; fields = 8;</code>
    */
   @java.lang.Override
-  public java.lang.String getFieldsOrDefault(java.lang.String key, java.lang.String defaultValue) {
+  public /* nullable */ java.lang.String getFieldsOrDefault(
+      java.lang.String key,
+      /* nullable */
+      java.lang.String defaultValue) {
     if (key == null) {
       throw new NullPointerException("map key");
     }
@@ -567,7 +455,9 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PolicyConditionsOrBuilder
       getConditionsOrBuilder() {
-    return getConditions();
+    return conditions_ == null
+        ? com.google.cloud.conformance.storage.v1.PolicyConditions.getDefaultInstance()
+        : conditions_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -610,7 +500,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     if (conditions_ != null) {
       output.writeMessage(9, getConditions());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -653,7 +543,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     if (conditions_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(9, getConditions());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -684,7 +574,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     if (hasConditions()) {
       if (!getConditions().equals(other.getConditions())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -719,7 +609,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + CONDITIONS_FIELD_NUMBER;
       hash = (53 * hash) + getConditions().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -860,45 +750,31 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
 
     // Construct using com.google.cloud.conformance.storage.v1.PolicyInput.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       scheme_ = "";
-
       urlStyle_ = 0;
-
       bucketBoundHostname_ = "";
-
       bucket_ = "";
-
       object_ = "";
-
       expiration_ = 0;
-
-      if (timestampBuilder_ == null) {
-        timestamp_ = null;
-      } else {
-        timestamp_ = null;
+      timestamp_ = null;
+      if (timestampBuilder_ != null) {
+        timestampBuilder_.dispose();
         timestampBuilder_ = null;
       }
       internalGetMutableFields().clear();
-      if (conditionsBuilder_ == null) {
-        conditions_ = null;
-      } else {
-        conditions_ = null;
+      conditions_ = null;
+      if (conditionsBuilder_ != null) {
+        conditionsBuilder_.dispose();
         conditionsBuilder_ = null;
       }
       return this;
@@ -928,27 +804,43 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     public com.google.cloud.conformance.storage.v1.PolicyInput buildPartial() {
       com.google.cloud.conformance.storage.v1.PolicyInput result =
           new com.google.cloud.conformance.storage.v1.PolicyInput(this);
-      int from_bitField0_ = bitField0_;
-      result.scheme_ = scheme_;
-      result.urlStyle_ = urlStyle_;
-      result.bucketBoundHostname_ = bucketBoundHostname_;
-      result.bucket_ = bucket_;
-      result.object_ = object_;
-      result.expiration_ = expiration_;
-      if (timestampBuilder_ == null) {
-        result.timestamp_ = timestamp_;
-      } else {
-        result.timestamp_ = timestampBuilder_.build();
-      }
-      result.fields_ = internalGetFields();
-      result.fields_.makeImmutable();
-      if (conditionsBuilder_ == null) {
-        result.conditions_ = conditions_;
-      } else {
-        result.conditions_ = conditionsBuilder_.build();
+      if (bitField0_ != 0) {
+        buildPartial0(result);
       }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.cloud.conformance.storage.v1.PolicyInput result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.scheme_ = scheme_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.urlStyle_ = urlStyle_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.bucketBoundHostname_ = bucketBoundHostname_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.bucket_ = bucket_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.object_ = object_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.expiration_ = expiration_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.timestamp_ = timestampBuilder_ == null ? timestamp_ : timestampBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.fields_ = internalGetFields();
+        result.fields_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.conditions_ = conditionsBuilder_ == null ? conditions_ : conditionsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -999,6 +891,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return this;
       if (!other.getScheme().isEmpty()) {
         scheme_ = other.scheme_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.urlStyle_ != 0) {
@@ -1006,14 +899,17 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       }
       if (!other.getBucketBoundHostname().isEmpty()) {
         bucketBoundHostname_ = other.bucketBoundHostname_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getBucket().isEmpty()) {
         bucket_ = other.bucket_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getObject().isEmpty()) {
         object_ = other.object_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.getExpiration() != 0) {
@@ -1023,10 +919,11 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         mergeTimestamp(other.getTimestamp());
       }
       internalGetMutableFields().mergeFrom(other.internalGetFields());
+      bitField0_ |= 0x00000080;
       if (other.hasConditions()) {
         mergeConditions(other.getConditions());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1041,18 +938,91 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.cloud.conformance.storage.v1.PolicyInput parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                scheme_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+            case 16:
+              {
+                urlStyle_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+            case 26:
+              {
+                bucketBoundHostname_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+            case 34:
+              {
+                bucket_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+            case 42:
+              {
+                object_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+            case 48:
+              {
+                expiration_ = input.readInt32();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+            case 58:
+              {
+                input.readMessage(getTimestampFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+            case 66:
+              {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> fields__ =
+                    input.readMessage(
+                        FieldsDefaultEntryHolder.defaultEntry.getParserForType(),
+                        extensionRegistry);
+                internalGetMutableFields()
+                    .getMutableMap()
+                    .put(fields__.getKey(), fields__.getValue());
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+            case 74:
+              {
+                input.readMessage(getConditionsFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage =
-            (com.google.cloud.conformance.storage.v1.PolicyInput) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -1119,8 +1089,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       scheme_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1136,8 +1106,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearScheme() {
-
       scheme_ = getDefaultInstance().getScheme();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1158,8 +1128,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       scheme_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1181,8 +1151,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder setUrlStyleValue(int value) {
-
       urlStyle_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1193,9 +1163,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      */
     @java.lang.Override
     public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
-      @SuppressWarnings("deprecation")
       com.google.cloud.conformance.storage.v1.UrlStyle result =
-          com.google.cloud.conformance.storage.v1.UrlStyle.valueOf(urlStyle_);
+          com.google.cloud.conformance.storage.v1.UrlStyle.forNumber(urlStyle_);
       return result == null
           ? com.google.cloud.conformance.storage.v1.UrlStyle.UNRECOGNIZED
           : result;
@@ -1210,7 +1179,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
+      bitField0_ |= 0x00000002;
       urlStyle_ = value.getNumber();
       onChanged();
       return this;
@@ -1221,7 +1190,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearUrlStyle() {
-
+      bitField0_ = (bitField0_ & ~0x00000002);
       urlStyle_ = 0;
       onChanged();
       return this;
@@ -1270,8 +1239,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       bucketBoundHostname_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1281,8 +1250,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearBucketBoundHostname() {
-
       bucketBoundHostname_ = getDefaultInstance().getBucketBoundHostname();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1297,8 +1266,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       bucketBoundHostname_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1346,8 +1315,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       bucket_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1357,8 +1326,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearBucket() {
-
       bucket_ = getDefaultInstance().getBucket();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1373,8 +1342,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       bucket_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1422,8 +1391,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       object_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1433,8 +1402,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearObject() {
-
       object_ = getDefaultInstance().getObject();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1449,8 +1418,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       object_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1474,6 +1443,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     public Builder setExpiration(int value) {
 
       expiration_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1483,7 +1453,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearExpiration() {
-
+      bitField0_ = (bitField0_ & ~0x00000020);
       expiration_ = 0;
       onChanged();
       return this;
@@ -1501,7 +1471,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      * @return Whether the timestamp field is set.
      */
     public boolean hasTimestamp() {
-      return timestampBuilder_ != null || timestamp_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 7;</code>
@@ -1522,55 +1492,55 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
           throw new NullPointerException();
         }
         timestamp_ = value;
-        onChanged();
       } else {
         timestampBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder setTimestamp(com.google.protobuf.Timestamp.Builder builderForValue) {
       if (timestampBuilder_ == null) {
         timestamp_ = builderForValue.build();
-        onChanged();
       } else {
         timestampBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
       if (timestampBuilder_ == null) {
-        if (timestamp_ != null) {
-          timestamp_ =
-              com.google.protobuf.Timestamp.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0)
+            && timestamp_ != null
+            && timestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getTimestampBuilder().mergeFrom(value);
         } else {
           timestamp_ = value;
         }
-        onChanged();
       } else {
         timestampBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder clearTimestamp() {
-      if (timestampBuilder_ == null) {
-        timestamp_ = null;
-        onChanged();
-      } else {
-        timestamp_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      timestamp_ = null;
+      if (timestampBuilder_ != null) {
+        timestampBuilder_.dispose();
         timestampBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
-
+      bitField0_ |= 0x00000040;
       onChanged();
       return getTimestampFieldBuilder().getBuilder();
     }
@@ -1611,14 +1581,14 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
         internalGetMutableFields() {
-      onChanged();
-      ;
       if (fields_ == null) {
         fields_ = com.google.protobuf.MapField.newMapField(FieldsDefaultEntryHolder.defaultEntry);
       }
       if (!fields_.isMutable()) {
         fields_ = fields_.copy();
       }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return fields_;
     }
 
@@ -1688,8 +1658,10 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      * <code>map&lt;string, string&gt; fields = 8;</code>
      */
     @java.lang.Override
-    public java.lang.String getFieldsOrDefault(
-        java.lang.String key, java.lang.String defaultValue) {
+    public /* nullable */ java.lang.String getFieldsOrDefault(
+        java.lang.String key,
+        /* nullable */
+        java.lang.String defaultValue) {
       if (key == null) {
         throw new NullPointerException("map key");
       }
@@ -1724,6 +1696,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
 
     public Builder clearFields() {
+      bitField0_ = (bitField0_ & ~0x00000080);
       internalGetMutableFields().getMutableMap().clear();
       return this;
     }
@@ -1752,6 +1725,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     /** Use alternate mutation accessors instead. */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMutableFields() {
+      bitField0_ |= 0x00000080;
       return internalGetMutableFields().getMutableMap();
     }
     /**
@@ -1776,8 +1750,8 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException("map value");
       }
-
       internalGetMutableFields().getMutableMap().put(key, value);
+      bitField0_ |= 0x00000080;
       return this;
     }
     /**
@@ -1797,6 +1771,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder putAllFields(java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableFields().getMutableMap().putAll(values);
+      bitField0_ |= 0x00000080;
       return this;
     }
 
@@ -1812,7 +1787,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
      * @return Whether the conditions field is set.
      */
     public boolean hasConditions() {
-      return conditionsBuilder_ != null || conditions_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
@@ -1835,11 +1810,11 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
           throw new NullPointerException();
         }
         conditions_ = value;
-        onChanged();
       } else {
         conditionsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
@@ -1847,46 +1822,45 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         com.google.cloud.conformance.storage.v1.PolicyConditions.Builder builderForValue) {
       if (conditionsBuilder_ == null) {
         conditions_ = builderForValue.build();
-        onChanged();
       } else {
         conditionsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public Builder mergeConditions(com.google.cloud.conformance.storage.v1.PolicyConditions value) {
       if (conditionsBuilder_ == null) {
-        if (conditions_ != null) {
-          conditions_ =
-              com.google.cloud.conformance.storage.v1.PolicyConditions.newBuilder(conditions_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (((bitField0_ & 0x00000100) != 0)
+            && conditions_ != null
+            && conditions_
+                != com.google.cloud.conformance.storage.v1.PolicyConditions.getDefaultInstance()) {
+          getConditionsBuilder().mergeFrom(value);
         } else {
           conditions_ = value;
         }
-        onChanged();
       } else {
         conditionsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public Builder clearConditions() {
-      if (conditionsBuilder_ == null) {
-        conditions_ = null;
-        onChanged();
-      } else {
-        conditions_ = null;
+      bitField0_ = (bitField0_ & ~0x00000100);
+      conditions_ = null;
+      if (conditionsBuilder_ != null) {
+        conditionsBuilder_.dispose();
         conditionsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public com.google.cloud.conformance.storage.v1.PolicyConditions.Builder getConditionsBuilder() {
-
+      bitField0_ |= 0x00000100;
       onChanged();
       return getConditionsFieldBuilder().getBuilder();
     }
@@ -1951,7 +1925,18 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PolicyInput(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 

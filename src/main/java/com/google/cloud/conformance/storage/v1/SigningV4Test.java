@@ -54,172 +54,6 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     return this.unknownFields;
   }
 
-  private SigningV4Test(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              fileName_ = s;
-              break;
-            }
-          case 18:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              description_ = s;
-              break;
-            }
-          case 26:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              bucket_ = s;
-              break;
-            }
-          case 34:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              object_ = s;
-              break;
-            }
-          case 42:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              method_ = s;
-              break;
-            }
-          case 48:
-            {
-              expiration_ = input.readInt64();
-              break;
-            }
-          case 58:
-            {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (timestamp_ != null) {
-                subBuilder = timestamp_.toBuilder();
-              }
-              timestamp_ =
-                  input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(timestamp_);
-                timestamp_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 66:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              expectedUrl_ = s;
-              break;
-            }
-          case 74:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                headers_ =
-                    com.google.protobuf.MapField.newMapField(
-                        HeadersDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
-                  input.readMessage(
-                      HeadersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              headers_.getMutableMap().put(headers__.getKey(), headers__.getValue());
-              break;
-            }
-          case 82:
-            {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                queryParameters_ =
-                    com.google.protobuf.MapField.newMapField(
-                        QueryParametersDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String> queryParameters__ =
-                  input.readMessage(
-                      QueryParametersDefaultEntryHolder.defaultEntry.getParserForType(),
-                      extensionRegistry);
-              queryParameters_
-                  .getMutableMap()
-                  .put(queryParameters__.getKey(), queryParameters__.getValue());
-              break;
-            }
-          case 90:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              scheme_ = s;
-              break;
-            }
-          case 96:
-            {
-              int rawValue = input.readEnum();
-
-              urlStyle_ = rawValue;
-              break;
-            }
-          case 106:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              bucketBoundHostname_ = s;
-              break;
-            }
-          case 114:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              expectedCanonicalRequest_ = s;
-              break;
-            }
-          case 122:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              expectedStringToSign_ = s;
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.conformance.storage.v1.Tests
         .internal_static_google_cloud_conformance_storage_v1_SigningV4Test_descriptor;
@@ -249,7 +83,9 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int FILENAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object fileName_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fileName_ = "";
   /**
    * <code>string fileName = 1;</code>
    *
@@ -286,7 +122,9 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
-  private volatile java.lang.Object description_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <code>string description = 2;</code>
    *
@@ -323,7 +161,9 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int BUCKET_FIELD_NUMBER = 3;
-  private volatile java.lang.Object bucket_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object bucket_ = "";
   /**
    * <code>string bucket = 3;</code>
    *
@@ -360,7 +200,9 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int OBJECT_FIELD_NUMBER = 4;
-  private volatile java.lang.Object object_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object object_ = "";
   /**
    * <code>string object = 4;</code>
    *
@@ -397,7 +239,9 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int METHOD_FIELD_NUMBER = 5;
-  private volatile java.lang.Object method_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object method_ = "";
   /**
    * <code>string method = 5;</code>
    *
@@ -434,7 +278,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int EXPIRATION_FIELD_NUMBER = 6;
-  private long expiration_;
+  private long expiration_ = 0L;
   /**
    * <code>int64 expiration = 6;</code>
    *
@@ -468,11 +312,13 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
-    return getTimestamp();
+    return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
   }
 
   public static final int EXPECTEDURL_FIELD_NUMBER = 8;
-  private volatile java.lang.Object expectedUrl_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object expectedUrl_ = "";
   /**
    * <code>string expectedUrl = 8;</code>
    *
@@ -521,6 +367,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
             "");
   }
 
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<java.lang.String, java.lang.String> headers_;
 
   private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetHeaders() {
@@ -554,7 +401,10 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   @java.lang.Override
-  public java.lang.String getHeadersOrDefault(java.lang.String key, java.lang.String defaultValue) {
+  public /* nullable */ java.lang.String getHeadersOrDefault(
+      java.lang.String key,
+      /* nullable */
+      java.lang.String defaultValue) {
     if (key == null) {
       throw new NullPointerException("map key");
     }
@@ -587,6 +437,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
             "");
   }
 
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<java.lang.String, java.lang.String> queryParameters_;
 
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -622,8 +473,10 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   @java.lang.Override
-  public java.lang.String getQueryParametersOrDefault(
-      java.lang.String key, java.lang.String defaultValue) {
+  public /* nullable */ java.lang.String getQueryParametersOrDefault(
+      java.lang.String key,
+      /* nullable */
+      java.lang.String defaultValue) {
     if (key == null) {
       throw new NullPointerException("map key");
     }
@@ -644,7 +497,9 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int SCHEME_FIELD_NUMBER = 11;
-  private volatile java.lang.Object scheme_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object scheme_ = "";
   /**
    * <code>string scheme = 11;</code>
    *
@@ -681,7 +536,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int URLSTYLE_FIELD_NUMBER = 12;
-  private int urlStyle_;
+  private int urlStyle_ = 0;
   /**
    * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
    *
@@ -698,14 +553,15 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    */
   @java.lang.Override
   public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
-    @SuppressWarnings("deprecation")
     com.google.cloud.conformance.storage.v1.UrlStyle result =
-        com.google.cloud.conformance.storage.v1.UrlStyle.valueOf(urlStyle_);
+        com.google.cloud.conformance.storage.v1.UrlStyle.forNumber(urlStyle_);
     return result == null ? com.google.cloud.conformance.storage.v1.UrlStyle.UNRECOGNIZED : result;
   }
 
   public static final int BUCKETBOUNDHOSTNAME_FIELD_NUMBER = 13;
-  private volatile java.lang.Object bucketBoundHostname_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object bucketBoundHostname_ = "";
   /**
    * <code>string bucketBoundHostname = 13;</code>
    *
@@ -742,7 +598,9 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int EXPECTEDCANONICALREQUEST_FIELD_NUMBER = 14;
-  private volatile java.lang.Object expectedCanonicalRequest_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object expectedCanonicalRequest_ = "";
   /**
    * <code>string expectedCanonicalRequest = 14;</code>
    *
@@ -779,7 +637,9 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int EXPECTEDSTRINGTOSIGN_FIELD_NUMBER = 15;
-  private volatile java.lang.Object expectedStringToSign_;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object expectedStringToSign_ = "";
   /**
    * <code>string expectedStringToSign = 15;</code>
    *
@@ -872,7 +732,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedStringToSign_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, expectedStringToSign_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -941,7 +801,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedStringToSign_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, expectedStringToSign_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -975,7 +835,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (!getBucketBoundHostname().equals(other.getBucketBoundHostname())) return false;
     if (!getExpectedCanonicalRequest().equals(other.getExpectedCanonicalRequest())) return false;
     if (!getExpectedStringToSign().equals(other.getExpectedStringToSign())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1022,7 +882,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     hash = (53 * hash) + getExpectedCanonicalRequest().hashCode();
     hash = (37 * hash) + EXPECTEDSTRINGTOSIGN_FIELD_NUMBER;
     hash = (53 * hash) + getExpectedStringToSign().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1168,54 +1028,35 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     // Construct using com.google.cloud.conformance.storage.v1.SigningV4Test.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       fileName_ = "";
-
       description_ = "";
-
       bucket_ = "";
-
       object_ = "";
-
       method_ = "";
-
       expiration_ = 0L;
-
-      if (timestampBuilder_ == null) {
-        timestamp_ = null;
-      } else {
-        timestamp_ = null;
+      timestamp_ = null;
+      if (timestampBuilder_ != null) {
+        timestampBuilder_.dispose();
         timestampBuilder_ = null;
       }
       expectedUrl_ = "";
-
       internalGetMutableHeaders().clear();
       internalGetMutableQueryParameters().clear();
       scheme_ = "";
-
       urlStyle_ = 0;
-
       bucketBoundHostname_ = "";
-
       expectedCanonicalRequest_ = "";
-
       expectedStringToSign_ = "";
-
       return this;
     }
 
@@ -1243,30 +1084,62 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     public com.google.cloud.conformance.storage.v1.SigningV4Test buildPartial() {
       com.google.cloud.conformance.storage.v1.SigningV4Test result =
           new com.google.cloud.conformance.storage.v1.SigningV4Test(this);
-      int from_bitField0_ = bitField0_;
-      result.fileName_ = fileName_;
-      result.description_ = description_;
-      result.bucket_ = bucket_;
-      result.object_ = object_;
-      result.method_ = method_;
-      result.expiration_ = expiration_;
-      if (timestampBuilder_ == null) {
-        result.timestamp_ = timestamp_;
-      } else {
-        result.timestamp_ = timestampBuilder_.build();
+      if (bitField0_ != 0) {
+        buildPartial0(result);
       }
-      result.expectedUrl_ = expectedUrl_;
-      result.headers_ = internalGetHeaders();
-      result.headers_.makeImmutable();
-      result.queryParameters_ = internalGetQueryParameters();
-      result.queryParameters_.makeImmutable();
-      result.scheme_ = scheme_;
-      result.urlStyle_ = urlStyle_;
-      result.bucketBoundHostname_ = bucketBoundHostname_;
-      result.expectedCanonicalRequest_ = expectedCanonicalRequest_;
-      result.expectedStringToSign_ = expectedStringToSign_;
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.cloud.conformance.storage.v1.SigningV4Test result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.fileName_ = fileName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.bucket_ = bucket_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.object_ = object_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.method_ = method_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.expiration_ = expiration_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.timestamp_ = timestampBuilder_ == null ? timestamp_ : timestampBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.expectedUrl_ = expectedUrl_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.headers_ = internalGetHeaders();
+        result.headers_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.queryParameters_ = internalGetQueryParameters();
+        result.queryParameters_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.scheme_ = scheme_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.urlStyle_ = urlStyle_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.bucketBoundHostname_ = bucketBoundHostname_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.expectedCanonicalRequest_ = expectedCanonicalRequest_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.expectedStringToSign_ = expectedStringToSign_;
+      }
     }
 
     @java.lang.Override
@@ -1317,22 +1190,27 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return this;
       if (!other.getFileName().isEmpty()) {
         fileName_ = other.fileName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getBucket().isEmpty()) {
         bucket_ = other.bucket_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getObject().isEmpty()) {
         object_ = other.object_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getMethod().isEmpty()) {
         method_ = other.method_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.getExpiration() != 0L) {
@@ -1343,12 +1221,16 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       }
       if (!other.getExpectedUrl().isEmpty()) {
         expectedUrl_ = other.expectedUrl_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       internalGetMutableHeaders().mergeFrom(other.internalGetHeaders());
+      bitField0_ |= 0x00000100;
       internalGetMutableQueryParameters().mergeFrom(other.internalGetQueryParameters());
+      bitField0_ |= 0x00000200;
       if (!other.getScheme().isEmpty()) {
         scheme_ = other.scheme_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (other.urlStyle_ != 0) {
@@ -1356,17 +1238,20 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       }
       if (!other.getBucketBoundHostname().isEmpty()) {
         bucketBoundHostname_ = other.bucketBoundHostname_;
+        bitField0_ |= 0x00001000;
         onChanged();
       }
       if (!other.getExpectedCanonicalRequest().isEmpty()) {
         expectedCanonicalRequest_ = other.expectedCanonicalRequest_;
+        bitField0_ |= 0x00002000;
         onChanged();
       }
       if (!other.getExpectedStringToSign().isEmpty()) {
         expectedStringToSign_ = other.expectedStringToSign_;
+        bitField0_ |= 0x00004000;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1381,18 +1266,133 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.cloud.conformance.storage.v1.SigningV4Test parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                fileName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+            case 18:
+              {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+            case 26:
+              {
+                bucket_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+            case 34:
+              {
+                object_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+            case 42:
+              {
+                method_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+            case 48:
+              {
+                expiration_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+            case 58:
+              {
+                input.readMessage(getTimestampFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+            case 66:
+              {
+                expectedUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+            case 74:
+              {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
+                    input.readMessage(
+                        HeadersDefaultEntryHolder.defaultEntry.getParserForType(),
+                        extensionRegistry);
+                internalGetMutableHeaders()
+                    .getMutableMap()
+                    .put(headers__.getKey(), headers__.getValue());
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+            case 82:
+              {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> queryParameters__ =
+                    input.readMessage(
+                        QueryParametersDefaultEntryHolder.defaultEntry.getParserForType(),
+                        extensionRegistry);
+                internalGetMutableQueryParameters()
+                    .getMutableMap()
+                    .put(queryParameters__.getKey(), queryParameters__.getValue());
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+            case 90:
+              {
+                scheme_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+            case 96:
+              {
+                urlStyle_ = input.readEnum();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+            case 106:
+              {
+                bucketBoundHostname_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+            case 114:
+              {
+                expectedCanonicalRequest_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+            case 122:
+              {
+                expectedStringToSign_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage =
-            (com.google.cloud.conformance.storage.v1.SigningV4Test) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -1441,8 +1441,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       fileName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1452,8 +1452,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearFileName() {
-
       fileName_ = getDefaultInstance().getFileName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1468,8 +1468,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       fileName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1517,8 +1517,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1528,8 +1528,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1544,8 +1544,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1593,8 +1593,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       bucket_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1604,8 +1604,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearBucket() {
-
       bucket_ = getDefaultInstance().getBucket();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1620,8 +1620,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       bucket_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1669,8 +1669,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       object_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1680,8 +1680,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearObject() {
-
       object_ = getDefaultInstance().getObject();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1696,8 +1696,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       object_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1745,8 +1745,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       method_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1756,8 +1756,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearMethod() {
-
       method_ = getDefaultInstance().getMethod();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1772,8 +1772,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       method_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1797,6 +1797,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     public Builder setExpiration(long value) {
 
       expiration_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1806,7 +1807,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearExpiration() {
-
+      bitField0_ = (bitField0_ & ~0x00000020);
       expiration_ = 0L;
       onChanged();
       return this;
@@ -1824,7 +1825,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return Whether the timestamp field is set.
      */
     public boolean hasTimestamp() {
-      return timestampBuilder_ != null || timestamp_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 7;</code>
@@ -1845,55 +1846,55 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
           throw new NullPointerException();
         }
         timestamp_ = value;
-        onChanged();
       } else {
         timestampBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder setTimestamp(com.google.protobuf.Timestamp.Builder builderForValue) {
       if (timestampBuilder_ == null) {
         timestamp_ = builderForValue.build();
-        onChanged();
       } else {
         timestampBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
       if (timestampBuilder_ == null) {
-        if (timestamp_ != null) {
-          timestamp_ =
-              com.google.protobuf.Timestamp.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0)
+            && timestamp_ != null
+            && timestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getTimestampBuilder().mergeFrom(value);
         } else {
           timestamp_ = value;
         }
-        onChanged();
       } else {
         timestampBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder clearTimestamp() {
-      if (timestampBuilder_ == null) {
-        timestamp_ = null;
-        onChanged();
-      } else {
-        timestamp_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      timestamp_ = null;
+      if (timestampBuilder_ != null) {
+        timestampBuilder_.dispose();
         timestampBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
-
+      bitField0_ |= 0x00000040;
       onChanged();
       return getTimestampFieldBuilder().getBuilder();
     }
@@ -1966,8 +1967,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       expectedUrl_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1977,8 +1978,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearExpectedUrl() {
-
       expectedUrl_ = getDefaultInstance().getExpectedUrl();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1993,8 +1994,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       expectedUrl_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2010,14 +2011,14 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
         internalGetMutableHeaders() {
-      onChanged();
-      ;
       if (headers_ == null) {
         headers_ = com.google.protobuf.MapField.newMapField(HeadersDefaultEntryHolder.defaultEntry);
       }
       if (!headers_.isMutable()) {
         headers_ = headers_.copy();
       }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return headers_;
     }
 
@@ -2045,8 +2046,10 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
     @java.lang.Override
-    public java.lang.String getHeadersOrDefault(
-        java.lang.String key, java.lang.String defaultValue) {
+    public /* nullable */ java.lang.String getHeadersOrDefault(
+        java.lang.String key,
+        /* nullable */
+        java.lang.String defaultValue) {
       if (key == null) {
         throw new NullPointerException("map key");
       }
@@ -2067,6 +2070,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     public Builder clearHeaders() {
+      bitField0_ = (bitField0_ & ~0x00000100);
       internalGetMutableHeaders().getMutableMap().clear();
       return this;
     }
@@ -2081,6 +2085,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     /** Use alternate mutation accessors instead. */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMutableHeaders() {
+      bitField0_ |= 0x00000100;
       return internalGetMutableHeaders().getMutableMap();
     }
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
@@ -2091,13 +2096,14 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException("map value");
       }
-
       internalGetMutableHeaders().getMutableMap().put(key, value);
+      bitField0_ |= 0x00000100;
       return this;
     }
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
     public Builder putAllHeaders(java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableHeaders().getMutableMap().putAll(values);
+      bitField0_ |= 0x00000100;
       return this;
     }
 
@@ -2114,8 +2120,6 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
         internalGetMutableQueryParameters() {
-      onChanged();
-      ;
       if (queryParameters_ == null) {
         queryParameters_ =
             com.google.protobuf.MapField.newMapField(
@@ -2124,6 +2128,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (!queryParameters_.isMutable()) {
         queryParameters_ = queryParameters_.copy();
       }
+      bitField0_ |= 0x00000200;
+      onChanged();
       return queryParameters_;
     }
 
@@ -2151,8 +2157,10 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
     @java.lang.Override
-    public java.lang.String getQueryParametersOrDefault(
-        java.lang.String key, java.lang.String defaultValue) {
+    public /* nullable */ java.lang.String getQueryParametersOrDefault(
+        java.lang.String key,
+        /* nullable */
+        java.lang.String defaultValue) {
       if (key == null) {
         throw new NullPointerException("map key");
       }
@@ -2173,6 +2181,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     public Builder clearQueryParameters() {
+      bitField0_ = (bitField0_ & ~0x00000200);
       internalGetMutableQueryParameters().getMutableMap().clear();
       return this;
     }
@@ -2187,6 +2196,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     /** Use alternate mutation accessors instead. */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMutableQueryParameters() {
+      bitField0_ |= 0x00000200;
       return internalGetMutableQueryParameters().getMutableMap();
     }
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
@@ -2197,13 +2207,14 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException("map value");
       }
-
       internalGetMutableQueryParameters().getMutableMap().put(key, value);
+      bitField0_ |= 0x00000200;
       return this;
     }
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
     public Builder putAllQueryParameters(java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableQueryParameters().getMutableMap().putAll(values);
+      bitField0_ |= 0x00000200;
       return this;
     }
 
@@ -2250,8 +2261,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       scheme_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2261,8 +2272,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearScheme() {
-
       scheme_ = getDefaultInstance().getScheme();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -2277,8 +2288,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       scheme_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2300,8 +2311,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder setUrlStyleValue(int value) {
-
       urlStyle_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2312,9 +2323,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      */
     @java.lang.Override
     public com.google.cloud.conformance.storage.v1.UrlStyle getUrlStyle() {
-      @SuppressWarnings("deprecation")
       com.google.cloud.conformance.storage.v1.UrlStyle result =
-          com.google.cloud.conformance.storage.v1.UrlStyle.valueOf(urlStyle_);
+          com.google.cloud.conformance.storage.v1.UrlStyle.forNumber(urlStyle_);
       return result == null
           ? com.google.cloud.conformance.storage.v1.UrlStyle.UNRECOGNIZED
           : result;
@@ -2329,7 +2339,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
+      bitField0_ |= 0x00000800;
       urlStyle_ = value.getNumber();
       onChanged();
       return this;
@@ -2340,7 +2350,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearUrlStyle() {
-
+      bitField0_ = (bitField0_ & ~0x00000800);
       urlStyle_ = 0;
       onChanged();
       return this;
@@ -2389,8 +2399,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       bucketBoundHostname_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2400,8 +2410,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearBucketBoundHostname() {
-
       bucketBoundHostname_ = getDefaultInstance().getBucketBoundHostname();
+      bitField0_ = (bitField0_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -2416,8 +2426,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       bucketBoundHostname_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2465,8 +2475,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       expectedCanonicalRequest_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2476,8 +2486,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearExpectedCanonicalRequest() {
-
       expectedCanonicalRequest_ = getDefaultInstance().getExpectedCanonicalRequest();
+      bitField0_ = (bitField0_ & ~0x00002000);
       onChanged();
       return this;
     }
@@ -2492,8 +2502,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       expectedCanonicalRequest_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2541,8 +2551,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
       expectedStringToSign_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2552,8 +2562,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearExpectedStringToSign() {
-
       expectedStringToSign_ = getDefaultInstance().getExpectedStringToSign();
+      bitField0_ = (bitField0_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -2568,8 +2578,8 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       checkByteStringIsUtf8(value);
-
       expectedStringToSign_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2606,7 +2616,18 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SigningV4Test(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 

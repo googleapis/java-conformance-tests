@@ -44,60 +44,6 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
     return this.unknownFields;
   }
 
-  private RetryTests(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                retryTests_ =
-                    new java.util.ArrayList<com.google.cloud.conformance.storage.v1.RetryTest>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              retryTests_.add(
-                  input.readMessage(
-                      com.google.cloud.conformance.storage.v1.RetryTest.parser(),
-                      extensionRegistry));
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        retryTests_ = java.util.Collections.unmodifiableList(retryTests_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.conformance.storage.v1.Tests
         .internal_static_google_cloud_conformance_storage_v1_RetryTests_descriptor;
@@ -114,6 +60,8 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int RETRYTESTS_FIELD_NUMBER = 1;
+
+  @SuppressWarnings("serial")
   private java.util.List<com.google.cloud.conformance.storage.v1.RetryTest> retryTests_;
   /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
   @java.lang.Override
@@ -160,7 +108,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
     for (int i = 0; i < retryTests_.size(); i++) {
       output.writeMessage(1, retryTests_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -172,7 +120,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
     for (int i = 0; i < retryTests_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, retryTests_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -189,7 +137,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
         (com.google.cloud.conformance.storage.v1.RetryTests) obj;
 
     if (!getRetryTestsList().equals(other.getRetryTestsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -204,7 +152,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + RETRYTESTS_FIELD_NUMBER;
       hash = (53 * hash) + getRetryTestsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -325,30 +273,23 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
     }
 
     // Construct using com.google.cloud.conformance.storage.v1.RetryTests.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-        getRetryTestsFieldBuilder();
-      }
     }
 
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (retryTestsBuilder_ == null) {
         retryTests_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        retryTests_ = null;
         retryTestsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -376,7 +317,16 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
     public com.google.cloud.conformance.storage.v1.RetryTests buildPartial() {
       com.google.cloud.conformance.storage.v1.RetryTests result =
           new com.google.cloud.conformance.storage.v1.RetryTests(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) {
+        buildPartial0(result);
+      }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(
+        com.google.cloud.conformance.storage.v1.RetryTests result) {
       if (retryTestsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           retryTests_ = java.util.Collections.unmodifiableList(retryTests_);
@@ -386,8 +336,10 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
       } else {
         result.retryTests_ = retryTestsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.cloud.conformance.storage.v1.RetryTests result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -463,7 +415,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -478,18 +430,45 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.cloud.conformance.storage.v1.RetryTests parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                com.google.cloud.conformance.storage.v1.RetryTest m =
+                    input.readMessage(
+                        com.google.cloud.conformance.storage.v1.RetryTest.parser(),
+                        extensionRegistry);
+                if (retryTestsBuilder_ == null) {
+                  ensureRetryTestsIsMutable();
+                  retryTests_.add(m);
+                } else {
+                  retryTestsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage =
-            (com.google.cloud.conformance.storage.v1.RetryTests) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -740,7 +719,18 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new RetryTests(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 

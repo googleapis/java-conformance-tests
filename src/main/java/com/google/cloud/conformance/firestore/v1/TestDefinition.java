@@ -79,61 +79,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private TestFile(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  tests_ =
-                      new java.util.ArrayList<
-                          com.google.cloud.conformance.firestore.v1.TestDefinition.Test>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                tests_.add(
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.Test.parser(),
-                        extensionRegistry));
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          tests_ = java.util.Collections.unmodifiableList(tests_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_TestFile_descriptor;
@@ -150,6 +95,8 @@ public final class TestDefinition {
     }
 
     public static final int TESTS_FIELD_NUMBER = 1;
+
+    @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Test> tests_;
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
     @java.lang.Override
@@ -198,7 +145,7 @@ public final class TestDefinition {
       for (int i = 0; i < tests_.size(); i++) {
         output.writeMessage(1, tests_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -210,7 +157,7 @@ public final class TestDefinition {
       for (int i = 0; i < tests_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, tests_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -227,7 +174,7 @@ public final class TestDefinition {
           (com.google.cloud.conformance.firestore.v1.TestDefinition.TestFile) obj;
 
       if (!getTestsList().equals(other.getTestsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -242,7 +189,7 @@ public final class TestDefinition {
         hash = (37 * hash) + TESTS_FIELD_NUMBER;
         hash = (53 * hash) + getTestsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -376,30 +323,23 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.TestFile.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-          getTestsFieldBuilder();
-        }
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (testsBuilder_ == null) {
           tests_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          tests_ = null;
           testsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -429,7 +369,16 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.TestFile buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.TestFile result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.TestFile(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) {
+          buildPartial0(result);
+        }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.TestFile result) {
         if (testsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             tests_ = java.util.Collections.unmodifiableList(tests_);
@@ -439,8 +388,11 @@ public final class TestDefinition {
         } else {
           result.tests_ = testsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.TestFile result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -521,7 +473,7 @@ public final class TestDefinition {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -536,19 +488,45 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.TestFile parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  com.google.cloud.conformance.firestore.v1.TestDefinition.Test m =
+                      input.readMessage(
+                          com.google.cloud.conformance.firestore.v1.TestDefinition.Test.parser(),
+                          extensionRegistry);
+                  if (testsBuilder_ == null) {
+                    ensureTestsIsMutable();
+                    tests_.add(m);
+                  } else {
+                    testsBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 10
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.TestFile)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -812,7 +790,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new TestFile(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -1049,232 +1039,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private Test(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                description_ = s;
-                break;
-              }
-            case 18:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest.Builder
-                    subBuilder = null;
-                if (testCase_ == 2) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest) test_)
-                          .toBuilder();
-                }
-                test_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest) test_);
-                  test_ = subBuilder.buildPartial();
-                }
-                testCase_ = 2;
-                break;
-              }
-            case 26:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest.Builder
-                    subBuilder = null;
-                if (testCase_ == 3) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest) test_)
-                          .toBuilder();
-                }
-                test_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest
-                            .parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest) test_);
-                  test_ = subBuilder.buildPartial();
-                }
-                testCase_ = 3;
-                break;
-              }
-            case 34:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest.Builder
-                    subBuilder = null;
-                if (testCase_ == 4) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest) test_)
-                          .toBuilder();
-                }
-                test_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest) test_);
-                  test_ = subBuilder.buildPartial();
-                }
-                testCase_ = 4;
-                break;
-              }
-            case 42:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest.Builder
-                    subBuilder = null;
-                if (testCase_ == 5) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest) test_)
-                          .toBuilder();
-                }
-                test_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest
-                            .parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest) test_);
-                  test_ = subBuilder.buildPartial();
-                }
-                testCase_ = 5;
-                break;
-              }
-            case 50:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest.Builder
-                    subBuilder = null;
-                if (testCase_ == 6) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest)
-                              test_)
-                          .toBuilder();
-                }
-                test_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest
-                            .parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest)
-                          test_);
-                  test_ = subBuilder.buildPartial();
-                }
-                testCase_ = 6;
-                break;
-              }
-            case 58:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest.Builder
-                    subBuilder = null;
-                if (testCase_ == 7) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest) test_)
-                          .toBuilder();
-                }
-                test_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest
-                            .parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest) test_);
-                  test_ = subBuilder.buildPartial();
-                }
-                testCase_ = 7;
-                break;
-              }
-            case 66:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest.Builder
-                    subBuilder = null;
-                if (testCase_ == 8) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest) test_)
-                          .toBuilder();
-                }
-                test_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest) test_);
-                  test_ = subBuilder.buildPartial();
-                }
-                testCase_ = 8;
-                break;
-              }
-            case 74:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest.Builder
-                    subBuilder = null;
-                if (testCase_ == 9) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest) test_)
-                          .toBuilder();
-                }
-                test_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest
-                            .parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest) test_);
-                  test_ = subBuilder.buildPartial();
-                }
-                testCase_ = 9;
-                break;
-              }
-            case 82:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                comment_ = s;
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_Test_descriptor;
@@ -1356,7 +1120,9 @@ public final class TestDefinition {
     }
 
     public static final int DESCRIPTION_FIELD_NUMBER = 1;
-    private volatile java.lang.Object description_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
     /**
      *
      *
@@ -1405,7 +1171,9 @@ public final class TestDefinition {
     }
 
     public static final int COMMENT_FIELD_NUMBER = 10;
-    private volatile java.lang.Object comment_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object comment_ = "";
     /**
      *
      *
@@ -1774,7 +1542,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, comment_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1830,7 +1598,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, comment_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1877,7 +1645,7 @@ public final class TestDefinition {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1928,7 +1696,7 @@ public final class TestDefinition {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2060,26 +1828,42 @@ public final class TestDefinition {
       }
 
       // Construct using com.google.cloud.conformance.firestore.v1.TestDefinition.Test.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         description_ = "";
-
         comment_ = "";
-
+        if (getBuilder_ != null) {
+          getBuilder_.clear();
+        }
+        if (createBuilder_ != null) {
+          createBuilder_.clear();
+        }
+        if (setBuilder_ != null) {
+          setBuilder_.clear();
+        }
+        if (updateBuilder_ != null) {
+          updateBuilder_.clear();
+        }
+        if (updatePathsBuilder_ != null) {
+          updatePathsBuilder_.clear();
+        }
+        if (deleteBuilder_ != null) {
+          deleteBuilder_.clear();
+        }
+        if (queryBuilder_ != null) {
+          queryBuilder_.clear();
+        }
+        if (listenBuilder_ != null) {
+          listenBuilder_.clear();
+        }
         testCase_ = 0;
         test_ = null;
         return this;
@@ -2110,67 +1894,53 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Test buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.Test result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.Test(this);
-        result.description_ = description_;
-        result.comment_ = comment_;
-        if (testCase_ == 2) {
-          if (getBuilder_ == null) {
-            result.test_ = test_;
-          } else {
-            result.test_ = getBuilder_.build();
-          }
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
-        if (testCase_ == 3) {
-          if (createBuilder_ == null) {
-            result.test_ = test_;
-          } else {
-            result.test_ = createBuilder_.build();
-          }
-        }
-        if (testCase_ == 4) {
-          if (setBuilder_ == null) {
-            result.test_ = test_;
-          } else {
-            result.test_ = setBuilder_.build();
-          }
-        }
-        if (testCase_ == 5) {
-          if (updateBuilder_ == null) {
-            result.test_ = test_;
-          } else {
-            result.test_ = updateBuilder_.build();
-          }
-        }
-        if (testCase_ == 6) {
-          if (updatePathsBuilder_ == null) {
-            result.test_ = test_;
-          } else {
-            result.test_ = updatePathsBuilder_.build();
-          }
-        }
-        if (testCase_ == 7) {
-          if (deleteBuilder_ == null) {
-            result.test_ = test_;
-          } else {
-            result.test_ = deleteBuilder_.build();
-          }
-        }
-        if (testCase_ == 8) {
-          if (queryBuilder_ == null) {
-            result.test_ = test_;
-          } else {
-            result.test_ = queryBuilder_.build();
-          }
-        }
-        if (testCase_ == 9) {
-          if (listenBuilder_ == null) {
-            result.test_ = test_;
-          } else {
-            result.test_ = listenBuilder_.build();
-          }
-        }
-        result.testCase_ = testCase_;
+        buildPartialOneofs(result);
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.Test result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.comment_ = comment_;
+        }
+      }
+
+      private void buildPartialOneofs(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.Test result) {
+        result.testCase_ = testCase_;
+        result.test_ = this.test_;
+        if (testCase_ == 2 && getBuilder_ != null) {
+          result.test_ = getBuilder_.build();
+        }
+        if (testCase_ == 3 && createBuilder_ != null) {
+          result.test_ = createBuilder_.build();
+        }
+        if (testCase_ == 4 && setBuilder_ != null) {
+          result.test_ = setBuilder_.build();
+        }
+        if (testCase_ == 5 && updateBuilder_ != null) {
+          result.test_ = updateBuilder_.build();
+        }
+        if (testCase_ == 6 && updatePathsBuilder_ != null) {
+          result.test_ = updatePathsBuilder_.build();
+        }
+        if (testCase_ == 7 && deleteBuilder_ != null) {
+          result.test_ = deleteBuilder_.build();
+        }
+        if (testCase_ == 8 && queryBuilder_ != null) {
+          result.test_ = queryBuilder_.build();
+        }
+        if (testCase_ == 9 && listenBuilder_ != null) {
+          result.test_ = listenBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -2225,10 +1995,12 @@ public final class TestDefinition {
           return this;
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getComment().isEmpty()) {
           comment_ = other.comment_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         switch (other.getTestCase()) {
@@ -2277,7 +2049,7 @@ public final class TestDefinition {
               break;
             }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2292,19 +2064,91 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.Test parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  description_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  input.readMessage(getGetFieldBuilder().getBuilder(), extensionRegistry);
+                  testCase_ = 2;
+                  break;
+                } // case 18
+              case 26:
+                {
+                  input.readMessage(getCreateFieldBuilder().getBuilder(), extensionRegistry);
+                  testCase_ = 3;
+                  break;
+                } // case 26
+              case 34:
+                {
+                  input.readMessage(getSetFieldBuilder().getBuilder(), extensionRegistry);
+                  testCase_ = 4;
+                  break;
+                } // case 34
+              case 42:
+                {
+                  input.readMessage(getUpdateFieldBuilder().getBuilder(), extensionRegistry);
+                  testCase_ = 5;
+                  break;
+                } // case 42
+              case 50:
+                {
+                  input.readMessage(getUpdatePathsFieldBuilder().getBuilder(), extensionRegistry);
+                  testCase_ = 6;
+                  break;
+                } // case 50
+              case 58:
+                {
+                  input.readMessage(getDeleteFieldBuilder().getBuilder(), extensionRegistry);
+                  testCase_ = 7;
+                  break;
+                } // case 58
+              case 66:
+                {
+                  input.readMessage(getQueryFieldBuilder().getBuilder(), extensionRegistry);
+                  testCase_ = 8;
+                  break;
+                } // case 66
+              case 74:
+                {
+                  input.readMessage(getListenFieldBuilder().getBuilder(), extensionRegistry);
+                  testCase_ = 9;
+                  break;
+                } // case 74
+              case 82:
+                {
+                  comment_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 82
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.Test)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -2321,6 +2165,8 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
+      private int bitField0_;
 
       private java.lang.Object description_ = "";
       /**
@@ -2383,8 +2229,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         description_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2400,8 +2246,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
-
         description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2422,8 +2268,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         description_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2489,8 +2335,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         comment_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2506,8 +2352,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearComment() {
-
         comment_ = getDefaultInstance().getComment();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2528,8 +2374,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         comment_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2617,8 +2463,9 @@ public final class TestDefinition {
         } else {
           if (testCase_ == 2) {
             getBuilder_.mergeFrom(value);
+          } else {
+            getBuilder_.setMessage(value);
           }
-          getBuilder_.setMessage(value);
         }
         testCase_ = 2;
         return this;
@@ -2683,7 +2530,6 @@ public final class TestDefinition {
         }
         testCase_ = 2;
         onChanged();
-        ;
         return getBuilder_;
       }
 
@@ -2770,8 +2616,9 @@ public final class TestDefinition {
         } else {
           if (testCase_ == 3) {
             createBuilder_.mergeFrom(value);
+          } else {
+            createBuilder_.setMessage(value);
           }
-          createBuilder_.setMessage(value);
         }
         testCase_ = 3;
         return this;
@@ -2836,7 +2683,6 @@ public final class TestDefinition {
         }
         testCase_ = 3;
         onChanged();
-        ;
         return createBuilder_;
       }
 
@@ -2923,8 +2769,9 @@ public final class TestDefinition {
         } else {
           if (testCase_ == 4) {
             setBuilder_.mergeFrom(value);
+          } else {
+            setBuilder_.setMessage(value);
           }
-          setBuilder_.setMessage(value);
         }
         testCase_ = 4;
         return this;
@@ -2989,7 +2836,6 @@ public final class TestDefinition {
         }
         testCase_ = 4;
         onChanged();
-        ;
         return setBuilder_;
       }
 
@@ -3076,8 +2922,9 @@ public final class TestDefinition {
         } else {
           if (testCase_ == 5) {
             updateBuilder_.mergeFrom(value);
+          } else {
+            updateBuilder_.setMessage(value);
           }
-          updateBuilder_.setMessage(value);
         }
         testCase_ = 5;
         return this;
@@ -3142,7 +2989,6 @@ public final class TestDefinition {
         }
         testCase_ = 5;
         onChanged();
-        ;
         return updateBuilder_;
       }
 
@@ -3231,8 +3077,9 @@ public final class TestDefinition {
         } else {
           if (testCase_ == 6) {
             updatePathsBuilder_.mergeFrom(value);
+          } else {
+            updatePathsBuilder_.setMessage(value);
           }
-          updatePathsBuilder_.setMessage(value);
         }
         testCase_ = 6;
         return this;
@@ -3298,7 +3145,6 @@ public final class TestDefinition {
         }
         testCase_ = 6;
         onChanged();
-        ;
         return updatePathsBuilder_;
       }
 
@@ -3385,8 +3231,9 @@ public final class TestDefinition {
         } else {
           if (testCase_ == 7) {
             deleteBuilder_.mergeFrom(value);
+          } else {
+            deleteBuilder_.setMessage(value);
           }
-          deleteBuilder_.setMessage(value);
         }
         testCase_ = 7;
         return this;
@@ -3451,7 +3298,6 @@ public final class TestDefinition {
         }
         testCase_ = 7;
         onChanged();
-        ;
         return deleteBuilder_;
       }
 
@@ -3538,8 +3384,9 @@ public final class TestDefinition {
         } else {
           if (testCase_ == 8) {
             queryBuilder_.mergeFrom(value);
+          } else {
+            queryBuilder_.setMessage(value);
           }
-          queryBuilder_.setMessage(value);
         }
         testCase_ = 8;
         return this;
@@ -3604,7 +3451,6 @@ public final class TestDefinition {
         }
         testCase_ = 8;
         onChanged();
-        ;
         return queryBuilder_;
       }
 
@@ -3691,8 +3537,9 @@ public final class TestDefinition {
         } else {
           if (testCase_ == 9) {
             listenBuilder_.mergeFrom(value);
+          } else {
+            listenBuilder_.setMessage(value);
           }
-          listenBuilder_.setMessage(value);
         }
         testCase_ = 9;
         return this;
@@ -3757,7 +3604,6 @@ public final class TestDefinition {
         }
         testCase_ = 9;
         onChanged();
-        ;
         return listenBuilder_;
       }
 
@@ -3796,7 +3642,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Test(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -3915,66 +3773,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private GetTest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                docRefPath_ = s;
-                break;
-              }
-            case 18:
-              {
-                com.google.firestore.v1.GetDocumentRequest.Builder subBuilder = null;
-                if (request_ != null) {
-                  subBuilder = request_.toBuilder();
-                }
-                request_ =
-                    input.readMessage(
-                        com.google.firestore.v1.GetDocumentRequest.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(request_);
-                  request_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_GetTest_descriptor;
@@ -3991,7 +3789,9 @@ public final class TestDefinition {
     }
 
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
-    private volatile java.lang.Object docRefPath_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object docRefPath_ = "";
     /**
      *
      *
@@ -4084,7 +3884,9 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public com.google.firestore.v1.GetDocumentRequestOrBuilder getRequestOrBuilder() {
-      return getRequest();
+      return request_ == null
+          ? com.google.firestore.v1.GetDocumentRequest.getDefaultInstance()
+          : request_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4107,7 +3909,7 @@ public final class TestDefinition {
       if (request_ != null) {
         output.writeMessage(2, getRequest());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4122,7 +3924,7 @@ public final class TestDefinition {
       if (request_ != null) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getRequest());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4143,7 +3945,7 @@ public final class TestDefinition {
       if (hasRequest()) {
         if (!getRequest().equals(other.getRequest())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4160,7 +3962,7 @@ public final class TestDefinition {
         hash = (37 * hash) + REQUEST_FIELD_NUMBER;
         hash = (53 * hash) + getRequest().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4294,28 +4096,20 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         docRefPath_ = "";
-
-        if (requestBuilder_ == null) {
-          request_ = null;
-        } else {
-          request_ = null;
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
         return this;
@@ -4347,14 +4141,22 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest(this);
-        result.docRefPath_ = docRefPath_;
-        if (requestBuilder_ == null) {
-          result.request_ = request_;
-        } else {
-          result.request_ = requestBuilder_.build();
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.docRefPath_ = docRefPath_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -4410,12 +4212,13 @@ public final class TestDefinition {
                 .getDefaultInstance()) return this;
         if (!other.getDocRefPath().isEmpty()) {
           docRefPath_ = other.docRefPath_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasRequest()) {
           mergeRequest(other.getRequest());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4430,21 +4233,47 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  docRefPath_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  input.readMessage(getRequestFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+
+      private int bitField0_;
 
       private java.lang.Object docRefPath_ = "";
       /**
@@ -4507,8 +4336,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4524,8 +4353,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
-
         docRefPath_ = getDefaultInstance().getDocRefPath();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4546,8 +4375,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4570,7 +4399,7 @@ public final class TestDefinition {
        * @return Whether the request field is set.
        */
       public boolean hasRequest() {
-        return requestBuilder_ != null || request_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        *
@@ -4607,11 +4436,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           request_ = value;
-          onChanged();
         } else {
           requestBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4627,11 +4456,11 @@ public final class TestDefinition {
           com.google.firestore.v1.GetDocumentRequest.Builder builderForValue) {
         if (requestBuilder_ == null) {
           request_ = builderForValue.build();
-          onChanged();
         } else {
           requestBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4645,19 +4474,18 @@ public final class TestDefinition {
        */
       public Builder mergeRequest(com.google.firestore.v1.GetDocumentRequest value) {
         if (requestBuilder_ == null) {
-          if (request_ != null) {
-            request_ =
-                com.google.firestore.v1.GetDocumentRequest.newBuilder(request_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000002) != 0)
+              && request_ != null
+              && request_ != com.google.firestore.v1.GetDocumentRequest.getDefaultInstance()) {
+            getRequestBuilder().mergeFrom(value);
           } else {
             request_ = value;
           }
-          onChanged();
         } else {
           requestBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4670,14 +4498,13 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.GetDocumentRequest request = 2;</code>
        */
       public Builder clearRequest() {
-        if (requestBuilder_ == null) {
-          request_ = null;
-          onChanged();
-        } else {
-          request_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4690,7 +4517,7 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.GetDocumentRequest request = 2;</code>
        */
       public com.google.firestore.v1.GetDocumentRequest.Builder getRequestBuilder() {
-
+        bitField0_ |= 0x00000002;
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
@@ -4773,7 +4600,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new GetTest(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -4936,78 +4775,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private CreateTest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                docRefPath_ = s;
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                jsonData_ = s;
-                break;
-              }
-            case 26:
-              {
-                com.google.firestore.v1.CommitRequest.Builder subBuilder = null;
-                if (request_ != null) {
-                  subBuilder = request_.toBuilder();
-                }
-                request_ =
-                    input.readMessage(
-                        com.google.firestore.v1.CommitRequest.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(request_);
-                  request_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 32:
-              {
-                isError_ = input.readBool();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_CreateTest_descriptor;
@@ -5024,7 +4791,9 @@ public final class TestDefinition {
     }
 
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
-    private volatile java.lang.Object docRefPath_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object docRefPath_ = "";
     /**
      *
      *
@@ -5073,7 +4842,9 @@ public final class TestDefinition {
     }
 
     public static final int JSON_DATA_FIELD_NUMBER = 2;
-    private volatile java.lang.Object jsonData_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object jsonData_ = "";
     /**
      *
      *
@@ -5170,11 +4941,13 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public com.google.firestore.v1.CommitRequestOrBuilder getRequestOrBuilder() {
-      return getRequest();
+      return request_ == null
+          ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
+          : request_;
     }
 
     public static final int IS_ERROR_FIELD_NUMBER = 4;
-    private boolean isError_;
+    private boolean isError_ = false;
     /**
      *
      *
@@ -5218,7 +4991,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         output.writeBool(4, isError_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -5239,7 +5012,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(4, isError_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -5262,7 +5035,7 @@ public final class TestDefinition {
         if (!getRequest().equals(other.getRequest())) return false;
       }
       if (getIsError() != other.getIsError()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -5283,7 +5056,7 @@ public final class TestDefinition {
       }
       hash = (37 * hash) + IS_ERROR_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getIsError());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -5417,34 +5190,24 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         docRefPath_ = "";
-
         jsonData_ = "";
-
-        if (requestBuilder_ == null) {
-          request_ = null;
-        } else {
-          request_ = null;
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
         isError_ = false;
-
         return this;
       }
 
@@ -5474,16 +5237,28 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest(this);
-        result.docRefPath_ = docRefPath_;
-        result.jsonData_ = jsonData_;
-        if (requestBuilder_ == null) {
-          result.request_ = request_;
-        } else {
-          result.request_ = requestBuilder_.build();
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
-        result.isError_ = isError_;
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.docRefPath_ = docRefPath_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.jsonData_ = jsonData_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.isError_ = isError_;
+        }
       }
 
       @java.lang.Override
@@ -5539,10 +5314,12 @@ public final class TestDefinition {
                 .getDefaultInstance()) return this;
         if (!other.getDocRefPath().isEmpty()) {
           docRefPath_ = other.docRefPath_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getJsonData().isEmpty()) {
           jsonData_ = other.jsonData_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasRequest()) {
@@ -5551,7 +5328,7 @@ public final class TestDefinition {
         if (other.getIsError() != false) {
           setIsError(other.getIsError());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -5566,21 +5343,59 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  docRefPath_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  jsonData_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+              case 26:
+                {
+                  input.readMessage(getRequestFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+              case 32:
+                {
+                  isError_ = input.readBool();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+
+      private int bitField0_;
 
       private java.lang.Object docRefPath_ = "";
       /**
@@ -5643,8 +5458,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5660,8 +5475,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
-
         docRefPath_ = getDefaultInstance().getDocRefPath();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5682,8 +5497,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5755,8 +5570,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         jsonData_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5774,8 +5589,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearJsonData() {
-
         jsonData_ = getDefaultInstance().getJsonData();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -5798,8 +5613,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         jsonData_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5822,7 +5637,7 @@ public final class TestDefinition {
        * @return Whether the request field is set.
        */
       public boolean hasRequest() {
-        return requestBuilder_ != null || request_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        *
@@ -5859,11 +5674,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           request_ = value;
-          onChanged();
         } else {
           requestBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5878,11 +5693,11 @@ public final class TestDefinition {
       public Builder setRequest(com.google.firestore.v1.CommitRequest.Builder builderForValue) {
         if (requestBuilder_ == null) {
           request_ = builderForValue.build();
-          onChanged();
         } else {
           requestBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5896,19 +5711,18 @@ public final class TestDefinition {
        */
       public Builder mergeRequest(com.google.firestore.v1.CommitRequest value) {
         if (requestBuilder_ == null) {
-          if (request_ != null) {
-            request_ =
-                com.google.firestore.v1.CommitRequest.newBuilder(request_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000004) != 0)
+              && request_ != null
+              && request_ != com.google.firestore.v1.CommitRequest.getDefaultInstance()) {
+            getRequestBuilder().mergeFrom(value);
           } else {
             request_ = value;
           }
-          onChanged();
         } else {
           requestBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5921,14 +5735,13 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.CommitRequest request = 3;</code>
        */
       public Builder clearRequest() {
-        if (requestBuilder_ == null) {
-          request_ = null;
-          onChanged();
-        } else {
-          request_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5941,7 +5754,7 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.CommitRequest request = 3;</code>
        */
       public com.google.firestore.v1.CommitRequest.Builder getRequestBuilder() {
-
+        bitField0_ |= 0x00000004;
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
@@ -6022,6 +5835,7 @@ public final class TestDefinition {
       public Builder setIsError(boolean value) {
 
         isError_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -6038,7 +5852,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearIsError() {
-
+        bitField0_ = (bitField0_ & ~0x00000008);
         isError_ = false;
         onChanged();
         return this;
@@ -6079,7 +5893,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new CreateTest(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -6273,96 +6099,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private SetTest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                docRefPath_ = s;
-                break;
-              }
-            case 18:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption.Builder
-                    subBuilder = null;
-                if (option_ != null) {
-                  subBuilder = option_.toBuilder();
-                }
-                option_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(option_);
-                  option_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 26:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                jsonData_ = s;
-                break;
-              }
-            case 34:
-              {
-                com.google.firestore.v1.CommitRequest.Builder subBuilder = null;
-                if (request_ != null) {
-                  subBuilder = request_.toBuilder();
-                }
-                request_ =
-                    input.readMessage(
-                        com.google.firestore.v1.CommitRequest.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(request_);
-                  request_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 40:
-              {
-                isError_ = input.readBool();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_SetTest_descriptor;
@@ -6379,7 +6115,9 @@ public final class TestDefinition {
     }
 
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
-    private volatile java.lang.Object docRefPath_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object docRefPath_ = "";
     /**
      *
      *
@@ -6473,11 +6211,15 @@ public final class TestDefinition {
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SetOptionOrBuilder
         getOptionOrBuilder() {
-      return getOption();
+      return option_ == null
+          ? com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption.getDefaultInstance()
+          : option_;
     }
 
     public static final int JSON_DATA_FIELD_NUMBER = 3;
-    private volatile java.lang.Object jsonData_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object jsonData_ = "";
     /**
      *
      *
@@ -6570,11 +6312,13 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public com.google.firestore.v1.CommitRequestOrBuilder getRequestOrBuilder() {
-      return getRequest();
+      return request_ == null
+          ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
+          : request_;
     }
 
     public static final int IS_ERROR_FIELD_NUMBER = 5;
-    private boolean isError_;
+    private boolean isError_ = false;
     /**
      *
      *
@@ -6620,7 +6364,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         output.writeBool(5, isError_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6644,7 +6388,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(5, isError_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6671,7 +6415,7 @@ public final class TestDefinition {
         if (!getRequest().equals(other.getRequest())) return false;
       }
       if (getIsError() != other.getIsError()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6696,7 +6440,7 @@ public final class TestDefinition {
       }
       hash = (37 * hash) + IS_ERROR_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getIsError());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6830,40 +6574,29 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         docRefPath_ = "";
-
-        if (optionBuilder_ == null) {
-          option_ = null;
-        } else {
-          option_ = null;
+        option_ = null;
+        if (optionBuilder_ != null) {
+          optionBuilder_.dispose();
           optionBuilder_ = null;
         }
         jsonData_ = "";
-
-        if (requestBuilder_ == null) {
-          request_ = null;
-        } else {
-          request_ = null;
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
         isError_ = false;
-
         return this;
       }
 
@@ -6893,21 +6626,31 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest(this);
-        result.docRefPath_ = docRefPath_;
-        if (optionBuilder_ == null) {
-          result.option_ = option_;
-        } else {
-          result.option_ = optionBuilder_.build();
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
-        result.jsonData_ = jsonData_;
-        if (requestBuilder_ == null) {
-          result.request_ = request_;
-        } else {
-          result.request_ = requestBuilder_.build();
-        }
-        result.isError_ = isError_;
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.docRefPath_ = docRefPath_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.option_ = optionBuilder_ == null ? option_ : optionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.jsonData_ = jsonData_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.isError_ = isError_;
+        }
       }
 
       @java.lang.Override
@@ -6963,6 +6706,7 @@ public final class TestDefinition {
                 .getDefaultInstance()) return this;
         if (!other.getDocRefPath().isEmpty()) {
           docRefPath_ = other.docRefPath_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasOption()) {
@@ -6970,6 +6714,7 @@ public final class TestDefinition {
         }
         if (!other.getJsonData().isEmpty()) {
           jsonData_ = other.jsonData_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasRequest()) {
@@ -6978,7 +6723,7 @@ public final class TestDefinition {
         if (other.getIsError() != false) {
           setIsError(other.getIsError());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6993,21 +6738,65 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  docRefPath_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  input.readMessage(getOptionFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+              case 26:
+                {
+                  jsonData_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+              case 34:
+                {
+                  input.readMessage(getRequestFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
+              case 40:
+                {
+                  isError_ = input.readBool();
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 40
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+
+      private int bitField0_;
 
       private java.lang.Object docRefPath_ = "";
       /**
@@ -7070,8 +6859,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7087,8 +6876,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
-
         docRefPath_ = getDefaultInstance().getDocRefPath();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7109,8 +6898,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7133,7 +6922,7 @@ public final class TestDefinition {
        * @return Whether the option field is set.
        */
       public boolean hasOption() {
-        return optionBuilder_ != null || option_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        *
@@ -7172,11 +6961,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           option_ = value;
-          onChanged();
         } else {
           optionBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7193,11 +6982,11 @@ public final class TestDefinition {
               builderForValue) {
         if (optionBuilder_ == null) {
           option_ = builderForValue.build();
-          onChanged();
         } else {
           optionBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7212,20 +7001,20 @@ public final class TestDefinition {
       public Builder mergeOption(
           com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption value) {
         if (optionBuilder_ == null) {
-          if (option_ != null) {
-            option_ =
-                com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption.newBuilder(
-                        option_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000002) != 0)
+              && option_ != null
+              && option_
+                  != com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption
+                      .getDefaultInstance()) {
+            getOptionBuilder().mergeFrom(value);
           } else {
             option_ = value;
           }
-          onChanged();
         } else {
           optionBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7238,14 +7027,13 @@ public final class TestDefinition {
        * <code>.google.cloud.conformance.firestore.v1.SetOption option = 2;</code>
        */
       public Builder clearOption() {
-        if (optionBuilder_ == null) {
-          option_ = null;
-          onChanged();
-        } else {
-          option_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        option_ = null;
+        if (optionBuilder_ != null) {
+          optionBuilder_.dispose();
           optionBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -7259,7 +7047,7 @@ public final class TestDefinition {
        */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption.Builder
           getOptionBuilder() {
-
+        bitField0_ |= 0x00000002;
         onChanged();
         return getOptionFieldBuilder().getBuilder();
       }
@@ -7370,8 +7158,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         jsonData_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -7387,8 +7175,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearJsonData() {
-
         jsonData_ = getDefaultInstance().getJsonData();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -7409,8 +7197,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         jsonData_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -7433,7 +7221,7 @@ public final class TestDefinition {
        * @return Whether the request field is set.
        */
       public boolean hasRequest() {
-        return requestBuilder_ != null || request_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        *
@@ -7470,11 +7258,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           request_ = value;
-          onChanged();
         } else {
           requestBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -7489,11 +7277,11 @@ public final class TestDefinition {
       public Builder setRequest(com.google.firestore.v1.CommitRequest.Builder builderForValue) {
         if (requestBuilder_ == null) {
           request_ = builderForValue.build();
-          onChanged();
         } else {
           requestBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -7507,19 +7295,18 @@ public final class TestDefinition {
        */
       public Builder mergeRequest(com.google.firestore.v1.CommitRequest value) {
         if (requestBuilder_ == null) {
-          if (request_ != null) {
-            request_ =
-                com.google.firestore.v1.CommitRequest.newBuilder(request_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000008) != 0)
+              && request_ != null
+              && request_ != com.google.firestore.v1.CommitRequest.getDefaultInstance()) {
+            getRequestBuilder().mergeFrom(value);
           } else {
             request_ = value;
           }
-          onChanged();
         } else {
           requestBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -7532,14 +7319,13 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.CommitRequest request = 4;</code>
        */
       public Builder clearRequest() {
-        if (requestBuilder_ == null) {
-          request_ = null;
-          onChanged();
-        } else {
-          request_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -7552,7 +7338,7 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.CommitRequest request = 4;</code>
        */
       public com.google.firestore.v1.CommitRequest.Builder getRequestBuilder() {
-
+        bitField0_ |= 0x00000008;
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
@@ -7631,6 +7417,7 @@ public final class TestDefinition {
       public Builder setIsError(boolean value) {
 
         isError_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -7646,7 +7433,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearIsError() {
-
+        bitField0_ = (bitField0_ & ~0x00000010);
         isError_ = false;
         onChanged();
         return this;
@@ -7687,7 +7474,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new SetTest(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -7881,94 +7680,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private UpdateTest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                docRefPath_ = s;
-                break;
-              }
-            case 18:
-              {
-                com.google.firestore.v1.Precondition.Builder subBuilder = null;
-                if (precondition_ != null) {
-                  subBuilder = precondition_.toBuilder();
-                }
-                precondition_ =
-                    input.readMessage(
-                        com.google.firestore.v1.Precondition.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(precondition_);
-                  precondition_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 26:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                jsonData_ = s;
-                break;
-              }
-            case 34:
-              {
-                com.google.firestore.v1.CommitRequest.Builder subBuilder = null;
-                if (request_ != null) {
-                  subBuilder = request_.toBuilder();
-                }
-                request_ =
-                    input.readMessage(
-                        com.google.firestore.v1.CommitRequest.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(request_);
-                  request_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 40:
-              {
-                isError_ = input.readBool();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_UpdateTest_descriptor;
@@ -7985,7 +7696,9 @@ public final class TestDefinition {
     }
 
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
-    private volatile java.lang.Object docRefPath_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object docRefPath_ = "";
     /**
      *
      *
@@ -8078,11 +7791,15 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public com.google.firestore.v1.PreconditionOrBuilder getPreconditionOrBuilder() {
-      return getPrecondition();
+      return precondition_ == null
+          ? com.google.firestore.v1.Precondition.getDefaultInstance()
+          : precondition_;
     }
 
     public static final int JSON_DATA_FIELD_NUMBER = 3;
-    private volatile java.lang.Object jsonData_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object jsonData_ = "";
     /**
      *
      *
@@ -8175,11 +7892,13 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public com.google.firestore.v1.CommitRequestOrBuilder getRequestOrBuilder() {
-      return getRequest();
+      return request_ == null
+          ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
+          : request_;
     }
 
     public static final int IS_ERROR_FIELD_NUMBER = 5;
-    private boolean isError_;
+    private boolean isError_ = false;
     /**
      *
      *
@@ -8225,7 +7944,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         output.writeBool(5, isError_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -8249,7 +7968,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(5, isError_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8276,7 +7995,7 @@ public final class TestDefinition {
         if (!getRequest().equals(other.getRequest())) return false;
       }
       if (getIsError() != other.getIsError()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8301,7 +8020,7 @@ public final class TestDefinition {
       }
       hash = (37 * hash) + IS_ERROR_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getIsError());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8436,40 +8155,29 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         docRefPath_ = "";
-
-        if (preconditionBuilder_ == null) {
-          precondition_ = null;
-        } else {
-          precondition_ = null;
+        precondition_ = null;
+        if (preconditionBuilder_ != null) {
+          preconditionBuilder_.dispose();
           preconditionBuilder_ = null;
         }
         jsonData_ = "";
-
-        if (requestBuilder_ == null) {
-          request_ = null;
-        } else {
-          request_ = null;
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
         isError_ = false;
-
         return this;
       }
 
@@ -8499,21 +8207,32 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest(this);
-        result.docRefPath_ = docRefPath_;
-        if (preconditionBuilder_ == null) {
-          result.precondition_ = precondition_;
-        } else {
-          result.precondition_ = preconditionBuilder_.build();
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
-        result.jsonData_ = jsonData_;
-        if (requestBuilder_ == null) {
-          result.request_ = request_;
-        } else {
-          result.request_ = requestBuilder_.build();
-        }
-        result.isError_ = isError_;
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.docRefPath_ = docRefPath_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.precondition_ =
+              preconditionBuilder_ == null ? precondition_ : preconditionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.jsonData_ = jsonData_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.isError_ = isError_;
+        }
       }
 
       @java.lang.Override
@@ -8569,6 +8288,7 @@ public final class TestDefinition {
                 .getDefaultInstance()) return this;
         if (!other.getDocRefPath().isEmpty()) {
           docRefPath_ = other.docRefPath_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasPrecondition()) {
@@ -8576,6 +8296,7 @@ public final class TestDefinition {
         }
         if (!other.getJsonData().isEmpty()) {
           jsonData_ = other.jsonData_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasRequest()) {
@@ -8584,7 +8305,7 @@ public final class TestDefinition {
         if (other.getIsError() != false) {
           setIsError(other.getIsError());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8599,21 +8320,65 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  docRefPath_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  input.readMessage(getPreconditionFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+              case 26:
+                {
+                  jsonData_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+              case 34:
+                {
+                  input.readMessage(getRequestFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
+              case 40:
+                {
+                  isError_ = input.readBool();
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 40
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+
+      private int bitField0_;
 
       private java.lang.Object docRefPath_ = "";
       /**
@@ -8676,8 +8441,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8693,8 +8458,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
-
         docRefPath_ = getDefaultInstance().getDocRefPath();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8715,8 +8480,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8739,7 +8504,7 @@ public final class TestDefinition {
        * @return Whether the precondition field is set.
        */
       public boolean hasPrecondition() {
-        return preconditionBuilder_ != null || precondition_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        *
@@ -8776,11 +8541,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           precondition_ = value;
-          onChanged();
         } else {
           preconditionBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8795,11 +8560,11 @@ public final class TestDefinition {
       public Builder setPrecondition(com.google.firestore.v1.Precondition.Builder builderForValue) {
         if (preconditionBuilder_ == null) {
           precondition_ = builderForValue.build();
-          onChanged();
         } else {
           preconditionBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8813,19 +8578,18 @@ public final class TestDefinition {
        */
       public Builder mergePrecondition(com.google.firestore.v1.Precondition value) {
         if (preconditionBuilder_ == null) {
-          if (precondition_ != null) {
-            precondition_ =
-                com.google.firestore.v1.Precondition.newBuilder(precondition_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000002) != 0)
+              && precondition_ != null
+              && precondition_ != com.google.firestore.v1.Precondition.getDefaultInstance()) {
+            getPreconditionBuilder().mergeFrom(value);
           } else {
             precondition_ = value;
           }
-          onChanged();
         } else {
           preconditionBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8838,14 +8602,13 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.Precondition precondition = 2;</code>
        */
       public Builder clearPrecondition() {
-        if (preconditionBuilder_ == null) {
-          precondition_ = null;
-          onChanged();
-        } else {
-          precondition_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        precondition_ = null;
+        if (preconditionBuilder_ != null) {
+          preconditionBuilder_.dispose();
           preconditionBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8858,7 +8621,7 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.Precondition precondition = 2;</code>
        */
       public com.google.firestore.v1.Precondition.Builder getPreconditionBuilder() {
-
+        bitField0_ |= 0x00000002;
         onChanged();
         return getPreconditionFieldBuilder().getBuilder();
       }
@@ -8967,8 +8730,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         jsonData_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8984,8 +8747,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearJsonData() {
-
         jsonData_ = getDefaultInstance().getJsonData();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -9006,8 +8769,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         jsonData_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9030,7 +8793,7 @@ public final class TestDefinition {
        * @return Whether the request field is set.
        */
       public boolean hasRequest() {
-        return requestBuilder_ != null || request_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        *
@@ -9067,11 +8830,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           request_ = value;
-          onChanged();
         } else {
           requestBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -9086,11 +8849,11 @@ public final class TestDefinition {
       public Builder setRequest(com.google.firestore.v1.CommitRequest.Builder builderForValue) {
         if (requestBuilder_ == null) {
           request_ = builderForValue.build();
-          onChanged();
         } else {
           requestBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -9104,19 +8867,18 @@ public final class TestDefinition {
        */
       public Builder mergeRequest(com.google.firestore.v1.CommitRequest value) {
         if (requestBuilder_ == null) {
-          if (request_ != null) {
-            request_ =
-                com.google.firestore.v1.CommitRequest.newBuilder(request_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000008) != 0)
+              && request_ != null
+              && request_ != com.google.firestore.v1.CommitRequest.getDefaultInstance()) {
+            getRequestBuilder().mergeFrom(value);
           } else {
             request_ = value;
           }
-          onChanged();
         } else {
           requestBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -9129,14 +8891,13 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.CommitRequest request = 4;</code>
        */
       public Builder clearRequest() {
-        if (requestBuilder_ == null) {
-          request_ = null;
-          onChanged();
-        } else {
-          request_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -9149,7 +8910,7 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.CommitRequest request = 4;</code>
        */
       public com.google.firestore.v1.CommitRequest.Builder getRequestBuilder() {
-
+        bitField0_ |= 0x00000008;
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
@@ -9228,6 +8989,7 @@ public final class TestDefinition {
       public Builder setIsError(boolean value) {
 
         isError_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -9243,7 +9005,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearIsError() {
-
+        bitField0_ = (bitField0_ & ~0x00000010);
         isError_ = false;
         onChanged();
         return this;
@@ -9284,7 +9046,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new UpdateTest(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -9560,118 +9334,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private UpdatePathsTest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                docRefPath_ = s;
-                break;
-              }
-            case 18:
-              {
-                com.google.firestore.v1.Precondition.Builder subBuilder = null;
-                if (precondition_ != null) {
-                  subBuilder = precondition_.toBuilder();
-                }
-                precondition_ =
-                    input.readMessage(
-                        com.google.firestore.v1.Precondition.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(precondition_);
-                  precondition_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 26:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  fieldPaths_ =
-                      new java.util.ArrayList<
-                          com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                fieldPaths_.add(
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.parser(),
-                        extensionRegistry));
-                break;
-              }
-            case 34:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                  jsonValues_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                jsonValues_.add(s);
-                break;
-              }
-            case 42:
-              {
-                com.google.firestore.v1.CommitRequest.Builder subBuilder = null;
-                if (request_ != null) {
-                  subBuilder = request_.toBuilder();
-                }
-                request_ =
-                    input.readMessage(
-                        com.google.firestore.v1.CommitRequest.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(request_);
-                  request_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 48:
-              {
-                isError_ = input.readBool();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          fieldPaths_ = java.util.Collections.unmodifiableList(fieldPaths_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          jsonValues_ = jsonValues_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_UpdatePathsTest_descriptor;
@@ -9689,7 +9351,9 @@ public final class TestDefinition {
     }
 
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
-    private volatile java.lang.Object docRefPath_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object docRefPath_ = "";
     /**
      *
      *
@@ -9782,10 +9446,14 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public com.google.firestore.v1.PreconditionOrBuilder getPreconditionOrBuilder() {
-      return getPrecondition();
+      return precondition_ == null
+          ? com.google.firestore.v1.Precondition.getDefaultInstance()
+          : precondition_;
     }
 
     public static final int FIELD_PATHS_FIELD_NUMBER = 3;
+
+    @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         fieldPaths_;
     /**
@@ -9860,6 +9528,8 @@ public final class TestDefinition {
     }
 
     public static final int JSON_VALUES_FIELD_NUMBER = 4;
+
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList jsonValues_;
     /**
      *
@@ -9965,11 +9635,13 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public com.google.firestore.v1.CommitRequestOrBuilder getRequestOrBuilder() {
-      return getRequest();
+      return request_ == null
+          ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
+          : request_;
     }
 
     public static final int IS_ERROR_FIELD_NUMBER = 6;
-    private boolean isError_;
+    private boolean isError_ = false;
     /**
      *
      *
@@ -10018,7 +9690,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         output.writeBool(6, isError_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -10050,7 +9722,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(6, isError_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -10079,7 +9751,7 @@ public final class TestDefinition {
         if (!getRequest().equals(other.getRequest())) return false;
       }
       if (getIsError() != other.getIsError()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -10110,7 +9782,7 @@ public final class TestDefinition {
       }
       hash = (37 * hash) + IS_ERROR_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getIsError());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -10251,48 +9923,37 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-          getFieldPathsFieldBuilder();
-        }
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         docRefPath_ = "";
-
-        if (preconditionBuilder_ == null) {
-          precondition_ = null;
-        } else {
-          precondition_ = null;
+        precondition_ = null;
+        if (preconditionBuilder_ != null) {
+          preconditionBuilder_.dispose();
           preconditionBuilder_ = null;
         }
         if (fieldPathsBuilder_ == null) {
           fieldPaths_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          fieldPaths_ = null;
           fieldPathsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (requestBuilder_ == null) {
-          request_ = null;
-        } else {
-          request_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
         isError_ = false;
-
         return this;
       }
 
@@ -10324,35 +9985,48 @@ public final class TestDefinition {
           buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest(this);
-        int from_bitField0_ = bitField0_;
-        result.docRefPath_ = docRefPath_;
-        if (preconditionBuilder_ == null) {
-          result.precondition_ = precondition_;
-        } else {
-          result.precondition_ = preconditionBuilder_.build();
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest result) {
         if (fieldPathsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             fieldPaths_ = java.util.Collections.unmodifiableList(fieldPaths_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.fieldPaths_ = fieldPaths_;
         } else {
           result.fieldPaths_ = fieldPathsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           jsonValues_ = jsonValues_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.jsonValues_ = jsonValues_;
-        if (requestBuilder_ == null) {
-          result.request_ = request_;
-        } else {
-          result.request_ = requestBuilder_.build();
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.docRefPath_ = docRefPath_;
         }
-        result.isError_ = isError_;
-        onBuilt();
-        return result;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.precondition_ =
+              preconditionBuilder_ == null ? precondition_ : preconditionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.isError_ = isError_;
+        }
       }
 
       @java.lang.Override
@@ -10409,6 +10083,7 @@ public final class TestDefinition {
                 .getDefaultInstance()) return this;
         if (!other.getDocRefPath().isEmpty()) {
           docRefPath_ = other.docRefPath_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasPrecondition()) {
@@ -10418,7 +10093,7 @@ public final class TestDefinition {
           if (!other.fieldPaths_.isEmpty()) {
             if (fieldPaths_.isEmpty()) {
               fieldPaths_ = other.fieldPaths_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureFieldPathsIsMutable();
               fieldPaths_.addAll(other.fieldPaths_);
@@ -10431,7 +10106,7 @@ public final class TestDefinition {
               fieldPathsBuilder_.dispose();
               fieldPathsBuilder_ = null;
               fieldPaths_ = other.fieldPaths_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               fieldPathsBuilder_ =
                   com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
                       ? getFieldPathsFieldBuilder()
@@ -10444,7 +10119,7 @@ public final class TestDefinition {
         if (!other.jsonValues_.isEmpty()) {
           if (jsonValues_.isEmpty()) {
             jsonValues_ = other.jsonValues_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureJsonValuesIsMutable();
             jsonValues_.addAll(other.jsonValues_);
@@ -10457,7 +10132,7 @@ public final class TestDefinition {
         if (other.getIsError() != false) {
           setIsError(other.getIsError());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -10472,20 +10147,77 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest parsedMessage =
-            null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  docRefPath_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  input.readMessage(getPreconditionFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+              case 26:
+                {
+                  com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath m =
+                      input.readMessage(
+                          com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath
+                              .parser(),
+                          extensionRegistry);
+                  if (fieldPathsBuilder_ == null) {
+                    ensureFieldPathsIsMutable();
+                    fieldPaths_.add(m);
+                  } else {
+                    fieldPathsBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 26
+              case 34:
+                {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureJsonValuesIsMutable();
+                  jsonValues_.add(s);
+                  break;
+                } // case 34
+              case 42:
+                {
+                  input.readMessage(getRequestFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 42
+              case 48:
+                {
+                  isError_ = input.readBool();
+                  bitField0_ |= 0x00000020;
+                  break;
+                } // case 48
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -10552,8 +10284,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10569,8 +10301,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
-
         docRefPath_ = getDefaultInstance().getDocRefPath();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -10591,8 +10323,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10615,7 +10347,7 @@ public final class TestDefinition {
        * @return Whether the precondition field is set.
        */
       public boolean hasPrecondition() {
-        return preconditionBuilder_ != null || precondition_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        *
@@ -10652,11 +10384,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           precondition_ = value;
-          onChanged();
         } else {
           preconditionBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -10671,11 +10403,11 @@ public final class TestDefinition {
       public Builder setPrecondition(com.google.firestore.v1.Precondition.Builder builderForValue) {
         if (preconditionBuilder_ == null) {
           precondition_ = builderForValue.build();
-          onChanged();
         } else {
           preconditionBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -10689,19 +10421,18 @@ public final class TestDefinition {
        */
       public Builder mergePrecondition(com.google.firestore.v1.Precondition value) {
         if (preconditionBuilder_ == null) {
-          if (precondition_ != null) {
-            precondition_ =
-                com.google.firestore.v1.Precondition.newBuilder(precondition_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000002) != 0)
+              && precondition_ != null
+              && precondition_ != com.google.firestore.v1.Precondition.getDefaultInstance()) {
+            getPreconditionBuilder().mergeFrom(value);
           } else {
             precondition_ = value;
           }
-          onChanged();
         } else {
           preconditionBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -10714,14 +10445,13 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.Precondition precondition = 2;</code>
        */
       public Builder clearPrecondition() {
-        if (preconditionBuilder_ == null) {
-          precondition_ = null;
-          onChanged();
-        } else {
-          precondition_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        precondition_ = null;
+        if (preconditionBuilder_ != null) {
+          preconditionBuilder_.dispose();
           preconditionBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -10734,7 +10464,7 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.Precondition precondition = 2;</code>
        */
       public com.google.firestore.v1.Precondition.Builder getPreconditionBuilder() {
-
+        bitField0_ |= 0x00000002;
         onChanged();
         return getPreconditionFieldBuilder().getBuilder();
       }
@@ -10786,11 +10516,11 @@ public final class TestDefinition {
           fieldPaths_ = java.util.Collections.emptyList();
 
       private void ensureFieldPathsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           fieldPaths_ =
               new java.util.ArrayList<
                   com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>(fieldPaths_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
         }
       }
 
@@ -11018,7 +10748,7 @@ public final class TestDefinition {
       public Builder clearFieldPaths() {
         if (fieldPathsBuilder_ == null) {
           fieldPaths_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           fieldPathsBuilder_.clear();
@@ -11151,7 +10881,7 @@ public final class TestDefinition {
                   com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath,
                   com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder,
                   com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>(
-                  fieldPaths_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+                  fieldPaths_, ((bitField0_ & 0x00000004) != 0), getParentForChildren(), isClean());
           fieldPaths_ = null;
         }
         return fieldPathsBuilder_;
@@ -11161,9 +10891,9 @@ public final class TestDefinition {
           com.google.protobuf.LazyStringArrayList.EMPTY;
 
       private void ensureJsonValuesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           jsonValues_ = new com.google.protobuf.LazyStringArrayList(jsonValues_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000008;
         }
       }
       /**
@@ -11298,7 +11028,7 @@ public final class TestDefinition {
        */
       public Builder clearJsonValues() {
         jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -11343,7 +11073,7 @@ public final class TestDefinition {
        * @return Whether the request field is set.
        */
       public boolean hasRequest() {
-        return requestBuilder_ != null || request_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        *
@@ -11380,11 +11110,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           request_ = value;
-          onChanged();
         } else {
           requestBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -11399,11 +11129,11 @@ public final class TestDefinition {
       public Builder setRequest(com.google.firestore.v1.CommitRequest.Builder builderForValue) {
         if (requestBuilder_ == null) {
           request_ = builderForValue.build();
-          onChanged();
         } else {
           requestBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -11417,19 +11147,18 @@ public final class TestDefinition {
        */
       public Builder mergeRequest(com.google.firestore.v1.CommitRequest value) {
         if (requestBuilder_ == null) {
-          if (request_ != null) {
-            request_ =
-                com.google.firestore.v1.CommitRequest.newBuilder(request_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000010) != 0)
+              && request_ != null
+              && request_ != com.google.firestore.v1.CommitRequest.getDefaultInstance()) {
+            getRequestBuilder().mergeFrom(value);
           } else {
             request_ = value;
           }
-          onChanged();
         } else {
           requestBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -11442,14 +11171,13 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.CommitRequest request = 5;</code>
        */
       public Builder clearRequest() {
-        if (requestBuilder_ == null) {
-          request_ = null;
-          onChanged();
-        } else {
-          request_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -11462,7 +11190,7 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.CommitRequest request = 5;</code>
        */
       public com.google.firestore.v1.CommitRequest.Builder getRequestBuilder() {
-
+        bitField0_ |= 0x00000010;
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
@@ -11541,6 +11269,7 @@ public final class TestDefinition {
       public Builder setIsError(boolean value) {
 
         isError_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -11556,7 +11285,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearIsError() {
-
+        bitField0_ = (bitField0_ & ~0x00000020);
         isError_ = false;
         onChanged();
         return this;
@@ -11598,7 +11327,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new UpdatePathsTest(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -11745,87 +11486,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private DeleteTest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                docRefPath_ = s;
-                break;
-              }
-            case 18:
-              {
-                com.google.firestore.v1.Precondition.Builder subBuilder = null;
-                if (precondition_ != null) {
-                  subBuilder = precondition_.toBuilder();
-                }
-                precondition_ =
-                    input.readMessage(
-                        com.google.firestore.v1.Precondition.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(precondition_);
-                  precondition_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 26:
-              {
-                com.google.firestore.v1.CommitRequest.Builder subBuilder = null;
-                if (request_ != null) {
-                  subBuilder = request_.toBuilder();
-                }
-                request_ =
-                    input.readMessage(
-                        com.google.firestore.v1.CommitRequest.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(request_);
-                  request_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 32:
-              {
-                isError_ = input.readBool();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_DeleteTest_descriptor;
@@ -11842,7 +11502,9 @@ public final class TestDefinition {
     }
 
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
-    private volatile java.lang.Object docRefPath_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object docRefPath_ = "";
     /**
      *
      *
@@ -11915,7 +11577,9 @@ public final class TestDefinition {
     /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
     @java.lang.Override
     public com.google.firestore.v1.PreconditionOrBuilder getPreconditionOrBuilder() {
-      return getPrecondition();
+      return precondition_ == null
+          ? com.google.firestore.v1.Precondition.getDefaultInstance()
+          : precondition_;
     }
 
     public static final int REQUEST_FIELD_NUMBER = 3;
@@ -11963,11 +11627,13 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public com.google.firestore.v1.CommitRequestOrBuilder getRequestOrBuilder() {
-      return getRequest();
+      return request_ == null
+          ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
+          : request_;
     }
 
     public static final int IS_ERROR_FIELD_NUMBER = 4;
-    private boolean isError_;
+    private boolean isError_ = false;
     /**
      *
      *
@@ -12010,7 +11676,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         output.writeBool(4, isError_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -12031,7 +11697,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(4, isError_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -12057,7 +11723,7 @@ public final class TestDefinition {
         if (!getRequest().equals(other.getRequest())) return false;
       }
       if (getIsError() != other.getIsError()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -12080,7 +11746,7 @@ public final class TestDefinition {
       }
       hash = (37 * hash) + IS_ERROR_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getIsError());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -12214,38 +11880,28 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         docRefPath_ = "";
-
-        if (preconditionBuilder_ == null) {
-          precondition_ = null;
-        } else {
-          precondition_ = null;
+        precondition_ = null;
+        if (preconditionBuilder_ != null) {
+          preconditionBuilder_.dispose();
           preconditionBuilder_ = null;
         }
-        if (requestBuilder_ == null) {
-          request_ = null;
-        } else {
-          request_ = null;
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
         isError_ = false;
-
         return this;
       }
 
@@ -12275,20 +11931,29 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest(this);
-        result.docRefPath_ = docRefPath_;
-        if (preconditionBuilder_ == null) {
-          result.precondition_ = precondition_;
-        } else {
-          result.precondition_ = preconditionBuilder_.build();
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
-        if (requestBuilder_ == null) {
-          result.request_ = request_;
-        } else {
-          result.request_ = requestBuilder_.build();
-        }
-        result.isError_ = isError_;
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.docRefPath_ = docRefPath_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.precondition_ =
+              preconditionBuilder_ == null ? precondition_ : preconditionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.isError_ = isError_;
+        }
       }
 
       @java.lang.Override
@@ -12344,6 +12009,7 @@ public final class TestDefinition {
                 .getDefaultInstance()) return this;
         if (!other.getDocRefPath().isEmpty()) {
           docRefPath_ = other.docRefPath_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasPrecondition()) {
@@ -12355,7 +12021,7 @@ public final class TestDefinition {
         if (other.getIsError() != false) {
           setIsError(other.getIsError());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -12370,21 +12036,59 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  docRefPath_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  input.readMessage(getPreconditionFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+              case 26:
+                {
+                  input.readMessage(getRequestFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+              case 32:
+                {
+                  isError_ = input.readBool();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+
+      private int bitField0_;
 
       private java.lang.Object docRefPath_ = "";
       /**
@@ -12447,8 +12151,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -12464,8 +12168,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearDocRefPath() {
-
         docRefPath_ = getDefaultInstance().getDocRefPath();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -12486,8 +12190,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         docRefPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -12504,7 +12208,7 @@ public final class TestDefinition {
        * @return Whether the precondition field is set.
        */
       public boolean hasPrecondition() {
-        return preconditionBuilder_ != null || precondition_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.google.firestore.v1.Precondition precondition = 2;</code>
@@ -12527,57 +12231,55 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           precondition_ = value;
-          onChanged();
         } else {
           preconditionBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
       public Builder setPrecondition(com.google.firestore.v1.Precondition.Builder builderForValue) {
         if (preconditionBuilder_ == null) {
           precondition_ = builderForValue.build();
-          onChanged();
         } else {
           preconditionBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
       public Builder mergePrecondition(com.google.firestore.v1.Precondition value) {
         if (preconditionBuilder_ == null) {
-          if (precondition_ != null) {
-            precondition_ =
-                com.google.firestore.v1.Precondition.newBuilder(precondition_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000002) != 0)
+              && precondition_ != null
+              && precondition_ != com.google.firestore.v1.Precondition.getDefaultInstance()) {
+            getPreconditionBuilder().mergeFrom(value);
           } else {
             precondition_ = value;
           }
-          onChanged();
         } else {
           preconditionBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
       public Builder clearPrecondition() {
-        if (preconditionBuilder_ == null) {
-          precondition_ = null;
-          onChanged();
-        } else {
-          precondition_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        precondition_ = null;
+        if (preconditionBuilder_ != null) {
+          preconditionBuilder_.dispose();
           preconditionBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
       public com.google.firestore.v1.Precondition.Builder getPreconditionBuilder() {
-
+        bitField0_ |= 0x00000002;
         onChanged();
         return getPreconditionFieldBuilder().getBuilder();
       }
@@ -12627,7 +12329,7 @@ public final class TestDefinition {
        * @return Whether the request field is set.
        */
       public boolean hasRequest() {
-        return requestBuilder_ != null || request_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        *
@@ -12664,11 +12366,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           request_ = value;
-          onChanged();
         } else {
           requestBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -12683,11 +12385,11 @@ public final class TestDefinition {
       public Builder setRequest(com.google.firestore.v1.CommitRequest.Builder builderForValue) {
         if (requestBuilder_ == null) {
           request_ = builderForValue.build();
-          onChanged();
         } else {
           requestBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -12701,19 +12403,18 @@ public final class TestDefinition {
        */
       public Builder mergeRequest(com.google.firestore.v1.CommitRequest value) {
         if (requestBuilder_ == null) {
-          if (request_ != null) {
-            request_ =
-                com.google.firestore.v1.CommitRequest.newBuilder(request_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000004) != 0)
+              && request_ != null
+              && request_ != com.google.firestore.v1.CommitRequest.getDefaultInstance()) {
+            getRequestBuilder().mergeFrom(value);
           } else {
             request_ = value;
           }
-          onChanged();
         } else {
           requestBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -12726,14 +12427,13 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.CommitRequest request = 3;</code>
        */
       public Builder clearRequest() {
-        if (requestBuilder_ == null) {
-          request_ = null;
-          onChanged();
-        } else {
-          request_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
           requestBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -12746,7 +12446,7 @@ public final class TestDefinition {
        * <code>.google.firestore.v1.CommitRequest request = 3;</code>
        */
       public com.google.firestore.v1.CommitRequest.Builder getRequestBuilder() {
-
+        bitField0_ |= 0x00000004;
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
@@ -12825,6 +12525,7 @@ public final class TestDefinition {
       public Builder setIsError(boolean value) {
 
         isError_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -12840,7 +12541,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearIsError() {
-
+        bitField0_ = (bitField0_ & ~0x00000008);
         isError_ = false;
         onChanged();
         return this;
@@ -12881,7 +12582,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new DeleteTest(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -13008,66 +12721,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private SetOption(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8:
-              {
-                all_ = input.readBool();
-                break;
-              }
-            case 18:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  fields_ =
-                      new java.util.ArrayList<
-                          com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                fields_.add(
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.parser(),
-                        extensionRegistry));
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          fields_ = java.util.Collections.unmodifiableList(fields_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_SetOption_descriptor;
@@ -13084,7 +12737,7 @@ public final class TestDefinition {
     }
 
     public static final int ALL_FIELD_NUMBER = 1;
-    private boolean all_;
+    private boolean all_ = false;
     /**
      *
      *
@@ -13102,6 +12755,8 @@ public final class TestDefinition {
     }
 
     public static final int FIELDS_FIELD_NUMBER = 2;
+
+    @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         fields_;
     /**
@@ -13194,7 +12849,7 @@ public final class TestDefinition {
       for (int i = 0; i < fields_.size(); i++) {
         output.writeMessage(2, fields_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -13209,7 +12864,7 @@ public final class TestDefinition {
       for (int i = 0; i < fields_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, fields_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -13227,7 +12882,7 @@ public final class TestDefinition {
 
       if (getAll() != other.getAll()) return false;
       if (!getFieldsList().equals(other.getFieldsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -13244,7 +12899,7 @@ public final class TestDefinition {
         hash = (37 * hash) + FIELDS_FIELD_NUMBER;
         hash = (53 * hash) + getFieldsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -13378,32 +13033,24 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-          getFieldsFieldBuilder();
-        }
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         all_ = false;
-
         if (fieldsBuilder_ == null) {
           fields_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          fields_ = null;
           fieldsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -13433,19 +13080,33 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption(this);
-        int from_bitField0_ = bitField0_;
-        result.all_ = all_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) {
+          buildPartial0(result);
+        }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption result) {
         if (fieldsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             fields_ = java.util.Collections.unmodifiableList(fields_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.fields_ = fields_;
         } else {
           result.fields_ = fieldsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.all_ = all_;
+        }
       }
 
       @java.lang.Override
@@ -13506,7 +13167,7 @@ public final class TestDefinition {
           if (!other.fields_.isEmpty()) {
             if (fields_.isEmpty()) {
               fields_ = other.fields_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureFieldsIsMutable();
               fields_.addAll(other.fields_);
@@ -13519,7 +13180,7 @@ public final class TestDefinition {
               fieldsBuilder_.dispose();
               fieldsBuilder_ = null;
               fields_ = other.fields_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               fieldsBuilder_ =
                   com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
                       ? getFieldsFieldBuilder()
@@ -13529,7 +13190,7 @@ public final class TestDefinition {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -13544,19 +13205,52 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8:
+                {
+                  all_ = input.readBool();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+              case 18:
+                {
+                  com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath m =
+                      input.readMessage(
+                          com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath
+                              .parser(),
+                          extensionRegistry);
+                  if (fieldsBuilder_ == null) {
+                    ensureFieldsIsMutable();
+                    fields_.add(m);
+                  } else {
+                    fieldsBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 18
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -13593,6 +13287,7 @@ public final class TestDefinition {
       public Builder setAll(boolean value) {
 
         all_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -13608,7 +13303,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearAll() {
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         all_ = false;
         onChanged();
         return this;
@@ -13618,11 +13313,11 @@ public final class TestDefinition {
           fields_ = java.util.Collections.emptyList();
 
       private void ensureFieldsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           fields_ =
               new java.util.ArrayList<
                   com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>(fields_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
         }
       }
 
@@ -13850,7 +13545,7 @@ public final class TestDefinition {
       public Builder clearFields() {
         if (fieldsBuilder_ == null) {
           fields_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           fieldsBuilder_.clear();
@@ -13983,7 +13678,7 @@ public final class TestDefinition {
                   com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath,
                   com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder,
                   com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>(
-                  fields_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+                  fields_, ((bitField0_ & 0x00000002) != 0), getParentForChildren(), isClean());
           fields_ = null;
         }
         return fieldsBuilder_;
@@ -14024,7 +13719,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new SetOption(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -14138,89 +13845,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private QueryTest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                collPath_ = s;
-                break;
-              }
-            case 18:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  clauses_ =
-                      new java.util.ArrayList<
-                          com.google.cloud.conformance.firestore.v1.TestDefinition.Clause>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                clauses_.add(
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.Clause.parser(),
-                        extensionRegistry));
-                break;
-              }
-            case 26:
-              {
-                com.google.firestore.v1.StructuredQuery.Builder subBuilder = null;
-                if (query_ != null) {
-                  subBuilder = query_.toBuilder();
-                }
-                query_ =
-                    input.readMessage(
-                        com.google.firestore.v1.StructuredQuery.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(query_);
-                  query_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 32:
-              {
-                isError_ = input.readBool();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          clauses_ = java.util.Collections.unmodifiableList(clauses_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_QueryTest_descriptor;
@@ -14237,7 +13861,9 @@ public final class TestDefinition {
     }
 
     public static final int COLL_PATH_FIELD_NUMBER = 1;
-    private volatile java.lang.Object collPath_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collPath_ = "";
     /**
      *
      *
@@ -14286,6 +13912,8 @@ public final class TestDefinition {
     }
 
     public static final int CLAUSES_FIELD_NUMBER = 2;
+
+    @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Clause>
         clauses_;
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
@@ -14341,11 +13969,11 @@ public final class TestDefinition {
     /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
     @java.lang.Override
     public com.google.firestore.v1.StructuredQueryOrBuilder getQueryOrBuilder() {
-      return getQuery();
+      return query_ == null ? com.google.firestore.v1.StructuredQuery.getDefaultInstance() : query_;
     }
 
     public static final int IS_ERROR_FIELD_NUMBER = 4;
-    private boolean isError_;
+    private boolean isError_ = false;
     /**
      * <code>bool is_error = 4;</code>
      *
@@ -14382,7 +14010,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         output.writeBool(4, isError_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -14403,7 +14031,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(4, isError_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -14426,7 +14054,7 @@ public final class TestDefinition {
         if (!getQuery().equals(other.getQuery())) return false;
       }
       if (getIsError() != other.getIsError()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -14449,7 +14077,7 @@ public final class TestDefinition {
       }
       hash = (37 * hash) + IS_ERROR_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getIsError());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -14575,40 +14203,30 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-          getClausesFieldBuilder();
-        }
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         collPath_ = "";
-
         if (clausesBuilder_ == null) {
           clauses_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          clauses_ = null;
           clausesBuilder_.clear();
         }
-        if (queryBuilder_ == null) {
-          query_ = null;
-        } else {
-          query_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        query_ = null;
+        if (queryBuilder_ != null) {
+          queryBuilder_.dispose();
           queryBuilder_ = null;
         }
         isError_ = false;
-
         return this;
       }
 
@@ -14638,25 +14256,39 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest(this);
-        int from_bitField0_ = bitField0_;
-        result.collPath_ = collPath_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) {
+          buildPartial0(result);
+        }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest result) {
         if (clausesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             clauses_ = java.util.Collections.unmodifiableList(clauses_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.clauses_ = clauses_;
         } else {
           result.clauses_ = clausesBuilder_.build();
         }
-        if (queryBuilder_ == null) {
-          result.query_ = query_;
-        } else {
-          result.query_ = queryBuilder_.build();
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.collPath_ = collPath_;
         }
-        result.isError_ = isError_;
-        onBuilt();
-        return result;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.query_ = queryBuilder_ == null ? query_ : queryBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.isError_ = isError_;
+        }
       }
 
       @java.lang.Override
@@ -14712,13 +14344,14 @@ public final class TestDefinition {
                 .getDefaultInstance()) return this;
         if (!other.getCollPath().isEmpty()) {
           collPath_ = other.collPath_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (clausesBuilder_ == null) {
           if (!other.clauses_.isEmpty()) {
             if (clauses_.isEmpty()) {
               clauses_ = other.clauses_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureClausesIsMutable();
               clauses_.addAll(other.clauses_);
@@ -14731,7 +14364,7 @@ public final class TestDefinition {
               clausesBuilder_.dispose();
               clausesBuilder_ = null;
               clauses_ = other.clauses_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               clausesBuilder_ =
                   com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
                       ? getClausesFieldBuilder()
@@ -14747,7 +14380,7 @@ public final class TestDefinition {
         if (other.getIsError() != false) {
           setIsError(other.getIsError());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -14762,19 +14395,63 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  collPath_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  com.google.cloud.conformance.firestore.v1.TestDefinition.Clause m =
+                      input.readMessage(
+                          com.google.cloud.conformance.firestore.v1.TestDefinition.Clause.parser(),
+                          extensionRegistry);
+                  if (clausesBuilder_ == null) {
+                    ensureClausesIsMutable();
+                    clauses_.add(m);
+                  } else {
+                    clausesBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 18
+              case 26:
+                {
+                  input.readMessage(getQueryFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+              case 32:
+                {
+                  isError_ = input.readBool();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -14841,8 +14518,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         collPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -14858,8 +14535,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearCollPath() {
-
         collPath_ = getDefaultInstance().getCollPath();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -14880,8 +14557,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         collPath_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -14890,11 +14567,11 @@ public final class TestDefinition {
           clauses_ = java.util.Collections.emptyList();
 
       private void ensureClausesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           clauses_ =
               new java.util.ArrayList<
                   com.google.cloud.conformance.firestore.v1.TestDefinition.Clause>(clauses_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
         }
       }
 
@@ -15030,7 +14707,7 @@ public final class TestDefinition {
       public Builder clearClauses() {
         if (clausesBuilder_ == null) {
           clauses_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           clausesBuilder_.clear();
@@ -15106,7 +14783,7 @@ public final class TestDefinition {
                   com.google.cloud.conformance.firestore.v1.TestDefinition.Clause,
                   com.google.cloud.conformance.firestore.v1.TestDefinition.Clause.Builder,
                   com.google.cloud.conformance.firestore.v1.TestDefinition.ClauseOrBuilder>(
-                  clauses_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+                  clauses_, ((bitField0_ & 0x00000002) != 0), getParentForChildren(), isClean());
           clauses_ = null;
         }
         return clausesBuilder_;
@@ -15124,7 +14801,7 @@ public final class TestDefinition {
        * @return Whether the query field is set.
        */
       public boolean hasQuery() {
-        return queryBuilder_ != null || query_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
@@ -15147,57 +14824,55 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           query_ = value;
-          onChanged();
         } else {
           queryBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
       public Builder setQuery(com.google.firestore.v1.StructuredQuery.Builder builderForValue) {
         if (queryBuilder_ == null) {
           query_ = builderForValue.build();
-          onChanged();
         } else {
           queryBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
       public Builder mergeQuery(com.google.firestore.v1.StructuredQuery value) {
         if (queryBuilder_ == null) {
-          if (query_ != null) {
-            query_ =
-                com.google.firestore.v1.StructuredQuery.newBuilder(query_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000004) != 0)
+              && query_ != null
+              && query_ != com.google.firestore.v1.StructuredQuery.getDefaultInstance()) {
+            getQueryBuilder().mergeFrom(value);
           } else {
             query_ = value;
           }
-          onChanged();
         } else {
           queryBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
       public Builder clearQuery() {
-        if (queryBuilder_ == null) {
-          query_ = null;
-          onChanged();
-        } else {
-          query_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        query_ = null;
+        if (queryBuilder_ != null) {
+          queryBuilder_.dispose();
           queryBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
       public com.google.firestore.v1.StructuredQuery.Builder getQueryBuilder() {
-
+        bitField0_ |= 0x00000004;
         onChanged();
         return getQueryFieldBuilder().getBuilder();
       }
@@ -15248,6 +14923,7 @@ public final class TestDefinition {
       public Builder setIsError(boolean value) {
 
         isError_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -15257,7 +14933,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearIsError() {
-
+        bitField0_ = (bitField0_ & ~0x00000008);
         isError_ = false;
         onChanged();
         return this;
@@ -15298,7 +14974,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new QueryTest(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -15481,202 +15169,6 @@ public final class TestDefinition {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
-    }
-
-    private Clause(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.Select.Builder subBuilder =
-                    null;
-                if (clauseCase_ == 1) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.Select) clause_)
-                          .toBuilder();
-                }
-                clause_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.Select.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.Select) clause_);
-                  clause_ = subBuilder.buildPartial();
-                }
-                clauseCase_ = 1;
-                break;
-              }
-            case 18:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.Where.Builder subBuilder =
-                    null;
-                if (clauseCase_ == 2) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.Where) clause_)
-                          .toBuilder();
-                }
-                clause_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.Where.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.Where) clause_);
-                  clause_ = subBuilder.buildPartial();
-                }
-                clauseCase_ = 2;
-                break;
-              }
-            case 26:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy.Builder
-                    subBuilder = null;
-                if (clauseCase_ == 3) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy) clause_)
-                          .toBuilder();
-                }
-                clause_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy) clause_);
-                  clause_ = subBuilder.buildPartial();
-                }
-                clauseCase_ = 3;
-                break;
-              }
-            case 32:
-              {
-                clause_ = input.readInt32();
-                clauseCase_ = 4;
-                break;
-              }
-            case 40:
-              {
-                clause_ = input.readInt32();
-                clauseCase_ = 5;
-                break;
-              }
-            case 50:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder subBuilder =
-                    null;
-                if (clauseCase_ == 6) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_)
-                          .toBuilder();
-                }
-                clause_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_);
-                  clause_ = subBuilder.buildPartial();
-                }
-                clauseCase_ = 6;
-                break;
-              }
-            case 58:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder subBuilder =
-                    null;
-                if (clauseCase_ == 7) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_)
-                          .toBuilder();
-                }
-                clause_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_);
-                  clause_ = subBuilder.buildPartial();
-                }
-                clauseCase_ = 7;
-                break;
-              }
-            case 66:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder subBuilder =
-                    null;
-                if (clauseCase_ == 8) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_)
-                          .toBuilder();
-                }
-                clause_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_);
-                  clause_ = subBuilder.buildPartial();
-                }
-                clauseCase_ = 8;
-                break;
-              }
-            case 74:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder subBuilder =
-                    null;
-                if (clauseCase_ == 9) {
-                  subBuilder =
-                      ((com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_)
-                          .toBuilder();
-                }
-                clause_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_);
-                  clause_ = subBuilder.buildPartial();
-                }
-                clauseCase_ = 9;
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -16080,7 +15572,7 @@ public final class TestDefinition {
         output.writeMessage(
             9, (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -16134,7 +15626,7 @@ public final class TestDefinition {
             com.google.protobuf.CodedOutputStream.computeMessageSize(
                 9, (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor) clause_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -16182,7 +15674,7 @@ public final class TestDefinition {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -16233,7 +15725,7 @@ public final class TestDefinition {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -16359,22 +15851,37 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.Clause.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        if (selectBuilder_ != null) {
+          selectBuilder_.clear();
+        }
+        if (whereBuilder_ != null) {
+          whereBuilder_.clear();
+        }
+        if (orderByBuilder_ != null) {
+          orderByBuilder_.clear();
+        }
+        if (startAtBuilder_ != null) {
+          startAtBuilder_.clear();
+        }
+        if (startAfterBuilder_ != null) {
+          startAfterBuilder_.clear();
+        }
+        if (endAtBuilder_ != null) {
+          endAtBuilder_.clear();
+        }
+        if (endBeforeBuilder_ != null) {
+          endBeforeBuilder_.clear();
+        }
         clauseCase_ = 0;
         clause_ = null;
         return this;
@@ -16405,64 +15912,44 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Clause buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.Clause result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.Clause(this);
-        if (clauseCase_ == 1) {
-          if (selectBuilder_ == null) {
-            result.clause_ = clause_;
-          } else {
-            result.clause_ = selectBuilder_.build();
-          }
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
-        if (clauseCase_ == 2) {
-          if (whereBuilder_ == null) {
-            result.clause_ = clause_;
-          } else {
-            result.clause_ = whereBuilder_.build();
-          }
-        }
-        if (clauseCase_ == 3) {
-          if (orderByBuilder_ == null) {
-            result.clause_ = clause_;
-          } else {
-            result.clause_ = orderByBuilder_.build();
-          }
-        }
-        if (clauseCase_ == 4) {
-          result.clause_ = clause_;
-        }
-        if (clauseCase_ == 5) {
-          result.clause_ = clause_;
-        }
-        if (clauseCase_ == 6) {
-          if (startAtBuilder_ == null) {
-            result.clause_ = clause_;
-          } else {
-            result.clause_ = startAtBuilder_.build();
-          }
-        }
-        if (clauseCase_ == 7) {
-          if (startAfterBuilder_ == null) {
-            result.clause_ = clause_;
-          } else {
-            result.clause_ = startAfterBuilder_.build();
-          }
-        }
-        if (clauseCase_ == 8) {
-          if (endAtBuilder_ == null) {
-            result.clause_ = clause_;
-          } else {
-            result.clause_ = endAtBuilder_.build();
-          }
-        }
-        if (clauseCase_ == 9) {
-          if (endBeforeBuilder_ == null) {
-            result.clause_ = clause_;
-          } else {
-            result.clause_ = endBeforeBuilder_.build();
-          }
-        }
-        result.clauseCase_ = clauseCase_;
+        buildPartialOneofs(result);
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.Clause result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.Clause result) {
+        result.clauseCase_ = clauseCase_;
+        result.clause_ = this.clause_;
+        if (clauseCase_ == 1 && selectBuilder_ != null) {
+          result.clause_ = selectBuilder_.build();
+        }
+        if (clauseCase_ == 2 && whereBuilder_ != null) {
+          result.clause_ = whereBuilder_.build();
+        }
+        if (clauseCase_ == 3 && orderByBuilder_ != null) {
+          result.clause_ = orderByBuilder_.build();
+        }
+        if (clauseCase_ == 6 && startAtBuilder_ != null) {
+          result.clause_ = startAtBuilder_.build();
+        }
+        if (clauseCase_ == 7 && startAfterBuilder_ != null) {
+          result.clause_ = startAfterBuilder_.build();
+        }
+        if (clauseCase_ == 8 && endAtBuilder_ != null) {
+          result.clause_ = endAtBuilder_.build();
+        }
+        if (clauseCase_ == 9 && endBeforeBuilder_ != null) {
+          result.clause_ = endBeforeBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -16566,7 +16053,7 @@ public final class TestDefinition {
               break;
             }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -16581,19 +16068,85 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.Clause parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  input.readMessage(getSelectFieldBuilder().getBuilder(), extensionRegistry);
+                  clauseCase_ = 1;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  input.readMessage(getWhereFieldBuilder().getBuilder(), extensionRegistry);
+                  clauseCase_ = 2;
+                  break;
+                } // case 18
+              case 26:
+                {
+                  input.readMessage(getOrderByFieldBuilder().getBuilder(), extensionRegistry);
+                  clauseCase_ = 3;
+                  break;
+                } // case 26
+              case 32:
+                {
+                  clause_ = input.readInt32();
+                  clauseCase_ = 4;
+                  break;
+                } // case 32
+              case 40:
+                {
+                  clause_ = input.readInt32();
+                  clauseCase_ = 5;
+                  break;
+                } // case 40
+              case 50:
+                {
+                  input.readMessage(getStartAtFieldBuilder().getBuilder(), extensionRegistry);
+                  clauseCase_ = 6;
+                  break;
+                } // case 50
+              case 58:
+                {
+                  input.readMessage(getStartAfterFieldBuilder().getBuilder(), extensionRegistry);
+                  clauseCase_ = 7;
+                  break;
+                } // case 58
+              case 66:
+                {
+                  input.readMessage(getEndAtFieldBuilder().getBuilder(), extensionRegistry);
+                  clauseCase_ = 8;
+                  break;
+                } // case 66
+              case 74:
+                {
+                  input.readMessage(getEndBeforeFieldBuilder().getBuilder(), extensionRegistry);
+                  clauseCase_ = 9;
+                  break;
+                } // case 74
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.Clause)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -16610,6 +16163,8 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
+      private int bitField0_;
 
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.Select,
@@ -16693,8 +16248,9 @@ public final class TestDefinition {
         } else {
           if (clauseCase_ == 1) {
             selectBuilder_.mergeFrom(value);
+          } else {
+            selectBuilder_.setMessage(value);
           }
-          selectBuilder_.setMessage(value);
         }
         clauseCase_ = 1;
         return this;
@@ -16759,7 +16315,6 @@ public final class TestDefinition {
         }
         clauseCase_ = 1;
         onChanged();
-        ;
         return selectBuilder_;
       }
 
@@ -16845,8 +16400,9 @@ public final class TestDefinition {
         } else {
           if (clauseCase_ == 2) {
             whereBuilder_.mergeFrom(value);
+          } else {
+            whereBuilder_.setMessage(value);
           }
-          whereBuilder_.setMessage(value);
         }
         clauseCase_ = 2;
         return this;
@@ -16910,7 +16466,6 @@ public final class TestDefinition {
         }
         clauseCase_ = 2;
         onChanged();
-        ;
         return whereBuilder_;
       }
 
@@ -16997,8 +16552,9 @@ public final class TestDefinition {
         } else {
           if (clauseCase_ == 3) {
             orderByBuilder_.mergeFrom(value);
+          } else {
+            orderByBuilder_.setMessage(value);
           }
-          orderByBuilder_.setMessage(value);
         }
         clauseCase_ = 3;
         return this;
@@ -17063,7 +16619,6 @@ public final class TestDefinition {
         }
         clauseCase_ = 3;
         onChanged();
-        ;
         return orderByBuilder_;
       }
 
@@ -17093,6 +16648,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder setOffset(int value) {
+
         clauseCase_ = 4;
         clause_ = value;
         onChanged();
@@ -17138,6 +16694,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder setLimit(int value) {
+
         clauseCase_ = 5;
         clause_ = value;
         onChanged();
@@ -17239,8 +16796,9 @@ public final class TestDefinition {
         } else {
           if (clauseCase_ == 6) {
             startAtBuilder_.mergeFrom(value);
+          } else {
+            startAtBuilder_.setMessage(value);
           }
-          startAtBuilder_.setMessage(value);
         }
         clauseCase_ = 6;
         return this;
@@ -17305,7 +16863,6 @@ public final class TestDefinition {
         }
         clauseCase_ = 6;
         onChanged();
-        ;
         return startAtBuilder_;
       }
 
@@ -17391,8 +16948,9 @@ public final class TestDefinition {
         } else {
           if (clauseCase_ == 7) {
             startAfterBuilder_.mergeFrom(value);
+          } else {
+            startAfterBuilder_.setMessage(value);
           }
-          startAfterBuilder_.setMessage(value);
         }
         clauseCase_ = 7;
         return this;
@@ -17457,7 +17015,6 @@ public final class TestDefinition {
         }
         clauseCase_ = 7;
         onChanged();
-        ;
         return startAfterBuilder_;
       }
 
@@ -17543,8 +17100,9 @@ public final class TestDefinition {
         } else {
           if (clauseCase_ == 8) {
             endAtBuilder_.mergeFrom(value);
+          } else {
+            endAtBuilder_.setMessage(value);
           }
-          endAtBuilder_.setMessage(value);
         }
         clauseCase_ = 8;
         return this;
@@ -17609,7 +17167,6 @@ public final class TestDefinition {
         }
         clauseCase_ = 8;
         onChanged();
-        ;
         return endAtBuilder_;
       }
 
@@ -17695,8 +17252,9 @@ public final class TestDefinition {
         } else {
           if (clauseCase_ == 9) {
             endBeforeBuilder_.mergeFrom(value);
+          } else {
+            endBeforeBuilder_.setMessage(value);
           }
-          endBeforeBuilder_.setMessage(value);
         }
         clauseCase_ = 9;
         return this;
@@ -17761,7 +17319,6 @@ public final class TestDefinition {
         }
         clauseCase_ = 9;
         onChanged();
-        ;
         return endBeforeBuilder_;
       }
 
@@ -17800,7 +17357,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Clause(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -17866,61 +17435,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private Select(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  fields_ =
-                      new java.util.ArrayList<
-                          com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                fields_.add(
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.parser(),
-                        extensionRegistry));
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          fields_ = java.util.Collections.unmodifiableList(fields_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_Select_descriptor;
@@ -17937,6 +17451,8 @@ public final class TestDefinition {
     }
 
     public static final int FIELDS_FIELD_NUMBER = 1;
+
+    @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         fields_;
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
@@ -17986,7 +17502,7 @@ public final class TestDefinition {
       for (int i = 0; i < fields_.size(); i++) {
         output.writeMessage(1, fields_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -17998,7 +17514,7 @@ public final class TestDefinition {
       for (int i = 0; i < fields_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, fields_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -18015,7 +17531,7 @@ public final class TestDefinition {
           (com.google.cloud.conformance.firestore.v1.TestDefinition.Select) obj;
 
       if (!getFieldsList().equals(other.getFieldsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -18030,7 +17546,7 @@ public final class TestDefinition {
         hash = (37 * hash) + FIELDS_FIELD_NUMBER;
         hash = (53 * hash) + getFieldsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -18156,30 +17672,23 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.Select.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-          getFieldsFieldBuilder();
-        }
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (fieldsBuilder_ == null) {
           fields_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          fields_ = null;
           fieldsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -18208,7 +17717,16 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Select buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.Select result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.Select(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) {
+          buildPartial0(result);
+        }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.Select result) {
         if (fieldsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             fields_ = java.util.Collections.unmodifiableList(fields_);
@@ -18218,8 +17736,11 @@ public final class TestDefinition {
         } else {
           result.fields_ = fieldsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.Select result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -18299,7 +17820,7 @@ public final class TestDefinition {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -18314,19 +17835,46 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.Select parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath m =
+                      input.readMessage(
+                          com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath
+                              .parser(),
+                          extensionRegistry);
+                  if (fieldsBuilder_ == null) {
+                    ensureFieldsIsMutable();
+                    fields_.add(m);
+                  } else {
+                    fieldsBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 10
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.Select)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -18598,7 +18146,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Select(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -18691,75 +18251,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private Where(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
-                    subBuilder = null;
-                if (path_ != null) {
-                  subBuilder = path_.toBuilder();
-                }
-                path_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(path_);
-                  path_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                op_ = s;
-                break;
-              }
-            case 26:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                jsonValue_ = s;
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_Where_descriptor;
@@ -18801,11 +18292,15 @@ public final class TestDefinition {
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
         getPathOrBuilder() {
-      return getPath();
+      return path_ == null
+          ? com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.getDefaultInstance()
+          : path_;
     }
 
     public static final int OP_FIELD_NUMBER = 2;
-    private volatile java.lang.Object op_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object op_ = "";
     /**
      * <code>string op = 2;</code>
      *
@@ -18842,7 +18337,9 @@ public final class TestDefinition {
     }
 
     public static final int JSON_VALUE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object jsonValue_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object jsonValue_ = "";
     /**
      * <code>string json_value = 3;</code>
      *
@@ -18901,7 +18398,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonValue_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, jsonValue_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -18919,7 +18416,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonValue_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, jsonValue_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -18941,7 +18438,7 @@ public final class TestDefinition {
       }
       if (!getOp().equals(other.getOp())) return false;
       if (!getJsonValue().equals(other.getJsonValue())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -18960,7 +18457,7 @@ public final class TestDefinition {
       hash = (53 * hash) + getOp().hashCode();
       hash = (37 * hash) + JSON_VALUE_FIELD_NUMBER;
       hash = (53 * hash) + getJsonValue().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -19084,32 +18581,23 @@ public final class TestDefinition {
       }
 
       // Construct using com.google.cloud.conformance.firestore.v1.TestDefinition.Where.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (pathBuilder_ == null) {
-          path_ = null;
-        } else {
-          path_ = null;
+        bitField0_ = 0;
+        path_ = null;
+        if (pathBuilder_ != null) {
+          pathBuilder_.dispose();
           pathBuilder_ = null;
         }
         op_ = "";
-
         jsonValue_ = "";
-
         return this;
       }
 
@@ -19138,15 +18626,25 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Where buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.Where result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.Where(this);
-        if (pathBuilder_ == null) {
-          result.path_ = path_;
-        } else {
-          result.path_ = pathBuilder_.build();
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
-        result.op_ = op_;
-        result.jsonValue_ = jsonValue_;
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.Where result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.path_ = pathBuilder_ == null ? path_ : pathBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.op_ = op_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.jsonValue_ = jsonValue_;
+        }
       }
 
       @java.lang.Override
@@ -19204,13 +18702,15 @@ public final class TestDefinition {
         }
         if (!other.getOp().isEmpty()) {
           op_ = other.op_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getJsonValue().isEmpty()) {
           jsonValue_ = other.jsonValue_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -19225,21 +18725,53 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.Where parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  input.readMessage(getPathFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  op_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+              case 26:
+                {
+                  jsonValue_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.Where)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+
+      private int bitField0_;
 
       private com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath path_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -19253,7 +18785,7 @@ public final class TestDefinition {
        * @return Whether the path field is set.
        */
       public boolean hasPath() {
-        return pathBuilder_ != null || path_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
@@ -19278,11 +18810,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           path_ = value;
-          onChanged();
         } else {
           pathBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
@@ -19291,48 +18823,48 @@ public final class TestDefinition {
               builderForValue) {
         if (pathBuilder_ == null) {
           path_ = builderForValue.build();
-          onChanged();
         } else {
           pathBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder mergePath(
           com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath value) {
         if (pathBuilder_ == null) {
-          if (path_ != null) {
-            path_ =
-                com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.newBuilder(path_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000001) != 0)
+              && path_ != null
+              && path_
+                  != com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath
+                      .getDefaultInstance()) {
+            getPathBuilder().mergeFrom(value);
           } else {
             path_ = value;
           }
-          onChanged();
         } else {
           pathBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder clearPath() {
-        if (pathBuilder_ == null) {
-          path_ = null;
-          onChanged();
-        } else {
-          path_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        path_ = null;
+        if (pathBuilder_ != null) {
+          pathBuilder_.dispose();
           pathBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
           getPathBuilder() {
-
+        bitField0_ |= 0x00000001;
         onChanged();
         return getPathFieldBuilder().getBuilder();
       }
@@ -19409,8 +18941,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         op_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -19420,8 +18952,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearOp() {
-
         op_ = getDefaultInstance().getOp();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -19436,8 +18968,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         op_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -19485,8 +19017,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         jsonValue_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -19496,8 +19028,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearJsonValue() {
-
         jsonValue_ = getDefaultInstance().getJsonValue();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -19512,8 +19044,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         jsonValue_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -19553,7 +19085,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Where(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -19644,68 +19188,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private OrderBy(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
-                    subBuilder = null;
-                if (path_ != null) {
-                  subBuilder = path_.toBuilder();
-                }
-                path_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(path_);
-                  path_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                direction_ = s;
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_OrderBy_descriptor;
@@ -19747,11 +19229,15 @@ public final class TestDefinition {
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
         getPathOrBuilder() {
-      return getPath();
+      return path_ == null
+          ? com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.getDefaultInstance()
+          : path_;
     }
 
     public static final int DIRECTION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object direction_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object direction_ = "";
     /**
      *
      *
@@ -19819,7 +19305,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(direction_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, direction_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -19834,7 +19320,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(direction_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, direction_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -19855,7 +19341,7 @@ public final class TestDefinition {
         if (!getPath().equals(other.getPath())) return false;
       }
       if (!getDirection().equals(other.getDirection())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -19872,7 +19358,7 @@ public final class TestDefinition {
       }
       hash = (37 * hash) + DIRECTION_FIELD_NUMBER;
       hash = (53 * hash) + getDirection().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -19998,30 +19484,22 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (pathBuilder_ == null) {
-          path_ = null;
-        } else {
-          path_ = null;
+        bitField0_ = 0;
+        path_ = null;
+        if (pathBuilder_ != null) {
+          pathBuilder_.dispose();
           pathBuilder_ = null;
         }
         direction_ = "";
-
         return this;
       }
 
@@ -20051,14 +19529,22 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy(this);
-        if (pathBuilder_ == null) {
-          result.path_ = path_;
-        } else {
-          result.path_ = pathBuilder_.build();
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
-        result.direction_ = direction_;
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.path_ = pathBuilder_ == null ? path_ : pathBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.direction_ = direction_;
+        }
       }
 
       @java.lang.Override
@@ -20117,9 +19603,10 @@ public final class TestDefinition {
         }
         if (!other.getDirection().isEmpty()) {
           direction_ = other.direction_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -20134,21 +19621,47 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  input.readMessage(getPathFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  direction_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+
+      private int bitField0_;
 
       private com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath path_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -20162,7 +19675,7 @@ public final class TestDefinition {
        * @return Whether the path field is set.
        */
       public boolean hasPath() {
-        return pathBuilder_ != null || path_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
@@ -20187,11 +19700,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           path_ = value;
-          onChanged();
         } else {
           pathBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
@@ -20200,48 +19713,48 @@ public final class TestDefinition {
               builderForValue) {
         if (pathBuilder_ == null) {
           path_ = builderForValue.build();
-          onChanged();
         } else {
           pathBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder mergePath(
           com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath value) {
         if (pathBuilder_ == null) {
-          if (path_ != null) {
-            path_ =
-                com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.newBuilder(path_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000001) != 0)
+              && path_ != null
+              && path_
+                  != com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath
+                      .getDefaultInstance()) {
+            getPathBuilder().mergeFrom(value);
           } else {
             path_ = value;
           }
-          onChanged();
         } else {
           pathBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder clearPath() {
-        if (pathBuilder_ == null) {
-          path_ = null;
-          onChanged();
-        } else {
-          path_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        path_ = null;
+        if (pathBuilder_ != null) {
+          pathBuilder_.dispose();
           pathBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
           getPathBuilder() {
-
+        bitField0_ |= 0x00000001;
         onChanged();
         return getPathFieldBuilder().getBuilder();
       }
@@ -20336,8 +19849,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         direction_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -20353,8 +19866,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearDirection() {
-
         direction_ = getDefaultInstance().getDirection();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -20375,8 +19888,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         direction_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -20416,7 +19929,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new OrderBy(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -20530,76 +20055,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private Cursor(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot.Builder
-                    subBuilder = null;
-                if (docSnapshot_ != null) {
-                  subBuilder = docSnapshot_.toBuilder();
-                }
-                docSnapshot_ =
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot
-                            .parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(docSnapshot_);
-                  docSnapshot_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  jsonValues_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                jsonValues_.add(s);
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          jsonValues_ = jsonValues_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_Cursor_descriptor;
@@ -20662,10 +20117,15 @@ public final class TestDefinition {
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshotOrBuilder
         getDocSnapshotOrBuilder() {
-      return getDocSnapshot();
+      return docSnapshot_ == null
+          ? com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot
+              .getDefaultInstance()
+          : docSnapshot_;
     }
 
     public static final int JSON_VALUES_FIELD_NUMBER = 2;
+
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList jsonValues_;
     /**
      * <code>repeated string json_values = 2;</code>
@@ -20722,7 +20182,7 @@ public final class TestDefinition {
       for (int i = 0; i < jsonValues_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jsonValues_.getRaw(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -20742,7 +20202,7 @@ public final class TestDefinition {
         size += dataSize;
         size += 1 * getJsonValuesList().size();
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -20763,7 +20223,7 @@ public final class TestDefinition {
         if (!getDocSnapshot().equals(other.getDocSnapshot())) return false;
       }
       if (!getJsonValuesList().equals(other.getJsonValuesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -20782,7 +20242,7 @@ public final class TestDefinition {
         hash = (37 * hash) + JSON_VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getJsonValuesList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -20908,30 +20368,23 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (docSnapshotBuilder_ == null) {
-          docSnapshot_ = null;
-        } else {
-          docSnapshot_ = null;
+        bitField0_ = 0;
+        docSnapshot_ = null;
+        if (docSnapshotBuilder_ != null) {
+          docSnapshotBuilder_.dispose();
           docSnapshotBuilder_ = null;
         }
         jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -20960,19 +20413,30 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor(this);
-        int from_bitField0_ = bitField0_;
-        if (docSnapshotBuilder_ == null) {
-          result.docSnapshot_ = docSnapshot_;
-        } else {
-          result.docSnapshot_ = docSnapshotBuilder_.build();
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          jsonValues_ = jsonValues_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.jsonValues_ = jsonValues_;
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          jsonValues_ = jsonValues_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.jsonValues_ = jsonValues_;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.docSnapshot_ =
+              docSnapshotBuilder_ == null ? docSnapshot_ : docSnapshotBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -21031,14 +20495,14 @@ public final class TestDefinition {
         if (!other.jsonValues_.isEmpty()) {
           if (jsonValues_.isEmpty()) {
             jsonValues_ = other.jsonValues_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureJsonValuesIsMutable();
             jsonValues_.addAll(other.jsonValues_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -21053,19 +20517,44 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  input.readMessage(getDocSnapshotFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureJsonValuesIsMutable();
+                  jsonValues_.add(s);
+                  break;
+                } // case 18
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -21089,7 +20578,7 @@ public final class TestDefinition {
        * @return Whether the docSnapshot field is set.
        */
       public boolean hasDocSnapshot() {
-        return docSnapshotBuilder_ != null || docSnapshot_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        *
@@ -21128,11 +20617,11 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           docSnapshot_ = value;
-          onChanged();
         } else {
           docSnapshotBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -21149,11 +20638,11 @@ public final class TestDefinition {
               builderForValue) {
         if (docSnapshotBuilder_ == null) {
           docSnapshot_ = builderForValue.build();
-          onChanged();
         } else {
           docSnapshotBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -21168,20 +20657,20 @@ public final class TestDefinition {
       public Builder mergeDocSnapshot(
           com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot value) {
         if (docSnapshotBuilder_ == null) {
-          if (docSnapshot_ != null) {
-            docSnapshot_ =
-                com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot.newBuilder(
-                        docSnapshot_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (((bitField0_ & 0x00000001) != 0)
+              && docSnapshot_ != null
+              && docSnapshot_
+                  != com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot
+                      .getDefaultInstance()) {
+            getDocSnapshotBuilder().mergeFrom(value);
           } else {
             docSnapshot_ = value;
           }
-          onChanged();
         } else {
           docSnapshotBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -21194,14 +20683,13 @@ public final class TestDefinition {
        * <code>.google.cloud.conformance.firestore.v1.DocSnapshot doc_snapshot = 1;</code>
        */
       public Builder clearDocSnapshot() {
-        if (docSnapshotBuilder_ == null) {
-          docSnapshot_ = null;
-          onChanged();
-        } else {
-          docSnapshot_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        docSnapshot_ = null;
+        if (docSnapshotBuilder_ != null) {
+          docSnapshotBuilder_.dispose();
           docSnapshotBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -21215,7 +20703,7 @@ public final class TestDefinition {
        */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot.Builder
           getDocSnapshotBuilder() {
-
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDocSnapshotFieldBuilder().getBuilder();
       }
@@ -21269,9 +20757,9 @@ public final class TestDefinition {
           com.google.protobuf.LazyStringArrayList.EMPTY;
 
       private void ensureJsonValuesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           jsonValues_ = new com.google.protobuf.LazyStringArrayList(jsonValues_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
         }
       }
       /**
@@ -21358,7 +20846,7 @@ public final class TestDefinition {
        */
       public Builder clearJsonValues() {
         jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -21414,7 +20902,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Cursor(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -21492,57 +20992,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private DocSnapshot(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                path_ = s;
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                jsonData_ = s;
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_DocSnapshot_descriptor;
@@ -21559,7 +21008,9 @@ public final class TestDefinition {
     }
 
     public static final int PATH_FIELD_NUMBER = 1;
-    private volatile java.lang.Object path_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object path_ = "";
     /**
      * <code>string path = 1;</code>
      *
@@ -21596,7 +21047,9 @@ public final class TestDefinition {
     }
 
     public static final int JSON_DATA_FIELD_NUMBER = 2;
-    private volatile java.lang.Object jsonData_;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object jsonData_ = "";
     /**
      * <code>string json_data = 2;</code>
      *
@@ -21652,7 +21105,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonData_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jsonData_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -21667,7 +21120,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonData_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, jsonData_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -21685,7 +21138,7 @@ public final class TestDefinition {
 
       if (!getPath().equals(other.getPath())) return false;
       if (!getJsonData().equals(other.getJsonData())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -21700,7 +21153,7 @@ public final class TestDefinition {
       hash = (53 * hash) + getPath().hashCode();
       hash = (37 * hash) + JSON_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getJsonData().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -21826,26 +21279,18 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         path_ = "";
-
         jsonData_ = "";
-
         return this;
       }
 
@@ -21876,10 +21321,22 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot(this);
-        result.path_ = path_;
-        result.jsonData_ = jsonData_;
+        if (bitField0_ != 0) {
+          buildPartial0(result);
+        }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.path_ = path_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.jsonData_ = jsonData_;
+        }
       }
 
       @java.lang.Override
@@ -21935,13 +21392,15 @@ public final class TestDefinition {
                 .getDefaultInstance()) return this;
         if (!other.getPath().isEmpty()) {
           path_ = other.path_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getJsonData().isEmpty()) {
           jsonData_ = other.jsonData_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -21956,21 +21415,47 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  path_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  jsonData_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+
+      private int bitField0_;
 
       private java.lang.Object path_ = "";
       /**
@@ -22015,8 +21500,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         path_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22026,8 +21511,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearPath() {
-
         path_ = getDefaultInstance().getPath();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -22042,8 +21527,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         path_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22091,8 +21576,8 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
         jsonData_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -22102,8 +21587,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearJsonData() {
-
         jsonData_ = getDefaultInstance().getJsonData();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -22118,8 +21603,8 @@ public final class TestDefinition {
           throw new NullPointerException();
         }
         checkByteStringIsUtf8(value);
-
         jsonData_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -22159,7 +21644,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new DocSnapshot(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -22237,57 +21734,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private FieldPath(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  field_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                field_.add(s);
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          field_ = field_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_FieldPath_descriptor;
@@ -22304,6 +21750,8 @@ public final class TestDefinition {
     }
 
     public static final int FIELD_FIELD_NUMBER = 1;
+
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList field_;
     /**
      * <code>repeated string field = 1;</code>
@@ -22357,7 +21805,7 @@ public final class TestDefinition {
       for (int i = 0; i < field_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, field_.getRaw(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -22374,7 +21822,7 @@ public final class TestDefinition {
         size += dataSize;
         size += 1 * getFieldList().size();
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -22391,7 +21839,7 @@ public final class TestDefinition {
           (com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath) obj;
 
       if (!getFieldList().equals(other.getFieldList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -22406,7 +21854,7 @@ public final class TestDefinition {
         hash = (37 * hash) + FIELD_FIELD_NUMBER;
         hash = (53 * hash) + getFieldList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -22532,22 +21980,16 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         field_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -22579,14 +22021,26 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) {
+          buildPartial0(result);
+        }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           field_ = field_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.field_ = field_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -22650,7 +22104,7 @@ public final class TestDefinition {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -22665,19 +22119,38 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureFieldIsMutable();
+                  field_.add(s);
+                  break;
+                } // case 10
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -22832,7 +22305,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new FieldPath(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -22934,80 +22419,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private ListenTest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  responses_ = new java.util.ArrayList<com.google.firestore.v1.ListenResponse>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                responses_.add(
-                    input.readMessage(
-                        com.google.firestore.v1.ListenResponse.parser(), extensionRegistry));
-                break;
-              }
-            case 18:
-              {
-                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                  snapshots_ =
-                      new java.util.ArrayList<
-                          com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot>();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                snapshots_.add(
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot.parser(),
-                        extensionRegistry));
-                break;
-              }
-            case 24:
-              {
-                isError_ = input.readBool();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          responses_ = java.util.Collections.unmodifiableList(responses_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          snapshots_ = java.util.Collections.unmodifiableList(snapshots_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_ListenTest_descriptor;
@@ -23024,6 +22435,8 @@ public final class TestDefinition {
     }
 
     public static final int RESPONSES_FIELD_NUMBER = 1;
+
+    @SuppressWarnings("serial")
     private java.util.List<com.google.firestore.v1.ListenResponse> responses_;
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
     @java.lang.Override
@@ -23053,6 +22466,8 @@ public final class TestDefinition {
     }
 
     public static final int SNAPSHOTS_FIELD_NUMBER = 2;
+
+    @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot>
         snapshots_;
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
@@ -23087,7 +22502,7 @@ public final class TestDefinition {
     }
 
     public static final int IS_ERROR_FIELD_NUMBER = 3;
-    private boolean isError_;
+    private boolean isError_ = false;
     /**
      * <code>bool is_error = 3;</code>
      *
@@ -23121,7 +22536,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         output.writeBool(3, isError_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -23139,7 +22554,7 @@ public final class TestDefinition {
       if (isError_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(3, isError_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -23158,7 +22573,7 @@ public final class TestDefinition {
       if (!getResponsesList().equals(other.getResponsesList())) return false;
       if (!getSnapshotsList().equals(other.getSnapshotsList())) return false;
       if (getIsError() != other.getIsError()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -23179,7 +22594,7 @@ public final class TestDefinition {
       }
       hash = (37 * hash) + IS_ERROR_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getIsError());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -23321,39 +22736,31 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-          getResponsesFieldBuilder();
-          getSnapshotsFieldBuilder();
-        }
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (responsesBuilder_ == null) {
           responses_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          responses_ = null;
           responsesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (snapshotsBuilder_ == null) {
           snapshots_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          snapshots_ = null;
           snapshotsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         isError_ = false;
-
         return this;
       }
 
@@ -23383,7 +22790,16 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) {
+          buildPartial0(result);
+        }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest result) {
         if (responsesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             responses_ = java.util.Collections.unmodifiableList(responses_);
@@ -23402,9 +22818,14 @@ public final class TestDefinition {
         } else {
           result.snapshots_ = snapshotsBuilder_.build();
         }
-        result.isError_ = isError_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isError_ = isError_;
+        }
       }
 
       @java.lang.Override
@@ -23515,7 +22936,7 @@ public final class TestDefinition {
         if (other.getIsError() != false) {
           setIsError(other.getIsError());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -23530,19 +22951,65 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  com.google.firestore.v1.ListenResponse m =
+                      input.readMessage(
+                          com.google.firestore.v1.ListenResponse.parser(), extensionRegistry);
+                  if (responsesBuilder_ == null) {
+                    ensureResponsesIsMutable();
+                    responses_.add(m);
+                  } else {
+                    responsesBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 10
+              case 18:
+                {
+                  com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot m =
+                      input.readMessage(
+                          com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot
+                              .parser(),
+                          extensionRegistry);
+                  if (snapshotsBuilder_ == null) {
+                    ensureSnapshotsIsMutable();
+                    snapshots_.add(m);
+                  } else {
+                    snapshotsBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 18
+              case 24:
+                {
+                  isError_ = input.readBool();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -24003,6 +23470,7 @@ public final class TestDefinition {
       public Builder setIsError(boolean value) {
 
         isError_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -24012,7 +23480,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearIsError() {
-
+        bitField0_ = (bitField0_ & ~0x00000004);
         isError_ = false;
         onChanged();
         return this;
@@ -24053,7 +23521,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new ListenTest(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -24146,90 +23626,6 @@ public final class TestDefinition {
       return this.unknownFields;
     }
 
-    private Snapshot(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  docs_ = new java.util.ArrayList<com.google.firestore.v1.Document>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                docs_.add(
-                    input.readMessage(
-                        com.google.firestore.v1.Document.parser(), extensionRegistry));
-                break;
-              }
-            case 18:
-              {
-                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                  changes_ =
-                      new java.util.ArrayList<
-                          com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange>();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                changes_.add(
-                    input.readMessage(
-                        com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.parser(),
-                        extensionRegistry));
-                break;
-              }
-            case 26:
-              {
-                com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (readTime_ != null) {
-                  subBuilder = readTime_.toBuilder();
-                }
-                readTime_ =
-                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(readTime_);
-                  readTime_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          docs_ = java.util.Collections.unmodifiableList(docs_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          changes_ = java.util.Collections.unmodifiableList(changes_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.conformance.firestore.v1.TestDefinition
           .internal_static_google_cloud_conformance_firestore_v1_Snapshot_descriptor;
@@ -24246,6 +23642,8 @@ public final class TestDefinition {
     }
 
     public static final int DOCS_FIELD_NUMBER = 1;
+
+    @SuppressWarnings("serial")
     private java.util.List<com.google.firestore.v1.Document> docs_;
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
     @java.lang.Override
@@ -24275,6 +23673,8 @@ public final class TestDefinition {
     }
 
     public static final int CHANGES_FIELD_NUMBER = 2;
+
+    @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange>
         changes_;
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
@@ -24331,7 +23731,7 @@ public final class TestDefinition {
     /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getReadTimeOrBuilder() {
-      return getReadTime();
+      return readTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : readTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -24357,7 +23757,7 @@ public final class TestDefinition {
       if (readTime_ != null) {
         output.writeMessage(3, getReadTime());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -24375,7 +23775,7 @@ public final class TestDefinition {
       if (readTime_ != null) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getReadTime());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -24397,7 +23797,7 @@ public final class TestDefinition {
       if (hasReadTime()) {
         if (!getReadTime().equals(other.getReadTime())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -24420,7 +23820,7 @@ public final class TestDefinition {
         hash = (37 * hash) + READ_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getReadTime().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -24546,41 +23946,33 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-          getDocsFieldBuilder();
-          getChangesFieldBuilder();
-        }
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (docsBuilder_ == null) {
           docs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          docs_ = null;
           docsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (changesBuilder_ == null) {
           changes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          changes_ = null;
           changesBuilder_.clear();
         }
-        if (readTimeBuilder_ == null) {
-          readTime_ = null;
-        } else {
-          readTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        readTime_ = null;
+        if (readTimeBuilder_ != null) {
+          readTimeBuilder_.dispose();
           readTimeBuilder_ = null;
         }
         return this;
@@ -24612,7 +24004,16 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) {
+          buildPartial0(result);
+        }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot result) {
         if (docsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             docs_ = java.util.Collections.unmodifiableList(docs_);
@@ -24631,13 +24032,14 @@ public final class TestDefinition {
         } else {
           result.changes_ = changesBuilder_.build();
         }
-        if (readTimeBuilder_ == null) {
-          result.readTime_ = readTime_;
-        } else {
-          result.readTime_ = readTimeBuilder_.build();
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.readTime_ = readTimeBuilder_ == null ? readTime_ : readTimeBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
       @java.lang.Override
@@ -24748,7 +24150,7 @@ public final class TestDefinition {
         if (other.hasReadTime()) {
           mergeReadTime(other.getReadTime());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -24763,19 +24165,65 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  com.google.firestore.v1.Document m =
+                      input.readMessage(
+                          com.google.firestore.v1.Document.parser(), extensionRegistry);
+                  if (docsBuilder_ == null) {
+                    ensureDocsIsMutable();
+                    docs_.add(m);
+                  } else {
+                    docsBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 10
+              case 18:
+                {
+                  com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange m =
+                      input.readMessage(
+                          com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange
+                              .parser(),
+                          extensionRegistry);
+                  if (changesBuilder_ == null) {
+                    ensureChangesIsMutable();
+                    changes_.add(m);
+                  } else {
+                    changesBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 18
+              case 26:
+                {
+                  input.readMessage(getReadTimeFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -25226,7 +24674,7 @@ public final class TestDefinition {
        * @return Whether the readTime field is set.
        */
       public boolean hasReadTime() {
-        return readTimeBuilder_ != null || readTime_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp read_time = 3;</code>
@@ -25247,55 +24695,55 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           readTime_ = value;
-          onChanged();
         } else {
           readTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
       public Builder setReadTime(com.google.protobuf.Timestamp.Builder builderForValue) {
         if (readTimeBuilder_ == null) {
           readTime_ = builderForValue.build();
-          onChanged();
         } else {
           readTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
       public Builder mergeReadTime(com.google.protobuf.Timestamp value) {
         if (readTimeBuilder_ == null) {
-          if (readTime_ != null) {
-            readTime_ =
-                com.google.protobuf.Timestamp.newBuilder(readTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0)
+              && readTime_ != null
+              && readTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getReadTimeBuilder().mergeFrom(value);
           } else {
             readTime_ = value;
           }
-          onChanged();
         } else {
           readTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
       public Builder clearReadTime() {
-        if (readTimeBuilder_ == null) {
-          readTime_ = null;
-          onChanged();
-        } else {
-          readTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        readTime_ = null;
+        if (readTimeBuilder_ != null) {
+          readTimeBuilder_.dispose();
           readTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
       public com.google.protobuf.Timestamp.Builder getReadTimeBuilder() {
-
+        bitField0_ |= 0x00000004;
         onChanged();
         return getReadTimeFieldBuilder().getBuilder();
       }
@@ -25360,7 +24808,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Snapshot(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -25451,75 +24911,6 @@ public final class TestDefinition {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
-    }
-
-    private DocChange(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8:
-              {
-                int rawValue = input.readEnum();
-
-                kind_ = rawValue;
-                break;
-              }
-            case 18:
-              {
-                com.google.firestore.v1.Document.Builder subBuilder = null;
-                if (doc_ != null) {
-                  subBuilder = doc_.toBuilder();
-                }
-                doc_ =
-                    input.readMessage(com.google.firestore.v1.Document.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(doc_);
-                  doc_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 24:
-              {
-                oldIndex_ = input.readInt32();
-                break;
-              }
-            case 32:
-              {
-                newIndex_ = input.readInt32();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -25647,7 +25038,7 @@ public final class TestDefinition {
     }
 
     public static final int KIND_FIELD_NUMBER = 1;
-    private int kind_;
+    private int kind_ = 0;
     /**
      * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
      *
@@ -25664,9 +25055,8 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind getKind() {
-      @SuppressWarnings("deprecation")
       com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind result =
-          com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind.valueOf(kind_);
+          com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind.forNumber(kind_);
       return result == null
           ? com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind.UNRECOGNIZED
           : result;
@@ -25695,11 +25085,11 @@ public final class TestDefinition {
     /** <code>.google.firestore.v1.Document doc = 2;</code> */
     @java.lang.Override
     public com.google.firestore.v1.DocumentOrBuilder getDocOrBuilder() {
-      return getDoc();
+      return doc_ == null ? com.google.firestore.v1.Document.getDefaultInstance() : doc_;
     }
 
     public static final int OLD_INDEX_FIELD_NUMBER = 3;
-    private int oldIndex_;
+    private int oldIndex_ = 0;
     /**
      * <code>int32 old_index = 3;</code>
      *
@@ -25711,7 +25101,7 @@ public final class TestDefinition {
     }
 
     public static final int NEW_INDEX_FIELD_NUMBER = 4;
-    private int newIndex_;
+    private int newIndex_ = 0;
     /**
      * <code>int32 new_index = 4;</code>
      *
@@ -25751,7 +25141,7 @@ public final class TestDefinition {
       if (newIndex_ != 0) {
         output.writeInt32(4, newIndex_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -25775,7 +25165,7 @@ public final class TestDefinition {
       if (newIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream.computeInt32Size(4, newIndex_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -25798,7 +25188,7 @@ public final class TestDefinition {
       }
       if (getOldIndex() != other.getOldIndex()) return false;
       if (getNewIndex() != other.getNewIndex()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -25819,7 +25209,7 @@ public final class TestDefinition {
       hash = (53 * hash) + getOldIndex();
       hash = (37 * hash) + NEW_INDEX_FIELD_NUMBER;
       hash = (53 * hash) + getNewIndex();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -25945,34 +25335,24 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         kind_ = 0;
-
-        if (docBuilder_ == null) {
-          doc_ = null;
-        } else {
-          doc_ = null;
+        doc_ = null;
+        if (docBuilder_ != null) {
+          docBuilder_.dispose();
           docBuilder_ = null;
         }
         oldIndex_ = 0;
-
         newIndex_ = 0;
-
         return this;
       }
 
@@ -26002,16 +25382,28 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange(this);
-        result.kind_ = kind_;
-        if (docBuilder_ == null) {
-          result.doc_ = doc_;
-        } else {
-          result.doc_ = docBuilder_.build();
+        if (bitField0_ != 0) {
+          buildPartial0(result);
         }
-        result.oldIndex_ = oldIndex_;
-        result.newIndex_ = newIndex_;
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(
+          com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.kind_ = kind_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.doc_ = docBuilder_ == null ? doc_ : docBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.oldIndex_ = oldIndex_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.newIndex_ = newIndex_;
+        }
       }
 
       @java.lang.Override
@@ -26077,7 +25469,7 @@ public final class TestDefinition {
         if (other.getNewIndex() != 0) {
           setNewIndex(other.getNewIndex());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -26092,21 +25484,59 @@ public final class TestDefinition {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8:
+                {
+                  kind_ = input.readEnum();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+              case 18:
+                {
+                  input.readMessage(getDocFieldBuilder().getBuilder(), extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+              case 24:
+                {
+                  oldIndex_ = input.readInt32();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+              case 32:
+                {
+                  newIndex_ = input.readInt32();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+
+      private int bitField0_;
 
       private int kind_ = 0;
       /**
@@ -26125,8 +25555,8 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder setKindValue(int value) {
-
         kind_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -26137,9 +25567,9 @@ public final class TestDefinition {
        */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind getKind() {
-        @SuppressWarnings("deprecation")
         com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind result =
-            com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind.valueOf(kind_);
+            com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind.forNumber(
+                kind_);
         return result == null
             ? com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind.UNRECOGNIZED
             : result;
@@ -26155,7 +25585,7 @@ public final class TestDefinition {
         if (value == null) {
           throw new NullPointerException();
         }
-
+        bitField0_ |= 0x00000001;
         kind_ = value.getNumber();
         onChanged();
         return this;
@@ -26166,7 +25596,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearKind() {
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         kind_ = 0;
         onChanged();
         return this;
@@ -26184,7 +25614,7 @@ public final class TestDefinition {
        * @return Whether the doc field is set.
        */
       public boolean hasDoc() {
-        return docBuilder_ != null || doc_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.google.firestore.v1.Document doc = 2;</code>
@@ -26205,55 +25635,55 @@ public final class TestDefinition {
             throw new NullPointerException();
           }
           doc_ = value;
-          onChanged();
         } else {
           docBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.Document doc = 2;</code> */
       public Builder setDoc(com.google.firestore.v1.Document.Builder builderForValue) {
         if (docBuilder_ == null) {
           doc_ = builderForValue.build();
-          onChanged();
         } else {
           docBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.Document doc = 2;</code> */
       public Builder mergeDoc(com.google.firestore.v1.Document value) {
         if (docBuilder_ == null) {
-          if (doc_ != null) {
-            doc_ =
-                com.google.firestore.v1.Document.newBuilder(doc_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0)
+              && doc_ != null
+              && doc_ != com.google.firestore.v1.Document.getDefaultInstance()) {
+            getDocBuilder().mergeFrom(value);
           } else {
             doc_ = value;
           }
-          onChanged();
         } else {
           docBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.Document doc = 2;</code> */
       public Builder clearDoc() {
-        if (docBuilder_ == null) {
-          doc_ = null;
-          onChanged();
-        } else {
-          doc_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        doc_ = null;
+        if (docBuilder_ != null) {
+          docBuilder_.dispose();
           docBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /** <code>.google.firestore.v1.Document doc = 2;</code> */
       public com.google.firestore.v1.Document.Builder getDocBuilder() {
-
+        bitField0_ |= 0x00000002;
         onChanged();
         return getDocFieldBuilder().getBuilder();
       }
@@ -26302,6 +25732,7 @@ public final class TestDefinition {
       public Builder setOldIndex(int value) {
 
         oldIndex_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -26311,7 +25742,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearOldIndex() {
-
+        bitField0_ = (bitField0_ & ~0x00000004);
         oldIndex_ = 0;
         onChanged();
         return this;
@@ -26336,6 +25767,7 @@ public final class TestDefinition {
       public Builder setNewIndex(int value) {
 
         newIndex_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -26345,7 +25777,7 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearNewIndex() {
-
+        bitField0_ = (bitField0_ & ~0x00000008);
         newIndex_ = 0;
         onChanged();
         return this;
@@ -26386,7 +25818,19 @@ public final class TestDefinition {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new DocChange(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
