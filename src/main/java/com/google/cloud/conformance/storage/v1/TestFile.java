@@ -32,6 +32,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
   private TestFile() {
     signingV4Tests_ = java.util.Collections.emptyList();
     postPolicyV4Tests_ = java.util.Collections.emptyList();
+    retryTests_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -152,6 +153,88 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
     return postPolicyV4Tests_.get(index);
   }
 
+  public static final int RETRY_TESTS_FIELD_NUMBER = 3;
+
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.cloud.conformance.storage.v1.RetryTest> retryTests_;
+  /**
+   *
+   *
+   * <pre>
+   * Note: type is RetryTest rather than RetryTests.
+   * The data file can be loaded as either a TestFile or
+   * a RetryTests.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.cloud.conformance.storage.v1.RetryTest> getRetryTestsList() {
+    return retryTests_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Note: type is RetryTest rather than RetryTests.
+   * The data file can be loaded as either a TestFile or
+   * a RetryTests.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.cloud.conformance.storage.v1.RetryTestOrBuilder>
+      getRetryTestsOrBuilderList() {
+    return retryTests_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Note: type is RetryTest rather than RetryTests.
+   * The data file can be loaded as either a TestFile or
+   * a RetryTests.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+   */
+  @java.lang.Override
+  public int getRetryTestsCount() {
+    return retryTests_.size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Note: type is RetryTest rather than RetryTests.
+   * The data file can be loaded as either a TestFile or
+   * a RetryTests.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+   */
+  @java.lang.Override
+  public com.google.cloud.conformance.storage.v1.RetryTest getRetryTests(int index) {
+    return retryTests_.get(index);
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Note: type is RetryTest rather than RetryTests.
+   * The data file can be loaded as either a TestFile or
+   * a RetryTests.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+   */
+  @java.lang.Override
+  public com.google.cloud.conformance.storage.v1.RetryTestOrBuilder getRetryTestsOrBuilder(
+      int index) {
+    return retryTests_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -172,6 +255,9 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
     for (int i = 0; i < postPolicyV4Tests_.size(); i++) {
       output.writeMessage(2, postPolicyV4Tests_.get(i));
     }
+    for (int i = 0; i < retryTests_.size(); i++) {
+      output.writeMessage(3, retryTests_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -187,6 +273,9 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
     for (int i = 0; i < postPolicyV4Tests_.size(); i++) {
       size +=
           com.google.protobuf.CodedOutputStream.computeMessageSize(2, postPolicyV4Tests_.get(i));
+    }
+    for (int i = 0; i < retryTests_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, retryTests_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -206,6 +295,7 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
 
     if (!getSigningV4TestsList().equals(other.getSigningV4TestsList())) return false;
     if (!getPostPolicyV4TestsList().equals(other.getPostPolicyV4TestsList())) return false;
+    if (!getRetryTestsList().equals(other.getRetryTestsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -224,6 +314,10 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
     if (getPostPolicyV4TestsCount() > 0) {
       hash = (37 * hash) + POST_POLICY_V4_TESTS_FIELD_NUMBER;
       hash = (53 * hash) + getPostPolicyV4TestsList().hashCode();
+    }
+    if (getRetryTestsCount() > 0) {
+      hash = (37 * hash) + RETRY_TESTS_FIELD_NUMBER;
+      hash = (53 * hash) + getRetryTestsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -370,6 +464,13 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
         postPolicyV4TestsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      if (retryTestsBuilder_ == null) {
+        retryTests_ = java.util.Collections.emptyList();
+      } else {
+        retryTests_ = null;
+        retryTestsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -424,6 +525,15 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
         result.postPolicyV4Tests_ = postPolicyV4Tests_;
       } else {
         result.postPolicyV4Tests_ = postPolicyV4TestsBuilder_.build();
+      }
+      if (retryTestsBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          retryTests_ = java.util.Collections.unmodifiableList(retryTests_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.retryTests_ = retryTests_;
+      } else {
+        result.retryTests_ = retryTestsBuilder_.build();
       }
     }
 
@@ -531,6 +641,33 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
           }
         }
       }
+      if (retryTestsBuilder_ == null) {
+        if (!other.retryTests_.isEmpty()) {
+          if (retryTests_.isEmpty()) {
+            retryTests_ = other.retryTests_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureRetryTestsIsMutable();
+            retryTests_.addAll(other.retryTests_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.retryTests_.isEmpty()) {
+          if (retryTestsBuilder_.isEmpty()) {
+            retryTestsBuilder_.dispose();
+            retryTestsBuilder_ = null;
+            retryTests_ = other.retryTests_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            retryTestsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getRetryTestsFieldBuilder()
+                    : null;
+          } else {
+            retryTestsBuilder_.addAllMessages(other.retryTests_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -585,6 +722,20 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
                 }
                 break;
               } // case 18
+            case 26:
+              {
+                com.google.cloud.conformance.storage.v1.RetryTest m =
+                    input.readMessage(
+                        com.google.cloud.conformance.storage.v1.RetryTest.parser(),
+                        extensionRegistry);
+                if (retryTestsBuilder_ == null) {
+                  ensureRetryTestsIsMutable();
+                  retryTests_.add(m);
+                } else {
+                  retryTestsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -1174,6 +1325,399 @@ public final class TestFile extends com.google.protobuf.GeneratedMessageV3
         postPolicyV4Tests_ = null;
       }
       return postPolicyV4TestsBuilder_;
+    }
+
+    private java.util.List<com.google.cloud.conformance.storage.v1.RetryTest> retryTests_ =
+        java.util.Collections.emptyList();
+
+    private void ensureRetryTestsIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        retryTests_ =
+            new java.util.ArrayList<com.google.cloud.conformance.storage.v1.RetryTest>(retryTests_);
+        bitField0_ |= 0x00000004;
+      }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.cloud.conformance.storage.v1.RetryTest,
+            com.google.cloud.conformance.storage.v1.RetryTest.Builder,
+            com.google.cloud.conformance.storage.v1.RetryTestOrBuilder>
+        retryTestsBuilder_;
+
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public java.util.List<com.google.cloud.conformance.storage.v1.RetryTest> getRetryTestsList() {
+      if (retryTestsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(retryTests_);
+      } else {
+        return retryTestsBuilder_.getMessageList();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public int getRetryTestsCount() {
+      if (retryTestsBuilder_ == null) {
+        return retryTests_.size();
+      } else {
+        return retryTestsBuilder_.getCount();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public com.google.cloud.conformance.storage.v1.RetryTest getRetryTests(int index) {
+      if (retryTestsBuilder_ == null) {
+        return retryTests_.get(index);
+      } else {
+        return retryTestsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public Builder setRetryTests(
+        int index, com.google.cloud.conformance.storage.v1.RetryTest value) {
+      if (retryTestsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRetryTestsIsMutable();
+        retryTests_.set(index, value);
+        onChanged();
+      } else {
+        retryTestsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public Builder setRetryTests(
+        int index, com.google.cloud.conformance.storage.v1.RetryTest.Builder builderForValue) {
+      if (retryTestsBuilder_ == null) {
+        ensureRetryTestsIsMutable();
+        retryTests_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        retryTestsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public Builder addRetryTests(com.google.cloud.conformance.storage.v1.RetryTest value) {
+      if (retryTestsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRetryTestsIsMutable();
+        retryTests_.add(value);
+        onChanged();
+      } else {
+        retryTestsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public Builder addRetryTests(
+        int index, com.google.cloud.conformance.storage.v1.RetryTest value) {
+      if (retryTestsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRetryTestsIsMutable();
+        retryTests_.add(index, value);
+        onChanged();
+      } else {
+        retryTestsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public Builder addRetryTests(
+        com.google.cloud.conformance.storage.v1.RetryTest.Builder builderForValue) {
+      if (retryTestsBuilder_ == null) {
+        ensureRetryTestsIsMutable();
+        retryTests_.add(builderForValue.build());
+        onChanged();
+      } else {
+        retryTestsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public Builder addRetryTests(
+        int index, com.google.cloud.conformance.storage.v1.RetryTest.Builder builderForValue) {
+      if (retryTestsBuilder_ == null) {
+        ensureRetryTestsIsMutable();
+        retryTests_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        retryTestsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public Builder addAllRetryTests(
+        java.lang.Iterable<? extends com.google.cloud.conformance.storage.v1.RetryTest> values) {
+      if (retryTestsBuilder_ == null) {
+        ensureRetryTestsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, retryTests_);
+        onChanged();
+      } else {
+        retryTestsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public Builder clearRetryTests() {
+      if (retryTestsBuilder_ == null) {
+        retryTests_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        retryTestsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public Builder removeRetryTests(int index) {
+      if (retryTestsBuilder_ == null) {
+        ensureRetryTestsIsMutable();
+        retryTests_.remove(index);
+        onChanged();
+      } else {
+        retryTestsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public com.google.cloud.conformance.storage.v1.RetryTest.Builder getRetryTestsBuilder(
+        int index) {
+      return getRetryTestsFieldBuilder().getBuilder(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public com.google.cloud.conformance.storage.v1.RetryTestOrBuilder getRetryTestsOrBuilder(
+        int index) {
+      if (retryTestsBuilder_ == null) {
+        return retryTests_.get(index);
+      } else {
+        return retryTestsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public java.util.List<? extends com.google.cloud.conformance.storage.v1.RetryTestOrBuilder>
+        getRetryTestsOrBuilderList() {
+      if (retryTestsBuilder_ != null) {
+        return retryTestsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(retryTests_);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public com.google.cloud.conformance.storage.v1.RetryTest.Builder addRetryTestsBuilder() {
+      return getRetryTestsFieldBuilder()
+          .addBuilder(com.google.cloud.conformance.storage.v1.RetryTest.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public com.google.cloud.conformance.storage.v1.RetryTest.Builder addRetryTestsBuilder(
+        int index) {
+      return getRetryTestsFieldBuilder()
+          .addBuilder(
+              index, com.google.cloud.conformance.storage.v1.RetryTest.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Note: type is RetryTest rather than RetryTests.
+     * The data file can be loaded as either a TestFile or
+     * a RetryTests.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+     */
+    public java.util.List<com.google.cloud.conformance.storage.v1.RetryTest.Builder>
+        getRetryTestsBuilderList() {
+      return getRetryTestsFieldBuilder().getBuilderList();
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.cloud.conformance.storage.v1.RetryTest,
+            com.google.cloud.conformance.storage.v1.RetryTest.Builder,
+            com.google.cloud.conformance.storage.v1.RetryTestOrBuilder>
+        getRetryTestsFieldBuilder() {
+      if (retryTestsBuilder_ == null) {
+        retryTestsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.cloud.conformance.storage.v1.RetryTest,
+                com.google.cloud.conformance.storage.v1.RetryTest.Builder,
+                com.google.cloud.conformance.storage.v1.RetryTestOrBuilder>(
+                retryTests_, ((bitField0_ & 0x00000004) != 0), getParentForChildren(), isClean());
+        retryTests_ = null;
+      }
+      return retryTestsBuilder_;
     }
 
     @java.lang.Override
