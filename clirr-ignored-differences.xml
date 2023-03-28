@@ -3,8 +3,8 @@
 <differences>
   <difference>
     <differenceType>7012</differenceType>
-    <className>com/google/cloud/conformance/storage/v1/Method*</className>
-    <method>* *Group*(*)</method>
+    <className>com/google/cloud/conformance/storage/v1/TestFileOrBuilder</className>
+    <method>* *RetryTests*(*)</method>
   </difference>
 
 </differences>

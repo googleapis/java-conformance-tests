@@ -74,4 +74,66 @@ public interface TestFileOrBuilder
    */
   com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder getPostPolicyV4TestsOrBuilder(
       int index);
+
+  /**
+   *
+   *
+   * <pre>
+   * Note: type is RetryTest rather than RetryTests.
+   * The data file can be loaded as either a TestFile or
+   * a RetryTests.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+   */
+  java.util.List<com.google.cloud.conformance.storage.v1.RetryTest> getRetryTestsList();
+  /**
+   *
+   *
+   * <pre>
+   * Note: type is RetryTest rather than RetryTests.
+   * The data file can be loaded as either a TestFile or
+   * a RetryTests.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+   */
+  com.google.cloud.conformance.storage.v1.RetryTest getRetryTests(int index);
+  /**
+   *
+   *
+   * <pre>
+   * Note: type is RetryTest rather than RetryTests.
+   * The data file can be loaded as either a TestFile or
+   * a RetryTests.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+   */
+  int getRetryTestsCount();
+  /**
+   *
+   *
+   * <pre>
+   * Note: type is RetryTest rather than RetryTests.
+   * The data file can be loaded as either a TestFile or
+   * a RetryTests.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+   */
+  java.util.List<? extends com.google.cloud.conformance.storage.v1.RetryTestOrBuilder>
+      getRetryTestsOrBuilderList();
+  /**
+   *
+   *
+   * <pre>
+   * Note: type is RetryTest rather than RetryTests.
+   * The data file can be loaded as either a TestFile or
+   * a RetryTests.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
+   */
+  com.google.cloud.conformance.storage.v1.RetryTestOrBuilder getRetryTestsOrBuilder(int index);
 }
