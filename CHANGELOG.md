@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.6](https://github.com/googleapis/java-conformance-tests/compare/v0.3.5...v0.3.6) (2023-05-10)
+
+
+### Dependencies
+
+* Bump conformance-tests to f5b5d0f0a0e246319ef4119ba076df7c010095a4 ([#579](https://github.com/googleapis/java-conformance-tests/issues/579)) ([7069bf5](https://github.com/googleapis/java-conformance-tests/commit/7069bf57c8958586142704e8dac8f3720efc3cb7))
+* Update dependency com.google.cloud:google-cloud-bom to v0.193.0 ([#573](https://github.com/googleapis/java-conformance-tests/issues/573)) ([0c9e73f](https://github.com/googleapis/java-conformance-tests/commit/0c9e73f3ec07fec26d250d3f67860e0b6494b64c))
+* Update dependency com.google.cloud:google-cloud-bom to v0.194.0 ([#575](https://github.com/googleapis/java-conformance-tests/issues/575)) ([c835aab](https://github.com/googleapis/java-conformance-tests/commit/c835aab604aeb90fbb8c0e0b5ab52b3fd97ee1ad))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.6.0 ([#571](https://github.com/googleapis/java-conformance-tests/issues/571)) ([ec45691](https://github.com/googleapis/java-conformance-tests/commit/ec456911ad7cea67c79f5f7db287dd162b0772fe))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.7.0 ([#574](https://github.com/googleapis/java-conformance-tests/issues/574)) ([50fa24c](https://github.com/googleapis/java-conformance-tests/commit/50fa24cefdf2100fac0b63e8e9eb6b45102b0c93))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.8.0 ([#576](https://github.com/googleapis/java-conformance-tests/issues/576)) ([6c0d304](https://github.com/googleapis/java-conformance-tests/commit/6c0d30430b0221b310a3a7c3d097886c17ba35e2))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.9.0 ([#581](https://github.com/googleapis/java-conformance-tests/issues/581)) ([0fc5e81](https://github.com/googleapis/java-conformance-tests/commit/0fc5e817c0909485f57a4a469d34a929b3a680c7))
+* Update dependency com.google.googlejavaformat:google-java-format to v1.17.0 ([#577](https://github.com/googleapis/java-conformance-tests/issues/577)) ([64af594](https://github.com/googleapis/java-conformance-tests/commit/64af5944b75bff4cfd39ef789248f8f541c59811))
+
 ## [0.3.5](https://github.com/googleapis/java-conformance-tests/compare/v0.3.4...v0.3.5) (2023-03-28)
 
 
