@@ -29,12 +29,14 @@ public interface InstructionListOrBuilder
    * @return A list containing the instructions.
    */
   java.util.List<java.lang.String> getInstructionsList();
+
   /**
    * <code>repeated string instructions = 1;</code>
    *
    * @return The count of instructions.
    */
   int getInstructionsCount();
+
   /**
    * <code>repeated string instructions = 1;</code>
    *
@@ -42,6 +44,7 @@ public interface InstructionListOrBuilder
    * @return The instructions at the given index.
    */
   java.lang.String getInstructions(int index);
+
   /**
    * <code>repeated string instructions = 1;</code>
    *

@@ -24,6 +24,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     // @@protoc_insertion_point(message_implements:google.cloud.conformance.storage.v1.PolicyInput)
     PolicyInputOrBuilder {
   private static final long serialVersionUID = 0L;
+
   // Use PolicyInput.newBuilder() to construct.
   private PolicyInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
@@ -41,11 +42,6 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new PolicyInput();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -78,6 +74,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object scheme_ = "";
+
   /**
    *
    *
@@ -101,6 +98,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    *
    *
@@ -127,6 +125,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
   public static final int URLSTYLE_FIELD_NUMBER = 2;
   private int urlStyle_ = 0;
+
   /**
    * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
    *
@@ -136,6 +135,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   public int getUrlStyleValue() {
     return urlStyle_;
   }
+
   /**
    * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
    *
@@ -152,6 +152,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object bucketBoundHostname_ = "";
+
   /**
    * <code>string bucketBoundHostname = 3;</code>
    *
@@ -169,6 +170,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string bucketBoundHostname = 3;</code>
    *
@@ -191,6 +193,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object bucket_ = "";
+
   /**
    * <code>string bucket = 4;</code>
    *
@@ -208,6 +211,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string bucket = 4;</code>
    *
@@ -230,6 +234,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object object_ = "";
+
   /**
    * <code>string object = 5;</code>
    *
@@ -247,6 +252,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string object = 5;</code>
    *
@@ -267,6 +273,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
   public static final int EXPIRATION_FIELD_NUMBER = 6;
   private int expiration_ = 0;
+
   /**
    * <code>int32 expiration = 6;</code>
    *
@@ -279,6 +286,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
   public static final int TIMESTAMP_FIELD_NUMBER = 7;
   private com.google.protobuf.Timestamp timestamp_;
+
   /**
    * <code>.google.protobuf.Timestamp timestamp = 7;</code>
    *
@@ -288,6 +296,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   public boolean hasTimestamp() {
     return timestamp_ != null;
   }
+
   /**
    * <code>.google.protobuf.Timestamp timestamp = 7;</code>
    *
@@ -297,6 +306,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   public com.google.protobuf.Timestamp getTimestamp() {
     return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
   }
+
   /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
@@ -329,14 +339,18 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   public int getFieldsCount() {
     return internalGetFields().getMap().size();
   }
+
   /**
    *
    *
    * <pre>
+   *
    * fields with strict equivalence which are added into
    * PolicyOutput.expectedDecodedPolicy to generate the
    * signature.
+   *
    * Expectations
+   *
    * E.1: Order them in lexigraphical order so it's the
    * signature can be verified across different language
    * implementations.
@@ -351,20 +365,25 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
     return internalGetFields().getMap().containsKey(key);
   }
+
   /** Use {@link #getFieldsMap()} instead. */
   @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.String, java.lang.String> getFields() {
     return getFieldsMap();
   }
+
   /**
    *
    *
    * <pre>
+   *
    * fields with strict equivalence which are added into
    * PolicyOutput.expectedDecodedPolicy to generate the
    * signature.
+   *
    * Expectations
+   *
    * E.1: Order them in lexigraphical order so it's the
    * signature can be verified across different language
    * implementations.
@@ -376,14 +395,18 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
     return internalGetFields().getMap();
   }
+
   /**
    *
    *
    * <pre>
+   *
    * fields with strict equivalence which are added into
    * PolicyOutput.expectedDecodedPolicy to generate the
    * signature.
+   *
    * Expectations
+   *
    * E.1: Order them in lexigraphical order so it's the
    * signature can be verified across different language
    * implementations.
@@ -402,14 +425,18 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
+
   /**
    *
    *
    * <pre>
+   *
    * fields with strict equivalence which are added into
    * PolicyOutput.expectedDecodedPolicy to generate the
    * signature.
+   *
    * Expectations
+   *
    * E.1: Order them in lexigraphical order so it's the
    * signature can be verified across different language
    * implementations.
@@ -431,6 +458,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
 
   public static final int CONDITIONS_FIELD_NUMBER = 9;
   private com.google.cloud.conformance.storage.v1.PolicyConditions conditions_;
+
   /**
    * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
    *
@@ -440,6 +468,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
   public boolean hasConditions() {
     return conditions_ != null;
   }
+
   /**
    * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
    *
@@ -451,6 +480,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         ? com.google.cloud.conformance.storage.v1.PolicyConditions.getDefaultInstance()
         : conditions_;
   }
+
   /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
   @java.lang.Override
   public com.google.cloud.conformance.storage.v1.PolicyConditionsOrBuilder
@@ -709,6 +739,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /** Protobuf type {@code google.cloud.conformance.storage.v1.PolicyInput} */
   public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
       implements
@@ -1029,6 +1060,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     private int bitField0_;
 
     private java.lang.Object scheme_ = "";
+
     /**
      *
      *
@@ -1051,6 +1083,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      *
      *
@@ -1073,6 +1106,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      *
      *
@@ -1094,6 +1128,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      *
      *
@@ -1111,6 +1146,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      *
      *
@@ -1135,6 +1171,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
 
     private int urlStyle_ = 0;
+
     /**
      * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
      *
@@ -1144,6 +1181,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     public int getUrlStyleValue() {
       return urlStyle_;
     }
+
     /**
      * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
      *
@@ -1156,6 +1194,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
      *
@@ -1169,6 +1208,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
           ? com.google.cloud.conformance.storage.v1.UrlStyle.UNRECOGNIZED
           : result;
     }
+
     /**
      * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
      *
@@ -1184,6 +1224,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
      *
@@ -1197,6 +1238,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object bucketBoundHostname_ = "";
+
     /**
      * <code>string bucketBoundHostname = 3;</code>
      *
@@ -1213,6 +1255,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string bucketBoundHostname = 3;</code>
      *
@@ -1229,6 +1272,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string bucketBoundHostname = 3;</code>
      *
@@ -1244,6 +1288,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string bucketBoundHostname = 3;</code>
      *
@@ -1255,6 +1300,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string bucketBoundHostname = 3;</code>
      *
@@ -1273,6 +1319,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object bucket_ = "";
+
     /**
      * <code>string bucket = 4;</code>
      *
@@ -1289,6 +1336,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string bucket = 4;</code>
      *
@@ -1305,6 +1353,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string bucket = 4;</code>
      *
@@ -1320,6 +1369,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string bucket = 4;</code>
      *
@@ -1331,6 +1381,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string bucket = 4;</code>
      *
@@ -1349,6 +1400,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object object_ = "";
+
     /**
      * <code>string object = 5;</code>
      *
@@ -1365,6 +1417,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string object = 5;</code>
      *
@@ -1381,6 +1434,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string object = 5;</code>
      *
@@ -1396,6 +1450,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string object = 5;</code>
      *
@@ -1407,6 +1462,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string object = 5;</code>
      *
@@ -1425,6 +1481,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     }
 
     private int expiration_;
+
     /**
      * <code>int32 expiration = 6;</code>
      *
@@ -1434,6 +1491,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     public int getExpiration() {
       return expiration_;
     }
+
     /**
      * <code>int32 expiration = 6;</code>
      *
@@ -1447,6 +1505,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>int32 expiration = 6;</code>
      *
@@ -1465,6 +1524,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.Timestamp.Builder,
             com.google.protobuf.TimestampOrBuilder>
         timestampBuilder_;
+
     /**
      * <code>.google.protobuf.Timestamp timestamp = 7;</code>
      *
@@ -1473,6 +1533,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     public boolean hasTimestamp() {
       return ((bitField0_ & 0x00000040) != 0);
     }
+
     /**
      * <code>.google.protobuf.Timestamp timestamp = 7;</code>
      *
@@ -1485,6 +1546,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return timestampBuilder_.getMessage();
       }
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder setTimestamp(com.google.protobuf.Timestamp value) {
       if (timestampBuilder_ == null) {
@@ -1499,6 +1561,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder setTimestamp(com.google.protobuf.Timestamp.Builder builderForValue) {
       if (timestampBuilder_ == null) {
@@ -1510,6 +1573,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
       if (timestampBuilder_ == null) {
@@ -1527,6 +1591,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder clearTimestamp() {
       bitField0_ = (bitField0_ & ~0x00000040);
@@ -1538,12 +1603,14 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
       bitField0_ |= 0x00000040;
       onChanged();
       return getTimestampFieldBuilder().getBuilder();
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
       if (timestampBuilder_ != null) {
@@ -1552,6 +1619,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
       }
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp,
@@ -1595,14 +1663,18 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     public int getFieldsCount() {
       return internalGetFields().getMap().size();
     }
+
     /**
      *
      *
      * <pre>
+     *
      * fields with strict equivalence which are added into
      * PolicyOutput.expectedDecodedPolicy to generate the
      * signature.
+     *
      * Expectations
+     *
      * E.1: Order them in lexigraphical order so it's the
      * signature can be verified across different language
      * implementations.
@@ -1617,20 +1689,25 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       }
       return internalGetFields().getMap().containsKey(key);
     }
+
     /** Use {@link #getFieldsMap()} instead. */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getFields() {
       return getFieldsMap();
     }
+
     /**
      *
      *
      * <pre>
+     *
      * fields with strict equivalence which are added into
      * PolicyOutput.expectedDecodedPolicy to generate the
      * signature.
+     *
      * Expectations
+     *
      * E.1: Order them in lexigraphical order so it's the
      * signature can be verified across different language
      * implementations.
@@ -1642,14 +1719,18 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
       return internalGetFields().getMap();
     }
+
     /**
      *
      *
      * <pre>
+     *
      * fields with strict equivalence which are added into
      * PolicyOutput.expectedDecodedPolicy to generate the
      * signature.
+     *
      * Expectations
+     *
      * E.1: Order them in lexigraphical order so it's the
      * signature can be verified across different language
      * implementations.
@@ -1668,14 +1749,18 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
+
     /**
      *
      *
      * <pre>
+     *
      * fields with strict equivalence which are added into
      * PolicyOutput.expectedDecodedPolicy to generate the
      * signature.
+     *
      * Expectations
+     *
      * E.1: Order them in lexigraphical order so it's the
      * signature can be verified across different language
      * implementations.
@@ -1700,14 +1785,18 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableFields().getMutableMap().clear();
       return this;
     }
+
     /**
      *
      *
      * <pre>
+     *
      * fields with strict equivalence which are added into
      * PolicyOutput.expectedDecodedPolicy to generate the
      * signature.
+     *
      * Expectations
+     *
      * E.1: Order them in lexigraphical order so it's the
      * signature can be verified across different language
      * implementations.
@@ -1722,20 +1811,25 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableFields().getMutableMap().remove(key);
       return this;
     }
+
     /** Use alternate mutation accessors instead. */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMutableFields() {
       bitField0_ |= 0x00000080;
       return internalGetMutableFields().getMutableMap();
     }
+
     /**
      *
      *
      * <pre>
+     *
      * fields with strict equivalence which are added into
      * PolicyOutput.expectedDecodedPolicy to generate the
      * signature.
+     *
      * Expectations
+     *
      * E.1: Order them in lexigraphical order so it's the
      * signature can be verified across different language
      * implementations.
@@ -1754,14 +1848,18 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       bitField0_ |= 0x00000080;
       return this;
     }
+
     /**
      *
      *
      * <pre>
+     *
      * fields with strict equivalence which are added into
      * PolicyOutput.expectedDecodedPolicy to generate the
      * signature.
+     *
      * Expectations
+     *
      * E.1: Order them in lexigraphical order so it's the
      * signature can be verified across different language
      * implementations.
@@ -1781,6 +1879,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
             com.google.cloud.conformance.storage.v1.PolicyConditions.Builder,
             com.google.cloud.conformance.storage.v1.PolicyConditionsOrBuilder>
         conditionsBuilder_;
+
     /**
      * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
      *
@@ -1789,6 +1888,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
     public boolean hasConditions() {
       return ((bitField0_ & 0x00000100) != 0);
     }
+
     /**
      * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
      *
@@ -1803,6 +1903,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
         return conditionsBuilder_.getMessage();
       }
     }
+
     /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public Builder setConditions(com.google.cloud.conformance.storage.v1.PolicyConditions value) {
       if (conditionsBuilder_ == null) {
@@ -1817,6 +1918,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public Builder setConditions(
         com.google.cloud.conformance.storage.v1.PolicyConditions.Builder builderForValue) {
@@ -1829,6 +1931,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public Builder mergeConditions(com.google.cloud.conformance.storage.v1.PolicyConditions value) {
       if (conditionsBuilder_ == null) {
@@ -1847,6 +1950,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public Builder clearConditions() {
       bitField0_ = (bitField0_ & ~0x00000100);
@@ -1858,12 +1962,14 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public com.google.cloud.conformance.storage.v1.PolicyConditions.Builder getConditionsBuilder() {
       bitField0_ |= 0x00000100;
       onChanged();
       return getConditionsFieldBuilder().getBuilder();
     }
+
     /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     public com.google.cloud.conformance.storage.v1.PolicyConditionsOrBuilder
         getConditionsOrBuilder() {
@@ -1875,6 +1981,7 @@ public final class PolicyInput extends com.google.protobuf.GeneratedMessageV3
             : conditions_;
       }
     }
+
     /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.cloud.conformance.storage.v1.PolicyConditions,

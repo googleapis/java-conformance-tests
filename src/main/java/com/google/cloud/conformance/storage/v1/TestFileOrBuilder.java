@@ -27,19 +27,23 @@ public interface TestFileOrBuilder
    * <code>repeated .google.cloud.conformance.storage.v1.SigningV4Test signing_v4_tests = 1;</code>
    */
   java.util.List<com.google.cloud.conformance.storage.v1.SigningV4Test> getSigningV4TestsList();
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.SigningV4Test signing_v4_tests = 1;</code>
    */
   com.google.cloud.conformance.storage.v1.SigningV4Test getSigningV4Tests(int index);
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.SigningV4Test signing_v4_tests = 1;</code>
    */
   int getSigningV4TestsCount();
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.SigningV4Test signing_v4_tests = 1;</code>
    */
   java.util.List<? extends com.google.cloud.conformance.storage.v1.SigningV4TestOrBuilder>
       getSigningV4TestsOrBuilderList();
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.SigningV4Test signing_v4_tests = 1;</code>
    */
@@ -52,22 +56,26 @@ public interface TestFileOrBuilder
    */
   java.util.List<com.google.cloud.conformance.storage.v1.PostPolicyV4Test>
       getPostPolicyV4TestsList();
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
    * </code>
    */
   com.google.cloud.conformance.storage.v1.PostPolicyV4Test getPostPolicyV4Tests(int index);
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
    * </code>
    */
   int getPostPolicyV4TestsCount();
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
    * </code>
    */
   java.util.List<? extends com.google.cloud.conformance.storage.v1.PostPolicyV4TestOrBuilder>
       getPostPolicyV4TestsOrBuilderList();
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.PostPolicyV4Test post_policy_v4_tests = 2;
    * </code>
@@ -87,6 +95,7 @@ public interface TestFileOrBuilder
    * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
    */
   java.util.List<com.google.cloud.conformance.storage.v1.RetryTest> getRetryTestsList();
+
   /**
    *
    *
@@ -99,6 +108,7 @@ public interface TestFileOrBuilder
    * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
    */
   com.google.cloud.conformance.storage.v1.RetryTest getRetryTests(int index);
+
   /**
    *
    *
@@ -111,6 +121,7 @@ public interface TestFileOrBuilder
    * <code>repeated .google.cloud.conformance.storage.v1.RetryTest retry_tests = 3;</code>
    */
   int getRetryTestsCount();
+
   /**
    *
    *
@@ -124,6 +135,7 @@ public interface TestFileOrBuilder
    */
   java.util.List<? extends com.google.cloud.conformance.storage.v1.RetryTestOrBuilder>
       getRetryTestsOrBuilderList();
+
   /**
    *
    *

@@ -33,24 +33,20 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
     // @@protoc_insertion_point(message_implements:google.cloud.conformance.storage.v1.InstructionList)
     InstructionListOrBuilder {
   private static final long serialVersionUID = 0L;
+
   // Use InstructionList.newBuilder() to construct.
   private InstructionList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
 
   private InstructionList() {
-    instructions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    instructions_ = com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new InstructionList();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -71,7 +67,9 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
   public static final int INSTRUCTIONS_FIELD_NUMBER = 1;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList instructions_;
+  private com.google.protobuf.LazyStringArrayList instructions_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+
   /**
    * <code>repeated string instructions = 1;</code>
    *
@@ -80,6 +78,7 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
   public com.google.protobuf.ProtocolStringList getInstructionsList() {
     return instructions_;
   }
+
   /**
    * <code>repeated string instructions = 1;</code>
    *
@@ -88,6 +87,7 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
   public int getInstructionsCount() {
     return instructions_.size();
   }
+
   /**
    * <code>repeated string instructions = 1;</code>
    *
@@ -97,6 +97,7 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
   public java.lang.String getInstructions(int index) {
     return instructions_.get(index);
   }
+
   /**
    * <code>repeated string instructions = 1;</code>
    *
@@ -274,6 +275,7 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /**
    *
    *
@@ -314,8 +316,7 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      instructions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      instructions_ = com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -343,7 +344,6 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
     public com.google.cloud.conformance.storage.v1.InstructionList buildPartial() {
       com.google.cloud.conformance.storage.v1.InstructionList result =
           new com.google.cloud.conformance.storage.v1.InstructionList(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) {
         buildPartial0(result);
       }
@@ -351,17 +351,12 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
       return result;
     }
 
-    private void buildPartialRepeatedFields(
-        com.google.cloud.conformance.storage.v1.InstructionList result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        instructions_ = instructions_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.instructions_ = instructions_;
-    }
-
     private void buildPartial0(com.google.cloud.conformance.storage.v1.InstructionList result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        instructions_.makeImmutable();
+        result.instructions_ = instructions_;
+      }
     }
 
     @java.lang.Override
@@ -413,7 +408,7 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
       if (!other.instructions_.isEmpty()) {
         if (instructions_.isEmpty()) {
           instructions_ = other.instructions_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureInstructionsIsMutable();
           instructions_.addAll(other.instructions_);
@@ -472,23 +467,26 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
 
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList instructions_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList instructions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureInstructionsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!instructions_.isModifiable()) {
         instructions_ = new com.google.protobuf.LazyStringArrayList(instructions_);
-        bitField0_ |= 0x00000001;
       }
+      bitField0_ |= 0x00000001;
     }
+
     /**
      * <code>repeated string instructions = 1;</code>
      *
      * @return A list containing the instructions.
      */
     public com.google.protobuf.ProtocolStringList getInstructionsList() {
-      return instructions_.getUnmodifiableView();
+      instructions_.makeImmutable();
+      return instructions_;
     }
+
     /**
      * <code>repeated string instructions = 1;</code>
      *
@@ -497,6 +495,7 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
     public int getInstructionsCount() {
       return instructions_.size();
     }
+
     /**
      * <code>repeated string instructions = 1;</code>
      *
@@ -506,6 +505,7 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
     public java.lang.String getInstructions(int index) {
       return instructions_.get(index);
     }
+
     /**
      * <code>repeated string instructions = 1;</code>
      *
@@ -515,6 +515,7 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
     public com.google.protobuf.ByteString getInstructionsBytes(int index) {
       return instructions_.getByteString(index);
     }
+
     /**
      * <code>repeated string instructions = 1;</code>
      *
@@ -528,9 +529,11 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
       }
       ensureInstructionsIsMutable();
       instructions_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string instructions = 1;</code>
      *
@@ -543,9 +546,11 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
       }
       ensureInstructionsIsMutable();
       instructions_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string instructions = 1;</code>
      *
@@ -555,20 +560,24 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
     public Builder addAllInstructions(java.lang.Iterable<java.lang.String> values) {
       ensureInstructionsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, instructions_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string instructions = 1;</code>
      *
      * @return This builder for chaining.
      */
     public Builder clearInstructions() {
-      instructions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      instructions_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      ;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string instructions = 1;</code>
      *
@@ -582,6 +591,7 @@ public final class InstructionList extends com.google.protobuf.GeneratedMessageV
       checkByteStringIsUtf8(value);
       ensureInstructionsIsMutable();
       instructions_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

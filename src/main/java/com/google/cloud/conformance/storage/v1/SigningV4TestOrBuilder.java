@@ -29,6 +29,7 @@ public interface SigningV4TestOrBuilder
    * @return The fileName.
    */
   java.lang.String getFileName();
+
   /**
    * <code>string fileName = 1;</code>
    *
@@ -42,6 +43,7 @@ public interface SigningV4TestOrBuilder
    * @return The description.
    */
   java.lang.String getDescription();
+
   /**
    * <code>string description = 2;</code>
    *
@@ -55,6 +57,7 @@ public interface SigningV4TestOrBuilder
    * @return The bucket.
    */
   java.lang.String getBucket();
+
   /**
    * <code>string bucket = 3;</code>
    *
@@ -68,6 +71,7 @@ public interface SigningV4TestOrBuilder
    * @return The object.
    */
   java.lang.String getObject();
+
   /**
    * <code>string object = 4;</code>
    *
@@ -81,6 +85,7 @@ public interface SigningV4TestOrBuilder
    * @return The method.
    */
   java.lang.String getMethod();
+
   /**
    * <code>string method = 5;</code>
    *
@@ -101,12 +106,14 @@ public interface SigningV4TestOrBuilder
    * @return Whether the timestamp field is set.
    */
   boolean hasTimestamp();
+
   /**
    * <code>.google.protobuf.Timestamp timestamp = 7;</code>
    *
    * @return The timestamp.
    */
   com.google.protobuf.Timestamp getTimestamp();
+
   /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
   com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
@@ -116,6 +123,7 @@ public interface SigningV4TestOrBuilder
    * @return The expectedUrl.
    */
   java.lang.String getExpectedUrl();
+
   /**
    * <code>string expectedUrl = 8;</code>
    *
@@ -125,37 +133,47 @@ public interface SigningV4TestOrBuilder
 
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   int getHeadersCount();
+
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   boolean containsHeaders(java.lang.String key);
+
   /** Use {@link #getHeadersMap()} instead. */
   @java.lang.Deprecated
   java.util.Map<java.lang.String, java.lang.String> getHeaders();
+
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   java.util.Map<java.lang.String, java.lang.String> getHeadersMap();
+
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   /* nullable */
   java.lang.String getHeadersOrDefault(
       java.lang.String key,
       /* nullable */
       java.lang.String defaultValue);
+
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   java.lang.String getHeadersOrThrow(java.lang.String key);
 
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   int getQueryParametersCount();
+
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   boolean containsQueryParameters(java.lang.String key);
+
   /** Use {@link #getQueryParametersMap()} instead. */
   @java.lang.Deprecated
   java.util.Map<java.lang.String, java.lang.String> getQueryParameters();
+
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   java.util.Map<java.lang.String, java.lang.String> getQueryParametersMap();
+
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   /* nullable */
   java.lang.String getQueryParametersOrDefault(
       java.lang.String key,
       /* nullable */
       java.lang.String defaultValue);
+
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   java.lang.String getQueryParametersOrThrow(java.lang.String key);
 
@@ -165,6 +183,7 @@ public interface SigningV4TestOrBuilder
    * @return The scheme.
    */
   java.lang.String getScheme();
+
   /**
    * <code>string scheme = 11;</code>
    *
@@ -178,6 +197,7 @@ public interface SigningV4TestOrBuilder
    * @return The enum numeric value on the wire for urlStyle.
    */
   int getUrlStyleValue();
+
   /**
    * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
    *
@@ -191,6 +211,7 @@ public interface SigningV4TestOrBuilder
    * @return The bucketBoundHostname.
    */
   java.lang.String getBucketBoundHostname();
+
   /**
    * <code>string bucketBoundHostname = 13;</code>
    *
@@ -204,6 +225,7 @@ public interface SigningV4TestOrBuilder
    * @return The expectedCanonicalRequest.
    */
   java.lang.String getExpectedCanonicalRequest();
+
   /**
    * <code>string expectedCanonicalRequest = 14;</code>
    *
@@ -217,6 +239,7 @@ public interface SigningV4TestOrBuilder
    * @return The expectedStringToSign.
    */
   java.lang.String getExpectedStringToSign();
+
   /**
    * <code>string expectedStringToSign = 15;</code>
    *

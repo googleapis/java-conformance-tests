@@ -24,6 +24,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     // @@protoc_insertion_point(message_implements:google.cloud.conformance.storage.v1.PolicyConditions)
     PolicyConditionsOrBuilder {
   private static final long serialVersionUID = 0L;
+
   // Use PolicyConditions.newBuilder() to construct.
   private PolicyConditions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
@@ -31,18 +32,13 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
 
   private PolicyConditions() {
     contentLengthRange_ = emptyIntList();
-    startsWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    startsWith_ = com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new PolicyConditions();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -64,6 +60,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
 
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.IntList contentLengthRange_;
+
   /**
    * <code>repeated int32 contentLengthRange = 1;</code>
    *
@@ -73,6 +70,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
   public java.util.List<java.lang.Integer> getContentLengthRangeList() {
     return contentLengthRange_;
   }
+
   /**
    * <code>repeated int32 contentLengthRange = 1;</code>
    *
@@ -81,6 +79,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
   public int getContentLengthRangeCount() {
     return contentLengthRange_.size();
   }
+
   /**
    * <code>repeated int32 contentLengthRange = 1;</code>
    *
@@ -96,7 +95,9 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
   public static final int STARTSWITH_FIELD_NUMBER = 2;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList startsWith_;
+  private com.google.protobuf.LazyStringArrayList startsWith_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+
   /**
    * <code>repeated string startsWith = 2;</code>
    *
@@ -105,6 +106,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
   public com.google.protobuf.ProtocolStringList getStartsWithList() {
     return startsWith_;
   }
+
   /**
    * <code>repeated string startsWith = 2;</code>
    *
@@ -113,6 +115,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
   public int getStartsWithCount() {
     return startsWith_.size();
   }
+
   /**
    * <code>repeated string startsWith = 2;</code>
    *
@@ -122,6 +125,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
   public java.lang.String getStartsWith(int index) {
     return startsWith_.get(index);
   }
+
   /**
    * <code>repeated string startsWith = 2;</code>
    *
@@ -326,6 +330,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /** Protobuf type {@code google.cloud.conformance.storage.v1.PolicyConditions} */
   public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
       implements
@@ -358,8 +363,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       super.clear();
       bitField0_ = 0;
       contentLengthRange_ = emptyIntList();
-      startsWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      startsWith_ = com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -402,15 +406,14 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.contentLengthRange_ = contentLengthRange_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        startsWith_ = startsWith_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.startsWith_ = startsWith_;
     }
 
     private void buildPartial0(com.google.cloud.conformance.storage.v1.PolicyConditions result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        startsWith_.makeImmutable();
+        result.startsWith_ = startsWith_;
+      }
     }
 
     @java.lang.Override
@@ -472,7 +475,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       if (!other.startsWith_.isEmpty()) {
         if (startsWith_.isEmpty()) {
           startsWith_ = other.startsWith_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ |= 0x00000002;
         } else {
           ensureStartsWithIsMutable();
           startsWith_.addAll(other.startsWith_);
@@ -557,6 +560,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
         bitField0_ |= 0x00000001;
       }
     }
+
     /**
      * <code>repeated int32 contentLengthRange = 1;</code>
      *
@@ -567,6 +571,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
           ? java.util.Collections.unmodifiableList(contentLengthRange_)
           : contentLengthRange_;
     }
+
     /**
      * <code>repeated int32 contentLengthRange = 1;</code>
      *
@@ -575,6 +580,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     public int getContentLengthRangeCount() {
       return contentLengthRange_.size();
     }
+
     /**
      * <code>repeated int32 contentLengthRange = 1;</code>
      *
@@ -584,6 +590,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     public int getContentLengthRange(int index) {
       return contentLengthRange_.getInt(index);
     }
+
     /**
      * <code>repeated int32 contentLengthRange = 1;</code>
      *
@@ -598,6 +605,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated int32 contentLengthRange = 1;</code>
      *
@@ -611,6 +619,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated int32 contentLengthRange = 1;</code>
      *
@@ -624,6 +633,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated int32 contentLengthRange = 1;</code>
      *
@@ -636,23 +646,26 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private com.google.protobuf.LazyStringList startsWith_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList startsWith_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureStartsWithIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!startsWith_.isModifiable()) {
         startsWith_ = new com.google.protobuf.LazyStringArrayList(startsWith_);
-        bitField0_ |= 0x00000002;
       }
+      bitField0_ |= 0x00000002;
     }
+
     /**
      * <code>repeated string startsWith = 2;</code>
      *
      * @return A list containing the startsWith.
      */
     public com.google.protobuf.ProtocolStringList getStartsWithList() {
-      return startsWith_.getUnmodifiableView();
+      startsWith_.makeImmutable();
+      return startsWith_;
     }
+
     /**
      * <code>repeated string startsWith = 2;</code>
      *
@@ -661,6 +674,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     public int getStartsWithCount() {
       return startsWith_.size();
     }
+
     /**
      * <code>repeated string startsWith = 2;</code>
      *
@@ -670,6 +684,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     public java.lang.String getStartsWith(int index) {
       return startsWith_.get(index);
     }
+
     /**
      * <code>repeated string startsWith = 2;</code>
      *
@@ -679,6 +694,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     public com.google.protobuf.ByteString getStartsWithBytes(int index) {
       return startsWith_.getByteString(index);
     }
+
     /**
      * <code>repeated string startsWith = 2;</code>
      *
@@ -692,9 +708,11 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       }
       ensureStartsWithIsMutable();
       startsWith_.set(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string startsWith = 2;</code>
      *
@@ -707,9 +725,11 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       }
       ensureStartsWithIsMutable();
       startsWith_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string startsWith = 2;</code>
      *
@@ -719,20 +739,24 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     public Builder addAllStartsWith(java.lang.Iterable<java.lang.String> values) {
       ensureStartsWithIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, startsWith_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string startsWith = 2;</code>
      *
      * @return This builder for chaining.
      */
     public Builder clearStartsWith() {
-      startsWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      startsWith_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000002);
+      ;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string startsWith = 2;</code>
      *
@@ -746,6 +770,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       checkByteStringIsUtf8(value);
       ensureStartsWithIsMutable();
       startsWith_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

@@ -48,6 +48,7 @@ public interface RetryTestOrBuilder
    * @return The description.
    */
   java.lang.String getDescription();
+
   /**
    *
    *
@@ -71,6 +72,7 @@ public interface RetryTestOrBuilder
    * <code>repeated .google.cloud.conformance.storage.v1.InstructionList cases = 3;</code>
    */
   java.util.List<com.google.cloud.conformance.storage.v1.InstructionList> getCasesList();
+
   /**
    *
    *
@@ -81,6 +83,7 @@ public interface RetryTestOrBuilder
    * <code>repeated .google.cloud.conformance.storage.v1.InstructionList cases = 3;</code>
    */
   com.google.cloud.conformance.storage.v1.InstructionList getCases(int index);
+
   /**
    *
    *
@@ -91,6 +94,7 @@ public interface RetryTestOrBuilder
    * <code>repeated .google.cloud.conformance.storage.v1.InstructionList cases = 3;</code>
    */
   int getCasesCount();
+
   /**
    *
    *
@@ -102,6 +106,7 @@ public interface RetryTestOrBuilder
    */
   java.util.List<? extends com.google.cloud.conformance.storage.v1.InstructionListOrBuilder>
       getCasesOrBuilderList();
+
   /**
    *
    *
@@ -123,6 +128,7 @@ public interface RetryTestOrBuilder
    * <code>repeated .google.cloud.conformance.storage.v1.Method methods = 4;</code>
    */
   java.util.List<com.google.cloud.conformance.storage.v1.Method> getMethodsList();
+
   /**
    *
    *
@@ -133,6 +139,7 @@ public interface RetryTestOrBuilder
    * <code>repeated .google.cloud.conformance.storage.v1.Method methods = 4;</code>
    */
   com.google.cloud.conformance.storage.v1.Method getMethods(int index);
+
   /**
    *
    *
@@ -143,6 +150,7 @@ public interface RetryTestOrBuilder
    * <code>repeated .google.cloud.conformance.storage.v1.Method methods = 4;</code>
    */
   int getMethodsCount();
+
   /**
    *
    *
@@ -154,6 +162,7 @@ public interface RetryTestOrBuilder
    */
   java.util.List<? extends com.google.cloud.conformance.storage.v1.MethodOrBuilder>
       getMethodsOrBuilderList();
+
   /**
    *
    *

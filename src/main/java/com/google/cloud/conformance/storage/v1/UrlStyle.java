@@ -31,8 +31,10 @@ public enum UrlStyle implements com.google.protobuf.ProtocolMessageEnum {
 
   /** <code>PATH_STYLE = 0;</code> */
   public static final int PATH_STYLE_VALUE = 0;
+
   /** <code>VIRTUAL_HOSTED_STYLE = 1;</code> */
   public static final int VIRTUAL_HOSTED_STYLE_VALUE = 1;
+
   /** <code>BUCKET_BOUND_HOSTNAME = 2;</code> */
   public static final int BUCKET_BOUND_HOSTNAME_VALUE = 2;
 
