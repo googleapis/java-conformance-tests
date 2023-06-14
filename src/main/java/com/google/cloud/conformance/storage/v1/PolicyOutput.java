@@ -24,6 +24,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     // @@protoc_insertion_point(message_implements:google.cloud.conformance.storage.v1.PolicyOutput)
     PolicyOutputOrBuilder {
   private static final long serialVersionUID = 0L;
+
   // Use PolicyOutput.newBuilder() to construct.
   private PolicyOutput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
@@ -38,11 +39,6 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new PolicyOutput();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -75,6 +71,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object url_ = "";
+
   /**
    * <code>string url = 1;</code>
    *
@@ -92,6 +89,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string url = 1;</code>
    *
@@ -136,17 +134,23 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
   public int getFieldsCount() {
     return internalGetFields().getMap().size();
   }
+
   /**
    *
    *
    * <pre>
+   *
    * Expectations
+   *
    * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
    * for consistent result across languages. Ordering doesn't matter to the
    * service but the decision is made to make it easier to conform implementations
    * in implementation.
+   *
    * Example:
+   *
    * # Step 1
+   *
    * PolicyInput.fields has:
    * {
    * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -154,9 +158,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    * "content-type":"text/plain",
    * "success_action_redirect":"http://www.google.com/"
    * }
+   *
    * # Step 2
+   *
    * The expectedDecodedPolicy before prepending the PolicyInput.fields
    * would look like this:
+   *
    * {
    * "conditions":[
    * ...prepend here in the same order provided in PolicyInput.fields...
@@ -168,9 +175,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    * ],
    * "expiration":"2020-01-23T04:35:40Z"
    * }
+   *
    * # Step 3
+   *
    * Then expectedDecodedPolicy should prepends PolicyInput.fields in
    * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   *
    * {
    * "conditions":[
    * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -196,23 +206,30 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     }
     return internalGetFields().getMap().containsKey(key);
   }
+
   /** Use {@link #getFieldsMap()} instead. */
   @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.String, java.lang.String> getFields() {
     return getFieldsMap();
   }
+
   /**
    *
    *
    * <pre>
+   *
    * Expectations
+   *
    * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
    * for consistent result across languages. Ordering doesn't matter to the
    * service but the decision is made to make it easier to conform implementations
    * in implementation.
+   *
    * Example:
+   *
    * # Step 1
+   *
    * PolicyInput.fields has:
    * {
    * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -220,9 +237,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    * "content-type":"text/plain",
    * "success_action_redirect":"http://www.google.com/"
    * }
+   *
    * # Step 2
+   *
    * The expectedDecodedPolicy before prepending the PolicyInput.fields
    * would look like this:
+   *
    * {
    * "conditions":[
    * ...prepend here in the same order provided in PolicyInput.fields...
@@ -234,9 +254,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    * ],
    * "expiration":"2020-01-23T04:35:40Z"
    * }
+   *
    * # Step 3
+   *
    * Then expectedDecodedPolicy should prepends PolicyInput.fields in
    * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   *
    * {
    * "conditions":[
    * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -259,17 +282,23 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
   public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
     return internalGetFields().getMap();
   }
+
   /**
    *
    *
    * <pre>
+   *
    * Expectations
+   *
    * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
    * for consistent result across languages. Ordering doesn't matter to the
    * service but the decision is made to make it easier to conform implementations
    * in implementation.
+   *
    * Example:
+   *
    * # Step 1
+   *
    * PolicyInput.fields has:
    * {
    * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -277,9 +306,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    * "content-type":"text/plain",
    * "success_action_redirect":"http://www.google.com/"
    * }
+   *
    * # Step 2
+   *
    * The expectedDecodedPolicy before prepending the PolicyInput.fields
    * would look like this:
+   *
    * {
    * "conditions":[
    * ...prepend here in the same order provided in PolicyInput.fields...
@@ -291,9 +323,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    * ],
    * "expiration":"2020-01-23T04:35:40Z"
    * }
+   *
    * # Step 3
+   *
    * Then expectedDecodedPolicy should prepends PolicyInput.fields in
    * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   *
    * {
    * "conditions":[
    * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -323,17 +358,23 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
+
   /**
    *
    *
    * <pre>
+   *
    * Expectations
+   *
    * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
    * for consistent result across languages. Ordering doesn't matter to the
    * service but the decision is made to make it easier to conform implementations
    * in implementation.
+   *
    * Example:
+   *
    * # Step 1
+   *
    * PolicyInput.fields has:
    * {
    * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -341,9 +382,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    * "content-type":"text/plain",
    * "success_action_redirect":"http://www.google.com/"
    * }
+   *
    * # Step 2
+   *
    * The expectedDecodedPolicy before prepending the PolicyInput.fields
    * would look like this:
+   *
    * {
    * "conditions":[
    * ...prepend here in the same order provided in PolicyInput.fields...
@@ -355,9 +399,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
    * ],
    * "expiration":"2020-01-23T04:35:40Z"
    * }
+   *
    * # Step 3
+   *
    * Then expectedDecodedPolicy should prepends PolicyInput.fields in
    * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   *
    * {
    * "conditions":[
    * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -392,6 +439,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object expectedDecodedPolicy_ = "";
+
   /**
    * <code>string expectedDecodedPolicy = 3;</code>
    *
@@ -409,6 +457,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string expectedDecodedPolicy = 3;</code>
    *
@@ -612,6 +661,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /** Protobuf type {@code google.cloud.conformance.storage.v1.PolicyOutput} */
   public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
       implements
@@ -842,6 +892,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     private int bitField0_;
 
     private java.lang.Object url_ = "";
+
     /**
      * <code>string url = 1;</code>
      *
@@ -858,6 +909,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string url = 1;</code>
      *
@@ -874,6 +926,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string url = 1;</code>
      *
@@ -889,6 +942,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string url = 1;</code>
      *
@@ -900,6 +954,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string url = 1;</code>
      *
@@ -942,17 +997,23 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     public int getFieldsCount() {
       return internalGetFields().getMap().size();
     }
+
     /**
      *
      *
      * <pre>
+     *
      * Expectations
+     *
      * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
      * for consistent result across languages. Ordering doesn't matter to the
      * service but the decision is made to make it easier to conform implementations
      * in implementation.
+     *
      * Example:
+     *
      * # Step 1
+     *
      * PolicyInput.fields has:
      * {
      * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -960,9 +1021,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * "content-type":"text/plain",
      * "success_action_redirect":"http://www.google.com/"
      * }
+     *
      * # Step 2
+     *
      * The expectedDecodedPolicy before prepending the PolicyInput.fields
      * would look like this:
+     *
      * {
      * "conditions":[
      * ...prepend here in the same order provided in PolicyInput.fields...
@@ -974,9 +1038,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * ],
      * "expiration":"2020-01-23T04:35:40Z"
      * }
+     *
      * # Step 3
+     *
      * Then expectedDecodedPolicy should prepends PolicyInput.fields in
      * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     *
      * {
      * "conditions":[
      * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -1002,23 +1069,30 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       }
       return internalGetFields().getMap().containsKey(key);
     }
+
     /** Use {@link #getFieldsMap()} instead. */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getFields() {
       return getFieldsMap();
     }
+
     /**
      *
      *
      * <pre>
+     *
      * Expectations
+     *
      * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
      * for consistent result across languages. Ordering doesn't matter to the
      * service but the decision is made to make it easier to conform implementations
      * in implementation.
+     *
      * Example:
+     *
      * # Step 1
+     *
      * PolicyInput.fields has:
      * {
      * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -1026,9 +1100,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * "content-type":"text/plain",
      * "success_action_redirect":"http://www.google.com/"
      * }
+     *
      * # Step 2
+     *
      * The expectedDecodedPolicy before prepending the PolicyInput.fields
      * would look like this:
+     *
      * {
      * "conditions":[
      * ...prepend here in the same order provided in PolicyInput.fields...
@@ -1040,9 +1117,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * ],
      * "expiration":"2020-01-23T04:35:40Z"
      * }
+     *
      * # Step 3
+     *
      * Then expectedDecodedPolicy should prepends PolicyInput.fields in
      * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     *
      * {
      * "conditions":[
      * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -1065,17 +1145,23 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
       return internalGetFields().getMap();
     }
+
     /**
      *
      *
      * <pre>
+     *
      * Expectations
+     *
      * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
      * for consistent result across languages. Ordering doesn't matter to the
      * service but the decision is made to make it easier to conform implementations
      * in implementation.
+     *
      * Example:
+     *
      * # Step 1
+     *
      * PolicyInput.fields has:
      * {
      * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -1083,9 +1169,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * "content-type":"text/plain",
      * "success_action_redirect":"http://www.google.com/"
      * }
+     *
      * # Step 2
+     *
      * The expectedDecodedPolicy before prepending the PolicyInput.fields
      * would look like this:
+     *
      * {
      * "conditions":[
      * ...prepend here in the same order provided in PolicyInput.fields...
@@ -1097,9 +1186,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * ],
      * "expiration":"2020-01-23T04:35:40Z"
      * }
+     *
      * # Step 3
+     *
      * Then expectedDecodedPolicy should prepends PolicyInput.fields in
      * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     *
      * {
      * "conditions":[
      * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -1129,17 +1221,23 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       java.util.Map<java.lang.String, java.lang.String> map = internalGetFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
+
     /**
      *
      *
      * <pre>
+     *
      * Expectations
+     *
      * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
      * for consistent result across languages. Ordering doesn't matter to the
      * service but the decision is made to make it easier to conform implementations
      * in implementation.
+     *
      * Example:
+     *
      * # Step 1
+     *
      * PolicyInput.fields has:
      * {
      * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -1147,9 +1245,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * "content-type":"text/plain",
      * "success_action_redirect":"http://www.google.com/"
      * }
+     *
      * # Step 2
+     *
      * The expectedDecodedPolicy before prepending the PolicyInput.fields
      * would look like this:
+     *
      * {
      * "conditions":[
      * ...prepend here in the same order provided in PolicyInput.fields...
@@ -1161,9 +1262,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * ],
      * "expiration":"2020-01-23T04:35:40Z"
      * }
+     *
      * # Step 3
+     *
      * Then expectedDecodedPolicy should prepends PolicyInput.fields in
      * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     *
      * {
      * "conditions":[
      * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -1199,17 +1303,23 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableFields().getMutableMap().clear();
       return this;
     }
+
     /**
      *
      *
      * <pre>
+     *
      * Expectations
+     *
      * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
      * for consistent result across languages. Ordering doesn't matter to the
      * service but the decision is made to make it easier to conform implementations
      * in implementation.
+     *
      * Example:
+     *
      * # Step 1
+     *
      * PolicyInput.fields has:
      * {
      * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -1217,9 +1327,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * "content-type":"text/plain",
      * "success_action_redirect":"http://www.google.com/"
      * }
+     *
      * # Step 2
+     *
      * The expectedDecodedPolicy before prepending the PolicyInput.fields
      * would look like this:
+     *
      * {
      * "conditions":[
      * ...prepend here in the same order provided in PolicyInput.fields...
@@ -1231,9 +1344,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * ],
      * "expiration":"2020-01-23T04:35:40Z"
      * }
+     *
      * # Step 3
+     *
      * Then expectedDecodedPolicy should prepends PolicyInput.fields in
      * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     *
      * {
      * "conditions":[
      * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -1259,23 +1375,30 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableFields().getMutableMap().remove(key);
       return this;
     }
+
     /** Use alternate mutation accessors instead. */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMutableFields() {
       bitField0_ |= 0x00000002;
       return internalGetMutableFields().getMutableMap();
     }
+
     /**
      *
      *
      * <pre>
+     *
      * Expectations
+     *
      * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
      * for consistent result across languages. Ordering doesn't matter to the
      * service but the decision is made to make it easier to conform implementations
      * in implementation.
+     *
      * Example:
+     *
      * # Step 1
+     *
      * PolicyInput.fields has:
      * {
      * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -1283,9 +1406,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * "content-type":"text/plain",
      * "success_action_redirect":"http://www.google.com/"
      * }
+     *
      * # Step 2
+     *
      * The expectedDecodedPolicy before prepending the PolicyInput.fields
      * would look like this:
+     *
      * {
      * "conditions":[
      * ...prepend here in the same order provided in PolicyInput.fields...
@@ -1297,9 +1423,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * ],
      * "expiration":"2020-01-23T04:35:40Z"
      * }
+     *
      * # Step 3
+     *
      * Then expectedDecodedPolicy should prepends PolicyInput.fields in
      * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     *
      * {
      * "conditions":[
      * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -1329,17 +1458,23 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       bitField0_ |= 0x00000002;
       return this;
     }
+
     /**
      *
      *
      * <pre>
+     *
      * Expectations
+     *
      * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
      * for consistent result across languages. Ordering doesn't matter to the
      * service but the decision is made to make it easier to conform implementations
      * in implementation.
+     *
      * Example:
+     *
      * # Step 1
+     *
      * PolicyInput.fields has:
      * {
      * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -1347,9 +1482,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * "content-type":"text/plain",
      * "success_action_redirect":"http://www.google.com/"
      * }
+     *
      * # Step 2
+     *
      * The expectedDecodedPolicy before prepending the PolicyInput.fields
      * would look like this:
+     *
      * {
      * "conditions":[
      * ...prepend here in the same order provided in PolicyInput.fields...
@@ -1361,9 +1499,12 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
      * ],
      * "expiration":"2020-01-23T04:35:40Z"
      * }
+     *
      * # Step 3
+     *
      * Then expectedDecodedPolicy should prepends PolicyInput.fields in
      * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+     *
      * {
      * "conditions":[
      * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -1389,6 +1530,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object expectedDecodedPolicy_ = "";
+
     /**
      * <code>string expectedDecodedPolicy = 3;</code>
      *
@@ -1405,6 +1547,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string expectedDecodedPolicy = 3;</code>
      *
@@ -1421,6 +1564,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string expectedDecodedPolicy = 3;</code>
      *
@@ -1436,6 +1580,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string expectedDecodedPolicy = 3;</code>
      *
@@ -1447,6 +1592,7 @@ public final class PolicyOutput extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string expectedDecodedPolicy = 3;</code>
      *

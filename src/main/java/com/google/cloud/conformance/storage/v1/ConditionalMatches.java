@@ -24,24 +24,20 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
     // @@protoc_insertion_point(message_implements:google.cloud.conformance.storage.v1.ConditionalMatches)
     ConditionalMatchesOrBuilder {
   private static final long serialVersionUID = 0L;
+
   // Use ConditionalMatches.newBuilder() to construct.
   private ConditionalMatches(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
 
   private ConditionalMatches() {
-    expression_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    expression_ = com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new ConditionalMatches();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -62,7 +58,9 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
   public static final int EXPRESSION_FIELD_NUMBER = 1;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList expression_;
+  private com.google.protobuf.LazyStringArrayList expression_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+
   /**
    * <code>repeated string expression = 1;</code>
    *
@@ -71,6 +69,7 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
   public com.google.protobuf.ProtocolStringList getExpressionList() {
     return expression_;
   }
+
   /**
    * <code>repeated string expression = 1;</code>
    *
@@ -79,6 +78,7 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
   public int getExpressionCount() {
     return expression_.size();
   }
+
   /**
    * <code>repeated string expression = 1;</code>
    *
@@ -88,6 +88,7 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
   public java.lang.String getExpression(int index) {
     return expression_.get(index);
   }
+
   /**
    * <code>repeated string expression = 1;</code>
    *
@@ -265,6 +266,7 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /** Protobuf type {@code google.cloud.conformance.storage.v1.ConditionalMatches} */
   public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
       implements
@@ -296,8 +298,7 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      expression_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      expression_ = com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -325,7 +326,6 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
     public com.google.cloud.conformance.storage.v1.ConditionalMatches buildPartial() {
       com.google.cloud.conformance.storage.v1.ConditionalMatches result =
           new com.google.cloud.conformance.storage.v1.ConditionalMatches(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) {
         buildPartial0(result);
       }
@@ -333,17 +333,12 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
       return result;
     }
 
-    private void buildPartialRepeatedFields(
-        com.google.cloud.conformance.storage.v1.ConditionalMatches result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        expression_ = expression_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.expression_ = expression_;
-    }
-
     private void buildPartial0(com.google.cloud.conformance.storage.v1.ConditionalMatches result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        expression_.makeImmutable();
+        result.expression_ = expression_;
+      }
     }
 
     @java.lang.Override
@@ -395,7 +390,7 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
       if (!other.expression_.isEmpty()) {
         if (expression_.isEmpty()) {
           expression_ = other.expression_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureExpressionIsMutable();
           expression_.addAll(other.expression_);
@@ -454,23 +449,26 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
 
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList expression_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList expression_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureExpressionIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!expression_.isModifiable()) {
         expression_ = new com.google.protobuf.LazyStringArrayList(expression_);
-        bitField0_ |= 0x00000001;
       }
+      bitField0_ |= 0x00000001;
     }
+
     /**
      * <code>repeated string expression = 1;</code>
      *
      * @return A list containing the expression.
      */
     public com.google.protobuf.ProtocolStringList getExpressionList() {
-      return expression_.getUnmodifiableView();
+      expression_.makeImmutable();
+      return expression_;
     }
+
     /**
      * <code>repeated string expression = 1;</code>
      *
@@ -479,6 +477,7 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
     public int getExpressionCount() {
       return expression_.size();
     }
+
     /**
      * <code>repeated string expression = 1;</code>
      *
@@ -488,6 +487,7 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
     public java.lang.String getExpression(int index) {
       return expression_.get(index);
     }
+
     /**
      * <code>repeated string expression = 1;</code>
      *
@@ -497,6 +497,7 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
     public com.google.protobuf.ByteString getExpressionBytes(int index) {
       return expression_.getByteString(index);
     }
+
     /**
      * <code>repeated string expression = 1;</code>
      *
@@ -510,9 +511,11 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
       }
       ensureExpressionIsMutable();
       expression_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string expression = 1;</code>
      *
@@ -525,9 +528,11 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
       }
       ensureExpressionIsMutable();
       expression_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string expression = 1;</code>
      *
@@ -537,20 +542,24 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
     public Builder addAllExpression(java.lang.Iterable<java.lang.String> values) {
       ensureExpressionIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, expression_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string expression = 1;</code>
      *
      * @return This builder for chaining.
      */
     public Builder clearExpression() {
-      expression_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      expression_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      ;
       onChanged();
       return this;
     }
+
     /**
      * <code>repeated string expression = 1;</code>
      *
@@ -564,6 +573,7 @@ public final class ConditionalMatches extends com.google.protobuf.GeneratedMessa
       checkByteStringIsUtf8(value);
       ensureExpressionIsMutable();
       expression_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

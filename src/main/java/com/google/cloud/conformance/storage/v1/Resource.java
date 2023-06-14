@@ -42,10 +42,13 @@ public enum Resource implements com.google.protobuf.ProtocolMessageEnum {
 
   /** <code>BUCKET = 0;</code> */
   public static final int BUCKET_VALUE = 0;
+
   /** <code>OBJECT = 1;</code> */
   public static final int OBJECT_VALUE = 1;
+
   /** <code>NOTIFICATION = 2;</code> */
   public static final int NOTIFICATION_VALUE = 2;
+
   /** <code>HMAC_KEY = 3;</code> */
   public static final int HMAC_KEY_VALUE = 3;
 

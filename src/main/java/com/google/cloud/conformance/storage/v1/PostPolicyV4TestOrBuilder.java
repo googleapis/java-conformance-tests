@@ -29,6 +29,7 @@ public interface PostPolicyV4TestOrBuilder
    * @return The description.
    */
   java.lang.String getDescription();
+
   /**
    * <code>string description = 1;</code>
    *
@@ -42,12 +43,14 @@ public interface PostPolicyV4TestOrBuilder
    * @return Whether the policyInput field is set.
    */
   boolean hasPolicyInput();
+
   /**
    * <code>.google.cloud.conformance.storage.v1.PolicyInput policyInput = 2;</code>
    *
    * @return The policyInput.
    */
   com.google.cloud.conformance.storage.v1.PolicyInput getPolicyInput();
+
   /** <code>.google.cloud.conformance.storage.v1.PolicyInput policyInput = 2;</code> */
   com.google.cloud.conformance.storage.v1.PolicyInputOrBuilder getPolicyInputOrBuilder();
 
@@ -57,12 +60,14 @@ public interface PostPolicyV4TestOrBuilder
    * @return Whether the policyOutput field is set.
    */
   boolean hasPolicyOutput();
+
   /**
    * <code>.google.cloud.conformance.storage.v1.PolicyOutput policyOutput = 3;</code>
    *
    * @return The policyOutput.
    */
   com.google.cloud.conformance.storage.v1.PolicyOutput getPolicyOutput();
+
   /** <code>.google.cloud.conformance.storage.v1.PolicyOutput policyOutput = 3;</code> */
   com.google.cloud.conformance.storage.v1.PolicyOutputOrBuilder getPolicyOutputOrBuilder();
 }

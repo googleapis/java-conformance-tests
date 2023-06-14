@@ -24,6 +24,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     // @@protoc_insertion_point(message_implements:google.cloud.conformance.storage.v1.SigningV4Test)
     SigningV4TestOrBuilder {
   private static final long serialVersionUID = 0L;
+
   // Use SigningV4Test.newBuilder() to construct.
   private SigningV4Test(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
@@ -47,11 +48,6 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new SigningV4Test();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -86,6 +82,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object fileName_ = "";
+
   /**
    * <code>string fileName = 1;</code>
    *
@@ -103,6 +100,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string fileName = 1;</code>
    *
@@ -125,6 +123,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
+
   /**
    * <code>string description = 2;</code>
    *
@@ -142,6 +141,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string description = 2;</code>
    *
@@ -164,6 +164,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object bucket_ = "";
+
   /**
    * <code>string bucket = 3;</code>
    *
@@ -181,6 +182,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string bucket = 3;</code>
    *
@@ -203,6 +205,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object object_ = "";
+
   /**
    * <code>string object = 4;</code>
    *
@@ -220,6 +223,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string object = 4;</code>
    *
@@ -242,6 +246,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object method_ = "";
+
   /**
    * <code>string method = 5;</code>
    *
@@ -259,6 +264,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string method = 5;</code>
    *
@@ -279,6 +285,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   public static final int EXPIRATION_FIELD_NUMBER = 6;
   private long expiration_ = 0L;
+
   /**
    * <code>int64 expiration = 6;</code>
    *
@@ -291,6 +298,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   public static final int TIMESTAMP_FIELD_NUMBER = 7;
   private com.google.protobuf.Timestamp timestamp_;
+
   /**
    * <code>.google.protobuf.Timestamp timestamp = 7;</code>
    *
@@ -300,6 +308,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   public boolean hasTimestamp() {
     return timestamp_ != null;
   }
+
   /**
    * <code>.google.protobuf.Timestamp timestamp = 7;</code>
    *
@@ -309,6 +318,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   public com.google.protobuf.Timestamp getTimestamp() {
     return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
   }
+
   /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
@@ -319,6 +329,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object expectedUrl_ = "";
+
   /**
    * <code>string expectedUrl = 8;</code>
    *
@@ -336,6 +347,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string expectedUrl = 8;</code>
    *
@@ -380,6 +392,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   public int getHeadersCount() {
     return internalGetHeaders().getMap().size();
   }
+
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   @java.lang.Override
   public boolean containsHeaders(java.lang.String key) {
@@ -388,17 +401,20 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
     return internalGetHeaders().getMap().containsKey(key);
   }
+
   /** Use {@link #getHeadersMap()} instead. */
   @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.String, java.lang.String> getHeaders() {
     return getHeadersMap();
   }
+
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   @java.lang.Override
   public java.util.Map<java.lang.String, java.lang.String> getHeadersMap() {
     return internalGetHeaders().getMap();
   }
+
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   @java.lang.Override
   public /* nullable */ java.lang.String getHeadersOrDefault(
@@ -411,6 +427,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
+
   /** <code>map&lt;string, string&gt; headers = 9;</code> */
   @java.lang.Override
   public java.lang.String getHeadersOrThrow(java.lang.String key) {
@@ -452,6 +469,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   public int getQueryParametersCount() {
     return internalGetQueryParameters().getMap().size();
   }
+
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   @java.lang.Override
   public boolean containsQueryParameters(java.lang.String key) {
@@ -460,17 +478,20 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
     return internalGetQueryParameters().getMap().containsKey(key);
   }
+
   /** Use {@link #getQueryParametersMap()} instead. */
   @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.String, java.lang.String> getQueryParameters() {
     return getQueryParametersMap();
   }
+
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   @java.lang.Override
   public java.util.Map<java.lang.String, java.lang.String> getQueryParametersMap() {
     return internalGetQueryParameters().getMap();
   }
+
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   @java.lang.Override
   public /* nullable */ java.lang.String getQueryParametersOrDefault(
@@ -483,6 +504,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     java.util.Map<java.lang.String, java.lang.String> map = internalGetQueryParameters().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
+
   /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
   @java.lang.Override
   public java.lang.String getQueryParametersOrThrow(java.lang.String key) {
@@ -500,6 +522,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object scheme_ = "";
+
   /**
    * <code>string scheme = 11;</code>
    *
@@ -517,6 +540,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string scheme = 11;</code>
    *
@@ -537,6 +561,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   public static final int URLSTYLE_FIELD_NUMBER = 12;
   private int urlStyle_ = 0;
+
   /**
    * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
    *
@@ -546,6 +571,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
   public int getUrlStyleValue() {
     return urlStyle_;
   }
+
   /**
    * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
    *
@@ -562,6 +588,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object bucketBoundHostname_ = "";
+
   /**
    * <code>string bucketBoundHostname = 13;</code>
    *
@@ -579,6 +606,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string bucketBoundHostname = 13;</code>
    *
@@ -601,6 +629,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object expectedCanonicalRequest_ = "";
+
   /**
    * <code>string expectedCanonicalRequest = 14;</code>
    *
@@ -618,6 +647,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string expectedCanonicalRequest = 14;</code>
    *
@@ -640,6 +670,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private volatile java.lang.Object expectedStringToSign_ = "";
+
   /**
    * <code>string expectedStringToSign = 15;</code>
    *
@@ -657,6 +688,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       return s;
     }
   }
+
   /**
    * <code>string expectedStringToSign = 15;</code>
    *
@@ -983,6 +1015,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /** Protobuf type {@code google.cloud.conformance.storage.v1.SigningV4Test} */
   public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
       implements
@@ -1399,6 +1432,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     private int bitField0_;
 
     private java.lang.Object fileName_ = "";
+
     /**
      * <code>string fileName = 1;</code>
      *
@@ -1415,6 +1449,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string fileName = 1;</code>
      *
@@ -1431,6 +1466,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string fileName = 1;</code>
      *
@@ -1446,6 +1482,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string fileName = 1;</code>
      *
@@ -1457,6 +1494,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string fileName = 1;</code>
      *
@@ -1475,6 +1513,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object description_ = "";
+
     /**
      * <code>string description = 2;</code>
      *
@@ -1491,6 +1530,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string description = 2;</code>
      *
@@ -1507,6 +1547,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string description = 2;</code>
      *
@@ -1522,6 +1563,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string description = 2;</code>
      *
@@ -1533,6 +1575,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string description = 2;</code>
      *
@@ -1551,6 +1594,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object bucket_ = "";
+
     /**
      * <code>string bucket = 3;</code>
      *
@@ -1567,6 +1611,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string bucket = 3;</code>
      *
@@ -1583,6 +1628,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string bucket = 3;</code>
      *
@@ -1598,6 +1644,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string bucket = 3;</code>
      *
@@ -1609,6 +1656,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string bucket = 3;</code>
      *
@@ -1627,6 +1675,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object object_ = "";
+
     /**
      * <code>string object = 4;</code>
      *
@@ -1643,6 +1692,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string object = 4;</code>
      *
@@ -1659,6 +1709,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string object = 4;</code>
      *
@@ -1674,6 +1725,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string object = 4;</code>
      *
@@ -1685,6 +1737,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string object = 4;</code>
      *
@@ -1703,6 +1756,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object method_ = "";
+
     /**
      * <code>string method = 5;</code>
      *
@@ -1719,6 +1773,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string method = 5;</code>
      *
@@ -1735,6 +1790,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string method = 5;</code>
      *
@@ -1750,6 +1806,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string method = 5;</code>
      *
@@ -1761,6 +1818,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string method = 5;</code>
      *
@@ -1779,6 +1837,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private long expiration_;
+
     /**
      * <code>int64 expiration = 6;</code>
      *
@@ -1788,6 +1847,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     public long getExpiration() {
       return expiration_;
     }
+
     /**
      * <code>int64 expiration = 6;</code>
      *
@@ -1801,6 +1861,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>int64 expiration = 6;</code>
      *
@@ -1819,6 +1880,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.Timestamp.Builder,
             com.google.protobuf.TimestampOrBuilder>
         timestampBuilder_;
+
     /**
      * <code>.google.protobuf.Timestamp timestamp = 7;</code>
      *
@@ -1827,6 +1889,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     public boolean hasTimestamp() {
       return ((bitField0_ & 0x00000040) != 0);
     }
+
     /**
      * <code>.google.protobuf.Timestamp timestamp = 7;</code>
      *
@@ -1839,6 +1902,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return timestampBuilder_.getMessage();
       }
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder setTimestamp(com.google.protobuf.Timestamp value) {
       if (timestampBuilder_ == null) {
@@ -1853,6 +1917,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder setTimestamp(com.google.protobuf.Timestamp.Builder builderForValue) {
       if (timestampBuilder_ == null) {
@@ -1864,6 +1929,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
       if (timestampBuilder_ == null) {
@@ -1881,6 +1947,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public Builder clearTimestamp() {
       bitField0_ = (bitField0_ & ~0x00000040);
@@ -1892,12 +1959,14 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
       bitField0_ |= 0x00000040;
       onChanged();
       return getTimestampFieldBuilder().getBuilder();
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
       if (timestampBuilder_ != null) {
@@ -1906,6 +1975,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
       }
     }
+
     /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp,
@@ -1925,6 +1995,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object expectedUrl_ = "";
+
     /**
      * <code>string expectedUrl = 8;</code>
      *
@@ -1941,6 +2012,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string expectedUrl = 8;</code>
      *
@@ -1957,6 +2029,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string expectedUrl = 8;</code>
      *
@@ -1972,6 +2045,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string expectedUrl = 8;</code>
      *
@@ -1983,6 +2057,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string expectedUrl = 8;</code>
      *
@@ -2025,6 +2100,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     public int getHeadersCount() {
       return internalGetHeaders().getMap().size();
     }
+
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
     @java.lang.Override
     public boolean containsHeaders(java.lang.String key) {
@@ -2033,17 +2109,20 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       }
       return internalGetHeaders().getMap().containsKey(key);
     }
+
     /** Use {@link #getHeadersMap()} instead. */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getHeaders() {
       return getHeadersMap();
     }
+
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
     @java.lang.Override
     public java.util.Map<java.lang.String, java.lang.String> getHeadersMap() {
       return internalGetHeaders().getMap();
     }
+
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
     @java.lang.Override
     public /* nullable */ java.lang.String getHeadersOrDefault(
@@ -2056,6 +2135,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
+
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
     @java.lang.Override
     public java.lang.String getHeadersOrThrow(java.lang.String key) {
@@ -2074,6 +2154,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableHeaders().getMutableMap().clear();
       return this;
     }
+
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
     public Builder removeHeaders(java.lang.String key) {
       if (key == null) {
@@ -2082,12 +2163,14 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableHeaders().getMutableMap().remove(key);
       return this;
     }
+
     /** Use alternate mutation accessors instead. */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMutableHeaders() {
       bitField0_ |= 0x00000100;
       return internalGetMutableHeaders().getMutableMap();
     }
+
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
     public Builder putHeaders(java.lang.String key, java.lang.String value) {
       if (key == null) {
@@ -2100,6 +2183,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       bitField0_ |= 0x00000100;
       return this;
     }
+
     /** <code>map&lt;string, string&gt; headers = 9;</code> */
     public Builder putAllHeaders(java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableHeaders().getMutableMap().putAll(values);
@@ -2136,6 +2220,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     public int getQueryParametersCount() {
       return internalGetQueryParameters().getMap().size();
     }
+
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
     @java.lang.Override
     public boolean containsQueryParameters(java.lang.String key) {
@@ -2144,17 +2229,20 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       }
       return internalGetQueryParameters().getMap().containsKey(key);
     }
+
     /** Use {@link #getQueryParametersMap()} instead. */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getQueryParameters() {
       return getQueryParametersMap();
     }
+
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
     @java.lang.Override
     public java.util.Map<java.lang.String, java.lang.String> getQueryParametersMap() {
       return internalGetQueryParameters().getMap();
     }
+
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
     @java.lang.Override
     public /* nullable */ java.lang.String getQueryParametersOrDefault(
@@ -2167,6 +2255,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       java.util.Map<java.lang.String, java.lang.String> map = internalGetQueryParameters().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
+
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
     @java.lang.Override
     public java.lang.String getQueryParametersOrThrow(java.lang.String key) {
@@ -2185,6 +2274,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableQueryParameters().getMutableMap().clear();
       return this;
     }
+
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
     public Builder removeQueryParameters(java.lang.String key) {
       if (key == null) {
@@ -2193,12 +2283,14 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       internalGetMutableQueryParameters().getMutableMap().remove(key);
       return this;
     }
+
     /** Use alternate mutation accessors instead. */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getMutableQueryParameters() {
       bitField0_ |= 0x00000200;
       return internalGetMutableQueryParameters().getMutableMap();
     }
+
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
     public Builder putQueryParameters(java.lang.String key, java.lang.String value) {
       if (key == null) {
@@ -2211,6 +2303,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       bitField0_ |= 0x00000200;
       return this;
     }
+
     /** <code>map&lt;string, string&gt; query_parameters = 10;</code> */
     public Builder putAllQueryParameters(java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableQueryParameters().getMutableMap().putAll(values);
@@ -2219,6 +2312,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object scheme_ = "";
+
     /**
      * <code>string scheme = 11;</code>
      *
@@ -2235,6 +2329,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string scheme = 11;</code>
      *
@@ -2251,6 +2346,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string scheme = 11;</code>
      *
@@ -2266,6 +2362,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string scheme = 11;</code>
      *
@@ -2277,6 +2374,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string scheme = 11;</code>
      *
@@ -2295,6 +2393,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private int urlStyle_ = 0;
+
     /**
      * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
      *
@@ -2304,6 +2403,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     public int getUrlStyleValue() {
       return urlStyle_;
     }
+
     /**
      * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
      *
@@ -2316,6 +2416,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
      *
@@ -2329,6 +2430,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
           ? com.google.cloud.conformance.storage.v1.UrlStyle.UNRECOGNIZED
           : result;
     }
+
     /**
      * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
      *
@@ -2344,6 +2446,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 12;</code>
      *
@@ -2357,6 +2460,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object bucketBoundHostname_ = "";
+
     /**
      * <code>string bucketBoundHostname = 13;</code>
      *
@@ -2373,6 +2477,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string bucketBoundHostname = 13;</code>
      *
@@ -2389,6 +2494,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string bucketBoundHostname = 13;</code>
      *
@@ -2404,6 +2510,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string bucketBoundHostname = 13;</code>
      *
@@ -2415,6 +2522,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string bucketBoundHostname = 13;</code>
      *
@@ -2433,6 +2541,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object expectedCanonicalRequest_ = "";
+
     /**
      * <code>string expectedCanonicalRequest = 14;</code>
      *
@@ -2449,6 +2558,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string expectedCanonicalRequest = 14;</code>
      *
@@ -2465,6 +2575,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string expectedCanonicalRequest = 14;</code>
      *
@@ -2480,6 +2591,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string expectedCanonicalRequest = 14;</code>
      *
@@ -2491,6 +2603,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string expectedCanonicalRequest = 14;</code>
      *
@@ -2509,6 +2622,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.lang.Object expectedStringToSign_ = "";
+
     /**
      * <code>string expectedStringToSign = 15;</code>
      *
@@ -2525,6 +2639,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string expectedStringToSign = 15;</code>
      *
@@ -2541,6 +2656,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string expectedStringToSign = 15;</code>
      *
@@ -2556,6 +2672,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string expectedStringToSign = 15;</code>
      *
@@ -2567,6 +2684,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       onChanged();
       return this;
     }
+
     /**
      * <code>string expectedStringToSign = 15;</code>
      *

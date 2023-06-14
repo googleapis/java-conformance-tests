@@ -29,12 +29,14 @@ public interface PolicyConditionsOrBuilder
    * @return A list containing the contentLengthRange.
    */
   java.util.List<java.lang.Integer> getContentLengthRangeList();
+
   /**
    * <code>repeated int32 contentLengthRange = 1;</code>
    *
    * @return The count of contentLengthRange.
    */
   int getContentLengthRangeCount();
+
   /**
    * <code>repeated int32 contentLengthRange = 1;</code>
    *
@@ -49,12 +51,14 @@ public interface PolicyConditionsOrBuilder
    * @return A list containing the startsWith.
    */
   java.util.List<java.lang.String> getStartsWithList();
+
   /**
    * <code>repeated string startsWith = 2;</code>
    *
    * @return The count of startsWith.
    */
   int getStartsWithCount();
+
   /**
    * <code>repeated string startsWith = 2;</code>
    *
@@ -62,6 +66,7 @@ public interface PolicyConditionsOrBuilder
    * @return The startsWith at the given index.
    */
   java.lang.String getStartsWith(int index);
+
   /**
    * <code>repeated string startsWith = 2;</code>
    *

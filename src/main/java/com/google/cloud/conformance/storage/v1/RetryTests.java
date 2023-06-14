@@ -24,6 +24,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
     // @@protoc_insertion_point(message_implements:google.cloud.conformance.storage.v1.RetryTests)
     RetryTestsOrBuilder {
   private static final long serialVersionUID = 0L;
+
   // Use RetryTests.newBuilder() to construct.
   private RetryTests(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
@@ -37,11 +38,6 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new RetryTests();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -63,27 +59,32 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
 
   @SuppressWarnings("serial")
   private java.util.List<com.google.cloud.conformance.storage.v1.RetryTest> retryTests_;
+
   /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
   @java.lang.Override
   public java.util.List<com.google.cloud.conformance.storage.v1.RetryTest> getRetryTestsList() {
     return retryTests_;
   }
+
   /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
   @java.lang.Override
   public java.util.List<? extends com.google.cloud.conformance.storage.v1.RetryTestOrBuilder>
       getRetryTestsOrBuilderList() {
     return retryTests_;
   }
+
   /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
   @java.lang.Override
   public int getRetryTestsCount() {
     return retryTests_.size();
   }
+
   /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
   @java.lang.Override
   public com.google.cloud.conformance.storage.v1.RetryTest getRetryTests(int index) {
     return retryTests_.get(index);
   }
+
   /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
   @java.lang.Override
   public com.google.cloud.conformance.storage.v1.RetryTestOrBuilder getRetryTestsOrBuilder(
@@ -252,6 +253,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /** Protobuf type {@code google.cloud.conformance.storage.v1.RetryTests} */
   public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
       implements
@@ -499,6 +501,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
         return retryTestsBuilder_.getMessageList();
       }
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public int getRetryTestsCount() {
       if (retryTestsBuilder_ == null) {
@@ -507,6 +510,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
         return retryTestsBuilder_.getCount();
       }
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public com.google.cloud.conformance.storage.v1.RetryTest getRetryTests(int index) {
       if (retryTestsBuilder_ == null) {
@@ -515,6 +519,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
         return retryTestsBuilder_.getMessage(index);
       }
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public Builder setRetryTests(
         int index, com.google.cloud.conformance.storage.v1.RetryTest value) {
@@ -530,6 +535,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public Builder setRetryTests(
         int index, com.google.cloud.conformance.storage.v1.RetryTest.Builder builderForValue) {
@@ -542,6 +548,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public Builder addRetryTests(com.google.cloud.conformance.storage.v1.RetryTest value) {
       if (retryTestsBuilder_ == null) {
@@ -556,6 +563,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public Builder addRetryTests(
         int index, com.google.cloud.conformance.storage.v1.RetryTest value) {
@@ -571,6 +579,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public Builder addRetryTests(
         com.google.cloud.conformance.storage.v1.RetryTest.Builder builderForValue) {
@@ -583,6 +592,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public Builder addRetryTests(
         int index, com.google.cloud.conformance.storage.v1.RetryTest.Builder builderForValue) {
@@ -595,6 +605,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public Builder addAllRetryTests(
         java.lang.Iterable<? extends com.google.cloud.conformance.storage.v1.RetryTest> values) {
@@ -607,6 +618,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public Builder clearRetryTests() {
       if (retryTestsBuilder_ == null) {
@@ -618,6 +630,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public Builder removeRetryTests(int index) {
       if (retryTestsBuilder_ == null) {
@@ -629,11 +642,13 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public com.google.cloud.conformance.storage.v1.RetryTest.Builder getRetryTestsBuilder(
         int index) {
       return getRetryTestsFieldBuilder().getBuilder(index);
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public com.google.cloud.conformance.storage.v1.RetryTestOrBuilder getRetryTestsOrBuilder(
         int index) {
@@ -643,6 +658,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
         return retryTestsBuilder_.getMessageOrBuilder(index);
       }
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public java.util.List<? extends com.google.cloud.conformance.storage.v1.RetryTestOrBuilder>
         getRetryTestsOrBuilderList() {
@@ -652,11 +668,13 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
         return java.util.Collections.unmodifiableList(retryTests_);
       }
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public com.google.cloud.conformance.storage.v1.RetryTest.Builder addRetryTestsBuilder() {
       return getRetryTestsFieldBuilder()
           .addBuilder(com.google.cloud.conformance.storage.v1.RetryTest.getDefaultInstance());
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public com.google.cloud.conformance.storage.v1.RetryTest.Builder addRetryTestsBuilder(
         int index) {
@@ -664,6 +682,7 @@ public final class RetryTests extends com.google.protobuf.GeneratedMessageV3
           .addBuilder(
               index, com.google.cloud.conformance.storage.v1.RetryTest.getDefaultInstance());
     }
+
     /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
     public java.util.List<com.google.cloud.conformance.storage.v1.RetryTest.Builder>
         getRetryTestsBuilderList() {

@@ -29,6 +29,7 @@ public interface PolicyOutputOrBuilder
    * @return The url.
    */
   java.lang.String getUrl();
+
   /**
    * <code>string url = 1;</code>
    *
@@ -40,13 +41,18 @@ public interface PolicyOutputOrBuilder
    *
    *
    * <pre>
+   *
    * Expectations
+   *
    * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
    * for consistent result across languages. Ordering doesn't matter to the
    * service but the decision is made to make it easier to conform implementations
    * in implementation.
+   *
    * Example:
+   *
    * # Step 1
+   *
    * PolicyInput.fields has:
    * {
    * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -54,9 +60,12 @@ public interface PolicyOutputOrBuilder
    * "content-type":"text/plain",
    * "success_action_redirect":"http://www.google.com/"
    * }
+   *
    * # Step 2
+   *
    * The expectedDecodedPolicy before prepending the PolicyInput.fields
    * would look like this:
+   *
    * {
    * "conditions":[
    * ...prepend here in the same order provided in PolicyInput.fields...
@@ -68,9 +77,12 @@ public interface PolicyOutputOrBuilder
    * ],
    * "expiration":"2020-01-23T04:35:40Z"
    * }
+   *
    * # Step 3
+   *
    * Then expectedDecodedPolicy should prepends PolicyInput.fields in
    * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   *
    * {
    * "conditions":[
    * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -90,17 +102,23 @@ public interface PolicyOutputOrBuilder
    * <code>map&lt;string, string&gt; fields = 2;</code>
    */
   int getFieldsCount();
+
   /**
    *
    *
    * <pre>
+   *
    * Expectations
+   *
    * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
    * for consistent result across languages. Ordering doesn't matter to the
    * service but the decision is made to make it easier to conform implementations
    * in implementation.
+   *
    * Example:
+   *
    * # Step 1
+   *
    * PolicyInput.fields has:
    * {
    * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -108,9 +126,12 @@ public interface PolicyOutputOrBuilder
    * "content-type":"text/plain",
    * "success_action_redirect":"http://www.google.com/"
    * }
+   *
    * # Step 2
+   *
    * The expectedDecodedPolicy before prepending the PolicyInput.fields
    * would look like this:
+   *
    * {
    * "conditions":[
    * ...prepend here in the same order provided in PolicyInput.fields...
@@ -122,9 +143,12 @@ public interface PolicyOutputOrBuilder
    * ],
    * "expiration":"2020-01-23T04:35:40Z"
    * }
+   *
    * # Step 3
+   *
    * Then expectedDecodedPolicy should prepends PolicyInput.fields in
    * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   *
    * {
    * "conditions":[
    * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -144,20 +168,27 @@ public interface PolicyOutputOrBuilder
    * <code>map&lt;string, string&gt; fields = 2;</code>
    */
   boolean containsFields(java.lang.String key);
+
   /** Use {@link #getFieldsMap()} instead. */
   @java.lang.Deprecated
   java.util.Map<java.lang.String, java.lang.String> getFields();
+
   /**
    *
    *
    * <pre>
+   *
    * Expectations
+   *
    * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
    * for consistent result across languages. Ordering doesn't matter to the
    * service but the decision is made to make it easier to conform implementations
    * in implementation.
+   *
    * Example:
+   *
    * # Step 1
+   *
    * PolicyInput.fields has:
    * {
    * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -165,9 +196,12 @@ public interface PolicyOutputOrBuilder
    * "content-type":"text/plain",
    * "success_action_redirect":"http://www.google.com/"
    * }
+   *
    * # Step 2
+   *
    * The expectedDecodedPolicy before prepending the PolicyInput.fields
    * would look like this:
+   *
    * {
    * "conditions":[
    * ...prepend here in the same order provided in PolicyInput.fields...
@@ -179,9 +213,12 @@ public interface PolicyOutputOrBuilder
    * ],
    * "expiration":"2020-01-23T04:35:40Z"
    * }
+   *
    * # Step 3
+   *
    * Then expectedDecodedPolicy should prepends PolicyInput.fields in
    * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   *
    * {
    * "conditions":[
    * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -201,17 +238,23 @@ public interface PolicyOutputOrBuilder
    * <code>map&lt;string, string&gt; fields = 2;</code>
    */
   java.util.Map<java.lang.String, java.lang.String> getFieldsMap();
+
   /**
    *
    *
    * <pre>
+   *
    * Expectations
+   *
    * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
    * for consistent result across languages. Ordering doesn't matter to the
    * service but the decision is made to make it easier to conform implementations
    * in implementation.
+   *
    * Example:
+   *
    * # Step 1
+   *
    * PolicyInput.fields has:
    * {
    * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -219,9 +262,12 @@ public interface PolicyOutputOrBuilder
    * "content-type":"text/plain",
    * "success_action_redirect":"http://www.google.com/"
    * }
+   *
    * # Step 2
+   *
    * The expectedDecodedPolicy before prepending the PolicyInput.fields
    * would look like this:
+   *
    * {
    * "conditions":[
    * ...prepend here in the same order provided in PolicyInput.fields...
@@ -233,9 +279,12 @@ public interface PolicyOutputOrBuilder
    * ],
    * "expiration":"2020-01-23T04:35:40Z"
    * }
+   *
    * # Step 3
+   *
    * Then expectedDecodedPolicy should prepends PolicyInput.fields in
    * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   *
    * {
    * "conditions":[
    * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -259,17 +308,23 @@ public interface PolicyOutputOrBuilder
       java.lang.String key,
       /* nullable */
       java.lang.String defaultValue);
+
   /**
    *
    *
    * <pre>
+   *
    * Expectations
+   *
    * E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
    * for consistent result across languages. Ordering doesn't matter to the
    * service but the decision is made to make it easier to conform implementations
    * in implementation.
+   *
    * Example:
+   *
    * # Step 1
+   *
    * PolicyInput.fields has:
    * {
    * "content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;"",
@@ -277,9 +332,12 @@ public interface PolicyOutputOrBuilder
    * "content-type":"text/plain",
    * "success_action_redirect":"http://www.google.com/"
    * }
+   *
    * # Step 2
+   *
    * The expectedDecodedPolicy before prepending the PolicyInput.fields
    * would look like this:
+   *
    * {
    * "conditions":[
    * ...prepend here in the same order provided in PolicyInput.fields...
@@ -291,9 +349,12 @@ public interface PolicyOutputOrBuilder
    * ],
    * "expiration":"2020-01-23T04:35:40Z"
    * }
+   *
    * # Step 3
+   *
    * Then expectedDecodedPolicy should prepends PolicyInput.fields in
    * the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+   *
    * {
    * "conditions":[
    * {"content-disposition":"attachment; filename=&#92;"~._-%=/é0Aa&#92;""},
@@ -320,6 +381,7 @@ public interface PolicyOutputOrBuilder
    * @return The expectedDecodedPolicy.
    */
   java.lang.String getExpectedDecodedPolicy();
+
   /**
    * <code>string expectedDecodedPolicy = 3;</code>
    *

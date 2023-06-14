@@ -35,6 +35,7 @@ public interface PolicyInputOrBuilder
    * @return The scheme.
    */
   java.lang.String getScheme();
+
   /**
    *
    *
@@ -54,6 +55,7 @@ public interface PolicyInputOrBuilder
    * @return The enum numeric value on the wire for urlStyle.
    */
   int getUrlStyleValue();
+
   /**
    * <code>.google.cloud.conformance.storage.v1.UrlStyle urlStyle = 2;</code>
    *
@@ -67,6 +69,7 @@ public interface PolicyInputOrBuilder
    * @return The bucketBoundHostname.
    */
   java.lang.String getBucketBoundHostname();
+
   /**
    * <code>string bucketBoundHostname = 3;</code>
    *
@@ -80,6 +83,7 @@ public interface PolicyInputOrBuilder
    * @return The bucket.
    */
   java.lang.String getBucket();
+
   /**
    * <code>string bucket = 4;</code>
    *
@@ -93,6 +97,7 @@ public interface PolicyInputOrBuilder
    * @return The object.
    */
   java.lang.String getObject();
+
   /**
    * <code>string object = 5;</code>
    *
@@ -113,12 +118,14 @@ public interface PolicyInputOrBuilder
    * @return Whether the timestamp field is set.
    */
   boolean hasTimestamp();
+
   /**
    * <code>.google.protobuf.Timestamp timestamp = 7;</code>
    *
    * @return The timestamp.
    */
   com.google.protobuf.Timestamp getTimestamp();
+
   /** <code>.google.protobuf.Timestamp timestamp = 7;</code> */
   com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
@@ -126,10 +133,13 @@ public interface PolicyInputOrBuilder
    *
    *
    * <pre>
+   *
    * fields with strict equivalence which are added into
    * PolicyOutput.expectedDecodedPolicy to generate the
    * signature.
+   *
    * Expectations
+   *
    * E.1: Order them in lexigraphical order so it's the
    * signature can be verified across different language
    * implementations.
@@ -138,14 +148,18 @@ public interface PolicyInputOrBuilder
    * <code>map&lt;string, string&gt; fields = 8;</code>
    */
   int getFieldsCount();
+
   /**
    *
    *
    * <pre>
+   *
    * fields with strict equivalence which are added into
    * PolicyOutput.expectedDecodedPolicy to generate the
    * signature.
+   *
    * Expectations
+   *
    * E.1: Order them in lexigraphical order so it's the
    * signature can be verified across different language
    * implementations.
@@ -154,17 +168,22 @@ public interface PolicyInputOrBuilder
    * <code>map&lt;string, string&gt; fields = 8;</code>
    */
   boolean containsFields(java.lang.String key);
+
   /** Use {@link #getFieldsMap()} instead. */
   @java.lang.Deprecated
   java.util.Map<java.lang.String, java.lang.String> getFields();
+
   /**
    *
    *
    * <pre>
+   *
    * fields with strict equivalence which are added into
    * PolicyOutput.expectedDecodedPolicy to generate the
    * signature.
+   *
    * Expectations
+   *
    * E.1: Order them in lexigraphical order so it's the
    * signature can be verified across different language
    * implementations.
@@ -173,14 +192,18 @@ public interface PolicyInputOrBuilder
    * <code>map&lt;string, string&gt; fields = 8;</code>
    */
   java.util.Map<java.lang.String, java.lang.String> getFieldsMap();
+
   /**
    *
    *
    * <pre>
+   *
    * fields with strict equivalence which are added into
    * PolicyOutput.expectedDecodedPolicy to generate the
    * signature.
+   *
    * Expectations
+   *
    * E.1: Order them in lexigraphical order so it's the
    * signature can be verified across different language
    * implementations.
@@ -193,14 +216,18 @@ public interface PolicyInputOrBuilder
       java.lang.String key,
       /* nullable */
       java.lang.String defaultValue);
+
   /**
    *
    *
    * <pre>
+   *
    * fields with strict equivalence which are added into
    * PolicyOutput.expectedDecodedPolicy to generate the
    * signature.
+   *
    * Expectations
+   *
    * E.1: Order them in lexigraphical order so it's the
    * signature can be verified across different language
    * implementations.
@@ -216,12 +243,14 @@ public interface PolicyInputOrBuilder
    * @return Whether the conditions field is set.
    */
   boolean hasConditions();
+
   /**
    * <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code>
    *
    * @return The conditions.
    */
   com.google.cloud.conformance.storage.v1.PolicyConditions getConditions();
+
   /** <code>.google.cloud.conformance.storage.v1.PolicyConditions conditions = 9;</code> */
   com.google.cloud.conformance.storage.v1.PolicyConditionsOrBuilder getConditionsOrBuilder();
 }

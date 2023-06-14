@@ -35,6 +35,7 @@ public interface MethodOrBuilder
    * @return The name.
    */
   java.lang.String getName();
+
   /**
    *
    *
@@ -54,12 +55,14 @@ public interface MethodOrBuilder
    * @return A list containing the resources.
    */
   java.util.List<com.google.cloud.conformance.storage.v1.Resource> getResourcesList();
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.Resource resources = 2;</code>
    *
    * @return The count of resources.
    */
   int getResourcesCount();
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.Resource resources = 2;</code>
    *
@@ -67,12 +70,14 @@ public interface MethodOrBuilder
    * @return The resources at the given index.
    */
   com.google.cloud.conformance.storage.v1.Resource getResources(int index);
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.Resource resources = 2;</code>
    *
    * @return A list containing the enum numeric values on the wire for resources.
    */
   java.util.List<java.lang.Integer> getResourcesValueList();
+
   /**
    * <code>repeated .google.cloud.conformance.storage.v1.Resource resources = 2;</code>
    *
@@ -93,6 +98,7 @@ public interface MethodOrBuilder
    * @return The group.
    */
   java.lang.String getGroup();
+
   /**
    *
    *

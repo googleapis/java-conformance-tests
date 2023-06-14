@@ -25,13 +25,17 @@ public interface RetryTestsOrBuilder
 
   /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
   java.util.List<com.google.cloud.conformance.storage.v1.RetryTest> getRetryTestsList();
+
   /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
   com.google.cloud.conformance.storage.v1.RetryTest getRetryTests(int index);
+
   /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
   int getRetryTestsCount();
+
   /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
   java.util.List<? extends com.google.cloud.conformance.storage.v1.RetryTestOrBuilder>
       getRetryTestsOrBuilderList();
+
   /** <code>repeated .google.cloud.conformance.storage.v1.RetryTest retryTests = 1;</code> */
   com.google.cloud.conformance.storage.v1.RetryTestOrBuilder getRetryTestsOrBuilder(int index);
 }

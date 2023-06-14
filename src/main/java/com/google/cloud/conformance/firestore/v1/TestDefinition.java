@@ -34,17 +34,22 @@ public final class TestDefinition {
 
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
     java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Test> getTestsList();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Test getTests(int index);
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
     int getTestsCount();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
     java.util.List<? extends com.google.cloud.conformance.firestore.v1.TestDefinition.TestOrBuilder>
         getTestsOrBuilderList();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.TestOrBuilder getTestsOrBuilder(
         int index);
   }
+
   /**
    *
    *
@@ -59,6 +64,7 @@ public final class TestDefinition {
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.TestFile)
       TestFileOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use TestFile.newBuilder() to construct.
     private TestFile(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -72,11 +78,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new TestFile();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -98,12 +99,14 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Test> tests_;
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
     @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Test>
         getTestsList() {
       return tests_;
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
     @java.lang.Override
     public java.util.List<
@@ -111,16 +114,19 @@ public final class TestDefinition {
         getTestsOrBuilderList() {
       return tests_;
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
     @java.lang.Override
     public int getTestsCount() {
       return tests_.size();
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Test getTests(int index) {
       return tests_.get(index);
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.TestOrBuilder getTestsOrBuilder(
@@ -292,6 +298,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      *
      *
@@ -559,6 +566,7 @@ public final class TestDefinition {
           return testsBuilder_.getMessageList();
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public int getTestsCount() {
         if (testsBuilder_ == null) {
@@ -567,6 +575,7 @@ public final class TestDefinition {
           return testsBuilder_.getCount();
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Test getTests(int index) {
         if (testsBuilder_ == null) {
@@ -575,6 +584,7 @@ public final class TestDefinition {
           return testsBuilder_.getMessage(index);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public Builder setTests(
           int index, com.google.cloud.conformance.firestore.v1.TestDefinition.Test value) {
@@ -590,6 +600,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public Builder setTests(
           int index,
@@ -603,6 +614,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public Builder addTests(com.google.cloud.conformance.firestore.v1.TestDefinition.Test value) {
         if (testsBuilder_ == null) {
@@ -617,6 +629,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public Builder addTests(
           int index, com.google.cloud.conformance.firestore.v1.TestDefinition.Test value) {
@@ -632,6 +645,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public Builder addTests(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Test.Builder builderForValue) {
@@ -644,6 +658,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public Builder addTests(
           int index,
@@ -657,6 +672,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public Builder addAllTests(
           java.lang.Iterable<
@@ -671,6 +687,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public Builder clearTests() {
         if (testsBuilder_ == null) {
@@ -682,6 +699,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public Builder removeTests(int index) {
         if (testsBuilder_ == null) {
@@ -693,11 +711,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Test.Builder getTestsBuilder(
           int index) {
         return getTestsFieldBuilder().getBuilder(index);
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.TestOrBuilder
           getTestsOrBuilder(int index) {
@@ -707,6 +727,7 @@ public final class TestDefinition {
           return testsBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public java.util.List<
               ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.TestOrBuilder>
@@ -717,6 +738,7 @@ public final class TestDefinition {
           return java.util.Collections.unmodifiableList(tests_);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Test.Builder
           addTestsBuilder() {
@@ -724,6 +746,7 @@ public final class TestDefinition {
             .addBuilder(
                 com.google.cloud.conformance.firestore.v1.TestDefinition.Test.getDefaultInstance());
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Test.Builder addTestsBuilder(
           int index) {
@@ -732,6 +755,7 @@ public final class TestDefinition {
                 index,
                 com.google.cloud.conformance.firestore.v1.TestDefinition.Test.getDefaultInstance());
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Test tests = 1;</code> */
       public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Test.Builder>
           getTestsBuilderList() {
@@ -839,6 +863,7 @@ public final class TestDefinition {
      * @return The description.
      */
     java.lang.String getDescription();
+
     /**
      *
      *
@@ -864,6 +889,7 @@ public final class TestDefinition {
      * @return The comment.
      */
     java.lang.String getComment();
+
     /**
      *
      *
@@ -883,12 +909,14 @@ public final class TestDefinition {
      * @return Whether the get field is set.
      */
     boolean hasGet();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code>
      *
      * @return The get.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest getGet();
+
     /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.GetTestOrBuilder getGetOrBuilder();
 
@@ -898,12 +926,14 @@ public final class TestDefinition {
      * @return Whether the create field is set.
      */
     boolean hasCreate();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code>
      *
      * @return The create.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest getCreate();
+
     /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTestOrBuilder
         getCreateOrBuilder();
@@ -914,12 +944,14 @@ public final class TestDefinition {
      * @return Whether the set field is set.
      */
     boolean hasSet();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code>
      *
      * @return The set.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest getSet();
+
     /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.SetTestOrBuilder getSetOrBuilder();
 
@@ -929,12 +961,14 @@ public final class TestDefinition {
      * @return Whether the update field is set.
      */
     boolean hasUpdate();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code>
      *
      * @return The update.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest getUpdate();
+
     /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTestOrBuilder
         getUpdateOrBuilder();
@@ -945,12 +979,14 @@ public final class TestDefinition {
      * @return Whether the updatePaths field is set.
      */
     boolean hasUpdatePaths();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code>
      *
      * @return The updatePaths.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest getUpdatePaths();
+
     /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTestOrBuilder
         getUpdatePathsOrBuilder();
@@ -961,12 +997,14 @@ public final class TestDefinition {
      * @return Whether the delete field is set.
      */
     boolean hasDelete();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code>
      *
      * @return The delete.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest getDelete();
+
     /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTestOrBuilder
         getDeleteOrBuilder();
@@ -977,12 +1015,14 @@ public final class TestDefinition {
      * @return Whether the query field is set.
      */
     boolean hasQuery();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code>
      *
      * @return The query.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest getQuery();
+
     /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTestOrBuilder getQueryOrBuilder();
 
@@ -992,18 +1032,21 @@ public final class TestDefinition {
      * @return Whether the listen field is set.
      */
     boolean hasListen();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code>
      *
      * @return The listen.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest getListen();
+
     /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTestOrBuilder
         getListenOrBuilder();
 
-    public com.google.cloud.conformance.firestore.v1.TestDefinition.Test.TestCase getTestCase();
+    com.google.cloud.conformance.firestore.v1.TestDefinition.Test.TestCase getTestCase();
   }
+
   /**
    *
    *
@@ -1018,6 +1061,7 @@ public final class TestDefinition {
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.Test)
       TestOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use Test.newBuilder() to construct.
     private Test(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -1032,11 +1076,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Test();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -1055,6 +1094,8 @@ public final class TestDefinition {
     }
 
     private int testCase_ = 0;
+
+    @SuppressWarnings("serial")
     private java.lang.Object test_;
 
     public enum TestCase
@@ -1075,6 +1116,7 @@ public final class TestDefinition {
       private TestCase(int value) {
         this.value = value;
       }
+
       /**
        * @param value The number of the enum to look for.
        * @return The enum associated with the given number.
@@ -1123,6 +1165,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object description_ = "";
+
     /**
      *
      *
@@ -1146,6 +1189,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -1174,6 +1218,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object comment_ = "";
+
     /**
      *
      *
@@ -1197,6 +1242,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -1222,6 +1268,7 @@ public final class TestDefinition {
     }
 
     public static final int GET_FIELD_NUMBER = 2;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code>
      *
@@ -1231,6 +1278,7 @@ public final class TestDefinition {
     public boolean hasGet() {
       return testCase_ == 2;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code>
      *
@@ -1243,6 +1291,7 @@ public final class TestDefinition {
       }
       return com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest.getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.GetTestOrBuilder
@@ -1254,6 +1303,7 @@ public final class TestDefinition {
     }
 
     public static final int CREATE_FIELD_NUMBER = 3;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code>
      *
@@ -1263,6 +1313,7 @@ public final class TestDefinition {
     public boolean hasCreate() {
       return testCase_ == 3;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code>
      *
@@ -1276,6 +1327,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest
           .getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTestOrBuilder
@@ -1288,6 +1340,7 @@ public final class TestDefinition {
     }
 
     public static final int SET_FIELD_NUMBER = 4;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code>
      *
@@ -1297,6 +1350,7 @@ public final class TestDefinition {
     public boolean hasSet() {
       return testCase_ == 4;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code>
      *
@@ -1309,6 +1363,7 @@ public final class TestDefinition {
       }
       return com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest.getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SetTestOrBuilder
@@ -1320,6 +1375,7 @@ public final class TestDefinition {
     }
 
     public static final int UPDATE_FIELD_NUMBER = 5;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code>
      *
@@ -1329,6 +1385,7 @@ public final class TestDefinition {
     public boolean hasUpdate() {
       return testCase_ == 5;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code>
      *
@@ -1342,6 +1399,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest
           .getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTestOrBuilder
@@ -1354,6 +1412,7 @@ public final class TestDefinition {
     }
 
     public static final int UPDATE_PATHS_FIELD_NUMBER = 6;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code>
      *
@@ -1363,6 +1422,7 @@ public final class TestDefinition {
     public boolean hasUpdatePaths() {
       return testCase_ == 6;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code>
      *
@@ -1377,6 +1437,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest
           .getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTestOrBuilder
@@ -1389,6 +1450,7 @@ public final class TestDefinition {
     }
 
     public static final int DELETE_FIELD_NUMBER = 7;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code>
      *
@@ -1398,6 +1460,7 @@ public final class TestDefinition {
     public boolean hasDelete() {
       return testCase_ == 7;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code>
      *
@@ -1411,6 +1474,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest
           .getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTestOrBuilder
@@ -1423,6 +1487,7 @@ public final class TestDefinition {
     }
 
     public static final int QUERY_FIELD_NUMBER = 8;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code>
      *
@@ -1432,6 +1497,7 @@ public final class TestDefinition {
     public boolean hasQuery() {
       return testCase_ == 8;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code>
      *
@@ -1445,6 +1511,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest
           .getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTestOrBuilder
@@ -1457,6 +1524,7 @@ public final class TestDefinition {
     }
 
     public static final int LISTEN_FIELD_NUMBER = 9;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code>
      *
@@ -1466,6 +1534,7 @@ public final class TestDefinition {
     public boolean hasListen() {
       return testCase_ == 9;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code>
      *
@@ -1479,6 +1548,7 @@ public final class TestDefinition {
       return com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest
           .getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTestOrBuilder
@@ -1798,6 +1868,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      *
      *
@@ -2169,6 +2240,7 @@ public final class TestDefinition {
       private int bitField0_;
 
       private java.lang.Object description_ = "";
+
       /**
        *
        *
@@ -2191,6 +2263,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -2213,6 +2286,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -2234,6 +2308,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -2251,6 +2326,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -2275,6 +2351,7 @@ public final class TestDefinition {
       }
 
       private java.lang.Object comment_ = "";
+
       /**
        *
        *
@@ -2297,6 +2374,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -2319,6 +2397,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -2340,6 +2419,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -2357,6 +2437,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -2385,6 +2466,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.GetTestOrBuilder>
           getBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code>
        *
@@ -2394,6 +2476,7 @@ public final class TestDefinition {
       public boolean hasGet() {
         return testCase_ == 2;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code>
        *
@@ -2415,6 +2498,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
       public Builder setGet(
           com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest value) {
@@ -2430,6 +2514,7 @@ public final class TestDefinition {
         testCase_ = 2;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
       public Builder setGet(
           com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest.Builder
@@ -2443,6 +2528,7 @@ public final class TestDefinition {
         testCase_ = 2;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
       public Builder mergeGet(
           com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest value) {
@@ -2470,6 +2556,7 @@ public final class TestDefinition {
         testCase_ = 2;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
       public Builder clearGet() {
         if (getBuilder_ == null) {
@@ -2487,11 +2574,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest.Builder
           getGetBuilder() {
         return getGetFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.GetTestOrBuilder
@@ -2506,6 +2595,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.GetTest get = 2;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest,
@@ -2538,6 +2628,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTestOrBuilder>
           createBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code>
        *
@@ -2547,6 +2638,7 @@ public final class TestDefinition {
       public boolean hasCreate() {
         return testCase_ == 3;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code>
        *
@@ -2568,6 +2660,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
       public Builder setCreate(
           com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest value) {
@@ -2583,6 +2676,7 @@ public final class TestDefinition {
         testCase_ = 3;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
       public Builder setCreate(
           com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest.Builder
@@ -2596,6 +2690,7 @@ public final class TestDefinition {
         testCase_ = 3;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
       public Builder mergeCreate(
           com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest value) {
@@ -2623,6 +2718,7 @@ public final class TestDefinition {
         testCase_ = 3;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
       public Builder clearCreate() {
         if (createBuilder_ == null) {
@@ -2640,11 +2736,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest.Builder
           getCreateBuilder() {
         return getCreateFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTestOrBuilder
@@ -2659,6 +2757,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.CreateTest create = 3;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest,
@@ -2691,6 +2790,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.SetTestOrBuilder>
           setBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code>
        *
@@ -2700,6 +2800,7 @@ public final class TestDefinition {
       public boolean hasSet() {
         return testCase_ == 4;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code>
        *
@@ -2721,6 +2822,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
       public Builder setSet(
           com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest value) {
@@ -2736,6 +2838,7 @@ public final class TestDefinition {
         testCase_ = 4;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
       public Builder setSet(
           com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest.Builder
@@ -2749,6 +2852,7 @@ public final class TestDefinition {
         testCase_ = 4;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
       public Builder mergeSet(
           com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest value) {
@@ -2776,6 +2880,7 @@ public final class TestDefinition {
         testCase_ = 4;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
       public Builder clearSet() {
         if (setBuilder_ == null) {
@@ -2793,11 +2898,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest.Builder
           getSetBuilder() {
         return getSetFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SetTestOrBuilder
@@ -2812,6 +2919,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.SetTest set = 4;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest,
@@ -2844,6 +2952,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTestOrBuilder>
           updateBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code>
        *
@@ -2853,6 +2962,7 @@ public final class TestDefinition {
       public boolean hasUpdate() {
         return testCase_ == 5;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code>
        *
@@ -2874,6 +2984,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
       public Builder setUpdate(
           com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest value) {
@@ -2889,6 +3000,7 @@ public final class TestDefinition {
         testCase_ = 5;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
       public Builder setUpdate(
           com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest.Builder
@@ -2902,6 +3014,7 @@ public final class TestDefinition {
         testCase_ = 5;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
       public Builder mergeUpdate(
           com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest value) {
@@ -2929,6 +3042,7 @@ public final class TestDefinition {
         testCase_ = 5;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
       public Builder clearUpdate() {
         if (updateBuilder_ == null) {
@@ -2946,11 +3060,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest.Builder
           getUpdateBuilder() {
         return getUpdateFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTestOrBuilder
@@ -2965,6 +3081,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdateTest update = 5;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest,
@@ -2997,6 +3114,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTestOrBuilder>
           updatePathsBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code>
        *
@@ -3006,6 +3124,7 @@ public final class TestDefinition {
       public boolean hasUpdatePaths() {
         return testCase_ == 6;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code>
        *
@@ -3028,6 +3147,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
       public Builder setUpdatePaths(
           com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest value) {
@@ -3043,6 +3163,7 @@ public final class TestDefinition {
         testCase_ = 6;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
       public Builder setUpdatePaths(
           com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest.Builder
@@ -3056,6 +3177,7 @@ public final class TestDefinition {
         testCase_ = 6;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
       public Builder mergeUpdatePaths(
           com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest value) {
@@ -3084,6 +3206,7 @@ public final class TestDefinition {
         testCase_ = 6;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
       public Builder clearUpdatePaths() {
         if (updatePathsBuilder_ == null) {
@@ -3101,11 +3224,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest.Builder
           getUpdatePathsBuilder() {
         return getUpdatePathsFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTestOrBuilder
@@ -3120,6 +3245,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.UpdatePathsTest update_paths = 6;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest,
@@ -3153,6 +3279,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTestOrBuilder>
           deleteBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code>
        *
@@ -3162,6 +3289,7 @@ public final class TestDefinition {
       public boolean hasDelete() {
         return testCase_ == 7;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code>
        *
@@ -3183,6 +3311,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
       public Builder setDelete(
           com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest value) {
@@ -3198,6 +3327,7 @@ public final class TestDefinition {
         testCase_ = 7;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
       public Builder setDelete(
           com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest.Builder
@@ -3211,6 +3341,7 @@ public final class TestDefinition {
         testCase_ = 7;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
       public Builder mergeDelete(
           com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest value) {
@@ -3238,6 +3369,7 @@ public final class TestDefinition {
         testCase_ = 7;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
       public Builder clearDelete() {
         if (deleteBuilder_ == null) {
@@ -3255,11 +3387,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest.Builder
           getDeleteBuilder() {
         return getDeleteFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTestOrBuilder
@@ -3274,6 +3408,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.DeleteTest delete = 7;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest,
@@ -3306,6 +3441,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTestOrBuilder>
           queryBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code>
        *
@@ -3315,6 +3451,7 @@ public final class TestDefinition {
       public boolean hasQuery() {
         return testCase_ == 8;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code>
        *
@@ -3336,6 +3473,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
       public Builder setQuery(
           com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest value) {
@@ -3351,6 +3489,7 @@ public final class TestDefinition {
         testCase_ = 8;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
       public Builder setQuery(
           com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest.Builder
@@ -3364,6 +3503,7 @@ public final class TestDefinition {
         testCase_ = 8;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
       public Builder mergeQuery(
           com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest value) {
@@ -3391,6 +3531,7 @@ public final class TestDefinition {
         testCase_ = 8;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
       public Builder clearQuery() {
         if (queryBuilder_ == null) {
@@ -3408,11 +3549,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest.Builder
           getQueryBuilder() {
         return getQueryFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTestOrBuilder
@@ -3427,6 +3570,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.QueryTest query = 8;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest,
@@ -3459,6 +3603,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTestOrBuilder>
           listenBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code>
        *
@@ -3468,6 +3613,7 @@ public final class TestDefinition {
       public boolean hasListen() {
         return testCase_ == 9;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code>
        *
@@ -3489,6 +3635,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
       public Builder setListen(
           com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest value) {
@@ -3504,6 +3651,7 @@ public final class TestDefinition {
         testCase_ = 9;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
       public Builder setListen(
           com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest.Builder
@@ -3517,6 +3665,7 @@ public final class TestDefinition {
         testCase_ = 9;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
       public Builder mergeListen(
           com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest value) {
@@ -3544,6 +3693,7 @@ public final class TestDefinition {
         testCase_ = 9;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
       public Builder clearListen() {
         if (listenBuilder_ == null) {
@@ -3561,11 +3711,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest.Builder
           getListenBuilder() {
         return getListenFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTestOrBuilder
@@ -3580,6 +3732,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.ListenTest listen = 9;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.ListenTest,
@@ -3691,6 +3844,7 @@ public final class TestDefinition {
      * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
+
     /**
      *
      *
@@ -3716,6 +3870,7 @@ public final class TestDefinition {
      * @return Whether the request field is set.
      */
     boolean hasRequest();
+
     /**
      *
      *
@@ -3728,6 +3883,7 @@ public final class TestDefinition {
      * @return The request.
      */
     com.google.firestore.v1.GetDocumentRequest getRequest();
+
     /**
      *
      *
@@ -3739,6 +3895,7 @@ public final class TestDefinition {
      */
     com.google.firestore.v1.GetDocumentRequestOrBuilder getRequestOrBuilder();
   }
+
   /**
    *
    *
@@ -3753,6 +3910,7 @@ public final class TestDefinition {
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.GetTest)
       GetTestOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use GetTest.newBuilder() to construct.
     private GetTest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -3766,11 +3924,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new GetTest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -3792,6 +3945,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object docRefPath_ = "";
+
     /**
      *
      *
@@ -3815,6 +3969,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -3841,6 +3996,7 @@ public final class TestDefinition {
 
     public static final int REQUEST_FIELD_NUMBER = 2;
     private com.google.firestore.v1.GetDocumentRequest request_;
+
     /**
      *
      *
@@ -3856,6 +4012,7 @@ public final class TestDefinition {
     public boolean hasRequest() {
       return request_ != null;
     }
+
     /**
      *
      *
@@ -3873,6 +4030,7 @@ public final class TestDefinition {
           ? com.google.firestore.v1.GetDocumentRequest.getDefaultInstance()
           : request_;
     }
+
     /**
      *
      *
@@ -4065,6 +4223,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      *
      *
@@ -4276,6 +4435,7 @@ public final class TestDefinition {
       private int bitField0_;
 
       private java.lang.Object docRefPath_ = "";
+
       /**
        *
        *
@@ -4298,6 +4458,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -4320,6 +4481,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -4341,6 +4503,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -4358,6 +4521,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -4387,6 +4551,7 @@ public final class TestDefinition {
               com.google.firestore.v1.GetDocumentRequest.Builder,
               com.google.firestore.v1.GetDocumentRequestOrBuilder>
           requestBuilder_;
+
       /**
        *
        *
@@ -4401,6 +4566,7 @@ public final class TestDefinition {
       public boolean hasRequest() {
         return ((bitField0_ & 0x00000002) != 0);
       }
+
       /**
        *
        *
@@ -4421,6 +4587,7 @@ public final class TestDefinition {
           return requestBuilder_.getMessage();
         }
       }
+
       /**
        *
        *
@@ -4443,6 +4610,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -4463,6 +4631,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -4488,6 +4657,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -4507,6 +4677,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -4521,6 +4692,7 @@ public final class TestDefinition {
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
+
       /**
        *
        *
@@ -4539,6 +4711,7 @@ public final class TestDefinition {
               : request_;
         }
       }
+
       /**
        *
        *
@@ -4649,6 +4822,7 @@ public final class TestDefinition {
      * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
+
     /**
      *
      *
@@ -4676,6 +4850,7 @@ public final class TestDefinition {
      * @return The jsonData.
      */
     java.lang.String getJsonData();
+
     /**
      *
      *
@@ -4703,6 +4878,7 @@ public final class TestDefinition {
      * @return Whether the request field is set.
      */
     boolean hasRequest();
+
     /**
      *
      *
@@ -4715,6 +4891,7 @@ public final class TestDefinition {
      * @return The request.
      */
     com.google.firestore.v1.CommitRequest getRequest();
+
     /**
      *
      *
@@ -4740,6 +4917,7 @@ public final class TestDefinition {
      */
     boolean getIsError();
   }
+
   /**
    *
    *
@@ -4754,6 +4932,7 @@ public final class TestDefinition {
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.CreateTest)
       CreateTestOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use CreateTest.newBuilder() to construct.
     private CreateTest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -4768,11 +4947,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new CreateTest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -4794,6 +4968,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object docRefPath_ = "";
+
     /**
      *
      *
@@ -4817,6 +4992,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -4845,6 +5021,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object jsonData_ = "";
+
     /**
      *
      *
@@ -4870,6 +5047,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -4898,6 +5076,7 @@ public final class TestDefinition {
 
     public static final int REQUEST_FIELD_NUMBER = 3;
     private com.google.firestore.v1.CommitRequest request_;
+
     /**
      *
      *
@@ -4913,6 +5092,7 @@ public final class TestDefinition {
     public boolean hasRequest() {
       return request_ != null;
     }
+
     /**
      *
      *
@@ -4930,6 +5110,7 @@ public final class TestDefinition {
           ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
           : request_;
     }
+
     /**
      *
      *
@@ -4948,6 +5129,7 @@ public final class TestDefinition {
 
     public static final int IS_ERROR_FIELD_NUMBER = 4;
     private boolean isError_ = false;
+
     /**
      *
      *
@@ -5159,6 +5341,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      *
      *
@@ -5398,6 +5581,7 @@ public final class TestDefinition {
       private int bitField0_;
 
       private java.lang.Object docRefPath_ = "";
+
       /**
        *
        *
@@ -5420,6 +5604,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -5442,6 +5627,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -5463,6 +5649,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -5480,6 +5667,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -5504,6 +5692,7 @@ public final class TestDefinition {
       }
 
       private java.lang.Object jsonData_ = "";
+
       /**
        *
        *
@@ -5528,6 +5717,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -5552,6 +5742,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -5575,6 +5766,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -5594,6 +5786,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -5625,6 +5818,7 @@ public final class TestDefinition {
               com.google.firestore.v1.CommitRequest.Builder,
               com.google.firestore.v1.CommitRequestOrBuilder>
           requestBuilder_;
+
       /**
        *
        *
@@ -5639,6 +5833,7 @@ public final class TestDefinition {
       public boolean hasRequest() {
         return ((bitField0_ & 0x00000004) != 0);
       }
+
       /**
        *
        *
@@ -5659,6 +5854,7 @@ public final class TestDefinition {
           return requestBuilder_.getMessage();
         }
       }
+
       /**
        *
        *
@@ -5681,6 +5877,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -5700,6 +5897,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -5725,6 +5923,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -5744,6 +5943,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -5758,6 +5958,7 @@ public final class TestDefinition {
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
+
       /**
        *
        *
@@ -5776,6 +5977,7 @@ public final class TestDefinition {
               : request_;
         }
       }
+
       /**
        *
        *
@@ -5803,6 +6005,7 @@ public final class TestDefinition {
       }
 
       private boolean isError_;
+
       /**
        *
        *
@@ -5819,6 +6022,7 @@ public final class TestDefinition {
       public boolean getIsError() {
         return isError_;
       }
+
       /**
        *
        *
@@ -5839,6 +6043,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -5942,6 +6147,7 @@ public final class TestDefinition {
      * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
+
     /**
      *
      *
@@ -5967,6 +6173,7 @@ public final class TestDefinition {
      * @return Whether the option field is set.
      */
     boolean hasOption();
+
     /**
      *
      *
@@ -5979,6 +6186,7 @@ public final class TestDefinition {
      * @return The option.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption getOption();
+
     /**
      *
      *
@@ -6003,6 +6211,7 @@ public final class TestDefinition {
      * @return The jsonData.
      */
     java.lang.String getJsonData();
+
     /**
      *
      *
@@ -6028,6 +6237,7 @@ public final class TestDefinition {
      * @return Whether the request field is set.
      */
     boolean hasRequest();
+
     /**
      *
      *
@@ -6040,6 +6250,7 @@ public final class TestDefinition {
      * @return The request.
      */
     com.google.firestore.v1.CommitRequest getRequest();
+
     /**
      *
      *
@@ -6064,6 +6275,7 @@ public final class TestDefinition {
      */
     boolean getIsError();
   }
+
   /**
    *
    *
@@ -6078,6 +6290,7 @@ public final class TestDefinition {
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.SetTest)
       SetTestOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use SetTest.newBuilder() to construct.
     private SetTest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -6092,11 +6305,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new SetTest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -6118,6 +6326,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object docRefPath_ = "";
+
     /**
      *
      *
@@ -6141,6 +6350,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -6167,6 +6377,7 @@ public final class TestDefinition {
 
     public static final int OPTION_FIELD_NUMBER = 2;
     private com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption option_;
+
     /**
      *
      *
@@ -6182,6 +6393,7 @@ public final class TestDefinition {
     public boolean hasOption() {
       return option_ != null;
     }
+
     /**
      *
      *
@@ -6199,6 +6411,7 @@ public final class TestDefinition {
           ? com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption.getDefaultInstance()
           : option_;
     }
+
     /**
      *
      *
@@ -6220,6 +6433,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object jsonData_ = "";
+
     /**
      *
      *
@@ -6243,6 +6457,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -6269,6 +6484,7 @@ public final class TestDefinition {
 
     public static final int REQUEST_FIELD_NUMBER = 4;
     private com.google.firestore.v1.CommitRequest request_;
+
     /**
      *
      *
@@ -6284,6 +6500,7 @@ public final class TestDefinition {
     public boolean hasRequest() {
       return request_ != null;
     }
+
     /**
      *
      *
@@ -6301,6 +6518,7 @@ public final class TestDefinition {
           ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
           : request_;
     }
+
     /**
      *
      *
@@ -6319,6 +6537,7 @@ public final class TestDefinition {
 
     public static final int IS_ERROR_FIELD_NUMBER = 5;
     private boolean isError_ = false;
+
     /**
      *
      *
@@ -6543,6 +6762,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      *
      *
@@ -6799,6 +7019,7 @@ public final class TestDefinition {
       private int bitField0_;
 
       private java.lang.Object docRefPath_ = "";
+
       /**
        *
        *
@@ -6821,6 +7042,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -6843,6 +7065,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -6864,6 +7087,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -6881,6 +7105,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -6910,6 +7135,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.SetOption.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.SetOptionOrBuilder>
           optionBuilder_;
+
       /**
        *
        *
@@ -6924,6 +7150,7 @@ public final class TestDefinition {
       public boolean hasOption() {
         return ((bitField0_ & 0x00000002) != 0);
       }
+
       /**
        *
        *
@@ -6945,6 +7172,7 @@ public final class TestDefinition {
           return optionBuilder_.getMessage();
         }
       }
+
       /**
        *
        *
@@ -6968,6 +7196,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -6989,6 +7218,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -7017,6 +7247,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -7036,6 +7267,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -7051,6 +7283,7 @@ public final class TestDefinition {
         onChanged();
         return getOptionFieldBuilder().getBuilder();
       }
+
       /**
        *
        *
@@ -7071,6 +7304,7 @@ public final class TestDefinition {
               : option_;
         }
       }
+
       /**
        *
        *
@@ -7098,6 +7332,7 @@ public final class TestDefinition {
       }
 
       private java.lang.Object jsonData_ = "";
+
       /**
        *
        *
@@ -7120,6 +7355,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -7142,6 +7378,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -7163,6 +7400,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -7180,6 +7418,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -7209,6 +7448,7 @@ public final class TestDefinition {
               com.google.firestore.v1.CommitRequest.Builder,
               com.google.firestore.v1.CommitRequestOrBuilder>
           requestBuilder_;
+
       /**
        *
        *
@@ -7223,6 +7463,7 @@ public final class TestDefinition {
       public boolean hasRequest() {
         return ((bitField0_ & 0x00000008) != 0);
       }
+
       /**
        *
        *
@@ -7243,6 +7484,7 @@ public final class TestDefinition {
           return requestBuilder_.getMessage();
         }
       }
+
       /**
        *
        *
@@ -7265,6 +7507,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -7284,6 +7527,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -7309,6 +7553,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -7328,6 +7573,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -7342,6 +7588,7 @@ public final class TestDefinition {
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
+
       /**
        *
        *
@@ -7360,6 +7607,7 @@ public final class TestDefinition {
               : request_;
         }
       }
+
       /**
        *
        *
@@ -7387,6 +7635,7 @@ public final class TestDefinition {
       }
 
       private boolean isError_;
+
       /**
        *
        *
@@ -7402,6 +7651,7 @@ public final class TestDefinition {
       public boolean getIsError() {
         return isError_;
       }
+
       /**
        *
        *
@@ -7421,6 +7671,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -7523,6 +7774,7 @@ public final class TestDefinition {
      * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
+
     /**
      *
      *
@@ -7548,6 +7800,7 @@ public final class TestDefinition {
      * @return Whether the precondition field is set.
      */
     boolean hasPrecondition();
+
     /**
      *
      *
@@ -7560,6 +7813,7 @@ public final class TestDefinition {
      * @return The precondition.
      */
     com.google.firestore.v1.Precondition getPrecondition();
+
     /**
      *
      *
@@ -7583,6 +7837,7 @@ public final class TestDefinition {
      * @return The jsonData.
      */
     java.lang.String getJsonData();
+
     /**
      *
      *
@@ -7608,6 +7863,7 @@ public final class TestDefinition {
      * @return Whether the request field is set.
      */
     boolean hasRequest();
+
     /**
      *
      *
@@ -7620,6 +7876,7 @@ public final class TestDefinition {
      * @return The request.
      */
     com.google.firestore.v1.CommitRequest getRequest();
+
     /**
      *
      *
@@ -7644,6 +7901,7 @@ public final class TestDefinition {
      */
     boolean getIsError();
   }
+
   /**
    *
    *
@@ -7659,6 +7917,7 @@ public final class TestDefinition {
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.UpdateTest)
       UpdateTestOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use UpdateTest.newBuilder() to construct.
     private UpdateTest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -7673,11 +7932,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new UpdateTest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -7699,6 +7953,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object docRefPath_ = "";
+
     /**
      *
      *
@@ -7722,6 +7977,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -7748,6 +8004,7 @@ public final class TestDefinition {
 
     public static final int PRECONDITION_FIELD_NUMBER = 2;
     private com.google.firestore.v1.Precondition precondition_;
+
     /**
      *
      *
@@ -7763,6 +8020,7 @@ public final class TestDefinition {
     public boolean hasPrecondition() {
       return precondition_ != null;
     }
+
     /**
      *
      *
@@ -7780,6 +8038,7 @@ public final class TestDefinition {
           ? com.google.firestore.v1.Precondition.getDefaultInstance()
           : precondition_;
     }
+
     /**
      *
      *
@@ -7800,6 +8059,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object jsonData_ = "";
+
     /**
      *
      *
@@ -7823,6 +8083,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -7849,6 +8110,7 @@ public final class TestDefinition {
 
     public static final int REQUEST_FIELD_NUMBER = 4;
     private com.google.firestore.v1.CommitRequest request_;
+
     /**
      *
      *
@@ -7864,6 +8126,7 @@ public final class TestDefinition {
     public boolean hasRequest() {
       return request_ != null;
     }
+
     /**
      *
      *
@@ -7881,6 +8144,7 @@ public final class TestDefinition {
           ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
           : request_;
     }
+
     /**
      *
      *
@@ -7899,6 +8163,7 @@ public final class TestDefinition {
 
     public static final int IS_ERROR_FIELD_NUMBER = 5;
     private boolean isError_ = false;
+
     /**
      *
      *
@@ -8123,6 +8388,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      *
      *
@@ -8381,6 +8647,7 @@ public final class TestDefinition {
       private int bitField0_;
 
       private java.lang.Object docRefPath_ = "";
+
       /**
        *
        *
@@ -8403,6 +8670,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -8425,6 +8693,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -8446,6 +8715,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8463,6 +8733,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8492,6 +8763,7 @@ public final class TestDefinition {
               com.google.firestore.v1.Precondition.Builder,
               com.google.firestore.v1.PreconditionOrBuilder>
           preconditionBuilder_;
+
       /**
        *
        *
@@ -8506,6 +8778,7 @@ public final class TestDefinition {
       public boolean hasPrecondition() {
         return ((bitField0_ & 0x00000002) != 0);
       }
+
       /**
        *
        *
@@ -8526,6 +8799,7 @@ public final class TestDefinition {
           return preconditionBuilder_.getMessage();
         }
       }
+
       /**
        *
        *
@@ -8548,6 +8822,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8567,6 +8842,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8592,6 +8868,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8611,6 +8888,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8625,6 +8903,7 @@ public final class TestDefinition {
         onChanged();
         return getPreconditionFieldBuilder().getBuilder();
       }
+
       /**
        *
        *
@@ -8643,6 +8922,7 @@ public final class TestDefinition {
               : precondition_;
         }
       }
+
       /**
        *
        *
@@ -8670,6 +8950,7 @@ public final class TestDefinition {
       }
 
       private java.lang.Object jsonData_ = "";
+
       /**
        *
        *
@@ -8692,6 +8973,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -8714,6 +8996,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -8735,6 +9018,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8752,6 +9036,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8781,6 +9066,7 @@ public final class TestDefinition {
               com.google.firestore.v1.CommitRequest.Builder,
               com.google.firestore.v1.CommitRequestOrBuilder>
           requestBuilder_;
+
       /**
        *
        *
@@ -8795,6 +9081,7 @@ public final class TestDefinition {
       public boolean hasRequest() {
         return ((bitField0_ & 0x00000008) != 0);
       }
+
       /**
        *
        *
@@ -8815,6 +9102,7 @@ public final class TestDefinition {
           return requestBuilder_.getMessage();
         }
       }
+
       /**
        *
        *
@@ -8837,6 +9125,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8856,6 +9145,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8881,6 +9171,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8900,6 +9191,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -8914,6 +9206,7 @@ public final class TestDefinition {
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
+
       /**
        *
        *
@@ -8932,6 +9225,7 @@ public final class TestDefinition {
               : request_;
         }
       }
+
       /**
        *
        *
@@ -8959,6 +9253,7 @@ public final class TestDefinition {
       }
 
       private boolean isError_;
+
       /**
        *
        *
@@ -8974,6 +9269,7 @@ public final class TestDefinition {
       public boolean getIsError() {
         return isError_;
       }
+
       /**
        *
        *
@@ -8993,6 +9289,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -9095,6 +9392,7 @@ public final class TestDefinition {
      * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
+
     /**
      *
      *
@@ -9120,6 +9418,7 @@ public final class TestDefinition {
      * @return Whether the precondition field is set.
      */
     boolean hasPrecondition();
+
     /**
      *
      *
@@ -9132,6 +9431,7 @@ public final class TestDefinition {
      * @return The precondition.
      */
     com.google.firestore.v1.Precondition getPrecondition();
+
     /**
      *
      *
@@ -9154,6 +9454,7 @@ public final class TestDefinition {
      */
     java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         getFieldPathsList();
+
     /**
      *
      *
@@ -9164,6 +9465,7 @@ public final class TestDefinition {
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath field_paths = 3;</code>
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getFieldPaths(int index);
+
     /**
      *
      *
@@ -9174,6 +9476,7 @@ public final class TestDefinition {
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath field_paths = 3;</code>
      */
     int getFieldPathsCount();
+
     /**
      *
      *
@@ -9186,6 +9489,7 @@ public final class TestDefinition {
     java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>
         getFieldPathsOrBuilderList();
+
     /**
      *
      *
@@ -9210,6 +9514,7 @@ public final class TestDefinition {
      * @return A list containing the jsonValues.
      */
     java.util.List<java.lang.String> getJsonValuesList();
+
     /**
      *
      *
@@ -9222,6 +9527,7 @@ public final class TestDefinition {
      * @return The count of jsonValues.
      */
     int getJsonValuesCount();
+
     /**
      *
      *
@@ -9235,6 +9541,7 @@ public final class TestDefinition {
      * @return The jsonValues at the given index.
      */
     java.lang.String getJsonValues(int index);
+
     /**
      *
      *
@@ -9261,6 +9568,7 @@ public final class TestDefinition {
      * @return Whether the request field is set.
      */
     boolean hasRequest();
+
     /**
      *
      *
@@ -9273,6 +9581,7 @@ public final class TestDefinition {
      * @return The request.
      */
     com.google.firestore.v1.CommitRequest getRequest();
+
     /**
      *
      *
@@ -9297,6 +9606,7 @@ public final class TestDefinition {
      */
     boolean getIsError();
   }
+
   /**
    *
    *
@@ -9312,6 +9622,7 @@ public final class TestDefinition {
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.UpdatePathsTest)
       UpdatePathsTestOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use UpdatePathsTest.newBuilder() to construct.
     private UpdatePathsTest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -9320,18 +9631,13 @@ public final class TestDefinition {
     private UpdatePathsTest() {
       docRefPath_ = "";
       fieldPaths_ = java.util.Collections.emptyList();
-      jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      jsonValues_ = com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new UpdatePathsTest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -9354,6 +9660,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object docRefPath_ = "";
+
     /**
      *
      *
@@ -9377,6 +9684,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -9403,6 +9711,7 @@ public final class TestDefinition {
 
     public static final int PRECONDITION_FIELD_NUMBER = 2;
     private com.google.firestore.v1.Precondition precondition_;
+
     /**
      *
      *
@@ -9418,6 +9727,7 @@ public final class TestDefinition {
     public boolean hasPrecondition() {
       return precondition_ != null;
     }
+
     /**
      *
      *
@@ -9435,6 +9745,7 @@ public final class TestDefinition {
           ? com.google.firestore.v1.Precondition.getDefaultInstance()
           : precondition_;
     }
+
     /**
      *
      *
@@ -9456,6 +9767,7 @@ public final class TestDefinition {
     @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         fieldPaths_;
+
     /**
      *
      *
@@ -9470,6 +9782,7 @@ public final class TestDefinition {
         getFieldPathsList() {
       return fieldPaths_;
     }
+
     /**
      *
      *
@@ -9485,6 +9798,7 @@ public final class TestDefinition {
         getFieldPathsOrBuilderList() {
       return fieldPaths_;
     }
+
     /**
      *
      *
@@ -9498,6 +9812,7 @@ public final class TestDefinition {
     public int getFieldPathsCount() {
       return fieldPaths_.size();
     }
+
     /**
      *
      *
@@ -9512,6 +9827,7 @@ public final class TestDefinition {
         int index) {
       return fieldPaths_.get(index);
     }
+
     /**
      *
      *
@@ -9530,7 +9846,9 @@ public final class TestDefinition {
     public static final int JSON_VALUES_FIELD_NUMBER = 4;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList jsonValues_;
+    private com.google.protobuf.LazyStringArrayList jsonValues_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+
     /**
      *
      *
@@ -9545,6 +9863,7 @@ public final class TestDefinition {
     public com.google.protobuf.ProtocolStringList getJsonValuesList() {
       return jsonValues_;
     }
+
     /**
      *
      *
@@ -9559,6 +9878,7 @@ public final class TestDefinition {
     public int getJsonValuesCount() {
       return jsonValues_.size();
     }
+
     /**
      *
      *
@@ -9574,6 +9894,7 @@ public final class TestDefinition {
     public java.lang.String getJsonValues(int index) {
       return jsonValues_.get(index);
     }
+
     /**
      *
      *
@@ -9592,6 +9913,7 @@ public final class TestDefinition {
 
     public static final int REQUEST_FIELD_NUMBER = 5;
     private com.google.firestore.v1.CommitRequest request_;
+
     /**
      *
      *
@@ -9607,6 +9929,7 @@ public final class TestDefinition {
     public boolean hasRequest() {
       return request_ != null;
     }
+
     /**
      *
      *
@@ -9624,6 +9947,7 @@ public final class TestDefinition {
           ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
           : request_;
     }
+
     /**
      *
      *
@@ -9642,6 +9966,7 @@ public final class TestDefinition {
 
     public static final int IS_ERROR_FIELD_NUMBER = 6;
     private boolean isError_ = false;
+
     /**
      *
      *
@@ -9890,6 +10215,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      *
      *
@@ -9946,8 +10272,7 @@ public final class TestDefinition {
           fieldPathsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
-        jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        jsonValues_ = com.google.protobuf.LazyStringArrayList.emptyList();
         request_ = null;
         if (requestBuilder_ != null) {
           requestBuilder_.dispose();
@@ -10004,11 +10329,6 @@ public final class TestDefinition {
         } else {
           result.fieldPaths_ = fieldPathsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000008) != 0)) {
-          jsonValues_ = jsonValues_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.jsonValues_ = jsonValues_;
       }
 
       private void buildPartial0(
@@ -10020,6 +10340,10 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.precondition_ =
               preconditionBuilder_ == null ? precondition_ : preconditionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          jsonValues_.makeImmutable();
+          result.jsonValues_ = jsonValues_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
@@ -10119,7 +10443,7 @@ public final class TestDefinition {
         if (!other.jsonValues_.isEmpty()) {
           if (jsonValues_.isEmpty()) {
             jsonValues_ = other.jsonValues_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ |= 0x00000008;
           } else {
             ensureJsonValuesIsMutable();
             jsonValues_.addAll(other.jsonValues_);
@@ -10224,6 +10548,7 @@ public final class TestDefinition {
       private int bitField0_;
 
       private java.lang.Object docRefPath_ = "";
+
       /**
        *
        *
@@ -10246,6 +10571,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -10268,6 +10594,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -10289,6 +10616,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -10306,6 +10634,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -10335,6 +10664,7 @@ public final class TestDefinition {
               com.google.firestore.v1.Precondition.Builder,
               com.google.firestore.v1.PreconditionOrBuilder>
           preconditionBuilder_;
+
       /**
        *
        *
@@ -10349,6 +10679,7 @@ public final class TestDefinition {
       public boolean hasPrecondition() {
         return ((bitField0_ & 0x00000002) != 0);
       }
+
       /**
        *
        *
@@ -10369,6 +10700,7 @@ public final class TestDefinition {
           return preconditionBuilder_.getMessage();
         }
       }
+
       /**
        *
        *
@@ -10391,6 +10723,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -10410,6 +10743,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -10435,6 +10769,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -10454,6 +10789,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -10468,6 +10804,7 @@ public final class TestDefinition {
         onChanged();
         return getPreconditionFieldBuilder().getBuilder();
       }
+
       /**
        *
        *
@@ -10486,6 +10823,7 @@ public final class TestDefinition {
               : precondition_;
         }
       }
+
       /**
        *
        *
@@ -10547,6 +10885,7 @@ public final class TestDefinition {
           return fieldPathsBuilder_.getMessageList();
         }
       }
+
       /**
        *
        *
@@ -10563,6 +10902,7 @@ public final class TestDefinition {
           return fieldPathsBuilder_.getCount();
         }
       }
+
       /**
        *
        *
@@ -10580,6 +10920,7 @@ public final class TestDefinition {
           return fieldPathsBuilder_.getMessage(index);
         }
       }
+
       /**
        *
        *
@@ -10603,6 +10944,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -10625,6 +10967,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -10648,6 +10991,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -10671,6 +11015,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -10692,6 +11037,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -10714,6 +11060,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -10736,6 +11083,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -10755,6 +11103,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -10774,6 +11123,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -10787,6 +11137,7 @@ public final class TestDefinition {
           getFieldPathsBuilder(int index) {
         return getFieldPathsFieldBuilder().getBuilder(index);
       }
+
       /**
        *
        *
@@ -10804,6 +11155,7 @@ public final class TestDefinition {
           return fieldPathsBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /**
        *
        *
@@ -10822,6 +11174,7 @@ public final class TestDefinition {
           return java.util.Collections.unmodifiableList(fieldPaths_);
         }
       }
+
       /**
        *
        *
@@ -10838,6 +11191,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath
                     .getDefaultInstance());
       }
+
       /**
        *
        *
@@ -10855,6 +11209,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath
                     .getDefaultInstance());
       }
+
       /**
        *
        *
@@ -10887,15 +11242,16 @@ public final class TestDefinition {
         return fieldPathsBuilder_;
       }
 
-      private com.google.protobuf.LazyStringList jsonValues_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList jsonValues_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensureJsonValuesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!jsonValues_.isModifiable()) {
           jsonValues_ = new com.google.protobuf.LazyStringArrayList(jsonValues_);
-          bitField0_ |= 0x00000008;
         }
+        bitField0_ |= 0x00000008;
       }
+
       /**
        *
        *
@@ -10908,8 +11264,10 @@ public final class TestDefinition {
        * @return A list containing the jsonValues.
        */
       public com.google.protobuf.ProtocolStringList getJsonValuesList() {
-        return jsonValues_.getUnmodifiableView();
+        jsonValues_.makeImmutable();
+        return jsonValues_;
       }
+
       /**
        *
        *
@@ -10924,6 +11282,7 @@ public final class TestDefinition {
       public int getJsonValuesCount() {
         return jsonValues_.size();
       }
+
       /**
        *
        *
@@ -10939,6 +11298,7 @@ public final class TestDefinition {
       public java.lang.String getJsonValues(int index) {
         return jsonValues_.get(index);
       }
+
       /**
        *
        *
@@ -10954,6 +11314,7 @@ public final class TestDefinition {
       public com.google.protobuf.ByteString getJsonValuesBytes(int index) {
         return jsonValues_.getByteString(index);
       }
+
       /**
        *
        *
@@ -10973,9 +11334,11 @@ public final class TestDefinition {
         }
         ensureJsonValuesIsMutable();
         jsonValues_.set(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -10994,9 +11357,11 @@ public final class TestDefinition {
         }
         ensureJsonValuesIsMutable();
         jsonValues_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -11012,9 +11377,11 @@ public final class TestDefinition {
       public Builder addAllJsonValues(java.lang.Iterable<java.lang.String> values) {
         ensureJsonValuesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, jsonValues_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -11027,11 +11394,13 @@ public final class TestDefinition {
        * @return This builder for chaining.
        */
       public Builder clearJsonValues() {
-        jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        jsonValues_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
+        ;
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -11051,6 +11420,7 @@ public final class TestDefinition {
         checkByteStringIsUtf8(value);
         ensureJsonValuesIsMutable();
         jsonValues_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -11061,6 +11431,7 @@ public final class TestDefinition {
               com.google.firestore.v1.CommitRequest.Builder,
               com.google.firestore.v1.CommitRequestOrBuilder>
           requestBuilder_;
+
       /**
        *
        *
@@ -11075,6 +11446,7 @@ public final class TestDefinition {
       public boolean hasRequest() {
         return ((bitField0_ & 0x00000010) != 0);
       }
+
       /**
        *
        *
@@ -11095,6 +11467,7 @@ public final class TestDefinition {
           return requestBuilder_.getMessage();
         }
       }
+
       /**
        *
        *
@@ -11117,6 +11490,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -11136,6 +11510,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -11161,6 +11536,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -11180,6 +11556,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -11194,6 +11571,7 @@ public final class TestDefinition {
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
+
       /**
        *
        *
@@ -11212,6 +11590,7 @@ public final class TestDefinition {
               : request_;
         }
       }
+
       /**
        *
        *
@@ -11239,6 +11618,7 @@ public final class TestDefinition {
       }
 
       private boolean isError_;
+
       /**
        *
        *
@@ -11254,6 +11634,7 @@ public final class TestDefinition {
       public boolean getIsError() {
         return isError_;
       }
+
       /**
        *
        *
@@ -11273,6 +11654,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -11376,6 +11758,7 @@ public final class TestDefinition {
      * @return The docRefPath.
      */
     java.lang.String getDocRefPath();
+
     /**
      *
      *
@@ -11395,12 +11778,14 @@ public final class TestDefinition {
      * @return Whether the precondition field is set.
      */
     boolean hasPrecondition();
+
     /**
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
      *
      * @return The precondition.
      */
     com.google.firestore.v1.Precondition getPrecondition();
+
     /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
     com.google.firestore.v1.PreconditionOrBuilder getPreconditionOrBuilder();
 
@@ -11416,6 +11801,7 @@ public final class TestDefinition {
      * @return Whether the request field is set.
      */
     boolean hasRequest();
+
     /**
      *
      *
@@ -11428,6 +11814,7 @@ public final class TestDefinition {
      * @return The request.
      */
     com.google.firestore.v1.CommitRequest getRequest();
+
     /**
      *
      *
@@ -11452,6 +11839,7 @@ public final class TestDefinition {
      */
     boolean getIsError();
   }
+
   /**
    *
    *
@@ -11466,6 +11854,7 @@ public final class TestDefinition {
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.DeleteTest)
       DeleteTestOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use DeleteTest.newBuilder() to construct.
     private DeleteTest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -11479,11 +11868,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new DeleteTest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -11505,6 +11889,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object docRefPath_ = "";
+
     /**
      *
      *
@@ -11528,6 +11913,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -11554,6 +11940,7 @@ public final class TestDefinition {
 
     public static final int PRECONDITION_FIELD_NUMBER = 2;
     private com.google.firestore.v1.Precondition precondition_;
+
     /**
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
      *
@@ -11563,6 +11950,7 @@ public final class TestDefinition {
     public boolean hasPrecondition() {
       return precondition_ != null;
     }
+
     /**
      * <code>.google.firestore.v1.Precondition precondition = 2;</code>
      *
@@ -11574,6 +11962,7 @@ public final class TestDefinition {
           ? com.google.firestore.v1.Precondition.getDefaultInstance()
           : precondition_;
     }
+
     /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
     @java.lang.Override
     public com.google.firestore.v1.PreconditionOrBuilder getPreconditionOrBuilder() {
@@ -11584,6 +11973,7 @@ public final class TestDefinition {
 
     public static final int REQUEST_FIELD_NUMBER = 3;
     private com.google.firestore.v1.CommitRequest request_;
+
     /**
      *
      *
@@ -11599,6 +11989,7 @@ public final class TestDefinition {
     public boolean hasRequest() {
       return request_ != null;
     }
+
     /**
      *
      *
@@ -11616,6 +12007,7 @@ public final class TestDefinition {
           ? com.google.firestore.v1.CommitRequest.getDefaultInstance()
           : request_;
     }
+
     /**
      *
      *
@@ -11634,6 +12026,7 @@ public final class TestDefinition {
 
     public static final int IS_ERROR_FIELD_NUMBER = 4;
     private boolean isError_ = false;
+
     /**
      *
      *
@@ -11849,6 +12242,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      *
      *
@@ -12091,6 +12485,7 @@ public final class TestDefinition {
       private int bitField0_;
 
       private java.lang.Object docRefPath_ = "";
+
       /**
        *
        *
@@ -12113,6 +12508,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -12135,6 +12531,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -12156,6 +12553,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -12173,6 +12571,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -12202,6 +12601,7 @@ public final class TestDefinition {
               com.google.firestore.v1.Precondition.Builder,
               com.google.firestore.v1.PreconditionOrBuilder>
           preconditionBuilder_;
+
       /**
        * <code>.google.firestore.v1.Precondition precondition = 2;</code>
        *
@@ -12210,6 +12610,7 @@ public final class TestDefinition {
       public boolean hasPrecondition() {
         return ((bitField0_ & 0x00000002) != 0);
       }
+
       /**
        * <code>.google.firestore.v1.Precondition precondition = 2;</code>
        *
@@ -12224,6 +12625,7 @@ public final class TestDefinition {
           return preconditionBuilder_.getMessage();
         }
       }
+
       /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
       public Builder setPrecondition(com.google.firestore.v1.Precondition value) {
         if (preconditionBuilder_ == null) {
@@ -12238,6 +12640,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
       public Builder setPrecondition(com.google.firestore.v1.Precondition.Builder builderForValue) {
         if (preconditionBuilder_ == null) {
@@ -12249,6 +12652,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
       public Builder mergePrecondition(com.google.firestore.v1.Precondition value) {
         if (preconditionBuilder_ == null) {
@@ -12266,6 +12670,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
       public Builder clearPrecondition() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -12277,12 +12682,14 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
       public com.google.firestore.v1.Precondition.Builder getPreconditionBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getPreconditionFieldBuilder().getBuilder();
       }
+
       /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
       public com.google.firestore.v1.PreconditionOrBuilder getPreconditionOrBuilder() {
         if (preconditionBuilder_ != null) {
@@ -12293,6 +12700,7 @@ public final class TestDefinition {
               : precondition_;
         }
       }
+
       /** <code>.google.firestore.v1.Precondition precondition = 2;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.firestore.v1.Precondition,
@@ -12317,6 +12725,7 @@ public final class TestDefinition {
               com.google.firestore.v1.CommitRequest.Builder,
               com.google.firestore.v1.CommitRequestOrBuilder>
           requestBuilder_;
+
       /**
        *
        *
@@ -12331,6 +12740,7 @@ public final class TestDefinition {
       public boolean hasRequest() {
         return ((bitField0_ & 0x00000004) != 0);
       }
+
       /**
        *
        *
@@ -12351,6 +12761,7 @@ public final class TestDefinition {
           return requestBuilder_.getMessage();
         }
       }
+
       /**
        *
        *
@@ -12373,6 +12784,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -12392,6 +12804,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -12417,6 +12830,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -12436,6 +12850,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -12450,6 +12865,7 @@ public final class TestDefinition {
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
+
       /**
        *
        *
@@ -12468,6 +12884,7 @@ public final class TestDefinition {
               : request_;
         }
       }
+
       /**
        *
        *
@@ -12495,6 +12912,7 @@ public final class TestDefinition {
       }
 
       private boolean isError_;
+
       /**
        *
        *
@@ -12510,6 +12928,7 @@ public final class TestDefinition {
       public boolean getIsError() {
         return isError_;
       }
+
       /**
        *
        *
@@ -12529,6 +12948,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -12643,6 +13063,7 @@ public final class TestDefinition {
      */
     java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         getFieldsList();
+
     /**
      *
      *
@@ -12653,6 +13074,7 @@ public final class TestDefinition {
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 2;</code>
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getFields(int index);
+
     /**
      *
      *
@@ -12663,6 +13085,7 @@ public final class TestDefinition {
      * <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 2;</code>
      */
     int getFieldsCount();
+
     /**
      *
      *
@@ -12675,6 +13098,7 @@ public final class TestDefinition {
     java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>
         getFieldsOrBuilderList();
+
     /**
      *
      *
@@ -12687,6 +13111,7 @@ public final class TestDefinition {
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder getFieldsOrBuilder(
         int index);
   }
+
   /**
    *
    *
@@ -12701,6 +13126,7 @@ public final class TestDefinition {
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.SetOption)
       SetOptionOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use SetOption.newBuilder() to construct.
     private SetOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -12714,11 +13140,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new SetOption();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -12738,6 +13159,7 @@ public final class TestDefinition {
 
     public static final int ALL_FIELD_NUMBER = 1;
     private boolean all_ = false;
+
     /**
      *
      *
@@ -12759,6 +13181,7 @@ public final class TestDefinition {
     @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         fields_;
+
     /**
      *
      *
@@ -12773,6 +13196,7 @@ public final class TestDefinition {
         getFieldsList() {
       return fields_;
     }
+
     /**
      *
      *
@@ -12788,6 +13212,7 @@ public final class TestDefinition {
         getFieldsOrBuilderList() {
       return fields_;
     }
+
     /**
      *
      *
@@ -12801,6 +13226,7 @@ public final class TestDefinition {
     public int getFieldsCount() {
       return fields_.size();
     }
+
     /**
      *
      *
@@ -12814,6 +13240,7 @@ public final class TestDefinition {
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getFields(int index) {
       return fields_.get(index);
     }
+
     /**
      *
      *
@@ -13002,6 +13429,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      *
      *
@@ -13257,6 +13685,7 @@ public final class TestDefinition {
       private int bitField0_;
 
       private boolean all_;
+
       /**
        *
        *
@@ -13272,6 +13701,7 @@ public final class TestDefinition {
       public boolean getAll() {
         return all_;
       }
+
       /**
        *
        *
@@ -13291,6 +13721,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -13344,6 +13775,7 @@ public final class TestDefinition {
           return fieldsBuilder_.getMessageList();
         }
       }
+
       /**
        *
        *
@@ -13360,6 +13792,7 @@ public final class TestDefinition {
           return fieldsBuilder_.getCount();
         }
       }
+
       /**
        *
        *
@@ -13377,6 +13810,7 @@ public final class TestDefinition {
           return fieldsBuilder_.getMessage(index);
         }
       }
+
       /**
        *
        *
@@ -13400,6 +13834,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -13422,6 +13857,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -13445,6 +13881,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -13468,6 +13905,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -13489,6 +13927,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -13511,6 +13950,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -13533,6 +13973,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -13552,6 +13993,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -13571,6 +14013,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /**
        *
        *
@@ -13584,6 +14027,7 @@ public final class TestDefinition {
           getFieldsBuilder(int index) {
         return getFieldsFieldBuilder().getBuilder(index);
       }
+
       /**
        *
        *
@@ -13601,6 +14045,7 @@ public final class TestDefinition {
           return fieldsBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /**
        *
        *
@@ -13619,6 +14064,7 @@ public final class TestDefinition {
           return java.util.Collections.unmodifiableList(fields_);
         }
       }
+
       /**
        *
        *
@@ -13635,6 +14081,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath
                     .getDefaultInstance());
       }
+
       /**
        *
        *
@@ -13652,6 +14099,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath
                     .getDefaultInstance());
       }
+
       /**
        *
        *
@@ -13768,6 +14216,7 @@ public final class TestDefinition {
      * @return The collPath.
      */
     java.lang.String getCollPath();
+
     /**
      *
      *
@@ -13784,14 +14233,18 @@ public final class TestDefinition {
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
     java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Clause>
         getClausesList();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Clause getClauses(int index);
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
     int getClausesCount();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
     java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.ClauseOrBuilder>
         getClausesOrBuilderList();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.ClauseOrBuilder getClausesOrBuilder(
         int index);
@@ -13802,12 +14255,14 @@ public final class TestDefinition {
      * @return Whether the query field is set.
      */
     boolean hasQuery();
+
     /**
      * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
      *
      * @return The query.
      */
     com.google.firestore.v1.StructuredQuery getQuery();
+
     /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
     com.google.firestore.v1.StructuredQueryOrBuilder getQueryOrBuilder();
 
@@ -13818,12 +14273,14 @@ public final class TestDefinition {
      */
     boolean getIsError();
   }
+
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.QueryTest} */
   public static final class QueryTest extends com.google.protobuf.GeneratedMessageV3
       implements
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.QueryTest)
       QueryTestOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use QueryTest.newBuilder() to construct.
     private QueryTest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -13838,11 +14295,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new QueryTest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -13864,6 +14316,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object collPath_ = "";
+
     /**
      *
      *
@@ -13887,6 +14340,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -13916,12 +14370,14 @@ public final class TestDefinition {
     @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Clause>
         clauses_;
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
     @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Clause>
         getClausesList() {
       return clauses_;
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
     @java.lang.Override
     public java.util.List<
@@ -13929,16 +14385,19 @@ public final class TestDefinition {
         getClausesOrBuilderList() {
       return clauses_;
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
     @java.lang.Override
     public int getClausesCount() {
       return clauses_.size();
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Clause getClauses(int index) {
       return clauses_.get(index);
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.ClauseOrBuilder
@@ -13948,6 +14407,7 @@ public final class TestDefinition {
 
     public static final int QUERY_FIELD_NUMBER = 3;
     private com.google.firestore.v1.StructuredQuery query_;
+
     /**
      * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
      *
@@ -13957,6 +14417,7 @@ public final class TestDefinition {
     public boolean hasQuery() {
       return query_ != null;
     }
+
     /**
      * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
      *
@@ -13966,6 +14427,7 @@ public final class TestDefinition {
     public com.google.firestore.v1.StructuredQuery getQuery() {
       return query_ == null ? com.google.firestore.v1.StructuredQuery.getDefaultInstance() : query_;
     }
+
     /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
     @java.lang.Override
     public com.google.firestore.v1.StructuredQueryOrBuilder getQueryOrBuilder() {
@@ -13974,6 +14436,7 @@ public final class TestDefinition {
 
     public static final int IS_ERROR_FIELD_NUMBER = 4;
     private boolean isError_ = false;
+
     /**
      * <code>bool is_error = 4;</code>
      *
@@ -14180,6 +14643,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /** Protobuf type {@code google.cloud.conformance.firestore.v1.QueryTest} */
     public static final class Builder
         extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
@@ -14458,6 +14922,7 @@ public final class TestDefinition {
       private int bitField0_;
 
       private java.lang.Object collPath_ = "";
+
       /**
        *
        *
@@ -14480,6 +14945,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -14502,6 +14968,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -14523,6 +14990,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -14540,6 +15008,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -14590,6 +15059,7 @@ public final class TestDefinition {
           return clausesBuilder_.getMessageList();
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public int getClausesCount() {
         if (clausesBuilder_ == null) {
@@ -14598,6 +15068,7 @@ public final class TestDefinition {
           return clausesBuilder_.getCount();
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Clause getClauses(int index) {
         if (clausesBuilder_ == null) {
@@ -14606,6 +15077,7 @@ public final class TestDefinition {
           return clausesBuilder_.getMessage(index);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public Builder setClauses(
           int index, com.google.cloud.conformance.firestore.v1.TestDefinition.Clause value) {
@@ -14621,6 +15093,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public Builder setClauses(
           int index,
@@ -14634,6 +15107,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public Builder addClauses(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Clause value) {
@@ -14649,6 +15123,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public Builder addClauses(
           int index, com.google.cloud.conformance.firestore.v1.TestDefinition.Clause value) {
@@ -14664,6 +15139,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public Builder addClauses(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Clause.Builder builderForValue) {
@@ -14676,6 +15152,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public Builder addClauses(
           int index,
@@ -14689,6 +15166,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public Builder addAllClauses(
           java.lang.Iterable<
@@ -14703,6 +15181,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public Builder clearClauses() {
         if (clausesBuilder_ == null) {
@@ -14714,6 +15193,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public Builder removeClauses(int index) {
         if (clausesBuilder_ == null) {
@@ -14725,11 +15205,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Clause.Builder
           getClausesBuilder(int index) {
         return getClausesFieldBuilder().getBuilder(index);
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.ClauseOrBuilder
           getClausesOrBuilder(int index) {
@@ -14739,6 +15221,7 @@ public final class TestDefinition {
           return clausesBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public java.util.List<
               ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.ClauseOrBuilder>
@@ -14749,6 +15232,7 @@ public final class TestDefinition {
           return java.util.Collections.unmodifiableList(clauses_);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Clause.Builder
           addClausesBuilder() {
@@ -14757,6 +15241,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.Clause
                     .getDefaultInstance());
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Clause.Builder
           addClausesBuilder(int index) {
@@ -14766,6 +15251,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.Clause
                     .getDefaultInstance());
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Clause clauses = 2;</code> */
       public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Clause.Builder>
           getClausesBuilderList() {
@@ -14795,6 +15281,7 @@ public final class TestDefinition {
               com.google.firestore.v1.StructuredQuery.Builder,
               com.google.firestore.v1.StructuredQueryOrBuilder>
           queryBuilder_;
+
       /**
        * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
        *
@@ -14803,6 +15290,7 @@ public final class TestDefinition {
       public boolean hasQuery() {
         return ((bitField0_ & 0x00000004) != 0);
       }
+
       /**
        * <code>.google.firestore.v1.StructuredQuery query = 3;</code>
        *
@@ -14817,6 +15305,7 @@ public final class TestDefinition {
           return queryBuilder_.getMessage();
         }
       }
+
       /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
       public Builder setQuery(com.google.firestore.v1.StructuredQuery value) {
         if (queryBuilder_ == null) {
@@ -14831,6 +15320,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
       public Builder setQuery(com.google.firestore.v1.StructuredQuery.Builder builderForValue) {
         if (queryBuilder_ == null) {
@@ -14842,6 +15332,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
       public Builder mergeQuery(com.google.firestore.v1.StructuredQuery value) {
         if (queryBuilder_ == null) {
@@ -14859,6 +15350,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
       public Builder clearQuery() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -14870,12 +15362,14 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
       public com.google.firestore.v1.StructuredQuery.Builder getQueryBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getQueryFieldBuilder().getBuilder();
       }
+
       /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
       public com.google.firestore.v1.StructuredQueryOrBuilder getQueryOrBuilder() {
         if (queryBuilder_ != null) {
@@ -14886,6 +15380,7 @@ public final class TestDefinition {
               : query_;
         }
       }
+
       /** <code>.google.firestore.v1.StructuredQuery query = 3;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.firestore.v1.StructuredQuery,
@@ -14905,6 +15400,7 @@ public final class TestDefinition {
       }
 
       private boolean isError_;
+
       /**
        * <code>bool is_error = 4;</code>
        *
@@ -14914,6 +15410,7 @@ public final class TestDefinition {
       public boolean getIsError() {
         return isError_;
       }
+
       /**
        * <code>bool is_error = 4;</code>
        *
@@ -14927,6 +15424,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>bool is_error = 4;</code>
        *
@@ -15017,12 +15515,14 @@ public final class TestDefinition {
      * @return Whether the select field is set.
      */
     boolean hasSelect();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code>
      *
      * @return The select.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Select getSelect();
+
     /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.SelectOrBuilder getSelectOrBuilder();
 
@@ -15032,12 +15532,14 @@ public final class TestDefinition {
      * @return Whether the where field is set.
      */
     boolean hasWhere();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code>
      *
      * @return The where.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Where getWhere();
+
     /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.WhereOrBuilder getWhereOrBuilder();
 
@@ -15047,12 +15549,14 @@ public final class TestDefinition {
      * @return Whether the orderBy field is set.
      */
     boolean hasOrderBy();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code>
      *
      * @return The orderBy.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy getOrderBy();
+
     /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.OrderByOrBuilder getOrderByOrBuilder();
 
@@ -15062,6 +15566,7 @@ public final class TestDefinition {
      * @return Whether the offset field is set.
      */
     boolean hasOffset();
+
     /**
      * <code>int32 offset = 4;</code>
      *
@@ -15075,6 +15580,7 @@ public final class TestDefinition {
      * @return Whether the limit field is set.
      */
     boolean hasLimit();
+
     /**
      * <code>int32 limit = 5;</code>
      *
@@ -15088,12 +15594,14 @@ public final class TestDefinition {
      * @return Whether the startAt field is set.
      */
     boolean hasStartAt();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code>
      *
      * @return The startAt.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAt();
+
     /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder getStartAtOrBuilder();
 
@@ -15103,12 +15611,14 @@ public final class TestDefinition {
      * @return Whether the startAfter field is set.
      */
     boolean hasStartAfter();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code>
      *
      * @return The startAfter.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getStartAfter();
+
     /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
         getStartAfterOrBuilder();
@@ -15119,12 +15629,14 @@ public final class TestDefinition {
      * @return Whether the endAt field is set.
      */
     boolean hasEndAt();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code>
      *
      * @return The endAt.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndAt();
+
     /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder getEndAtOrBuilder();
 
@@ -15134,25 +15646,28 @@ public final class TestDefinition {
      * @return Whether the endBefore field is set.
      */
     boolean hasEndBefore();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code>
      *
      * @return The endBefore.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor getEndBefore();
+
     /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
         getEndBeforeOrBuilder();
 
-    public com.google.cloud.conformance.firestore.v1.TestDefinition.Clause.ClauseCase
-        getClauseCase();
+    com.google.cloud.conformance.firestore.v1.TestDefinition.Clause.ClauseCase getClauseCase();
   }
+
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.Clause} */
   public static final class Clause extends com.google.protobuf.GeneratedMessageV3
       implements
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.Clause)
       ClauseOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use Clause.newBuilder() to construct.
     private Clause(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -15164,11 +15679,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Clause();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -15187,6 +15697,8 @@ public final class TestDefinition {
     }
 
     private int clauseCase_ = 0;
+
+    @SuppressWarnings("serial")
     private java.lang.Object clause_;
 
     public enum ClauseCase
@@ -15208,6 +15720,7 @@ public final class TestDefinition {
       private ClauseCase(int value) {
         this.value = value;
       }
+
       /**
        * @param value The number of the enum to look for.
        * @return The enum associated with the given number.
@@ -15255,6 +15768,7 @@ public final class TestDefinition {
     }
 
     public static final int SELECT_FIELD_NUMBER = 1;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code>
      *
@@ -15264,6 +15778,7 @@ public final class TestDefinition {
     public boolean hasSelect() {
       return clauseCase_ == 1;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code>
      *
@@ -15276,6 +15791,7 @@ public final class TestDefinition {
       }
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Select.getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SelectOrBuilder
@@ -15287,6 +15803,7 @@ public final class TestDefinition {
     }
 
     public static final int WHERE_FIELD_NUMBER = 2;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code>
      *
@@ -15296,6 +15813,7 @@ public final class TestDefinition {
     public boolean hasWhere() {
       return clauseCase_ == 2;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code>
      *
@@ -15308,6 +15826,7 @@ public final class TestDefinition {
       }
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Where.getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.WhereOrBuilder
@@ -15319,6 +15838,7 @@ public final class TestDefinition {
     }
 
     public static final int ORDER_BY_FIELD_NUMBER = 3;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code>
      *
@@ -15328,6 +15848,7 @@ public final class TestDefinition {
     public boolean hasOrderBy() {
       return clauseCase_ == 3;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code>
      *
@@ -15340,6 +15861,7 @@ public final class TestDefinition {
       }
       return com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy.getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.OrderByOrBuilder
@@ -15351,6 +15873,7 @@ public final class TestDefinition {
     }
 
     public static final int OFFSET_FIELD_NUMBER = 4;
+
     /**
      * <code>int32 offset = 4;</code>
      *
@@ -15360,6 +15883,7 @@ public final class TestDefinition {
     public boolean hasOffset() {
       return clauseCase_ == 4;
     }
+
     /**
      * <code>int32 offset = 4;</code>
      *
@@ -15374,6 +15898,7 @@ public final class TestDefinition {
     }
 
     public static final int LIMIT_FIELD_NUMBER = 5;
+
     /**
      * <code>int32 limit = 5;</code>
      *
@@ -15383,6 +15908,7 @@ public final class TestDefinition {
     public boolean hasLimit() {
       return clauseCase_ == 5;
     }
+
     /**
      * <code>int32 limit = 5;</code>
      *
@@ -15397,6 +15923,7 @@ public final class TestDefinition {
     }
 
     public static final int START_AT_FIELD_NUMBER = 6;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code>
      *
@@ -15406,6 +15933,7 @@ public final class TestDefinition {
     public boolean hasStartAt() {
       return clauseCase_ == 6;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code>
      *
@@ -15418,6 +15946,7 @@ public final class TestDefinition {
       }
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
@@ -15429,6 +15958,7 @@ public final class TestDefinition {
     }
 
     public static final int START_AFTER_FIELD_NUMBER = 7;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code>
      *
@@ -15438,6 +15968,7 @@ public final class TestDefinition {
     public boolean hasStartAfter() {
       return clauseCase_ == 7;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code>
      *
@@ -15450,6 +15981,7 @@ public final class TestDefinition {
       }
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
@@ -15461,6 +15993,7 @@ public final class TestDefinition {
     }
 
     public static final int END_AT_FIELD_NUMBER = 8;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code>
      *
@@ -15470,6 +16003,7 @@ public final class TestDefinition {
     public boolean hasEndAt() {
       return clauseCase_ == 8;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code>
      *
@@ -15482,6 +16016,7 @@ public final class TestDefinition {
       }
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
@@ -15493,6 +16028,7 @@ public final class TestDefinition {
     }
 
     public static final int END_BEFORE_FIELD_NUMBER = 9;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code>
      *
@@ -15502,6 +16038,7 @@ public final class TestDefinition {
     public boolean hasEndBefore() {
       return clauseCase_ == 9;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code>
      *
@@ -15514,6 +16051,7 @@ public final class TestDefinition {
       }
       return com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.getDefaultInstance();
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
@@ -15828,6 +16366,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /** Protobuf type {@code google.cloud.conformance.firestore.v1.Clause} */
     public static final class Builder
         extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
@@ -16171,6 +16710,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Select.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.SelectOrBuilder>
           selectBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code>
        *
@@ -16180,6 +16720,7 @@ public final class TestDefinition {
       public boolean hasSelect() {
         return clauseCase_ == 1;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code>
        *
@@ -16201,6 +16742,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
       public Builder setSelect(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Select value) {
@@ -16216,6 +16758,7 @@ public final class TestDefinition {
         clauseCase_ = 1;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
       public Builder setSelect(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Select.Builder builderForValue) {
@@ -16228,6 +16771,7 @@ public final class TestDefinition {
         clauseCase_ = 1;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
       public Builder mergeSelect(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Select value) {
@@ -16255,6 +16799,7 @@ public final class TestDefinition {
         clauseCase_ = 1;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
       public Builder clearSelect() {
         if (selectBuilder_ == null) {
@@ -16272,11 +16817,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Select.Builder
           getSelectBuilder() {
         return getSelectFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SelectOrBuilder
@@ -16291,6 +16838,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Select select = 1;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.Select,
@@ -16323,6 +16871,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Where.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.WhereOrBuilder>
           whereBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code>
        *
@@ -16332,6 +16881,7 @@ public final class TestDefinition {
       public boolean hasWhere() {
         return clauseCase_ == 2;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code>
        *
@@ -16353,6 +16903,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
       public Builder setWhere(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Where value) {
@@ -16368,6 +16919,7 @@ public final class TestDefinition {
         clauseCase_ = 2;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
       public Builder setWhere(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Where.Builder builderForValue) {
@@ -16380,6 +16932,7 @@ public final class TestDefinition {
         clauseCase_ = 2;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
       public Builder mergeWhere(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Where value) {
@@ -16407,6 +16960,7 @@ public final class TestDefinition {
         clauseCase_ = 2;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
       public Builder clearWhere() {
         if (whereBuilder_ == null) {
@@ -16424,11 +16978,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Where.Builder
           getWhereBuilder() {
         return getWhereFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.WhereOrBuilder
@@ -16443,6 +16999,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Where where = 2;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.Where,
@@ -16474,6 +17031,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.OrderByOrBuilder>
           orderByBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code>
        *
@@ -16483,6 +17041,7 @@ public final class TestDefinition {
       public boolean hasOrderBy() {
         return clauseCase_ == 3;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code>
        *
@@ -16504,6 +17063,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
       public Builder setOrderBy(
           com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy value) {
@@ -16519,6 +17079,7 @@ public final class TestDefinition {
         clauseCase_ = 3;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
       public Builder setOrderBy(
           com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy.Builder
@@ -16532,6 +17093,7 @@ public final class TestDefinition {
         clauseCase_ = 3;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
       public Builder mergeOrderBy(
           com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy value) {
@@ -16559,6 +17121,7 @@ public final class TestDefinition {
         clauseCase_ = 3;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
       public Builder clearOrderBy() {
         if (orderByBuilder_ == null) {
@@ -16576,11 +17139,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy.Builder
           getOrderByBuilder() {
         return getOrderByFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.OrderByOrBuilder
@@ -16595,6 +17160,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.OrderBy order_by = 3;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy,
@@ -16630,6 +17196,7 @@ public final class TestDefinition {
       public boolean hasOffset() {
         return clauseCase_ == 4;
       }
+
       /**
        * <code>int32 offset = 4;</code>
        *
@@ -16641,6 +17208,7 @@ public final class TestDefinition {
         }
         return 0;
       }
+
       /**
        * <code>int32 offset = 4;</code>
        *
@@ -16654,6 +17222,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>int32 offset = 4;</code>
        *
@@ -16676,6 +17245,7 @@ public final class TestDefinition {
       public boolean hasLimit() {
         return clauseCase_ == 5;
       }
+
       /**
        * <code>int32 limit = 5;</code>
        *
@@ -16687,6 +17257,7 @@ public final class TestDefinition {
         }
         return 0;
       }
+
       /**
        * <code>int32 limit = 5;</code>
        *
@@ -16700,6 +17271,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>int32 limit = 5;</code>
        *
@@ -16719,6 +17291,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder>
           startAtBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code>
        *
@@ -16728,6 +17301,7 @@ public final class TestDefinition {
       public boolean hasStartAt() {
         return clauseCase_ == 6;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code>
        *
@@ -16749,6 +17323,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
       public Builder setStartAt(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor value) {
@@ -16764,6 +17339,7 @@ public final class TestDefinition {
         clauseCase_ = 6;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
       public Builder setStartAt(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder builderForValue) {
@@ -16776,6 +17352,7 @@ public final class TestDefinition {
         clauseCase_ = 6;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
       public Builder mergeStartAt(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor value) {
@@ -16803,6 +17380,7 @@ public final class TestDefinition {
         clauseCase_ = 6;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
       public Builder clearStartAt() {
         if (startAtBuilder_ == null) {
@@ -16820,11 +17398,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder
           getStartAtBuilder() {
         return getStartAtFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
@@ -16839,6 +17419,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_at = 6;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor,
@@ -16871,6 +17452,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder>
           startAfterBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code>
        *
@@ -16880,6 +17462,7 @@ public final class TestDefinition {
       public boolean hasStartAfter() {
         return clauseCase_ == 7;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code>
        *
@@ -16901,6 +17484,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
       public Builder setStartAfter(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor value) {
@@ -16916,6 +17500,7 @@ public final class TestDefinition {
         clauseCase_ = 7;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
       public Builder setStartAfter(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder builderForValue) {
@@ -16928,6 +17513,7 @@ public final class TestDefinition {
         clauseCase_ = 7;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
       public Builder mergeStartAfter(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor value) {
@@ -16955,6 +17541,7 @@ public final class TestDefinition {
         clauseCase_ = 7;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
       public Builder clearStartAfter() {
         if (startAfterBuilder_ == null) {
@@ -16972,11 +17559,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder
           getStartAfterBuilder() {
         return getStartAfterFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
@@ -16991,6 +17580,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor start_after = 7;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor,
@@ -17023,6 +17613,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder>
           endAtBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code>
        *
@@ -17032,6 +17623,7 @@ public final class TestDefinition {
       public boolean hasEndAt() {
         return clauseCase_ == 8;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code>
        *
@@ -17053,6 +17645,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
       public Builder setEndAt(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor value) {
@@ -17068,6 +17661,7 @@ public final class TestDefinition {
         clauseCase_ = 8;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
       public Builder setEndAt(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder builderForValue) {
@@ -17080,6 +17674,7 @@ public final class TestDefinition {
         clauseCase_ = 8;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
       public Builder mergeEndAt(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor value) {
@@ -17107,6 +17702,7 @@ public final class TestDefinition {
         clauseCase_ = 8;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
       public Builder clearEndAt() {
         if (endAtBuilder_ == null) {
@@ -17124,11 +17720,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder
           getEndAtBuilder() {
         return getEndAtFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
@@ -17143,6 +17741,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_at = 8;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor,
@@ -17175,6 +17774,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder>
           endBeforeBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code>
        *
@@ -17184,6 +17784,7 @@ public final class TestDefinition {
       public boolean hasEndBefore() {
         return clauseCase_ == 9;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code>
        *
@@ -17205,6 +17806,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
       public Builder setEndBefore(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor value) {
@@ -17220,6 +17822,7 @@ public final class TestDefinition {
         clauseCase_ = 9;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
       public Builder setEndBefore(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder builderForValue) {
@@ -17232,6 +17835,7 @@ public final class TestDefinition {
         clauseCase_ = 9;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
       public Builder mergeEndBefore(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor value) {
@@ -17259,6 +17863,7 @@ public final class TestDefinition {
         clauseCase_ = 9;
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
       public Builder clearEndBefore() {
         if (endBeforeBuilder_ == null) {
@@ -17276,11 +17881,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder
           getEndBeforeBuilder() {
         return getEndBeforeFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
       @java.lang.Override
       public com.google.cloud.conformance.firestore.v1.TestDefinition.CursorOrBuilder
@@ -17295,6 +17902,7 @@ public final class TestDefinition {
               .getDefaultInstance();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.Cursor end_before = 9;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor,
@@ -17397,24 +18005,30 @@ public final class TestDefinition {
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
     java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         getFieldsList();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getFields(int index);
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
     int getFieldsCount();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
     java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>
         getFieldsOrBuilderList();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder getFieldsOrBuilder(
         int index);
   }
+
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.Select} */
   public static final class Select extends com.google.protobuf.GeneratedMessageV3
       implements
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.Select)
       SelectOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use Select.newBuilder() to construct.
     private Select(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -17428,11 +18042,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Select();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -17455,12 +18064,14 @@ public final class TestDefinition {
     @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         fields_;
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
     @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath>
         getFieldsList() {
       return fields_;
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
     @java.lang.Override
     public java.util.List<
@@ -17468,16 +18079,19 @@ public final class TestDefinition {
         getFieldsOrBuilderList() {
       return fields_;
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
     @java.lang.Override
     public int getFieldsCount() {
       return fields_.size();
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getFields(int index) {
       return fields_.get(index);
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
@@ -17649,6 +18263,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /** Protobuf type {@code google.cloud.conformance.firestore.v1.Select} */
     public static final class Builder
         extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
@@ -17907,6 +18522,7 @@ public final class TestDefinition {
           return fieldsBuilder_.getMessageList();
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public int getFieldsCount() {
         if (fieldsBuilder_ == null) {
@@ -17915,6 +18531,7 @@ public final class TestDefinition {
           return fieldsBuilder_.getCount();
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getFields(
           int index) {
@@ -17924,6 +18541,7 @@ public final class TestDefinition {
           return fieldsBuilder_.getMessage(index);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public Builder setFields(
           int index, com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath value) {
@@ -17939,6 +18557,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public Builder setFields(
           int index,
@@ -17953,6 +18572,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public Builder addFields(
           com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath value) {
@@ -17968,6 +18588,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public Builder addFields(
           int index, com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath value) {
@@ -17983,6 +18604,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public Builder addFields(
           com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
@@ -17996,6 +18618,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public Builder addFields(
           int index,
@@ -18010,6 +18633,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public Builder addAllFields(
           java.lang.Iterable<
@@ -18024,6 +18648,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public Builder clearFields() {
         if (fieldsBuilder_ == null) {
@@ -18035,6 +18660,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public Builder removeFields(int index) {
         if (fieldsBuilder_ == null) {
@@ -18046,11 +18672,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
           getFieldsBuilder(int index) {
         return getFieldsFieldBuilder().getBuilder(index);
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
           getFieldsOrBuilder(int index) {
@@ -18060,6 +18688,7 @@ public final class TestDefinition {
           return fieldsBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public java.util.List<
               ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>
@@ -18070,6 +18699,7 @@ public final class TestDefinition {
           return java.util.Collections.unmodifiableList(fields_);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
           addFieldsBuilder() {
@@ -18078,6 +18708,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath
                     .getDefaultInstance());
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
           addFieldsBuilder(int index) {
@@ -18087,6 +18718,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath
                     .getDefaultInstance());
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.FieldPath fields = 1;</code> */
       public java.util.List<
               com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder>
@@ -18189,12 +18821,14 @@ public final class TestDefinition {
      * @return Whether the path field is set.
      */
     boolean hasPath();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
      *
      * @return The path.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getPath();
+
     /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder getPathOrBuilder();
 
@@ -18204,6 +18838,7 @@ public final class TestDefinition {
      * @return The op.
      */
     java.lang.String getOp();
+
     /**
      * <code>string op = 2;</code>
      *
@@ -18217,6 +18852,7 @@ public final class TestDefinition {
      * @return The jsonValue.
      */
     java.lang.String getJsonValue();
+
     /**
      * <code>string json_value = 3;</code>
      *
@@ -18224,12 +18860,14 @@ public final class TestDefinition {
      */
     com.google.protobuf.ByteString getJsonValueBytes();
   }
+
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.Where} */
   public static final class Where extends com.google.protobuf.GeneratedMessageV3
       implements
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.Where)
       WhereOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use Where.newBuilder() to construct.
     private Where(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -18244,11 +18882,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Where();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -18268,6 +18901,7 @@ public final class TestDefinition {
 
     public static final int PATH_FIELD_NUMBER = 1;
     private com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath path_;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
      *
@@ -18277,6 +18911,7 @@ public final class TestDefinition {
     public boolean hasPath() {
       return path_ != null;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
      *
@@ -18288,6 +18923,7 @@ public final class TestDefinition {
           ? com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.getDefaultInstance()
           : path_;
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
@@ -18301,6 +18937,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object op_ = "";
+
     /**
      * <code>string op = 2;</code>
      *
@@ -18318,6 +18955,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      * <code>string op = 2;</code>
      *
@@ -18340,6 +18978,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object jsonValue_ = "";
+
     /**
      * <code>string json_value = 3;</code>
      *
@@ -18357,6 +18996,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      * <code>string json_value = 3;</code>
      *
@@ -18559,6 +19199,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /** Protobuf type {@code google.cloud.conformance.firestore.v1.Where} */
     public static final class Builder
         extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
@@ -18779,6 +19420,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>
           pathBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
        *
@@ -18787,6 +19429,7 @@ public final class TestDefinition {
       public boolean hasPath() {
         return ((bitField0_ & 0x00000001) != 0);
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
        *
@@ -18802,6 +19445,7 @@ public final class TestDefinition {
           return pathBuilder_.getMessage();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder setPath(
           com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath value) {
@@ -18817,6 +19461,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder setPath(
           com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
@@ -18830,6 +19475,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder mergePath(
           com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath value) {
@@ -18850,6 +19496,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder clearPath() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -18861,6 +19508,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
           getPathBuilder() {
@@ -18868,6 +19516,7 @@ public final class TestDefinition {
         onChanged();
         return getPathFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
           getPathOrBuilder() {
@@ -18880,6 +19529,7 @@ public final class TestDefinition {
               : path_;
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath,
@@ -18899,6 +19549,7 @@ public final class TestDefinition {
       }
 
       private java.lang.Object op_ = "";
+
       /**
        * <code>string op = 2;</code>
        *
@@ -18915,6 +19566,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string op = 2;</code>
        *
@@ -18931,6 +19583,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string op = 2;</code>
        *
@@ -18946,6 +19599,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>string op = 2;</code>
        *
@@ -18957,6 +19611,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>string op = 2;</code>
        *
@@ -18975,6 +19630,7 @@ public final class TestDefinition {
       }
 
       private java.lang.Object jsonValue_ = "";
+
       /**
        * <code>string json_value = 3;</code>
        *
@@ -18991,6 +19647,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string json_value = 3;</code>
        *
@@ -19007,6 +19664,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string json_value = 3;</code>
        *
@@ -19022,6 +19680,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>string json_value = 3;</code>
        *
@@ -19033,6 +19692,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>string json_value = 3;</code>
        *
@@ -19128,12 +19788,14 @@ public final class TestDefinition {
      * @return Whether the path field is set.
      */
     boolean hasPath();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
      *
      * @return The path.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath getPath();
+
     /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder getPathOrBuilder();
 
@@ -19149,6 +19811,7 @@ public final class TestDefinition {
      * @return The direction.
      */
     java.lang.String getDirection();
+
     /**
      *
      *
@@ -19162,12 +19825,14 @@ public final class TestDefinition {
      */
     com.google.protobuf.ByteString getDirectionBytes();
   }
+
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.OrderBy} */
   public static final class OrderBy extends com.google.protobuf.GeneratedMessageV3
       implements
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.OrderBy)
       OrderByOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use OrderBy.newBuilder() to construct.
     private OrderBy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -19181,11 +19846,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new OrderBy();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -19205,6 +19865,7 @@ public final class TestDefinition {
 
     public static final int PATH_FIELD_NUMBER = 1;
     private com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath path_;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
      *
@@ -19214,6 +19875,7 @@ public final class TestDefinition {
     public boolean hasPath() {
       return path_ != null;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
      *
@@ -19225,6 +19887,7 @@ public final class TestDefinition {
           ? com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.getDefaultInstance()
           : path_;
     }
+
     /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
@@ -19238,6 +19901,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object direction_ = "";
+
     /**
      *
      *
@@ -19261,6 +19925,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      *
      *
@@ -19461,6 +20126,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /** Protobuf type {@code google.cloud.conformance.firestore.v1.OrderBy} */
     public static final class Builder
         extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
@@ -19669,6 +20335,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder>
           pathBuilder_;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
        *
@@ -19677,6 +20344,7 @@ public final class TestDefinition {
       public boolean hasPath() {
         return ((bitField0_ & 0x00000001) != 0);
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code>
        *
@@ -19692,6 +20360,7 @@ public final class TestDefinition {
           return pathBuilder_.getMessage();
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder setPath(
           com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath value) {
@@ -19707,6 +20376,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder setPath(
           com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
@@ -19720,6 +20390,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder mergePath(
           com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath value) {
@@ -19740,6 +20411,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public Builder clearPath() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -19751,6 +20423,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath.Builder
           getPathBuilder() {
@@ -19758,6 +20431,7 @@ public final class TestDefinition {
         onChanged();
         return getPathFieldBuilder().getBuilder();
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPathOrBuilder
           getPathOrBuilder() {
@@ -19770,6 +20444,7 @@ public final class TestDefinition {
               : path_;
         }
       }
+
       /** <code>.google.cloud.conformance.firestore.v1.FieldPath path = 1;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath,
@@ -19789,6 +20464,7 @@ public final class TestDefinition {
       }
 
       private java.lang.Object direction_ = "";
+
       /**
        *
        *
@@ -19811,6 +20487,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        *
        *
@@ -19833,6 +20510,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        *
        *
@@ -19854,6 +20532,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -19871,6 +20550,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -19978,6 +20658,7 @@ public final class TestDefinition {
      * @return Whether the docSnapshot field is set.
      */
     boolean hasDocSnapshot();
+
     /**
      *
      *
@@ -19990,6 +20671,7 @@ public final class TestDefinition {
      * @return The docSnapshot.
      */
     com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot getDocSnapshot();
+
     /**
      *
      *
@@ -20008,12 +20690,14 @@ public final class TestDefinition {
      * @return A list containing the jsonValues.
      */
     java.util.List<java.lang.String> getJsonValuesList();
+
     /**
      * <code>repeated string json_values = 2;</code>
      *
      * @return The count of jsonValues.
      */
     int getJsonValuesCount();
+
     /**
      * <code>repeated string json_values = 2;</code>
      *
@@ -20021,6 +20705,7 @@ public final class TestDefinition {
      * @return The jsonValues at the given index.
      */
     java.lang.String getJsonValues(int index);
+
     /**
      * <code>repeated string json_values = 2;</code>
      *
@@ -20029,30 +20714,27 @@ public final class TestDefinition {
      */
     com.google.protobuf.ByteString getJsonValuesBytes(int index);
   }
+
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.Cursor} */
   public static final class Cursor extends com.google.protobuf.GeneratedMessageV3
       implements
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.Cursor)
       CursorOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use Cursor.newBuilder() to construct.
     private Cursor(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
 
     private Cursor() {
-      jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      jsonValues_ = com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Cursor();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -20072,6 +20754,7 @@ public final class TestDefinition {
 
     public static final int DOC_SNAPSHOT_FIELD_NUMBER = 1;
     private com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot docSnapshot_;
+
     /**
      *
      *
@@ -20087,6 +20770,7 @@ public final class TestDefinition {
     public boolean hasDocSnapshot() {
       return docSnapshot_ != null;
     }
+
     /**
      *
      *
@@ -20105,6 +20789,7 @@ public final class TestDefinition {
               .getDefaultInstance()
           : docSnapshot_;
     }
+
     /**
      *
      *
@@ -20126,7 +20811,9 @@ public final class TestDefinition {
     public static final int JSON_VALUES_FIELD_NUMBER = 2;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList jsonValues_;
+    private com.google.protobuf.LazyStringArrayList jsonValues_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+
     /**
      * <code>repeated string json_values = 2;</code>
      *
@@ -20135,6 +20822,7 @@ public final class TestDefinition {
     public com.google.protobuf.ProtocolStringList getJsonValuesList() {
       return jsonValues_;
     }
+
     /**
      * <code>repeated string json_values = 2;</code>
      *
@@ -20143,6 +20831,7 @@ public final class TestDefinition {
     public int getJsonValuesCount() {
       return jsonValues_.size();
     }
+
     /**
      * <code>repeated string json_values = 2;</code>
      *
@@ -20152,6 +20841,7 @@ public final class TestDefinition {
     public java.lang.String getJsonValues(int index) {
       return jsonValues_.get(index);
     }
+
     /**
      * <code>repeated string json_values = 2;</code>
      *
@@ -20345,6 +21035,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /** Protobuf type {@code google.cloud.conformance.firestore.v1.Cursor} */
     public static final class Builder
         extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
@@ -20383,8 +21074,7 @@ public final class TestDefinition {
           docSnapshotBuilder_.dispose();
           docSnapshotBuilder_ = null;
         }
-        jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        jsonValues_ = com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -20413,21 +21103,11 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) {
           buildPartial0(result);
         }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(
-          com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          jsonValues_ = jsonValues_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.jsonValues_ = jsonValues_;
       }
 
       private void buildPartial0(
@@ -20436,6 +21116,10 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.docSnapshot_ =
               docSnapshotBuilder_ == null ? docSnapshot_ : docSnapshotBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          jsonValues_.makeImmutable();
+          result.jsonValues_ = jsonValues_;
         }
       }
 
@@ -20495,7 +21179,7 @@ public final class TestDefinition {
         if (!other.jsonValues_.isEmpty()) {
           if (jsonValues_.isEmpty()) {
             jsonValues_ = other.jsonValues_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ |= 0x00000002;
           } else {
             ensureJsonValuesIsMutable();
             jsonValues_.addAll(other.jsonValues_);
@@ -20566,6 +21250,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot.Builder,
               com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshotOrBuilder>
           docSnapshotBuilder_;
+
       /**
        *
        *
@@ -20580,6 +21265,7 @@ public final class TestDefinition {
       public boolean hasDocSnapshot() {
         return ((bitField0_ & 0x00000001) != 0);
       }
+
       /**
        *
        *
@@ -20601,6 +21287,7 @@ public final class TestDefinition {
           return docSnapshotBuilder_.getMessage();
         }
       }
+
       /**
        *
        *
@@ -20624,6 +21311,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -20645,6 +21333,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -20673,6 +21362,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -20692,6 +21382,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        *
        *
@@ -20707,6 +21398,7 @@ public final class TestDefinition {
         onChanged();
         return getDocSnapshotFieldBuilder().getBuilder();
       }
+
       /**
        *
        *
@@ -20727,6 +21419,7 @@ public final class TestDefinition {
               : docSnapshot_;
         }
       }
+
       /**
        *
        *
@@ -20753,23 +21446,26 @@ public final class TestDefinition {
         return docSnapshotBuilder_;
       }
 
-      private com.google.protobuf.LazyStringList jsonValues_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList jsonValues_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensureJsonValuesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!jsonValues_.isModifiable()) {
           jsonValues_ = new com.google.protobuf.LazyStringArrayList(jsonValues_);
-          bitField0_ |= 0x00000002;
         }
+        bitField0_ |= 0x00000002;
       }
+
       /**
        * <code>repeated string json_values = 2;</code>
        *
        * @return A list containing the jsonValues.
        */
       public com.google.protobuf.ProtocolStringList getJsonValuesList() {
-        return jsonValues_.getUnmodifiableView();
+        jsonValues_.makeImmutable();
+        return jsonValues_;
       }
+
       /**
        * <code>repeated string json_values = 2;</code>
        *
@@ -20778,6 +21474,7 @@ public final class TestDefinition {
       public int getJsonValuesCount() {
         return jsonValues_.size();
       }
+
       /**
        * <code>repeated string json_values = 2;</code>
        *
@@ -20787,6 +21484,7 @@ public final class TestDefinition {
       public java.lang.String getJsonValues(int index) {
         return jsonValues_.get(index);
       }
+
       /**
        * <code>repeated string json_values = 2;</code>
        *
@@ -20796,6 +21494,7 @@ public final class TestDefinition {
       public com.google.protobuf.ByteString getJsonValuesBytes(int index) {
         return jsonValues_.getByteString(index);
       }
+
       /**
        * <code>repeated string json_values = 2;</code>
        *
@@ -20809,9 +21508,11 @@ public final class TestDefinition {
         }
         ensureJsonValuesIsMutable();
         jsonValues_.set(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string json_values = 2;</code>
        *
@@ -20824,9 +21525,11 @@ public final class TestDefinition {
         }
         ensureJsonValuesIsMutable();
         jsonValues_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string json_values = 2;</code>
        *
@@ -20836,20 +21539,24 @@ public final class TestDefinition {
       public Builder addAllJsonValues(java.lang.Iterable<java.lang.String> values) {
         ensureJsonValuesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, jsonValues_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string json_values = 2;</code>
        *
        * @return This builder for chaining.
        */
       public Builder clearJsonValues() {
-        jsonValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        jsonValues_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
+        ;
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string json_values = 2;</code>
        *
@@ -20863,6 +21570,7 @@ public final class TestDefinition {
         checkByteStringIsUtf8(value);
         ensureJsonValuesIsMutable();
         jsonValues_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -20945,6 +21653,7 @@ public final class TestDefinition {
      * @return The path.
      */
     java.lang.String getPath();
+
     /**
      * <code>string path = 1;</code>
      *
@@ -20958,6 +21667,7 @@ public final class TestDefinition {
      * @return The jsonData.
      */
     java.lang.String getJsonData();
+
     /**
      * <code>string json_data = 2;</code>
      *
@@ -20965,12 +21675,14 @@ public final class TestDefinition {
      */
     com.google.protobuf.ByteString getJsonDataBytes();
   }
+
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.DocSnapshot} */
   public static final class DocSnapshot extends com.google.protobuf.GeneratedMessageV3
       implements
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.DocSnapshot)
       DocSnapshotOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use DocSnapshot.newBuilder() to construct.
     private DocSnapshot(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -20985,11 +21697,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new DocSnapshot();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -21011,6 +21718,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object path_ = "";
+
     /**
      * <code>string path = 1;</code>
      *
@@ -21028,6 +21736,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      * <code>string path = 1;</code>
      *
@@ -21050,6 +21759,7 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private volatile java.lang.Object jsonData_ = "";
+
     /**
      * <code>string json_data = 2;</code>
      *
@@ -21067,6 +21777,7 @@ public final class TestDefinition {
         return s;
       }
     }
+
     /**
      * <code>string json_data = 2;</code>
      *
@@ -21256,6 +21967,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /** Protobuf type {@code google.cloud.conformance.firestore.v1.DocSnapshot} */
     public static final class Builder
         extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
@@ -21458,6 +22170,7 @@ public final class TestDefinition {
       private int bitField0_;
 
       private java.lang.Object path_ = "";
+
       /**
        * <code>string path = 1;</code>
        *
@@ -21474,6 +22187,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string path = 1;</code>
        *
@@ -21490,6 +22204,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string path = 1;</code>
        *
@@ -21505,6 +22220,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>string path = 1;</code>
        *
@@ -21516,6 +22232,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>string path = 1;</code>
        *
@@ -21534,6 +22251,7 @@ public final class TestDefinition {
       }
 
       private java.lang.Object jsonData_ = "";
+
       /**
        * <code>string json_data = 2;</code>
        *
@@ -21550,6 +22268,7 @@ public final class TestDefinition {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string json_data = 2;</code>
        *
@@ -21566,6 +22285,7 @@ public final class TestDefinition {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string json_data = 2;</code>
        *
@@ -21581,6 +22301,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>string json_data = 2;</code>
        *
@@ -21592,6 +22313,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>string json_data = 2;</code>
        *
@@ -21687,12 +22409,14 @@ public final class TestDefinition {
      * @return A list containing the field.
      */
     java.util.List<java.lang.String> getFieldList();
+
     /**
      * <code>repeated string field = 1;</code>
      *
      * @return The count of field.
      */
     int getFieldCount();
+
     /**
      * <code>repeated string field = 1;</code>
      *
@@ -21700,6 +22424,7 @@ public final class TestDefinition {
      * @return The field at the given index.
      */
     java.lang.String getField(int index);
+
     /**
      * <code>repeated string field = 1;</code>
      *
@@ -21708,30 +22433,27 @@ public final class TestDefinition {
      */
     com.google.protobuf.ByteString getFieldBytes(int index);
   }
+
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.FieldPath} */
   public static final class FieldPath extends com.google.protobuf.GeneratedMessageV3
       implements
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.FieldPath)
       FieldPathOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use FieldPath.newBuilder() to construct.
     private FieldPath(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
 
     private FieldPath() {
-      field_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      field_ = com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new FieldPath();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -21752,7 +22474,9 @@ public final class TestDefinition {
     public static final int FIELD_FIELD_NUMBER = 1;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList field_;
+    private com.google.protobuf.LazyStringArrayList field_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+
     /**
      * <code>repeated string field = 1;</code>
      *
@@ -21761,6 +22485,7 @@ public final class TestDefinition {
     public com.google.protobuf.ProtocolStringList getFieldList() {
       return field_;
     }
+
     /**
      * <code>repeated string field = 1;</code>
      *
@@ -21769,6 +22494,7 @@ public final class TestDefinition {
     public int getFieldCount() {
       return field_.size();
     }
+
     /**
      * <code>repeated string field = 1;</code>
      *
@@ -21778,6 +22504,7 @@ public final class TestDefinition {
     public java.lang.String getField(int index) {
       return field_.get(index);
     }
+
     /**
      * <code>repeated string field = 1;</code>
      *
@@ -21957,6 +22684,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /** Protobuf type {@code google.cloud.conformance.firestore.v1.FieldPath} */
     public static final class Builder
         extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
@@ -21990,8 +22718,7 @@ public final class TestDefinition {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        field_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        field_ = com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -22021,7 +22748,6 @@ public final class TestDefinition {
       public com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath buildPartial() {
         com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath result =
             new com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) {
           buildPartial0(result);
         }
@@ -22029,18 +22755,13 @@ public final class TestDefinition {
         return result;
       }
 
-      private void buildPartialRepeatedFields(
-          com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          field_ = field_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.field_ = field_;
-      }
-
       private void buildPartial0(
           com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          field_.makeImmutable();
+          result.field_ = field_;
+        }
       }
 
       @java.lang.Override
@@ -22097,7 +22818,7 @@ public final class TestDefinition {
         if (!other.field_.isEmpty()) {
           if (field_.isEmpty()) {
             field_ = other.field_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureFieldIsMutable();
             field_.addAll(other.field_);
@@ -22156,23 +22877,26 @@ public final class TestDefinition {
 
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList field_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList field_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensureFieldIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!field_.isModifiable()) {
           field_ = new com.google.protobuf.LazyStringArrayList(field_);
-          bitField0_ |= 0x00000001;
         }
+        bitField0_ |= 0x00000001;
       }
+
       /**
        * <code>repeated string field = 1;</code>
        *
        * @return A list containing the field.
        */
       public com.google.protobuf.ProtocolStringList getFieldList() {
-        return field_.getUnmodifiableView();
+        field_.makeImmutable();
+        return field_;
       }
+
       /**
        * <code>repeated string field = 1;</code>
        *
@@ -22181,6 +22905,7 @@ public final class TestDefinition {
       public int getFieldCount() {
         return field_.size();
       }
+
       /**
        * <code>repeated string field = 1;</code>
        *
@@ -22190,6 +22915,7 @@ public final class TestDefinition {
       public java.lang.String getField(int index) {
         return field_.get(index);
       }
+
       /**
        * <code>repeated string field = 1;</code>
        *
@@ -22199,6 +22925,7 @@ public final class TestDefinition {
       public com.google.protobuf.ByteString getFieldBytes(int index) {
         return field_.getByteString(index);
       }
+
       /**
        * <code>repeated string field = 1;</code>
        *
@@ -22212,9 +22939,11 @@ public final class TestDefinition {
         }
         ensureFieldIsMutable();
         field_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string field = 1;</code>
        *
@@ -22227,9 +22956,11 @@ public final class TestDefinition {
         }
         ensureFieldIsMutable();
         field_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string field = 1;</code>
        *
@@ -22239,20 +22970,24 @@ public final class TestDefinition {
       public Builder addAllField(java.lang.Iterable<java.lang.String> values) {
         ensureFieldIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, field_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string field = 1;</code>
        *
        * @return This builder for chaining.
        */
       public Builder clearField() {
-        field_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        field_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        ;
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string field = 1;</code>
        *
@@ -22266,6 +23001,7 @@ public final class TestDefinition {
         checkByteStringIsUtf8(value);
         ensureFieldIsMutable();
         field_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22344,27 +23080,35 @@ public final class TestDefinition {
 
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
     java.util.List<com.google.firestore.v1.ListenResponse> getResponsesList();
+
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
     com.google.firestore.v1.ListenResponse getResponses(int index);
+
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
     int getResponsesCount();
+
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
     java.util.List<? extends com.google.firestore.v1.ListenResponseOrBuilder>
         getResponsesOrBuilderList();
+
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
     com.google.firestore.v1.ListenResponseOrBuilder getResponsesOrBuilder(int index);
 
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
     java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot>
         getSnapshotsList();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot getSnapshots(int index);
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
     int getSnapshotsCount();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
     java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.SnapshotOrBuilder>
         getSnapshotsOrBuilderList();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.SnapshotOrBuilder
         getSnapshotsOrBuilder(int index);
@@ -22376,6 +23120,7 @@ public final class TestDefinition {
      */
     boolean getIsError();
   }
+
   /**
    *
    *
@@ -22384,8 +23129,10 @@ public final class TestDefinition {
    * If the sequence of responses is provided to the implementation,
    * it should produce the sequence of snapshots.
    * If is_error is true, an error should occur after the snapshots.
+   *
    * The tests assume that the query is
    * Collection("projects/projectID/databases/(default)/documents/C").OrderBy("a", Ascending)
+   *
    * The watch target ID used in these tests is 1. Test interpreters
    * should either change their client's ID for testing,
    * or change the ID in the tests before running them.
@@ -22398,6 +23145,7 @@ public final class TestDefinition {
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.ListenTest)
       ListenTestOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use ListenTest.newBuilder() to construct.
     private ListenTest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -22412,11 +23160,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new ListenTest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -22438,27 +23181,32 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private java.util.List<com.google.firestore.v1.ListenResponse> responses_;
+
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
     @java.lang.Override
     public java.util.List<com.google.firestore.v1.ListenResponse> getResponsesList() {
       return responses_;
     }
+
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
     @java.lang.Override
     public java.util.List<? extends com.google.firestore.v1.ListenResponseOrBuilder>
         getResponsesOrBuilderList() {
       return responses_;
     }
+
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
     @java.lang.Override
     public int getResponsesCount() {
       return responses_.size();
     }
+
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
     @java.lang.Override
     public com.google.firestore.v1.ListenResponse getResponses(int index) {
       return responses_.get(index);
     }
+
     /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
     @java.lang.Override
     public com.google.firestore.v1.ListenResponseOrBuilder getResponsesOrBuilder(int index) {
@@ -22470,12 +23218,14 @@ public final class TestDefinition {
     @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot>
         snapshots_;
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
     @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot>
         getSnapshotsList() {
       return snapshots_;
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
     @java.lang.Override
     public java.util.List<
@@ -22483,17 +23233,20 @@ public final class TestDefinition {
         getSnapshotsOrBuilderList() {
       return snapshots_;
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
     @java.lang.Override
     public int getSnapshotsCount() {
       return snapshots_.size();
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot getSnapshots(
         int index) {
       return snapshots_.get(index);
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.SnapshotOrBuilder
@@ -22503,6 +23256,7 @@ public final class TestDefinition {
 
     public static final int IS_ERROR_FIELD_NUMBER = 3;
     private boolean isError_ = false;
+
     /**
      * <code>bool is_error = 3;</code>
      *
@@ -22697,6 +23451,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      *
      *
@@ -22705,8 +23460,10 @@ public final class TestDefinition {
      * If the sequence of responses is provided to the implementation,
      * it should produce the sequence of snapshots.
      * If is_error is true, an error should occur after the snapshots.
+     *
      * The tests assume that the query is
      * Collection("projects/projectID/databases/(default)/documents/C").OrderBy("a", Ascending)
+     *
      * The watch target ID used in these tests is 1. Test interpreters
      * should either change their client's ID for testing,
      * or change the ID in the tests before running them.
@@ -23039,6 +23796,7 @@ public final class TestDefinition {
           return responsesBuilder_.getMessageList();
         }
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public int getResponsesCount() {
         if (responsesBuilder_ == null) {
@@ -23047,6 +23805,7 @@ public final class TestDefinition {
           return responsesBuilder_.getCount();
         }
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public com.google.firestore.v1.ListenResponse getResponses(int index) {
         if (responsesBuilder_ == null) {
@@ -23055,6 +23814,7 @@ public final class TestDefinition {
           return responsesBuilder_.getMessage(index);
         }
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public Builder setResponses(int index, com.google.firestore.v1.ListenResponse value) {
         if (responsesBuilder_ == null) {
@@ -23069,6 +23829,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public Builder setResponses(
           int index, com.google.firestore.v1.ListenResponse.Builder builderForValue) {
@@ -23081,6 +23842,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public Builder addResponses(com.google.firestore.v1.ListenResponse value) {
         if (responsesBuilder_ == null) {
@@ -23095,6 +23857,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public Builder addResponses(int index, com.google.firestore.v1.ListenResponse value) {
         if (responsesBuilder_ == null) {
@@ -23109,6 +23872,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public Builder addResponses(com.google.firestore.v1.ListenResponse.Builder builderForValue) {
         if (responsesBuilder_ == null) {
@@ -23120,6 +23884,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public Builder addResponses(
           int index, com.google.firestore.v1.ListenResponse.Builder builderForValue) {
@@ -23132,6 +23897,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public Builder addAllResponses(
           java.lang.Iterable<? extends com.google.firestore.v1.ListenResponse> values) {
@@ -23144,6 +23910,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public Builder clearResponses() {
         if (responsesBuilder_ == null) {
@@ -23155,6 +23922,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public Builder removeResponses(int index) {
         if (responsesBuilder_ == null) {
@@ -23166,10 +23934,12 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public com.google.firestore.v1.ListenResponse.Builder getResponsesBuilder(int index) {
         return getResponsesFieldBuilder().getBuilder(index);
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public com.google.firestore.v1.ListenResponseOrBuilder getResponsesOrBuilder(int index) {
         if (responsesBuilder_ == null) {
@@ -23178,6 +23948,7 @@ public final class TestDefinition {
           return responsesBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public java.util.List<? extends com.google.firestore.v1.ListenResponseOrBuilder>
           getResponsesOrBuilderList() {
@@ -23187,16 +23958,19 @@ public final class TestDefinition {
           return java.util.Collections.unmodifiableList(responses_);
         }
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public com.google.firestore.v1.ListenResponse.Builder addResponsesBuilder() {
         return getResponsesFieldBuilder()
             .addBuilder(com.google.firestore.v1.ListenResponse.getDefaultInstance());
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public com.google.firestore.v1.ListenResponse.Builder addResponsesBuilder(int index) {
         return getResponsesFieldBuilder()
             .addBuilder(index, com.google.firestore.v1.ListenResponse.getDefaultInstance());
       }
+
       /** <code>repeated .google.firestore.v1.ListenResponse responses = 1;</code> */
       public java.util.List<com.google.firestore.v1.ListenResponse.Builder>
           getResponsesBuilderList() {
@@ -23247,6 +24021,7 @@ public final class TestDefinition {
           return snapshotsBuilder_.getMessageList();
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public int getSnapshotsCount() {
         if (snapshotsBuilder_ == null) {
@@ -23255,6 +24030,7 @@ public final class TestDefinition {
           return snapshotsBuilder_.getCount();
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot getSnapshots(
           int index) {
@@ -23264,6 +24040,7 @@ public final class TestDefinition {
           return snapshotsBuilder_.getMessage(index);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public Builder setSnapshots(
           int index, com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot value) {
@@ -23279,6 +24056,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public Builder setSnapshots(
           int index,
@@ -23293,6 +24071,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public Builder addSnapshots(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot value) {
@@ -23308,6 +24087,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public Builder addSnapshots(
           int index, com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot value) {
@@ -23323,6 +24103,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public Builder addSnapshots(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot.Builder
@@ -23336,6 +24117,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public Builder addSnapshots(
           int index,
@@ -23350,6 +24132,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public Builder addAllSnapshots(
           java.lang.Iterable<
@@ -23364,6 +24147,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public Builder clearSnapshots() {
         if (snapshotsBuilder_ == null) {
@@ -23375,6 +24159,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public Builder removeSnapshots(int index) {
         if (snapshotsBuilder_ == null) {
@@ -23386,11 +24171,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot.Builder
           getSnapshotsBuilder(int index) {
         return getSnapshotsFieldBuilder().getBuilder(index);
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.SnapshotOrBuilder
           getSnapshotsOrBuilder(int index) {
@@ -23400,6 +24187,7 @@ public final class TestDefinition {
           return snapshotsBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public java.util.List<
               ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.SnapshotOrBuilder>
@@ -23410,6 +24198,7 @@ public final class TestDefinition {
           return java.util.Collections.unmodifiableList(snapshots_);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot.Builder
           addSnapshotsBuilder() {
@@ -23418,6 +24207,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot
                     .getDefaultInstance());
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot.Builder
           addSnapshotsBuilder(int index) {
@@ -23427,6 +24217,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot
                     .getDefaultInstance());
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.Snapshot snapshots = 2;</code> */
       public java.util.List<
               com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot.Builder>
@@ -23452,6 +24243,7 @@ public final class TestDefinition {
       }
 
       private boolean isError_;
+
       /**
        * <code>bool is_error = 3;</code>
        *
@@ -23461,6 +24253,7 @@ public final class TestDefinition {
       public boolean getIsError() {
         return isError_;
       }
+
       /**
        * <code>bool is_error = 3;</code>
        *
@@ -23474,6 +24267,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>bool is_error = 3;</code>
        *
@@ -23560,26 +24354,34 @@ public final class TestDefinition {
 
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
     java.util.List<com.google.firestore.v1.Document> getDocsList();
+
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
     com.google.firestore.v1.Document getDocs(int index);
+
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
     int getDocsCount();
+
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
     java.util.List<? extends com.google.firestore.v1.DocumentOrBuilder> getDocsOrBuilderList();
+
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
     com.google.firestore.v1.DocumentOrBuilder getDocsOrBuilder(int index);
 
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
     java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange>
         getChangesList();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange getChanges(int index);
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
     int getChangesCount();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
     java.util.List<
             ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.DocChangeOrBuilder>
         getChangesOrBuilderList();
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
     com.google.cloud.conformance.firestore.v1.TestDefinition.DocChangeOrBuilder getChangesOrBuilder(
         int index);
@@ -23590,21 +24392,25 @@ public final class TestDefinition {
      * @return Whether the readTime field is set.
      */
     boolean hasReadTime();
+
     /**
      * <code>.google.protobuf.Timestamp read_time = 3;</code>
      *
      * @return The readTime.
      */
     com.google.protobuf.Timestamp getReadTime();
+
     /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
     com.google.protobuf.TimestampOrBuilder getReadTimeOrBuilder();
   }
+
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.Snapshot} */
   public static final class Snapshot extends com.google.protobuf.GeneratedMessageV3
       implements
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.Snapshot)
       SnapshotOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use Snapshot.newBuilder() to construct.
     private Snapshot(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -23619,11 +24425,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Snapshot();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -23645,27 +24446,32 @@ public final class TestDefinition {
 
     @SuppressWarnings("serial")
     private java.util.List<com.google.firestore.v1.Document> docs_;
+
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
     @java.lang.Override
     public java.util.List<com.google.firestore.v1.Document> getDocsList() {
       return docs_;
     }
+
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
     @java.lang.Override
     public java.util.List<? extends com.google.firestore.v1.DocumentOrBuilder>
         getDocsOrBuilderList() {
       return docs_;
     }
+
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
     @java.lang.Override
     public int getDocsCount() {
       return docs_.size();
     }
+
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
     @java.lang.Override
     public com.google.firestore.v1.Document getDocs(int index) {
       return docs_.get(index);
     }
+
     /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
     @java.lang.Override
     public com.google.firestore.v1.DocumentOrBuilder getDocsOrBuilder(int index) {
@@ -23677,12 +24483,14 @@ public final class TestDefinition {
     @SuppressWarnings("serial")
     private java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange>
         changes_;
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
     @java.lang.Override
     public java.util.List<com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange>
         getChangesList() {
       return changes_;
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
     @java.lang.Override
     public java.util.List<
@@ -23690,17 +24498,20 @@ public final class TestDefinition {
         getChangesOrBuilderList() {
       return changes_;
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
     @java.lang.Override
     public int getChangesCount() {
       return changes_.size();
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange getChanges(
         int index) {
       return changes_.get(index);
     }
+
     /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
     @java.lang.Override
     public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChangeOrBuilder
@@ -23710,6 +24521,7 @@ public final class TestDefinition {
 
     public static final int READ_TIME_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp readTime_;
+
     /**
      * <code>.google.protobuf.Timestamp read_time = 3;</code>
      *
@@ -23719,6 +24531,7 @@ public final class TestDefinition {
     public boolean hasReadTime() {
       return readTime_ != null;
     }
+
     /**
      * <code>.google.protobuf.Timestamp read_time = 3;</code>
      *
@@ -23728,6 +24541,7 @@ public final class TestDefinition {
     public com.google.protobuf.Timestamp getReadTime() {
       return readTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : readTime_;
     }
+
     /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getReadTimeOrBuilder() {
@@ -23923,6 +24737,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /** Protobuf type {@code google.cloud.conformance.firestore.v1.Snapshot} */
     public static final class Builder
         extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
@@ -24253,6 +25068,7 @@ public final class TestDefinition {
           return docsBuilder_.getMessageList();
         }
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public int getDocsCount() {
         if (docsBuilder_ == null) {
@@ -24261,6 +25077,7 @@ public final class TestDefinition {
           return docsBuilder_.getCount();
         }
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public com.google.firestore.v1.Document getDocs(int index) {
         if (docsBuilder_ == null) {
@@ -24269,6 +25086,7 @@ public final class TestDefinition {
           return docsBuilder_.getMessage(index);
         }
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public Builder setDocs(int index, com.google.firestore.v1.Document value) {
         if (docsBuilder_ == null) {
@@ -24283,6 +25101,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public Builder setDocs(int index, com.google.firestore.v1.Document.Builder builderForValue) {
         if (docsBuilder_ == null) {
@@ -24294,6 +25113,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public Builder addDocs(com.google.firestore.v1.Document value) {
         if (docsBuilder_ == null) {
@@ -24308,6 +25128,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public Builder addDocs(int index, com.google.firestore.v1.Document value) {
         if (docsBuilder_ == null) {
@@ -24322,6 +25143,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public Builder addDocs(com.google.firestore.v1.Document.Builder builderForValue) {
         if (docsBuilder_ == null) {
@@ -24333,6 +25155,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public Builder addDocs(int index, com.google.firestore.v1.Document.Builder builderForValue) {
         if (docsBuilder_ == null) {
@@ -24344,6 +25167,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public Builder addAllDocs(
           java.lang.Iterable<? extends com.google.firestore.v1.Document> values) {
@@ -24356,6 +25180,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public Builder clearDocs() {
         if (docsBuilder_ == null) {
@@ -24367,6 +25192,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public Builder removeDocs(int index) {
         if (docsBuilder_ == null) {
@@ -24378,10 +25204,12 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public com.google.firestore.v1.Document.Builder getDocsBuilder(int index) {
         return getDocsFieldBuilder().getBuilder(index);
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public com.google.firestore.v1.DocumentOrBuilder getDocsOrBuilder(int index) {
         if (docsBuilder_ == null) {
@@ -24390,6 +25218,7 @@ public final class TestDefinition {
           return docsBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public java.util.List<? extends com.google.firestore.v1.DocumentOrBuilder>
           getDocsOrBuilderList() {
@@ -24399,16 +25228,19 @@ public final class TestDefinition {
           return java.util.Collections.unmodifiableList(docs_);
         }
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public com.google.firestore.v1.Document.Builder addDocsBuilder() {
         return getDocsFieldBuilder()
             .addBuilder(com.google.firestore.v1.Document.getDefaultInstance());
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public com.google.firestore.v1.Document.Builder addDocsBuilder(int index) {
         return getDocsFieldBuilder()
             .addBuilder(index, com.google.firestore.v1.Document.getDefaultInstance());
       }
+
       /** <code>repeated .google.firestore.v1.Document docs = 1;</code> */
       public java.util.List<com.google.firestore.v1.Document.Builder> getDocsBuilderList() {
         return getDocsFieldBuilder().getBuilderList();
@@ -24458,6 +25290,7 @@ public final class TestDefinition {
           return changesBuilder_.getMessageList();
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public int getChangesCount() {
         if (changesBuilder_ == null) {
@@ -24466,6 +25299,7 @@ public final class TestDefinition {
           return changesBuilder_.getCount();
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange getChanges(
           int index) {
@@ -24475,6 +25309,7 @@ public final class TestDefinition {
           return changesBuilder_.getMessage(index);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public Builder setChanges(
           int index, com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange value) {
@@ -24490,6 +25325,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public Builder setChanges(
           int index,
@@ -24504,6 +25340,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public Builder addChanges(
           com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange value) {
@@ -24519,6 +25356,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public Builder addChanges(
           int index, com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange value) {
@@ -24534,6 +25372,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public Builder addChanges(
           com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Builder
@@ -24547,6 +25386,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public Builder addChanges(
           int index,
@@ -24561,6 +25401,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public Builder addAllChanges(
           java.lang.Iterable<
@@ -24575,6 +25416,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public Builder clearChanges() {
         if (changesBuilder_ == null) {
@@ -24586,6 +25428,7 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public Builder removeChanges(int index) {
         if (changesBuilder_ == null) {
@@ -24597,11 +25440,13 @@ public final class TestDefinition {
         }
         return this;
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Builder
           getChangesBuilder(int index) {
         return getChangesFieldBuilder().getBuilder(index);
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChangeOrBuilder
           getChangesOrBuilder(int index) {
@@ -24611,6 +25456,7 @@ public final class TestDefinition {
           return changesBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public java.util.List<
               ? extends com.google.cloud.conformance.firestore.v1.TestDefinition.DocChangeOrBuilder>
@@ -24621,6 +25467,7 @@ public final class TestDefinition {
           return java.util.Collections.unmodifiableList(changes_);
         }
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Builder
           addChangesBuilder() {
@@ -24629,6 +25476,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange
                     .getDefaultInstance());
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Builder
           addChangesBuilder(int index) {
@@ -24638,6 +25486,7 @@ public final class TestDefinition {
                 com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange
                     .getDefaultInstance());
       }
+
       /** <code>repeated .google.cloud.conformance.firestore.v1.DocChange changes = 2;</code> */
       public java.util.List<
               com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Builder>
@@ -24668,6 +25517,7 @@ public final class TestDefinition {
               com.google.protobuf.Timestamp.Builder,
               com.google.protobuf.TimestampOrBuilder>
           readTimeBuilder_;
+
       /**
        * <code>.google.protobuf.Timestamp read_time = 3;</code>
        *
@@ -24676,6 +25526,7 @@ public final class TestDefinition {
       public boolean hasReadTime() {
         return ((bitField0_ & 0x00000004) != 0);
       }
+
       /**
        * <code>.google.protobuf.Timestamp read_time = 3;</code>
        *
@@ -24688,6 +25539,7 @@ public final class TestDefinition {
           return readTimeBuilder_.getMessage();
         }
       }
+
       /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
       public Builder setReadTime(com.google.protobuf.Timestamp value) {
         if (readTimeBuilder_ == null) {
@@ -24702,6 +25554,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
       public Builder setReadTime(com.google.protobuf.Timestamp.Builder builderForValue) {
         if (readTimeBuilder_ == null) {
@@ -24713,6 +25566,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
       public Builder mergeReadTime(com.google.protobuf.Timestamp value) {
         if (readTimeBuilder_ == null) {
@@ -24730,6 +25584,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
       public Builder clearReadTime() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -24741,12 +25596,14 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
       public com.google.protobuf.Timestamp.Builder getReadTimeBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getReadTimeFieldBuilder().getBuilder();
       }
+
       /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
       public com.google.protobuf.TimestampOrBuilder getReadTimeOrBuilder() {
         if (readTimeBuilder_ != null) {
@@ -24755,6 +25612,7 @@ public final class TestDefinition {
           return readTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : readTime_;
         }
       }
+
       /** <code>.google.protobuf.Timestamp read_time = 3;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.Timestamp,
@@ -24851,6 +25709,7 @@ public final class TestDefinition {
      * @return The enum numeric value on the wire for kind.
      */
     int getKindValue();
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
      *
@@ -24864,12 +25723,14 @@ public final class TestDefinition {
      * @return Whether the doc field is set.
      */
     boolean hasDoc();
+
     /**
      * <code>.google.firestore.v1.Document doc = 2;</code>
      *
      * @return The doc.
      */
     com.google.firestore.v1.Document getDoc();
+
     /** <code>.google.firestore.v1.Document doc = 2;</code> */
     com.google.firestore.v1.DocumentOrBuilder getDocOrBuilder();
 
@@ -24887,12 +25748,14 @@ public final class TestDefinition {
      */
     int getNewIndex();
   }
+
   /** Protobuf type {@code google.cloud.conformance.firestore.v1.DocChange} */
   public static final class DocChange extends com.google.protobuf.GeneratedMessageV3
       implements
       // @@protoc_insertion_point(message_implements:google.cloud.conformance.firestore.v1.DocChange)
       DocChangeOrBuilder {
     private static final long serialVersionUID = 0L;
+
     // Use DocChange.newBuilder() to construct.
     private DocChange(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -24906,11 +25769,6 @@ public final class TestDefinition {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new DocChange();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -24943,10 +25801,13 @@ public final class TestDefinition {
 
       /** <code>KIND_UNSPECIFIED = 0;</code> */
       public static final int KIND_UNSPECIFIED_VALUE = 0;
+
       /** <code>ADDED = 1;</code> */
       public static final int ADDED_VALUE = 1;
+
       /** <code>REMOVED = 2;</code> */
       public static final int REMOVED_VALUE = 2;
+
       /** <code>MODIFIED = 3;</code> */
       public static final int MODIFIED_VALUE = 3;
 
@@ -25039,6 +25900,7 @@ public final class TestDefinition {
 
     public static final int KIND_FIELD_NUMBER = 1;
     private int kind_ = 0;
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
      *
@@ -25048,6 +25910,7 @@ public final class TestDefinition {
     public int getKindValue() {
       return kind_;
     }
+
     /**
      * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
      *
@@ -25064,6 +25927,7 @@ public final class TestDefinition {
 
     public static final int DOC_FIELD_NUMBER = 2;
     private com.google.firestore.v1.Document doc_;
+
     /**
      * <code>.google.firestore.v1.Document doc = 2;</code>
      *
@@ -25073,6 +25937,7 @@ public final class TestDefinition {
     public boolean hasDoc() {
       return doc_ != null;
     }
+
     /**
      * <code>.google.firestore.v1.Document doc = 2;</code>
      *
@@ -25082,6 +25947,7 @@ public final class TestDefinition {
     public com.google.firestore.v1.Document getDoc() {
       return doc_ == null ? com.google.firestore.v1.Document.getDefaultInstance() : doc_;
     }
+
     /** <code>.google.firestore.v1.Document doc = 2;</code> */
     @java.lang.Override
     public com.google.firestore.v1.DocumentOrBuilder getDocOrBuilder() {
@@ -25090,6 +25956,7 @@ public final class TestDefinition {
 
     public static final int OLD_INDEX_FIELD_NUMBER = 3;
     private int oldIndex_ = 0;
+
     /**
      * <code>int32 old_index = 3;</code>
      *
@@ -25102,6 +25969,7 @@ public final class TestDefinition {
 
     public static final int NEW_INDEX_FIELD_NUMBER = 4;
     private int newIndex_ = 0;
+
     /**
      * <code>int32 new_index = 4;</code>
      *
@@ -25312,6 +26180,7 @@ public final class TestDefinition {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /** Protobuf type {@code google.cloud.conformance.firestore.v1.DocChange} */
     public static final class Builder
         extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
@@ -25539,6 +26408,7 @@ public final class TestDefinition {
       private int bitField0_;
 
       private int kind_ = 0;
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
        *
@@ -25548,6 +26418,7 @@ public final class TestDefinition {
       public int getKindValue() {
         return kind_;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
        *
@@ -25560,6 +26431,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
        *
@@ -25574,6 +26446,7 @@ public final class TestDefinition {
             ? com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.Kind.UNRECOGNIZED
             : result;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
        *
@@ -25590,6 +26463,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>.google.cloud.conformance.firestore.v1.DocChange.Kind kind = 1;</code>
        *
@@ -25608,6 +26482,7 @@ public final class TestDefinition {
               com.google.firestore.v1.Document.Builder,
               com.google.firestore.v1.DocumentOrBuilder>
           docBuilder_;
+
       /**
        * <code>.google.firestore.v1.Document doc = 2;</code>
        *
@@ -25616,6 +26491,7 @@ public final class TestDefinition {
       public boolean hasDoc() {
         return ((bitField0_ & 0x00000002) != 0);
       }
+
       /**
        * <code>.google.firestore.v1.Document doc = 2;</code>
        *
@@ -25628,6 +26504,7 @@ public final class TestDefinition {
           return docBuilder_.getMessage();
         }
       }
+
       /** <code>.google.firestore.v1.Document doc = 2;</code> */
       public Builder setDoc(com.google.firestore.v1.Document value) {
         if (docBuilder_ == null) {
@@ -25642,6 +26519,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.Document doc = 2;</code> */
       public Builder setDoc(com.google.firestore.v1.Document.Builder builderForValue) {
         if (docBuilder_ == null) {
@@ -25653,6 +26531,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.Document doc = 2;</code> */
       public Builder mergeDoc(com.google.firestore.v1.Document value) {
         if (docBuilder_ == null) {
@@ -25670,6 +26549,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.Document doc = 2;</code> */
       public Builder clearDoc() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -25681,12 +26561,14 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /** <code>.google.firestore.v1.Document doc = 2;</code> */
       public com.google.firestore.v1.Document.Builder getDocBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getDocFieldBuilder().getBuilder();
       }
+
       /** <code>.google.firestore.v1.Document doc = 2;</code> */
       public com.google.firestore.v1.DocumentOrBuilder getDocOrBuilder() {
         if (docBuilder_ != null) {
@@ -25695,6 +26577,7 @@ public final class TestDefinition {
           return doc_ == null ? com.google.firestore.v1.Document.getDefaultInstance() : doc_;
         }
       }
+
       /** <code>.google.firestore.v1.Document doc = 2;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.google.firestore.v1.Document,
@@ -25714,6 +26597,7 @@ public final class TestDefinition {
       }
 
       private int oldIndex_;
+
       /**
        * <code>int32 old_index = 3;</code>
        *
@@ -25723,6 +26607,7 @@ public final class TestDefinition {
       public int getOldIndex() {
         return oldIndex_;
       }
+
       /**
        * <code>int32 old_index = 3;</code>
        *
@@ -25736,6 +26621,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>int32 old_index = 3;</code>
        *
@@ -25749,6 +26635,7 @@ public final class TestDefinition {
       }
 
       private int newIndex_;
+
       /**
        * <code>int32 new_index = 4;</code>
        *
@@ -25758,6 +26645,7 @@ public final class TestDefinition {
       public int getNewIndex() {
         return newIndex_;
       }
+
       /**
        * <code>int32 new_index = 4;</code>
        *
@@ -25771,6 +26659,7 @@ public final class TestDefinition {
         onChanged();
         return this;
       }
+
       /**
        * <code>int32 new_index = 4;</code>
        *

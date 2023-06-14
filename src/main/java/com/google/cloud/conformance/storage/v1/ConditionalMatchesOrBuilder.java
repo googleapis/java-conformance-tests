@@ -29,12 +29,14 @@ public interface ConditionalMatchesOrBuilder
    * @return A list containing the expression.
    */
   java.util.List<java.lang.String> getExpressionList();
+
   /**
    * <code>repeated string expression = 1;</code>
    *
    * @return The count of expression.
    */
   int getExpressionCount();
+
   /**
    * <code>repeated string expression = 1;</code>
    *
@@ -42,6 +44,7 @@ public interface ConditionalMatchesOrBuilder
    * @return The expression at the given index.
    */
   java.lang.String getExpression(int index);
+
   /**
    * <code>repeated string expression = 1;</code>
    *
