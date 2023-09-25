@@ -25,6 +25,8 @@ java.common_templates(
     excludes=[
         ".github/workflows/samples.yaml",
         ".github/workflows/auto-release.yaml",
+        ".kokoro/requirements.in",
+        ".kokoro/requirements.txt"
         "samples/*",
         "README.md",
     ]
