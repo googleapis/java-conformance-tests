@@ -3941,6 +3941,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
 
     @SuppressWarnings("serial")
@@ -4010,7 +4011,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -4064,7 +4065,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(docRefPath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, docRefPath_);
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -4079,7 +4080,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(docRefPath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, docRefPath_);
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getRequest());
       }
       size += getUnknownFields().getSerializedSize();
@@ -4255,10 +4256,19 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.GetTest.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getRequestFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -4313,9 +4323,12 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.docRefPath_ = docRefPath_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4653,8 +4666,10 @@ public final class TestDefinition {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
 
@@ -4964,6 +4979,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
 
     @SuppressWarnings("serial")
@@ -5090,7 +5106,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -5167,7 +5183,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonData_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jsonData_);
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getRequest());
       }
       if (isError_ != false) {
@@ -5188,7 +5204,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonData_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, jsonData_);
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getRequest());
       }
       if (isError_ != false) {
@@ -5373,10 +5389,19 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.CreateTest.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getRequestFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -5436,12 +5461,15 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.jsonData_ = jsonData_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.isError_ = isError_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5919,8 +5947,10 @@ public final class TestDefinition {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
 
@@ -6322,6 +6352,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
 
     @SuppressWarnings("serial")
@@ -6391,7 +6422,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasOption() {
-      return option_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -6498,7 +6529,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
 
     /**
@@ -6571,13 +6602,13 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(docRefPath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, docRefPath_);
       }
-      if (option_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getOption());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonData_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, jsonData_);
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getRequest());
       }
       if (isError_ != false) {
@@ -6595,13 +6626,13 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(docRefPath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, docRefPath_);
       }
-      if (option_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getOption());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonData_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, jsonData_);
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getRequest());
       }
       if (isError_ != false) {
@@ -6794,10 +6825,20 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.SetTest.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getOptionFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -6859,18 +6900,22 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.docRefPath_ = docRefPath_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.option_ = optionBuilder_ == null ? option_ : optionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.jsonData_ = jsonData_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.isError_ = isError_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7243,8 +7288,10 @@ public final class TestDefinition {
         } else {
           optionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (option_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
 
@@ -7549,8 +7596,10 @@ public final class TestDefinition {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
 
@@ -7949,6 +7998,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
 
     @SuppressWarnings("serial")
@@ -8018,7 +8068,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasPrecondition() {
-      return precondition_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -8124,7 +8174,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
 
     /**
@@ -8197,13 +8247,13 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(docRefPath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, docRefPath_);
       }
-      if (precondition_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPrecondition());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonData_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, jsonData_);
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getRequest());
       }
       if (isError_ != false) {
@@ -8221,13 +8271,13 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(docRefPath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, docRefPath_);
       }
-      if (precondition_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getPrecondition());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonData_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, jsonData_);
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getRequest());
       }
       if (isError_ != false) {
@@ -8421,10 +8471,20 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.UpdateTest.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getPreconditionFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -8486,19 +8546,23 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.docRefPath_ = docRefPath_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.precondition_ =
               preconditionBuilder_ == null ? precondition_ : preconditionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.jsonData_ = jsonData_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.isError_ = isError_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8864,8 +8928,10 @@ public final class TestDefinition {
         } else {
           preconditionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (precondition_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
 
@@ -9167,8 +9233,10 @@ public final class TestDefinition {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
 
@@ -9656,6 +9724,7 @@ public final class TestDefinition {
                   .class);
     }
 
+    private int bitField0_;
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
 
     @SuppressWarnings("serial")
@@ -9725,7 +9794,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasPrecondition() {
-      return precondition_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -9927,7 +9996,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
 
     /**
@@ -10000,7 +10069,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(docRefPath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, docRefPath_);
       }
-      if (precondition_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPrecondition());
       }
       for (int i = 0; i < fieldPaths_.size(); i++) {
@@ -10009,7 +10078,7 @@ public final class TestDefinition {
       for (int i = 0; i < jsonValues_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, jsonValues_.getRaw(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getRequest());
       }
       if (isError_ != false) {
@@ -10027,7 +10096,7 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(docRefPath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, docRefPath_);
       }
-      if (precondition_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getPrecondition());
       }
       for (int i = 0; i < fieldPaths_.size(); i++) {
@@ -10041,7 +10110,7 @@ public final class TestDefinition {
         size += dataSize;
         size += 1 * getJsonValuesList().size();
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, getRequest());
       }
       if (isError_ != false) {
@@ -10249,10 +10318,21 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.UpdatePathsTest.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getPreconditionFieldBuilder();
+          getFieldPathsFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -10337,9 +10417,11 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.docRefPath_ = docRefPath_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.precondition_ =
               preconditionBuilder_ == null ? precondition_ : preconditionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           jsonValues_.makeImmutable();
@@ -10347,10 +10429,12 @@ public final class TestDefinition {
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.isError_ = isError_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10765,8 +10849,10 @@ public final class TestDefinition {
         } else {
           preconditionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (precondition_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
 
@@ -11532,8 +11618,10 @@ public final class TestDefinition {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
 
@@ -11885,6 +11973,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DOC_REF_PATH_FIELD_NUMBER = 1;
 
     @SuppressWarnings("serial")
@@ -11948,7 +12037,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasPrecondition() {
-      return precondition_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -11987,7 +12076,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
 
     /**
@@ -12060,10 +12149,10 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(docRefPath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, docRefPath_);
       }
-      if (precondition_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPrecondition());
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getRequest());
       }
       if (isError_ != false) {
@@ -12081,10 +12170,10 @@ public final class TestDefinition {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(docRefPath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, docRefPath_);
       }
-      if (precondition_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getPrecondition());
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getRequest());
       }
       if (isError_ != false) {
@@ -12274,10 +12363,20 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.DeleteTest.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getPreconditionFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -12338,16 +12437,20 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.docRefPath_ = docRefPath_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.precondition_ =
               preconditionBuilder_ == null ? precondition_ : preconditionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.request_ = requestBuilder_ == null ? request_ : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.isError_ = isError_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12666,8 +12769,10 @@ public final class TestDefinition {
         } else {
           preconditionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (precondition_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
 
@@ -12826,8 +12931,10 @@ public final class TestDefinition {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
 
@@ -14312,6 +14419,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLL_PATH_FIELD_NUMBER = 1;
 
     @SuppressWarnings("serial")
@@ -14415,7 +14523,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasQuery() {
-      return query_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -14467,7 +14575,7 @@ public final class TestDefinition {
       for (int i = 0; i < clauses_.size(); i++) {
         output.writeMessage(2, clauses_.get(i));
       }
-      if (query_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getQuery());
       }
       if (isError_ != false) {
@@ -14488,7 +14596,7 @@ public final class TestDefinition {
       for (int i = 0; i < clauses_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, clauses_.get(i));
       }
-      if (query_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getQuery());
       }
       if (isError_ != false) {
@@ -14667,10 +14775,20 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.QueryTest.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getClausesFieldBuilder();
+          getQueryFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -14747,12 +14865,15 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collPath_ = collPath_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.query_ = queryBuilder_ == null ? query_ : queryBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.isError_ = isError_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15346,8 +15467,10 @@ public final class TestDefinition {
         } else {
           queryBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (query_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
 
@@ -18899,6 +19022,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Where.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PATH_FIELD_NUMBER = 1;
     private com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath path_;
 
@@ -18909,7 +19033,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasPath() {
-      return path_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -19029,7 +19153,7 @@ public final class TestDefinition {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-      if (path_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPath());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(op_)) {
@@ -19047,7 +19171,7 @@ public final class TestDefinition {
       if (size != -1) return size;
 
       size = 0;
-      if (path_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getPath());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(op_)) {
@@ -19222,10 +19346,19 @@ public final class TestDefinition {
       }
 
       // Construct using com.google.cloud.conformance.firestore.v1.TestDefinition.Where.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getPathFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -19277,8 +19410,10 @@ public final class TestDefinition {
       private void buildPartial0(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Where result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.path_ = pathBuilder_ == null ? path_ : pathBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.op_ = op_;
@@ -19286,6 +19421,7 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.jsonValue_ = jsonValue_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -19492,8 +19628,10 @@ public final class TestDefinition {
         } else {
           pathBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (path_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
 
@@ -19863,6 +20001,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PATH_FIELD_NUMBER = 1;
     private com.google.cloud.conformance.firestore.v1.TestDefinition.FieldPath path_;
 
@@ -19873,7 +20012,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasPath() {
-      return path_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -19964,7 +20103,7 @@ public final class TestDefinition {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-      if (path_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPath());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(direction_)) {
@@ -19979,7 +20118,7 @@ public final class TestDefinition {
       if (size != -1) return size;
 
       size = 0;
-      if (path_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getPath());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(direction_)) {
@@ -20150,10 +20289,19 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getPathFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -20205,12 +20353,15 @@ public final class TestDefinition {
       private void buildPartial0(
           com.google.cloud.conformance.firestore.v1.TestDefinition.OrderBy result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.path_ = pathBuilder_ == null ? path_ : pathBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.direction_ = direction_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20407,8 +20558,10 @@ public final class TestDefinition {
         } else {
           pathBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (path_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
 
@@ -20752,6 +20905,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DOC_SNAPSHOT_FIELD_NUMBER = 1;
     private com.google.cloud.conformance.firestore.v1.TestDefinition.DocSnapshot docSnapshot_;
 
@@ -20768,7 +20922,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasDocSnapshot() {
-      return docSnapshot_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -20866,7 +21020,7 @@ public final class TestDefinition {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-      if (docSnapshot_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDocSnapshot());
       }
       for (int i = 0; i < jsonValues_.size(); i++) {
@@ -20881,7 +21035,7 @@ public final class TestDefinition {
       if (size != -1) return size;
 
       size = 0;
-      if (docSnapshot_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getDocSnapshot());
       }
       {
@@ -21059,10 +21213,19 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getDocSnapshotFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -21113,14 +21276,17 @@ public final class TestDefinition {
       private void buildPartial0(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Cursor result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.docSnapshot_ =
               docSnapshotBuilder_ == null ? docSnapshot_ : docSnapshotBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           jsonValues_.makeImmutable();
           result.jsonValues_ = jsonValues_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -21358,8 +21524,10 @@ public final class TestDefinition {
         } else {
           docSnapshotBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (docSnapshot_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
 
@@ -24442,6 +24610,7 @@ public final class TestDefinition {
               com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DOCS_FIELD_NUMBER = 1;
 
     @SuppressWarnings("serial")
@@ -24529,7 +24698,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasReadTime() {
-      return readTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -24568,7 +24737,7 @@ public final class TestDefinition {
       for (int i = 0; i < changes_.size(); i++) {
         output.writeMessage(2, changes_.get(i));
       }
-      if (readTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getReadTime());
       }
       getUnknownFields().writeTo(output);
@@ -24586,7 +24755,7 @@ public final class TestDefinition {
       for (int i = 0; i < changes_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, changes_.get(i));
       }
-      if (readTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getReadTime());
       }
       size += getUnknownFields().getSerializedSize();
@@ -24761,10 +24930,21 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getDocsFieldBuilder();
+          getChangesFieldBuilder();
+          getReadTimeFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -24852,9 +25032,12 @@ public final class TestDefinition {
       private void buildPartial0(
           com.google.cloud.conformance.firestore.v1.TestDefinition.Snapshot result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.readTime_ = readTimeBuilder_ == null ? readTime_ : readTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -25580,8 +25763,10 @@ public final class TestDefinition {
         } else {
           readTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (readTime_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
 
@@ -25898,6 +26083,7 @@ public final class TestDefinition {
       // @@protoc_insertion_point(enum_scope:google.cloud.conformance.firestore.v1.DocChange.Kind)
     }
 
+    private int bitField0_;
     public static final int KIND_FIELD_NUMBER = 1;
     private int kind_ = 0;
 
@@ -25935,7 +26121,7 @@ public final class TestDefinition {
      */
     @java.lang.Override
     public boolean hasDoc() {
-      return doc_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
 
     /**
@@ -26000,7 +26186,7 @@ public final class TestDefinition {
               .getNumber()) {
         output.writeEnum(1, kind_);
       }
-      if (doc_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getDoc());
       }
       if (oldIndex_ != 0) {
@@ -26024,7 +26210,7 @@ public final class TestDefinition {
               .getNumber()) {
         size += com.google.protobuf.CodedOutputStream.computeEnumSize(1, kind_);
       }
-      if (doc_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getDoc());
       }
       if (oldIndex_ != 0) {
@@ -26204,10 +26390,19 @@ public final class TestDefinition {
 
       // Construct using
       // com.google.cloud.conformance.firestore.v1.TestDefinition.DocChange.newBuilder()
-      private Builder() {}
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+          getDocFieldBuilder();
+        }
       }
 
       @java.lang.Override
@@ -26264,8 +26459,10 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.kind_ = kind_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.doc_ = docBuilder_ == null ? doc_ : docBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.oldIndex_ = oldIndex_;
@@ -26273,6 +26470,7 @@ public final class TestDefinition {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.newIndex_ = newIndex_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -26545,8 +26743,10 @@ public final class TestDefinition {
         } else {
           docBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (doc_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
 

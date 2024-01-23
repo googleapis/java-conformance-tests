@@ -59,7 +59,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
   public static final int CONTENTLENGTHRANGE_FIELD_NUMBER = 1;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.IntList contentLengthRange_;
+  private com.google.protobuf.Internal.IntList contentLengthRange_ = emptyIntList();
 
   /**
    * <code>repeated int32 contentLengthRange = 1;</code>
@@ -391,7 +391,6 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     public com.google.cloud.conformance.storage.v1.PolicyConditions buildPartial() {
       com.google.cloud.conformance.storage.v1.PolicyConditions result =
           new com.google.cloud.conformance.storage.v1.PolicyConditions(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) {
         buildPartial0(result);
       }
@@ -399,17 +398,12 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       return result;
     }
 
-    private void buildPartialRepeatedFields(
-        com.google.cloud.conformance.storage.v1.PolicyConditions result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        contentLengthRange_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.contentLengthRange_ = contentLengthRange_;
-    }
-
     private void buildPartial0(com.google.cloud.conformance.storage.v1.PolicyConditions result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        contentLengthRange_.makeImmutable();
+        result.contentLengthRange_ = contentLengthRange_;
+      }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         startsWith_.makeImmutable();
         result.startsWith_ = startsWith_;
@@ -465,7 +459,8 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
       if (!other.contentLengthRange_.isEmpty()) {
         if (contentLengthRange_.isEmpty()) {
           contentLengthRange_ = other.contentLengthRange_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          contentLengthRange_.makeImmutable();
+          bitField0_ |= 0x00000001;
         } else {
           ensureContentLengthRangeIsMutable();
           contentLengthRange_.addAll(other.contentLengthRange_);
@@ -555,10 +550,10 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
     private com.google.protobuf.Internal.IntList contentLengthRange_ = emptyIntList();
 
     private void ensureContentLengthRangeIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        contentLengthRange_ = mutableCopy(contentLengthRange_);
-        bitField0_ |= 0x00000001;
+      if (!contentLengthRange_.isModifiable()) {
+        contentLengthRange_ = makeMutableCopy(contentLengthRange_);
       }
+      bitField0_ |= 0x00000001;
     }
 
     /**
@@ -567,9 +562,8 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
      * @return A list containing the contentLengthRange.
      */
     public java.util.List<java.lang.Integer> getContentLengthRangeList() {
-      return ((bitField0_ & 0x00000001) != 0)
-          ? java.util.Collections.unmodifiableList(contentLengthRange_)
-          : contentLengthRange_;
+      contentLengthRange_.makeImmutable();
+      return contentLengthRange_;
     }
 
     /**
@@ -602,6 +596,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
 
       ensureContentLengthRangeIsMutable();
       contentLengthRange_.setInt(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -616,6 +611,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
 
       ensureContentLengthRangeIsMutable();
       contentLengthRange_.addInt(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -630,6 +626,7 @@ public final class PolicyConditions extends com.google.protobuf.GeneratedMessage
         java.lang.Iterable<? extends java.lang.Integer> values) {
       ensureContentLengthRangeIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, contentLengthRange_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

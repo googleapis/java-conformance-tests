@@ -55,6 +55,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
             com.google.cloud.conformance.storage.v1.PostPolicyV4Test.Builder.class);
   }
 
+  private int bitField0_;
   public static final int DESCRIPTION_FIELD_NUMBER = 1;
 
   @SuppressWarnings("serial")
@@ -106,7 +107,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
    */
   @java.lang.Override
   public boolean hasPolicyInput() {
-    return policyInput_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
 
   /**
@@ -139,7 +140,7 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
    */
   @java.lang.Override
   public boolean hasPolicyOutput() {
-    return policyOutput_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
 
   /**
@@ -179,10 +180,10 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
     }
-    if (policyInput_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getPolicyInput());
     }
-    if (policyOutput_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getPolicyOutput());
     }
     getUnknownFields().writeTo(output);
@@ -197,10 +198,10 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
     }
-    if (policyInput_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getPolicyInput());
     }
-    if (policyOutput_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getPolicyOutput());
     }
     size += getUnknownFields().getSerializedSize();
@@ -372,10 +373,20 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
     }
 
     // Construct using com.google.cloud.conformance.storage.v1.PostPolicyV4Test.newBuilder()
-    private Builder() {}
+    private Builder() {
+      maybeForceBuilderInitialization();
+    }
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
+      maybeForceBuilderInitialization();
+    }
+
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+        getPolicyInputFieldBuilder();
+        getPolicyOutputFieldBuilder();
+      }
     }
 
     @java.lang.Override
@@ -432,14 +443,18 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.description_ = description_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.policyInput_ =
             policyInputBuilder_ == null ? policyInput_ : policyInputBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.policyOutput_ =
             policyOutputBuilder_ == null ? policyOutput_ : policyOutputBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -716,8 +731,10 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
       } else {
         policyInputBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (policyInput_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
 
@@ -842,8 +859,10 @@ public final class PostPolicyV4Test extends com.google.protobuf.GeneratedMessage
       } else {
         policyOutputBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (policyOutput_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
 

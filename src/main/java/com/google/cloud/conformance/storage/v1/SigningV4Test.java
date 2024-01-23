@@ -78,6 +78,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
             com.google.cloud.conformance.storage.v1.SigningV4Test.Builder.class);
   }
 
+  private int bitField0_;
   public static final int FILENAME_FIELD_NUMBER = 1;
 
   @SuppressWarnings("serial")
@@ -306,7 +307,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
    */
   @java.lang.Override
   public boolean hasTimestamp() {
-    return timestamp_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
 
   /**
@@ -739,7 +740,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (expiration_ != 0L) {
       output.writeInt64(6, expiration_);
     }
-    if (timestamp_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(7, getTimestamp());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedUrl_)) {
@@ -791,7 +792,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (expiration_ != 0L) {
       size += com.google.protobuf.CodedOutputStream.computeInt64Size(6, expiration_);
     }
-    if (timestamp_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(7, getTimestamp());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedUrl_)) {
@@ -1061,10 +1062,19 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
 
     // Construct using com.google.cloud.conformance.storage.v1.SigningV4Test.newBuilder()
-    private Builder() {}
+    private Builder() {
+      maybeForceBuilderInitialization();
+    }
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
+      maybeForceBuilderInitialization();
+    }
+
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+        getTimestampFieldBuilder();
+      }
     }
 
     @java.lang.Override
@@ -1144,8 +1154,10 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.expiration_ = expiration_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.timestamp_ = timestampBuilder_ == null ? timestamp_ : timestampBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.expectedUrl_ = expectedUrl_;
@@ -1173,6 +1185,7 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.expectedStringToSign_ = expectedStringToSign_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1943,8 +1956,10 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       } else {
         timestampBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (timestamp_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
 
