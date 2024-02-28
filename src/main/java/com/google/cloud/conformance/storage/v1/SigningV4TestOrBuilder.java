@@ -246,4 +246,60 @@ public interface SigningV4TestOrBuilder
    * @return The bytes for expectedStringToSign.
    */
   com.google.protobuf.ByteString getExpectedStringToSignBytes();
+
+  /**
+   * <code>string hostname = 16;</code>
+   *
+   * @return The hostname.
+   */
+  java.lang.String getHostname();
+
+  /**
+   * <code>string hostname = 16;</code>
+   *
+   * @return The bytes for hostname.
+   */
+  com.google.protobuf.ByteString getHostnameBytes();
+
+  /**
+   * <code>string clientEndpoint = 17;</code>
+   *
+   * @return The clientEndpoint.
+   */
+  java.lang.String getClientEndpoint();
+
+  /**
+   * <code>string clientEndpoint = 17;</code>
+   *
+   * @return The bytes for clientEndpoint.
+   */
+  com.google.protobuf.ByteString getClientEndpointBytes();
+
+  /**
+   * <code>string emulatorHostname = 18;</code>
+   *
+   * @return The emulatorHostname.
+   */
+  java.lang.String getEmulatorHostname();
+
+  /**
+   * <code>string emulatorHostname = 18;</code>
+   *
+   * @return The bytes for emulatorHostname.
+   */
+  com.google.protobuf.ByteString getEmulatorHostnameBytes();
+
+  /**
+   * <code>string universeDomain = 19;</code>
+   *
+   * @return The universeDomain.
+   */
+  java.lang.String getUniverseDomain();
+
+  /**
+   * <code>string universeDomain = 19;</code>
+   *
+   * @return The bytes for universeDomain.
+   */
+  com.google.protobuf.ByteString getUniverseDomainBytes();
 }
