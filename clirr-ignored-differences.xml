@@ -6,5 +6,29 @@
     <className>com/google/cloud/conformance/storage/v1/TestFileOrBuilder</className>
     <method>* *RetryTests*(*)</method>
   </difference>
+  <difference>
+    <differenceType>7012</differenceType>
+    <className>com/google/cloud/conformance/storage/v1/SigningV4TestOrBuilder</className>
+    <method>* *getClientEndpoint*(*)</method>
+  </difference>
+
+  <difference>
+    <differenceType>7012</differenceType>
+    <className>com/google/cloud/conformance/storage/v1/SigningV4TestOrBuilder</className>
+    <method>* *getEmulatorHostname*(*)</method>
+  </difference>
+
+  <difference>
+    <differenceType>7012</differenceType>
+    <className>com/google/cloud/conformance/storage/v1/SigningV4TestOrBuilder</className>
+    <method>* *getHostname*(*)</method>
+  </difference>
+
+<difference>
+    <differenceType>7012</differenceType>
+    <className>com/google/cloud/conformance/storage/v1/SigningV4TestOrBuilder</className>
+    <method>* *getUniverseDomain*(*)</method>
+  </difference>
+
 
 </differences>

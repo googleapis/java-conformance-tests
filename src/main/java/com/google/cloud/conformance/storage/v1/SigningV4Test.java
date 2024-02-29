@@ -42,6 +42,10 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     bucketBoundHostname_ = "";
     expectedCanonicalRequest_ = "";
     expectedStringToSign_ = "";
+    hostname_ = "";
+    clientEndpoint_ = "";
+    emulatorHostname_ = "";
+    universeDomain_ = "";
   }
 
   @java.lang.Override
@@ -708,6 +712,170 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
   }
 
+  public static final int HOSTNAME_FIELD_NUMBER = 16;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object hostname_ = "";
+
+  /**
+   * <code>string hostname = 16;</code>
+   *
+   * @return The hostname.
+   */
+  @java.lang.Override
+  public java.lang.String getHostname() {
+    java.lang.Object ref = hostname_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      hostname_ = s;
+      return s;
+    }
+  }
+
+  /**
+   * <code>string hostname = 16;</code>
+   *
+   * @return The bytes for hostname.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getHostnameBytes() {
+    java.lang.Object ref = hostname_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      hostname_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CLIENTENDPOINT_FIELD_NUMBER = 17;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object clientEndpoint_ = "";
+
+  /**
+   * <code>string clientEndpoint = 17;</code>
+   *
+   * @return The clientEndpoint.
+   */
+  @java.lang.Override
+  public java.lang.String getClientEndpoint() {
+    java.lang.Object ref = clientEndpoint_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      clientEndpoint_ = s;
+      return s;
+    }
+  }
+
+  /**
+   * <code>string clientEndpoint = 17;</code>
+   *
+   * @return The bytes for clientEndpoint.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getClientEndpointBytes() {
+    java.lang.Object ref = clientEndpoint_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      clientEndpoint_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int EMULATORHOSTNAME_FIELD_NUMBER = 18;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object emulatorHostname_ = "";
+
+  /**
+   * <code>string emulatorHostname = 18;</code>
+   *
+   * @return The emulatorHostname.
+   */
+  @java.lang.Override
+  public java.lang.String getEmulatorHostname() {
+    java.lang.Object ref = emulatorHostname_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      emulatorHostname_ = s;
+      return s;
+    }
+  }
+
+  /**
+   * <code>string emulatorHostname = 18;</code>
+   *
+   * @return The bytes for emulatorHostname.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getEmulatorHostnameBytes() {
+    java.lang.Object ref = emulatorHostname_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      emulatorHostname_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int UNIVERSEDOMAIN_FIELD_NUMBER = 19;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object universeDomain_ = "";
+
+  /**
+   * <code>string universeDomain = 19;</code>
+   *
+   * @return The universeDomain.
+   */
+  @java.lang.Override
+  public java.lang.String getUniverseDomain() {
+    java.lang.Object ref = universeDomain_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      universeDomain_ = s;
+      return s;
+    }
+  }
+
+  /**
+   * <code>string universeDomain = 19;</code>
+   *
+   * @return The bytes for universeDomain.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getUniverseDomainBytes() {
+    java.lang.Object ref = universeDomain_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      universeDomain_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -764,6 +932,18 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedStringToSign_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, expectedStringToSign_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostname_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, hostname_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientEndpoint_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 17, clientEndpoint_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emulatorHostname_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 18, emulatorHostname_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(universeDomain_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 19, universeDomain_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -834,6 +1014,18 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expectedStringToSign_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, expectedStringToSign_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostname_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, hostname_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientEndpoint_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, clientEndpoint_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emulatorHostname_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, emulatorHostname_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(universeDomain_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, universeDomain_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -868,6 +1060,10 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     if (!getBucketBoundHostname().equals(other.getBucketBoundHostname())) return false;
     if (!getExpectedCanonicalRequest().equals(other.getExpectedCanonicalRequest())) return false;
     if (!getExpectedStringToSign().equals(other.getExpectedStringToSign())) return false;
+    if (!getHostname().equals(other.getHostname())) return false;
+    if (!getClientEndpoint().equals(other.getClientEndpoint())) return false;
+    if (!getEmulatorHostname().equals(other.getEmulatorHostname())) return false;
+    if (!getUniverseDomain().equals(other.getUniverseDomain())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -915,6 +1111,14 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
     hash = (53 * hash) + getExpectedCanonicalRequest().hashCode();
     hash = (37 * hash) + EXPECTEDSTRINGTOSIGN_FIELD_NUMBER;
     hash = (53 * hash) + getExpectedStringToSign().hashCode();
+    hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getHostname().hashCode();
+    hash = (37 * hash) + CLIENTENDPOINT_FIELD_NUMBER;
+    hash = (53 * hash) + getClientEndpoint().hashCode();
+    hash = (37 * hash) + EMULATORHOSTNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getEmulatorHostname().hashCode();
+    hash = (37 * hash) + UNIVERSEDOMAIN_FIELD_NUMBER;
+    hash = (53 * hash) + getUniverseDomain().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1100,6 +1304,10 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       bucketBoundHostname_ = "";
       expectedCanonicalRequest_ = "";
       expectedStringToSign_ = "";
+      hostname_ = "";
+      clientEndpoint_ = "";
+      emulatorHostname_ = "";
+      universeDomain_ = "";
       return this;
     }
 
@@ -1184,6 +1392,18 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.expectedStringToSign_ = expectedStringToSign_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.hostname_ = hostname_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.clientEndpoint_ = clientEndpoint_;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.emulatorHostname_ = emulatorHostname_;
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.universeDomain_ = universeDomain_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1295,6 +1515,26 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       if (!other.getExpectedStringToSign().isEmpty()) {
         expectedStringToSign_ = other.expectedStringToSign_;
         bitField0_ |= 0x00004000;
+        onChanged();
+      }
+      if (!other.getHostname().isEmpty()) {
+        hostname_ = other.hostname_;
+        bitField0_ |= 0x00008000;
+        onChanged();
+      }
+      if (!other.getClientEndpoint().isEmpty()) {
+        clientEndpoint_ = other.clientEndpoint_;
+        bitField0_ |= 0x00010000;
+        onChanged();
+      }
+      if (!other.getEmulatorHostname().isEmpty()) {
+        emulatorHostname_ = other.emulatorHostname_;
+        bitField0_ |= 0x00020000;
+        onChanged();
+      }
+      if (!other.getUniverseDomain().isEmpty()) {
+        universeDomain_ = other.universeDomain_;
+        bitField0_ |= 0x00040000;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1425,6 +1665,30 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
                 bitField0_ |= 0x00004000;
                 break;
               } // case 122
+            case 130:
+              {
+                hostname_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 130
+            case 138:
+              {
+                clientEndpoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 138
+            case 146:
+              {
+                emulatorHostname_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00020000;
+                break;
+              } // case 146
+            case 154:
+              {
+                universeDomain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00040000;
+                break;
+              } // case 154
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -2713,6 +2977,330 @@ public final class SigningV4Test extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       expectedStringToSign_ = value;
       bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object hostname_ = "";
+
+    /**
+     * <code>string hostname = 16;</code>
+     *
+     * @return The hostname.
+     */
+    public java.lang.String getHostname() {
+      java.lang.Object ref = hostname_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostname_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+
+    /**
+     * <code>string hostname = 16;</code>
+     *
+     * @return The bytes for hostname.
+     */
+    public com.google.protobuf.ByteString getHostnameBytes() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        hostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>string hostname = 16;</code>
+     *
+     * @param value The hostname to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHostname(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      hostname_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <code>string hostname = 16;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearHostname() {
+      hostname_ = getDefaultInstance().getHostname();
+      bitField0_ = (bitField0_ & ~0x00008000);
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <code>string hostname = 16;</code>
+     *
+     * @param value The bytes for hostname to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHostnameBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+      hostname_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object clientEndpoint_ = "";
+
+    /**
+     * <code>string clientEndpoint = 17;</code>
+     *
+     * @return The clientEndpoint.
+     */
+    public java.lang.String getClientEndpoint() {
+      java.lang.Object ref = clientEndpoint_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientEndpoint_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+
+    /**
+     * <code>string clientEndpoint = 17;</code>
+     *
+     * @return The bytes for clientEndpoint.
+     */
+    public com.google.protobuf.ByteString getClientEndpointBytes() {
+      java.lang.Object ref = clientEndpoint_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        clientEndpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>string clientEndpoint = 17;</code>
+     *
+     * @param value The clientEndpoint to set.
+     * @return This builder for chaining.
+     */
+    public Builder setClientEndpoint(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      clientEndpoint_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <code>string clientEndpoint = 17;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearClientEndpoint() {
+      clientEndpoint_ = getDefaultInstance().getClientEndpoint();
+      bitField0_ = (bitField0_ & ~0x00010000);
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <code>string clientEndpoint = 17;</code>
+     *
+     * @param value The bytes for clientEndpoint to set.
+     * @return This builder for chaining.
+     */
+    public Builder setClientEndpointBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+      clientEndpoint_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object emulatorHostname_ = "";
+
+    /**
+     * <code>string emulatorHostname = 18;</code>
+     *
+     * @return The emulatorHostname.
+     */
+    public java.lang.String getEmulatorHostname() {
+      java.lang.Object ref = emulatorHostname_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        emulatorHostname_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+
+    /**
+     * <code>string emulatorHostname = 18;</code>
+     *
+     * @return The bytes for emulatorHostname.
+     */
+    public com.google.protobuf.ByteString getEmulatorHostnameBytes() {
+      java.lang.Object ref = emulatorHostname_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        emulatorHostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>string emulatorHostname = 18;</code>
+     *
+     * @param value The emulatorHostname to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEmulatorHostname(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      emulatorHostname_ = value;
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <code>string emulatorHostname = 18;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearEmulatorHostname() {
+      emulatorHostname_ = getDefaultInstance().getEmulatorHostname();
+      bitField0_ = (bitField0_ & ~0x00020000);
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <code>string emulatorHostname = 18;</code>
+     *
+     * @param value The bytes for emulatorHostname to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEmulatorHostnameBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+      emulatorHostname_ = value;
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object universeDomain_ = "";
+
+    /**
+     * <code>string universeDomain = 19;</code>
+     *
+     * @return The universeDomain.
+     */
+    public java.lang.String getUniverseDomain() {
+      java.lang.Object ref = universeDomain_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        universeDomain_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+
+    /**
+     * <code>string universeDomain = 19;</code>
+     *
+     * @return The bytes for universeDomain.
+     */
+    public com.google.protobuf.ByteString getUniverseDomainBytes() {
+      java.lang.Object ref = universeDomain_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        universeDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>string universeDomain = 19;</code>
+     *
+     * @param value The universeDomain to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUniverseDomain(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      universeDomain_ = value;
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <code>string universeDomain = 19;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearUniverseDomain() {
+      universeDomain_ = getDefaultInstance().getUniverseDomain();
+      bitField0_ = (bitField0_ & ~0x00040000);
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <code>string universeDomain = 19;</code>
+     *
+     * @param value The bytes for universeDomain to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUniverseDomainBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+      universeDomain_ = value;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
