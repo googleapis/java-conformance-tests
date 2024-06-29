@@ -131,12 +131,13 @@ public final class ConformanceTestLocator {
     final String jarPath = urlPath.substring(5, urlPath.indexOf("!"));
 
     final List<String> resourcePaths = new ArrayList<>();
-    final JarFile jarFile = new JarFile(jarPath);
-    final Enumeration<JarEntry> jarEntries = jarFile.entries();
-    while (jarEntries.hasMoreElements()) {
-      JarEntry je = jarEntries.nextElement();
-      if (!je.isDirectory() && mp.matches(je.getName())) {
-        resourcePaths.add(je.getName());
+    try (final JarFile jarFile = new JarFile(jarPath)) {
+      final Enumeration<JarEntry> jarEntries = jarFile.entries();
+      while (jarEntries.hasMoreElements()) {
+        JarEntry je = jarEntries.nextElement();
+        if (!je.isDirectory() && mp.matches(je.getName())) {
+          resourcePaths.add(je.getName());
+        }
       }
     }
     return resourcePaths;
