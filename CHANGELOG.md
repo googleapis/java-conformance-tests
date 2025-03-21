@@ -1,5 +1,54 @@
 # Changelog
 
+## [0.3.8](https://github.com/googleapis/java-conformance-tests/compare/v0.3.7...v0.3.8) (2025-03-21)
+
+
+### Bug Fixes
+
+* Close JarFiles opened by ConformanceTestLocator ([#662](https://github.com/googleapis/java-conformance-tests/issues/662)) ([3b7da93](https://github.com/googleapis/java-conformance-tests/commit/3b7da9336971c84a560463de5b20fbb0ae77aa29))
+
+
+### Dependencies
+
+* Update actions/setup-java action to v4 ([#664](https://github.com/googleapis/java-conformance-tests/issues/664)) ([e2cb8ab](https://github.com/googleapis/java-conformance-tests/commit/e2cb8abbc1117474144c2d8ed8c2f869303a38a5))
+* Update dependency com.google.cloud:google-cloud-bom to v0.221.0 ([#633](https://github.com/googleapis/java-conformance-tests/issues/633)) ([b4c198a](https://github.com/googleapis/java-conformance-tests/commit/b4c198a870075646322fc45d40203e58c7bc8ccd))
+* Update dependency com.google.cloud:google-cloud-bom to v0.222.0 ([#666](https://github.com/googleapis/java-conformance-tests/issues/666)) ([485a23b](https://github.com/googleapis/java-conformance-tests/commit/485a23b0fb3ecfc708560346681a0b4fcb0c1c2b))
+* Update dependency com.google.cloud:google-cloud-bom to v0.223.0 ([#667](https://github.com/googleapis/java-conformance-tests/issues/667)) ([c1c3317](https://github.com/googleapis/java-conformance-tests/commit/c1c3317b307f7c1fe7203d7d0e0ea95f47d0a43d))
+* Update dependency com.google.cloud:google-cloud-bom to v0.224.0 ([#671](https://github.com/googleapis/java-conformance-tests/issues/671)) ([7fcf9e1](https://github.com/googleapis/java-conformance-tests/commit/7fcf9e10dbae441a335cfc7e7f21ac71764488c8))
+* Update dependency com.google.cloud:google-cloud-bom to v0.225.0 ([#677](https://github.com/googleapis/java-conformance-tests/issues/677)) ([9e8df08](https://github.com/googleapis/java-conformance-tests/commit/9e8df080b53426f9c4af39881b2bd8bcb8d2cd12))
+* Update dependency com.google.cloud:google-cloud-bom to v0.226.0 ([#681](https://github.com/googleapis/java-conformance-tests/issues/681)) ([d790bac](https://github.com/googleapis/java-conformance-tests/commit/d790bacfc57892f3e79ce1c54e710c761b8f6012))
+* Update dependency com.google.cloud:google-cloud-bom to v0.227.0 ([#685](https://github.com/googleapis/java-conformance-tests/issues/685)) ([d7af05b](https://github.com/googleapis/java-conformance-tests/commit/d7af05bc1c55a8a7a344aa7054f8a2d6b73490ed))
+* Update dependency com.google.cloud:google-cloud-bom to v0.228.0 ([#686](https://github.com/googleapis/java-conformance-tests/issues/686)) ([318255b](https://github.com/googleapis/java-conformance-tests/commit/318255be54892b6f43ca38556151ee26eeae524e))
+* Update dependency com.google.cloud:google-cloud-bom to v0.229.0 ([#692](https://github.com/googleapis/java-conformance-tests/issues/692)) ([4b93651](https://github.com/googleapis/java-conformance-tests/commit/4b93651a83db66a5c6ca44844164a57179e42343))
+* Update dependency com.google.cloud:google-cloud-bom to v0.233.0 ([#695](https://github.com/googleapis/java-conformance-tests/issues/695)) ([cc85c4f](https://github.com/googleapis/java-conformance-tests/commit/cc85c4fa181af6ee8f0e5dd6a889de916e847b42))
+* Update dependency com.google.cloud:google-cloud-bom to v0.234.0 ([#702](https://github.com/googleapis/java-conformance-tests/issues/702)) ([651d1ef](https://github.com/googleapis/java-conformance-tests/commit/651d1ef569243e7825afcec1527e945d320c66fb))
+* Update dependency com.google.cloud:google-cloud-bom to v0.235.0 ([#705](https://github.com/googleapis/java-conformance-tests/issues/705)) ([5e18528](https://github.com/googleapis/java-conformance-tests/commit/5e18528b05cc2054725a7bc95b3727226869fbdd))
+* Update dependency com.google.cloud:google-cloud-bom to v0.236.0 ([#710](https://github.com/googleapis/java-conformance-tests/issues/710)) ([d8c44d8](https://github.com/googleapis/java-conformance-tests/commit/d8c44d8a32bc03815e3147a9c382ded7bbe76ed0))
+* Update dependency com.google.cloud:google-cloud-bom to v0.237.0 ([#713](https://github.com/googleapis/java-conformance-tests/issues/713)) ([cd5380a](https://github.com/googleapis/java-conformance-tests/commit/cd5380a24e03877625456187e32ae74077739d4b))
+* Update dependency com.google.cloud:google-cloud-bom to v0.238.0 ([#719](https://github.com/googleapis/java-conformance-tests/issues/719)) ([7c60f7b](https://github.com/googleapis/java-conformance-tests/commit/7c60f7b444c744f3f36e942b89793a1e748b0bdb))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.31.0 ([#634](https://github.com/googleapis/java-conformance-tests/issues/634)) ([7d8e304](https://github.com/googleapis/java-conformance-tests/commit/7d8e3045535e415e70c44920ac5ce5dccb169300))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.32.0 ([#669](https://github.com/googleapis/java-conformance-tests/issues/669)) ([cacf7c7](https://github.com/googleapis/java-conformance-tests/commit/cacf7c73c7aeeef64a9d351f152d3304b38bd1f3))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.33.0 ([#675](https://github.com/googleapis/java-conformance-tests/issues/675)) ([7159740](https://github.com/googleapis/java-conformance-tests/commit/71597407000316bec786f54ad41c0e07137f14c0))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.34.0 ([#680](https://github.com/googleapis/java-conformance-tests/issues/680)) ([6227dfe](https://github.com/googleapis/java-conformance-tests/commit/6227dfe75e3df5134ecf5f582389d71ef7e5deb1))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.35.0 ([#683](https://github.com/googleapis/java-conformance-tests/issues/683)) ([53d7517](https://github.com/googleapis/java-conformance-tests/commit/53d75179d96959350545ce1de09eefd5503a3dbb))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.36.0 ([#688](https://github.com/googleapis/java-conformance-tests/issues/688)) ([d87c2db](https://github.com/googleapis/java-conformance-tests/commit/d87c2dbdb39a5d4236a0a9d80e3a2623fbda59f2))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.36.1 ([#690](https://github.com/googleapis/java-conformance-tests/issues/690)) ([4f55f4e](https://github.com/googleapis/java-conformance-tests/commit/4f55f4e71cf1255796ef1ed764d9ae4b9254e5e6))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.37.0 ([#694](https://github.com/googleapis/java-conformance-tests/issues/694)) ([82a5acf](https://github.com/googleapis/java-conformance-tests/commit/82a5acf85cb24521e3993a3c1b0312fbd6b0786b))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.41.0 ([#696](https://github.com/googleapis/java-conformance-tests/issues/696)) ([2ed430a](https://github.com/googleapis/java-conformance-tests/commit/2ed430a99d08dc4862247dae0755dc1417ed6df5))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.41.1 ([#701](https://github.com/googleapis/java-conformance-tests/issues/701)) ([982c8c3](https://github.com/googleapis/java-conformance-tests/commit/982c8c3ca86e71c483be27c252def6a655c475d5))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.42.0 ([#704](https://github.com/googleapis/java-conformance-tests/issues/704)) ([a8708fa](https://github.com/googleapis/java-conformance-tests/commit/a8708fa927729837510683750afecc946b0789cc))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.43.0 ([#708](https://github.com/googleapis/java-conformance-tests/issues/708)) ([9f1d7bc](https://github.com/googleapis/java-conformance-tests/commit/9f1d7bcb1ca7cce7d85112ac7c46cefd04e3fc7b))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.44.0 ([#712](https://github.com/googleapis/java-conformance-tests/issues/712)) ([f325a03](https://github.com/googleapis/java-conformance-tests/commit/f325a034c979045a9a0138e10eb3e93700cc6ca5))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.45.0 ([#715](https://github.com/googleapis/java-conformance-tests/issues/715)) ([9f0cc29](https://github.com/googleapis/java-conformance-tests/commit/9f0cc297e5bce44f1ab02a93ddc90f7f4ebc0786))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.45.1 ([#716](https://github.com/googleapis/java-conformance-tests/issues/716)) ([31acb97](https://github.com/googleapis/java-conformance-tests/commit/31acb977b18b54b21152b49798dbfe0da4aef320))
+* Update dependency com.google.googlejavaformat:google-java-format to v1.22.0 ([#639](https://github.com/googleapis/java-conformance-tests/issues/639)) ([b768a64](https://github.com/googleapis/java-conformance-tests/commit/b768a64f6c0d9155a034b0ff835d94170229e878))
+* Update dependency com.google.googlejavaformat:google-java-format to v1.23.0 ([#676](https://github.com/googleapis/java-conformance-tests/issues/676)) ([9c52119](https://github.com/googleapis/java-conformance-tests/commit/9c5211963e3d5a1253ccb76adce84e69d6b85df1))
+* Update dependency com.google.googlejavaformat:google-java-format to v1.24.0 ([#693](https://github.com/googleapis/java-conformance-tests/issues/693)) ([92e4a15](https://github.com/googleapis/java-conformance-tests/commit/92e4a15d8a205e8fc4acabf32020927a7fea8d9e))
+* Update dependency com.google.googlejavaformat:google-java-format to v1.25.2 ([#698](https://github.com/googleapis/java-conformance-tests/issues/698)) ([fb0564c](https://github.com/googleapis/java-conformance-tests/commit/fb0564cf14985ed303f6b1ae9b60ae09882a0ada))
+* Update dependency com.mycila:license-maven-plugin to v4.5 ([#655](https://github.com/googleapis/java-conformance-tests/issues/655)) ([eaba273](https://github.com/googleapis/java-conformance-tests/commit/eaba273cb5c974b3533148b03bde8c305ab9c1af))
+* Update dependency com.mycila:license-maven-plugin to v4.6 ([#689](https://github.com/googleapis/java-conformance-tests/issues/689)) ([ec20bd9](https://github.com/googleapis/java-conformance-tests/commit/ec20bd91d9fa3f7f90e4cb32c0a56553657ba3e6))
+* Update dependency com.mycila:license-maven-plugin to v5 ([#718](https://github.com/googleapis/java-conformance-tests/issues/718)) ([365f9bd](https://github.com/googleapis/java-conformance-tests/commit/365f9bd7359397a7613df332ea79315ab0cc6a6e))
+
 ## [0.3.7](https://github.com/googleapis/java-conformance-tests/compare/v0.3.6...v0.3.7) (2024-01-23)
 
 
