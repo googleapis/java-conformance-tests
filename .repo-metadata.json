@@ -8,5 +8,5 @@
   "distribution_name": "com.google.cloud:google-cloud-conformance-tests",
   "library_type": "OTHER",
   "client_documentation": "https://github.com/googleapis/java-conformance-tests",
-  "codeowner_team": "@googleapis/gcs-sdk-team @googleapis/api-bigtable @googleapis/api-firestore @googleapis/firestore-dpe"
+  "codeowner_team": "@googleapis/gcs-team @googleapis/bigtable-team @googleapis/firestore-team @googleapis/firestore-dpe"
 }
