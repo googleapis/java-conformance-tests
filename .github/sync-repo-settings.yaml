@@ -37,7 +37,7 @@ permissionRules:
   - team: Googlers
     # Access level required, one of push|pull|admin|maintain|triage
     permission: pull
-  - team: yoshi-java
+  - team: cloud-sdk-java-team
     permission: push
   - team: yoshi-java-admins
     permission: admin
